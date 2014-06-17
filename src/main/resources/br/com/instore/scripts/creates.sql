@@ -130,16 +130,16 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `instore`.`empresa`
+-- Table `instore`.`cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `instore`.`empresa` (
-  `idempresa` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `instore`.`cliente` (
+  `idcliente` INT NOT NULL AUTO_INCREMENT,
   `idendereco` INT NULL,
   `parente` INT(11) NOT NULL DEFAULT 0,
   `nome` VARCHAR(255) NOT NULL,
   `matriz` TINYINT(1) NOT NULL DEFAULT 0,
   `instore` TINYINT(1) NOT NULL,
-  PRIMARY KEY (`idempresa`),
+  PRIMARY KEY (`idcliente`),
   INDEX `fk_empresa_endereco1_idx` (`idendereco` ASC),
   CONSTRAINT `fk_empresa_endereco1`
     FOREIGN KEY (`idendereco`)
@@ -220,18 +220,18 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `instore`.`usuario_empresa`
+-- Table `instore`.`usuario_cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `instore`.`usuario_empresa` (
+CREATE TABLE IF NOT EXISTS `instore`.`usuario_cliente` (
   `idusuario_empresa` INT NOT NULL AUTO_INCREMENT,
-  `idempresa` INT NOT NULL,
+  `idcliente` INT NOT NULL,
   `idusuario` INT NOT NULL,
   PRIMARY KEY (`idusuario_empresa`),
-  INDEX `fk_usuario_empresa_empresa1_idx` (`idempresa` ASC),
+  INDEX `fk_usuario_empresa_empresa1_idx` (`idcliente` ASC),
   INDEX `fk_usuario_empresa_usuario1_idx` (`idusuario` ASC),
   CONSTRAINT `fk_usuario_empresa_empresa1`
-    FOREIGN KEY (`idempresa`)
-    REFERENCES `instore`.`empresa` (`idempresa`)
+    FOREIGN KEY (`idcliente`)
+    REFERENCES `instore`.`cliente` (`idcliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_usuario_empresa_usuario1`
@@ -243,35 +243,23 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `instore`.`dados_empresa`
+-- Table `instore`.`dados_cliene`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `instore`.`dados_empresa` (
-  `iddados_empresa` INT NOT NULL AUTO_INCREMENT,
-  `idempresa` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `instore`.`dados_cliene` (
+  `iddados_cliene` INT NOT NULL AUTO_INCREMENT,
+  `idcliente` INT NOT NULL,
+  `cnpj` VARCHAR(18) NOT NULL,
+  `razao_social` TEXT NOT NULL,
+  `nome_fantasia` VARCHAR(255) NOT NULL,
+  `indice_reajuste_contrato` DECIMAL NOT NULL,
   `data_inicio_contrato` DATE NOT NULL,
-  `data_fim_contrato` DATE NOT NULL,
-  `cnpj` VARCHAR(255) NULL,
-  `email` VARCHAR(255) NULL,
-  `email_faturamento` VARCHAR(255) NULL,
-  `tel` VARCHAR(255) NULL,
-  `tel_faturamento` VARCHAR(255) NULL,
-  `contato` VARCHAR(255) NULL,
-  `contato2` VARCHAR(255) NULL,
-  `nome_fantasia` VARCHAR(255) NULL,
-  `razao_social` VARCHAR(255) NULL,
-  `nosso_numero` VARCHAR(45) NULL,
-  `digito_nosso_numero` VARCHAR(45) NULL,
-  `tem_reajuste_faturamento` TINYINT(1) NOT NULL,
-  `data_reajuste_valor_faturamento` DATE NOT NULL,
-  `valor_reajuste_faturamento` DOUBLE NOT NULL,
-  `valor_faturamento` DOUBLE NOT NULL,
-  `valor_por_matriz` TINYINT(1) NOT NULL,
-  `data_faturamento` DATE NULL,
-  PRIMARY KEY (`iddados_empresa`),
-  INDEX `fk_dados_empresa_empresa1_idx` (`idempresa` ASC),
+  `data_termino_contrato` DATE NOT NULL,
+  `renovacao_automatica` TINYINT(1) NOT NULL,
+  PRIMARY KEY (`iddados_cliene`),
+  INDEX `fk_dados_empresa_empresa1_idx` (`idcliente` ASC),
   CONSTRAINT `fk_dados_empresa_empresa1`
-    FOREIGN KEY (`idempresa`)
-    REFERENCES `instore`.`empresa` (`idempresa`)
+    FOREIGN KEY (`idcliente`)
+    REFERENCES `instore`.`cliente` (`idcliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -299,7 +287,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `instore`.`boleto` (
   `idboleto` INT NOT NULL,
-  `idempresa` INT NOT NULL,
+  `idcliente` INT NOT NULL,
   `iddados_bancario` INT NOT NULL,
   `data_emissao` DATE NOT NULL,
   `arquivo` BLOB NOT NULL,
@@ -308,11 +296,11 @@ CREATE TABLE IF NOT EXISTS `instore`.`boleto` (
   `valor_pagamento` DOUBLE NULL,
   `numero_documento` INT(11) NOT NULL,
   PRIMARY KEY (`idboleto`),
-  INDEX `fk_boleto_empresa1_idx` (`idempresa` ASC),
+  INDEX `fk_boleto_empresa1_idx` (`idcliente` ASC),
   INDEX `fk_boleto_dados_bancario1_idx` (`iddados_bancario` ASC),
   CONSTRAINT `fk_boleto_empresa1`
-    FOREIGN KEY (`idempresa`)
-    REFERENCES `instore`.`empresa` (`idempresa`)
+    FOREIGN KEY (`idcliente`)
+    REFERENCES `instore`.`cliente` (`idcliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_boleto_dados_bancario1`
@@ -328,17 +316,17 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `instore`.`audiostore_categoria` (
   `codigo` SMALLINT NOT NULL AUTO_INCREMENT,
-  `idempresa` INT NOT NULL,
+  `idcliente` INT NOT NULL,
   `categoria` VARCHAR(30) NOT NULL,
   `data_inicio` DATE NOT NULL,
   `data_final` DATE NOT NULL,
   `tipo` SMALLINT NOT NULL,
   `tempo` TIME NOT NULL,
   PRIMARY KEY (`codigo`),
-  INDEX `fk_audiostore_categoria_empresa1_idx` (`idempresa` ASC),
+  INDEX `fk_audiostore_categoria_empresa1_idx` (`idcliente` ASC),
   CONSTRAINT `fk_audiostore_categoria_empresa1`
-    FOREIGN KEY (`idempresa`)
-    REFERENCES `instore`.`empresa` (`idempresa`)
+    FOREIGN KEY (`idcliente`)
+    REFERENCES `instore`.`cliente` (`idcliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -350,7 +338,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `instore`.`audiostore_programacao` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(20) NOT NULL,
-  `idempresa` INT NOT NULL,
+  `idcliente` INT NOT NULL,
   `data_inicio` DATE NOT NULL,
   `data_final` DATE NOT NULL,
   `hora_inicio` TIME NULL,
@@ -362,12 +350,12 @@ CREATE TABLE IF NOT EXISTS `instore`.`audiostore_programacao` (
   `sexta_feira` TINYINT(1) NOT NULL,
   `sabado` TINYINT(1) NOT NULL,
   `domingo` TINYINT(1) NOT NULL,
-  INDEX `fk_audiostore_programacao_empresa1_idx` (`idempresa` ASC),
+  INDEX `fk_audiostore_programacao_empresa1_idx` (`idcliente` ASC),
   PRIMARY KEY (`id`),
   UNIQUE INDEX `descricao_UNIQUE` (`descricao` ASC),
   CONSTRAINT `fk_audiostore_programacao_empresa1`
-    FOREIGN KEY (`idempresa`)
-    REFERENCES `instore`.`empresa` (`idempresa`)
+    FOREIGN KEY (`idcliente`)
+    REFERENCES `instore`.`cliente` (`idcliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -457,6 +445,47 @@ CREATE TABLE IF NOT EXISTS `instore`.`historico_usuario` (
   CONSTRAINT `fk_historico_usuario_usuario1`
     FOREIGN KEY (`idusuario`)
     REFERENCES `instore`.`usuario` (`idusuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `instore`.`voz`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `instore`.`voz` (
+  `idvoz` INT NOT NULL AUTO_INCREMENT,
+  `idcliente` INT NOT NULL,
+  `genero` TINYINT(1) NOT NULL,
+  `tipo` SMALLINT NOT NULL,
+  `nome` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `tel` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`idvoz`),
+  INDEX `fk_voz_cliente1_idx` (`idcliente` ASC),
+  CONSTRAINT `fk_voz_cliente1`
+    FOREIGN KEY (`idcliente`)
+    REFERENCES `instore`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `instore`.`contato_cliente`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `instore`.`contato_cliente` (
+  `idcontato_cliente` INT NOT NULL AUTO_INCREMENT,
+  `iddados_cliene` INT NOT NULL,
+  `principal` TINYINT(1) NOT NULL,
+  `email` VARCHAR(255) NULL,
+  `tel` VARCHAR(20) NULL,
+  `setor` VARCHAR(255) NULL,
+  PRIMARY KEY (`idcontato_cliente`),
+  INDEX `fk_contato_cliente_dados_cliene1_idx` (`iddados_cliene` ASC),
+  CONSTRAINT `fk_contato_cliente_dados_cliene1`
+    FOREIGN KEY (`iddados_cliene`)
+    REFERENCES `instore`.`dados_cliene` (`iddados_cliene`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

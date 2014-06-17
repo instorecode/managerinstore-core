@@ -31,7 +31,7 @@ public class AudiostoreProgramacaoBean extends Bean {
     
     @ManyToOne
     @JoinColumn(name = "idempresa", nullable = true)
-    private EmpresaBean empresa;
+    private ClienteBean empresa;
     
     @Temporal(TemporalType.DATE)
     @Column( name = "data_inicio" , nullable = false)
@@ -93,11 +93,11 @@ public class AudiostoreProgramacaoBean extends Bean {
         this.descricao = descricao;
     }
 
-    public EmpresaBean getEmpresa() {
+    public ClienteBean getEmpresa() {
         return empresa;
     }
 
-    public void setEmpresa(EmpresaBean empresa) {
+    public void setEmpresa(ClienteBean empresa) {
         this.empresa = empresa;
     }
 

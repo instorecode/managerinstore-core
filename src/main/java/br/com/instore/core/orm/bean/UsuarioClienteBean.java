@@ -15,28 +15,24 @@ import javax.persistence.Table;
 @Auditor
 @Entity
 @Table(name = "usuario_empresa")
-public class UsuarioEmpresaBean extends Bean {
+public class UsuarioClienteBean extends Bean {
     @Id
     @Column(name = "idusuario_empresa", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idusuarioEmpresa;
     
-    @ManyToOne(cascade = {
-        CascadeType.REMOVE
-    })
-    @JoinColumn(name = "idempresa" ,nullable = false)
-    private EmpresaBean empresa;
+    @ManyToOne()
+    @JoinColumn(name = "cliente" ,nullable = false)
+    private ClienteBean cliente;
     
-    @ManyToOne(cascade = {
-        CascadeType.REMOVE
-    })
+    @ManyToOne()
     @JoinColumn(name = "idusuario" ,nullable = false)
     private UsuarioBean usuario;
 
-    public UsuarioEmpresaBean() {
+    public UsuarioClienteBean() {
     }
 
-    public UsuarioEmpresaBean(Integer idusuarioEmpresa) {
+    public UsuarioClienteBean(Integer idusuarioEmpresa) {
         this.idusuarioEmpresa = idusuarioEmpresa;
     }
 
@@ -44,16 +40,12 @@ public class UsuarioEmpresaBean extends Bean {
         return idusuarioEmpresa;
     }
 
-    public void setIdusuarioEmpresa(Integer idusuarioEmpresa) {
-        this.idusuarioEmpresa = idusuarioEmpresa;
+    public ClienteBean getCliente() {
+        return cliente;
     }
 
-    public EmpresaBean getEmpresa() {
-        return empresa;
-    }
-
-    public void setEmpresa(EmpresaBean empresa) {
-        this.empresa = empresa;
+    public void setCliente(ClienteBean cliente) {
+        this.cliente = cliente;
     }
 
     public UsuarioBean getUsuario() {

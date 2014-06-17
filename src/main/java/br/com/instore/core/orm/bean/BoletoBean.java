@@ -27,7 +27,7 @@ public class BoletoBean extends Bean {
     
     @ManyToOne
     @JoinColumn(name = "idempresa", nullable = true)
-    private EmpresaBean empresa;
+    private ClienteBean empresa;
     
     @ManyToOne
     @JoinColumn(name = "iddados_bancario", nullable = true)
@@ -69,11 +69,11 @@ public class BoletoBean extends Bean {
         this.idboleto = idboleto;
     }
 
-    public EmpresaBean getEmpresa() {
+    public ClienteBean getEmpresa() {
         return empresa;
     }
 
-    public void setEmpresa(EmpresaBean empresa) {
+    public void setEmpresa(ClienteBean empresa) {
         this.empresa = empresa;
     }
 

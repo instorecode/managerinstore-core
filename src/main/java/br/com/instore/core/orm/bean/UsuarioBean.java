@@ -48,7 +48,7 @@ public class UsuarioBean extends Bean {
                 joinColumns = @JoinColumn(name = "idusuario"),
                 inverseJoinColumns = @JoinColumn(name = "idempresa")
             )
-    private List<EmpresaBean> empresaBeanList;
+    private List<ClienteBean> empresaBeanList;
     
     @OneToMany
     @JoinTable(
@@ -121,11 +121,11 @@ public class UsuarioBean extends Bean {
         this.senha = senha;
     }
 
-    public List<EmpresaBean> getEmpresaBeanList() {
+    public List<ClienteBean> getEmpresaBeanList() {
         return empresaBeanList;
     }
 
-    public void setEmpresaBeanList(List<EmpresaBean> empresaBeanList) {
+    public void setEmpresaBeanList(List<ClienteBean> empresaBeanList) {
         this.empresaBeanList = empresaBeanList;
     }
 

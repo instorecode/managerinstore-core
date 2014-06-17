@@ -13,13 +13,13 @@ import javax.persistence.Table;
 
 @Auditor
 @Entity
-@Table(name = "empresa")
-public class EmpresaBean extends Bean {
+@Table(name = "cliente")
+public class ClienteBean extends Bean {
 
     @Id
-    @Column(name = "idempresa", nullable = false)
+    @Column(name = "idcliente", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idempresa;
+    private Integer idcliente;
     
     @ManyToOne
     @JoinColumn(name = "idendereco", nullable = true)
@@ -38,19 +38,19 @@ public class EmpresaBean extends Bean {
     private Boolean instore;
     
 
-    public EmpresaBean() {
+    public ClienteBean() {
     }
 
-    public EmpresaBean(Integer idempresa) {
-        this.idempresa = idempresa;
+    public ClienteBean(Integer idempresa) {
+        this.idcliente = idempresa;
     }
 
-    public Integer getIdempresa() {
-        return idempresa;
+    public Integer getIdcliente() {
+        return idcliente;
     }
 
-    public void setIdempresa(Integer idempresa) {
-        this.idempresa = idempresa;
+    public void setIdcliente(Integer idcliente) {
+        this.idcliente = idcliente;
     }
 
     public EnderecoBean getEndereco() {

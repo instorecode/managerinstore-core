@@ -44,7 +44,7 @@ public class AudiostoreCategoriaBean extends Bean {
     
     @ManyToOne
     @JoinColumn(name = "idempresa")
-    private EmpresaBean empresa;
+    private ClienteBean empresa;
 
     public AudiostoreCategoriaBean() {
     }
@@ -105,11 +105,11 @@ public class AudiostoreCategoriaBean extends Bean {
         this.tempo = tempo;
     }
 
-    public EmpresaBean getEmpresa() {
+    public ClienteBean getEmpresa() {
         return empresa;
     }
 
-    public void setEmpresa(EmpresaBean empresa) {
+    public void setEmpresa(ClienteBean empresa) {
         this.empresa = empresa;
     }
 }

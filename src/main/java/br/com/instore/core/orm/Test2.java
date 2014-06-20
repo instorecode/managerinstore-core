@@ -1,9 +1,20 @@
 package br.com.instore.core.orm;
 
+import br.com.instore.core.orm.bean.PerfilBean;
+import br.com.instore.core.orm.bean.UsuarioBean;
+
 
 public class Test2 {
     public static void main(String[] args) {
-        int [] numeros = new int[]{0,1,2,2,52,14,69,14,147,258,6,25,85,96};
+        RepositoryViewer repository = new RepositoryViewer();
+       repository.setUsuario( new UsuarioBean(1));
+        
+        
+        PerfilBean perfil = new PerfilBean();
+        perfil.setNome("aaa");
+        
+        repository.save(perfil);
+        repository.finalize();
         
     }
 }

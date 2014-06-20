@@ -8,10 +8,10 @@
 -- show processlist;
 
 -- empresa origem (INSTORE)
-INSERT INTO cliente  VALUES (1, null , 0 , 'Instore', 1 , 1);
+INSERT INTO cliente  VALUES (1, null , 0 , 'Instore', 1 , 1 , 1);
 
 --  usuario padrão
-INSERT INTO usuario VALUES (1, null , now(), 'admin', '000.000.000-00', 'admin', md5(123));
+INSERT INTO usuario VALUES (1, null , now(), 'admin', '000.000.000-00', 'admin@instore.com.br', md5(123));
 INSERT INTO usuario_cliente VALUES (1,1,1);
 
 -- regioes
@@ -61,8 +61,8 @@ insert into perfil values(2, 'Administrador');
 
 INSERT INTO funcionalidade VALUES (1, '/clientes', 'Cliente' , 'fa-building' , 0 , 1 ); 
 INSERT INTO funcionalidade VALUES (2, '/cliente/cadastrar', 'Formulário de cadastro cliente' , 'fa-building'    , 1 , 1 ); 
-INSERT INTO funcionalidade VALUES (3, '/cliente/atualizar/{id}', 'Formulário de atualização cliente' , 'fa-building' , 1 , 0 ); 
-INSERT INTO funcionalidade VALUES (4, '/cliente/remover/{id}', 'Formulário de atualização cliente' , 'fa-building'   , 1 , 0 ); 
+INSERT INTO funcionalidade VALUES (3, '/cliente/atualizar/{id}', 'Formulário de atualização do cliente' , 'fa-building' , 1 , 0 ); 
+INSERT INTO funcionalidade VALUES (4, '/cliente/remover/{id}', 'Formulário de remoção do cliente' , 'fa-building'   , 1 , 0 ); 
 
 insert into perfil_funcionalidade select null, idfuncionalidade , idperfil from perfil , funcionalidade;
 insert into perfil_usuario select null, idperfil , idusuario from perfil , usuario;

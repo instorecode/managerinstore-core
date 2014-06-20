@@ -24,7 +24,7 @@ public class DadosClienteBean extends Bean {
     private Integer iddadosCliente;    
     
     @ManyToOne()
-    @JoinColumn(name = "cliente" ,nullable = false)
+    @JoinColumn(name = "idcliente" ,nullable = false)
     private ClienteBean cliente;
     
     @Column(name = "cnpj", nullable = false , length = 18)

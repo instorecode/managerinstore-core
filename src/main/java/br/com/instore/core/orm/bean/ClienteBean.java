@@ -37,6 +37,9 @@ public class ClienteBean extends Bean {
     @Column(name = "instore", nullable = false)
     private Boolean instore;
     
+    @Column(name = "situacao", nullable = false)
+    private Boolean situacao;
+    
 
     public ClienteBean() {
     }
@@ -91,5 +94,13 @@ public class ClienteBean extends Bean {
 
     public void setInstore(Boolean instore) {
         this.instore = instore;
+    }
+
+    public Boolean getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(Boolean situacao) {
+        this.situacao = situacao;
     }
 }

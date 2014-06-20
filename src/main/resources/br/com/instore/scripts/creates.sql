@@ -139,6 +139,7 @@ CREATE TABLE IF NOT EXISTS `instore`.`cliente` (
   `nome` VARCHAR(255) NOT NULL,
   `matriz` TINYINT(1) NOT NULL DEFAULT 0,
   `instore` TINYINT(1) NOT NULL,
+  `situacao` TINYINT(1) NULL,
   PRIMARY KEY (`idcliente`),
   INDEX `fk_empresa_endereco1_idx` (`idendereco` ASC),
   CONSTRAINT `fk_empresa_endereco1`
@@ -243,10 +244,10 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `instore`.`dados_cliene`
+-- Table `instore`.`dados_cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `instore`.`dados_cliene` (
-  `iddados_cliene` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `instore`.`dados_cliente` (
+  `iddados_cliente` INT NOT NULL AUTO_INCREMENT,
   `idcliente` INT NOT NULL,
   `cnpj` VARCHAR(18) NOT NULL,
   `razao_social` TEXT NOT NULL,
@@ -255,7 +256,7 @@ CREATE TABLE IF NOT EXISTS `instore`.`dados_cliene` (
   `data_inicio_contrato` DATE NOT NULL,
   `data_termino_contrato` DATE NOT NULL,
   `renovacao_automatica` TINYINT(1) NOT NULL,
-  PRIMARY KEY (`iddados_cliene`),
+  PRIMARY KEY (`iddados_cliente`),
   INDEX `fk_dados_empresa_empresa1_idx` (`idcliente` ASC),
   CONSTRAINT `fk_dados_empresa_empresa1`
     FOREIGN KEY (`idcliente`)
@@ -477,6 +478,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `instore`.`contato_cliente` (
   `idcontato_cliente` INT NOT NULL AUTO_INCREMENT,
   `iddados_cliene` INT NOT NULL,
+  `nome` VARCHAR(255) NULL,
   `principal` TINYINT(1) NOT NULL,
   `email` VARCHAR(255) NULL,
   `tel` VARCHAR(20) NULL,
@@ -485,7 +487,7 @@ CREATE TABLE IF NOT EXISTS `instore`.`contato_cliente` (
   INDEX `fk_contato_cliente_dados_cliene1_idx` (`iddados_cliene` ASC),
   CONSTRAINT `fk_contato_cliente_dados_cliene1`
     FOREIGN KEY (`iddados_cliene`)
-    REFERENCES `instore`.`dados_cliene` (`iddados_cliene`)
+    REFERENCES `instore`.`dados_cliente` (`iddados_cliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

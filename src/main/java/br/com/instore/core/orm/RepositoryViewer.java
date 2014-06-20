@@ -22,6 +22,12 @@ public class RepositoryViewer {
     private Query query;
     protected UsuarioBean usuario;
 
+    public RepositoryViewer() {
+        verifySession();
+    }
+    
+    
+
     protected void verifySession() {
         try {
             if (session == null) {
@@ -155,6 +161,11 @@ public class RepositoryViewer {
     }
 
     private <T extends Bean> void auditar(UsuarioBean usuario, T object, short tipo) {
+        
+        if(!object.getClass().isAnnotationPresent(Auditor.class)) {
+            return;
+        }
+        
         AuditoriaBean auditoria = new AuditoriaBean();
         auditoria.setAcao(tipo);
         auditoria.setEntidade("Módulo " + object.getClass().getSimpleName().replace("Bean", ""));
@@ -279,5 +290,13 @@ public class RepositoryViewer {
                 e.printStackTrace();
             }
         }
+    }
+
+    public UsuarioBean getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioBean usuario) {
+        this.usuario = usuario;
     }
 }

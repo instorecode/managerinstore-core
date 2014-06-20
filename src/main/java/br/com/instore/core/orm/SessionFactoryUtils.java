@@ -37,6 +37,7 @@ public class SessionFactoryUtils {
         properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/instore?autoReconnectForPools=true");
         properties.put("hibernate.connection.username", "root");
         properties.put("hibernate.connection.password", "");
+        properties.put("javax.persistence.validation.mode", "none");
         
         // pool
         properties.put("hibernate.connection.provider_class", "org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider");

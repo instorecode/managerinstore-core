@@ -144,7 +144,7 @@ public class RepositoryViewer {
     }
 
     
-    public <T extends Bean> void delete(T t, UsuarioBean usuarioBean) {
+    public <T extends Bean> void delete(T t) {
         verifySession();
         session.delete(t);
         auditar(usuario, t, (short) 3);

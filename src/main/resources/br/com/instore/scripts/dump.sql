@@ -64,7 +64,10 @@ INSERT INTO funcionalidade VALUES (2, '/cliente/cadastrar', 'Formulário de cada
 INSERT INTO funcionalidade VALUES (3, '/cliente/atualizar/{id}', 'Formulário de atualização do cliente' , 'fa-building' , 1 , 0 ); 
 INSERT INTO funcionalidade VALUES (4, '/cliente/remover/{id}', 'Formulário de remoção do cliente' , 'fa-building'   , 1 , 0 ); 
 
+INSERT INTO funcionalidade VALUES (5, '/contatos', 'Contato' , 'fa-users' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (6, '/contato/cadastrar', 'Formulário de cadastro contato' , 'fa-users'    , 5 , 1 ); 
+INSERT INTO funcionalidade VALUES (7, '/contato/atualizar/{id}', 'Formulário de atualização do contato' , 'fa-users' , 5 , 0 ); 
+INSERT INTO funcionalidade VALUES (8, '/cliente/remover/{id}', 'Formulário de remoção do contato' , 'fa-users'   , 5 , 0 ); 
+
 insert into perfil_funcionalidade select null, idfuncionalidade , idperfil from perfil , funcionalidade;
 insert into perfil_usuario select null, idperfil , idusuario from perfil , usuario;
-
-

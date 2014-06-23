@@ -27,6 +27,9 @@ public class ContatoClienteBean extends Bean {
     @JoinColumn(name = "iddados_cliente" ,nullable = false)
     private DadosClienteBean dadosCliente;
     
+    @Column( name = "nome" , nullable = false)
+    private String nome;
+    
     @Column( name = "principal" , nullable = false)
     private boolean principal;
     
@@ -60,6 +63,14 @@ public class ContatoClienteBean extends Bean {
 
     public void setDadosCliente(DadosClienteBean dadosCliente) {
         this.dadosCliente = dadosCliente;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public boolean isPrincipal() {

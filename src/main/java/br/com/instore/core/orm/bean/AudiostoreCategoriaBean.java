@@ -43,8 +43,8 @@ public class AudiostoreCategoriaBean extends Bean {
     private Date tempo;
     
     @ManyToOne
-    @JoinColumn(name = "idempresa")
-    private ClienteBean empresa;
+    @JoinColumn(name = "idcliente")
+    private ClienteBean cliente;
 
     public AudiostoreCategoriaBean() {
     }
@@ -105,11 +105,11 @@ public class AudiostoreCategoriaBean extends Bean {
         this.tempo = tempo;
     }
 
-    public ClienteBean getEmpresa() {
-        return empresa;
+    public ClienteBean getCliente() {
+        return cliente;
     }
 
-    public void setEmpresa(ClienteBean empresa) {
-        this.empresa = empresa;
+    public void setCliente(ClienteBean cliente) {
+        this.cliente = cliente;
     }
 }

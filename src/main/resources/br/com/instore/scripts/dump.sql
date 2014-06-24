@@ -69,10 +69,11 @@
     INSERT INTO funcionalidade VALUES (7, '/contato/atualizar/{id}', 'Formulário de atualização do contato' , 'fa-users' , 5 , 0 ); 
     INSERT INTO funcionalidade VALUES (8, '/contato/remover/{id}', 'Formulário de remoção do contato' , 'fa-users'   , 5 , 0 ); 
     
-    INSERT INTO funcionalidade VALUES (9, '/audiostore-categoria', 'Audiostore Categorias' , 'fa-users' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (10, '/audiostore-categoria/cadastrar', 'Formulário de cadastro audiostore categoria' , 'fa-users'    , 9 , 1 ); 
-    INSERT INTO funcionalidade VALUES (11, '/audiostore-categoria/atualizar/{id}', 'Formulário de atualização do audiostore categoria' , 'fa-users' , 9 , 0 ); 
-    INSERT INTO funcionalidade VALUES (12, '/audiostore-categoria/remover/{id}', 'Formulário de remoção do audiostore categoria' , 'fa-users'   , 9 , 0 ); 
+    INSERT INTO funcionalidade VALUES (9, '/audiostore-categorias', 'Audiostore Categorias' , 'fa-file-code-o' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (10, '/audiostore-categoria/cadastrar', 'Formulário de cadastro audiostore categoria' , 'fa-file-code-o'    , 9 , 1 ); 
+    INSERT INTO funcionalidade VALUES (11, '/audiostore-categoria/atualizar/{id}', 'Formulário de atualização do audiostore categoria' , 'fa-file-code-o' , 9 , 0 ); 
+    INSERT INTO funcionalidade VALUES (12, '/audiostore-categoria/remover/{id}', 'Formulário de remoção do audiostore categoria' , 'fa-file-code-o'   , 9 , 0 ); 
+    INSERT INTO funcionalidade VALUES (12, '/audiostore-categoria/download-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 9 , 0 ); 
 
     insert into perfil_funcionalidade select null, idfuncionalidade , idperfil from perfil , funcionalidade;
     insert into perfil_usuario select null, idperfil , idusuario from perfil , usuario;

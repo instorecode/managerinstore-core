@@ -1,6 +1,6 @@
 package br.com.instore.core.orm;
 
-import br.com.instore.core.orm.bean.PerfilBean;
+import br.com.instore.core.orm.bean.ContatoClienteBean;
 import br.com.instore.core.orm.bean.UsuarioBean;
 
 
@@ -10,11 +10,6 @@ public class Test2 {
        repository.setUsuario( new UsuarioBean(1));
         
         
-        PerfilBean perfil = new PerfilBean();
-        perfil.setNome("aaa");
-        
-        repository.save(perfil);
-        repository.finalize();
-        
+        System.out.println(repository.query(ContatoClienteBean.class).findAll());;
     }
 }

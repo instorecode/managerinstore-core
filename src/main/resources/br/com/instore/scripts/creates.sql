@@ -494,9 +494,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `instore`.`audiostoregravadora`
+-- Table `instore`.`audiostore_gravadora`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `instore`.`audiostoregravadora` (
+CREATE TABLE IF NOT EXISTS `instore`.`audiostore_gravadora` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))
@@ -562,7 +562,7 @@ CREATE TABLE IF NOT EXISTS `instore`.`audiostore_musica` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_audiostore_musica_audiostoregravadora1`
     FOREIGN KEY (`gravadora`)
-    REFERENCES `instore`.`audiostoregravadora` (`id`)
+    REFERENCES `instore`.`audiostore_gravadora` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

@@ -80,6 +80,11 @@
     INSERT INTO funcionalidade VALUES (16, '/audiostore-programacao/atualizar/{id}', 'Formulário de atualização do audiostore programação' , 'fa-file-archive-o' , 14 , 0 ); 
     INSERT INTO funcionalidade VALUES (17, '/audiostore-programacao/remover/{id}', 'Formulário de remoção do audiostore programação' , 'fa-file-archive-o'   , 14 , 0 ); 
     INSERT INTO funcionalidade VALUES (18, '/audiostore-programacao/download-exp/{id}', 'Download do arquivo exp' , 'fa-file-archive-o'   , 14 , 0 ); 
+    
+    INSERT INTO funcionalidade VALUES (19, '/voz', 'Vozes' , 'fa-bullhorn' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (20, '/voz/cadastrar', 'Formulário de cadastro voz' , 'fa-bullhorn'    , 19 , 1 ); 
+    INSERT INTO funcionalidade VALUES (21, '/voz/atualizar/{id}', 'Formulário de atualização da voz' , 'fa-bullhorn' , 19 , 0 ); 
+    INSERT INTO funcionalidade VALUES (22, '/voz/remover/{id}', 'Formulário de remoção da voz' , 'fa-bullhorn'   , 19 , 0 ); 
 
     insert into perfil_funcionalidade select null, idfuncionalidade , idperfil from perfil , funcionalidade;
     insert into perfil_usuario select null, idperfil , idusuario from perfil , usuario;

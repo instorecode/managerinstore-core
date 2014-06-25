@@ -69,22 +69,32 @@
     INSERT INTO funcionalidade VALUES (7, '/contato/atualizar/{id}', 'Formulário de atualização do contato' , 'fa-users' , 5 , 0 ); 
     INSERT INTO funcionalidade VALUES (8, '/contato/remover/{id}', 'Formulário de remoção do contato' , 'fa-users'   , 5 , 0 ); 
     
-    INSERT INTO funcionalidade VALUES (9, '/audiostore-categorias', 'Audiostore Categorias' , 'fa-file-code-o' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (9, '/audiostore-categorias', 'Categoria' , 'fa-file-code-o' , 0 , 1 ); 
     INSERT INTO funcionalidade VALUES (10, '/audiostore-categoria/cadastrar', 'Formulário de cadastro audiostore categoria' , 'fa-file-code-o'    , 9 , 1 ); 
     INSERT INTO funcionalidade VALUES (11, '/audiostore-categoria/atualizar/{id}', 'Formulário de atualização do audiostore categoria' , 'fa-file-code-o' , 9 , 0 ); 
     INSERT INTO funcionalidade VALUES (12, '/audiostore-categoria/remover/{id}', 'Formulário de remoção do audiostore categoria' , 'fa-file-code-o'   , 9 , 0 ); 
     INSERT INTO funcionalidade VALUES (13, '/audiostore-categoria/download-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 9 , 0 ); 
     
-    INSERT INTO funcionalidade VALUES (14, '/audiostore-programacao', 'Audiostore Programações' , 'fa-file-archive-o' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (14, '/audiostore-programacao', 'Programação' , 'fa-file-archive-o' , 0 , 1 ); 
     INSERT INTO funcionalidade VALUES (15, '/audiostore-programacao/cadastrar', 'Formulário de cadastro audiostore programação' , 'fa-file-archive-o'    , 14 , 1 ); 
     INSERT INTO funcionalidade VALUES (16, '/audiostore-programacao/atualizar/{id}', 'Formulário de atualização do audiostore programação' , 'fa-file-archive-o' , 14 , 0 ); 
     INSERT INTO funcionalidade VALUES (17, '/audiostore-programacao/remover/{id}', 'Formulário de remoção do audiostore programação' , 'fa-file-archive-o'   , 14 , 0 ); 
     INSERT INTO funcionalidade VALUES (18, '/audiostore-programacao/download-exp/{id}', 'Download do arquivo exp' , 'fa-file-archive-o'   , 14 , 0 ); 
     
-    INSERT INTO funcionalidade VALUES (19, '/voz', 'Vozes' , 'fa-bullhorn' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (19, '/voz', 'Voz' , 'fa-bullhorn' , 0 , 1 ); 
     INSERT INTO funcionalidade VALUES (20, '/voz/cadastrar', 'Formulário de cadastro voz' , 'fa-bullhorn'    , 19 , 1 ); 
     INSERT INTO funcionalidade VALUES (21, '/voz/atualizar/{id}', 'Formulário de atualização da voz' , 'fa-bullhorn' , 19 , 0 ); 
     INSERT INTO funcionalidade VALUES (22, '/voz/remover/{id}', 'Formulário de remoção da voz' , 'fa-bullhorn'   , 19 , 0 ); 
+    
+    INSERT INTO funcionalidade VALUES (23, '/audiostore-gravadora', 'Gravadora' , 'fa-youtube-play' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (24, '/audiostore-gravadora/cadastrar', 'Formulário de cadastro gravadora' , 'fa-youtube-play'    , 23 , 1 ); 
+    INSERT INTO funcionalidade VALUES (25, '/audiostore-gravadora/atualizar/{id}', 'Formulário de atualização da gravadora' , 'fa-youtube-play' , 23 , 0 ); 
+    INSERT INTO funcionalidade VALUES (26, '/audiostore-gravadora/remover/{id}', 'Formulário de remoção da gravadora' , 'fa-youtube-play'   , 23 , 0 ); 
+    
+    INSERT INTO funcionalidade VALUES (27, '/audiostore-musica', 'Música' , 'fa-volume-up' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (28, '/audiostore-musica/cadastrar', 'Formulário de cadastro música' , 'fa-volume-up'    , 27 , 1 ); 
+    INSERT INTO funcionalidade VALUES (29, '/audiostore-musica/atualizar/{id}', 'Formulário de atualização da música' , 'fa-volume-up' , 27 , 0 ); 
+    INSERT INTO funcionalidade VALUES (30, '/audiostore-musica/remover/{id}', 'Formulário de remoção da música' , 'fa-volume-up'   , 27 , 0 ); 
 
     insert into perfil_funcionalidade select null, idfuncionalidade , idperfil from perfil , funcionalidade;
     insert into perfil_usuario select null, idperfil , idusuario from perfil , usuario;

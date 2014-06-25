@@ -25,11 +25,7 @@ public class AudiostoreMusicaBean extends Bean {
     @ManyToOne
     @JoinColumn(name = "cliente" , nullable = false)
     private ClienteBean cliente;
-    
-    @ManyToOne
-    @JoinColumn(name = "audiostore_comercial_sh" , nullable = false)
-    private AudiostoreComercialShBean audiostoreComercialSh;
-    
+
     @ManyToOne
     @JoinColumn(name = "categoria1" , nullable = false)
     private AudiostoreCategoriaBean categoria1;
@@ -65,10 +61,10 @@ public class AudiostoreMusicaBean extends Bean {
     private Date dataVencimentoCrossover;
     
     @Column(name = "dia_execucao1" , nullable = false)
-    private Integer dia_Execucao1;
+    private Integer diaExecucao1;
     
     @Column(name = "dia_execucao2" , nullable = false)
-    private Integer dia_Execucao2;
+    private Integer diaExecucao2;
     
     @Column(name = "afinidade1" , length = 30, nullable = false)
     private String afinidade1;
@@ -155,14 +151,6 @@ public class AudiostoreMusicaBean extends Bean {
         this.cliente = cliente;
     }
 
-    public AudiostoreComercialShBean getAudiostoreComercialSh() {
-        return audiostoreComercialSh;
-    }
-
-    public void setAudiostoreComercialSh(AudiostoreComercialShBean audiostoreComercialSh) {
-        this.audiostoreComercialSh = audiostoreComercialSh;
-    }
-
     public AudiostoreCategoriaBean getCategoria1() {
         return categoria1;
     }
@@ -243,20 +231,20 @@ public class AudiostoreMusicaBean extends Bean {
         this.dataVencimentoCrossover = dataVencimentoCrossover;
     }
 
-    public Integer getDia_Execucao1() {
-        return dia_Execucao1;
+    public Integer getDiaExecucao1() {
+        return diaExecucao1;
     }
 
-    public void setDia_Execucao1(Integer dia_Execucao1) {
-        this.dia_Execucao1 = dia_Execucao1;
+    public void setDiaExecucao1(Integer diaExecucao1) {
+        this.diaExecucao1 = diaExecucao1;
     }
 
-    public Integer getDia_Execucao2() {
-        return dia_Execucao2;
+    public Integer getDiaExecucao2() {
+        return diaExecucao2;
     }
 
-    public void setDia_Execucao2(Integer dia_Execucao2) {
-        this.dia_Execucao2 = dia_Execucao2;
+    public void setDiaExecucao2(Integer diaExecucao2) {
+        this.diaExecucao2 = diaExecucao2;
     }
 
     public String getAfinidade1() {

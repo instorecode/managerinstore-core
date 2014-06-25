@@ -477,17 +477,155 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `instore`.`contato_cliente` (
   `idcontato_cliente` INT NOT NULL AUTO_INCREMENT,
-  `iddados_cliene` INT NOT NULL,
+  `iddados_cliente` INT NOT NULL,
   `nome` VARCHAR(255) NULL,
   `principal` TINYINT(1) NOT NULL,
   `email` VARCHAR(255) NULL,
   `tel` VARCHAR(20) NULL,
   `setor` VARCHAR(255) NULL,
   PRIMARY KEY (`idcontato_cliente`),
-  INDEX `fk_contato_cliente_dados_cliene1_idx` (`iddados_cliene` ASC),
-  CONSTRAINT `fk_contato_cliente_dados_cliene1`
-    FOREIGN KEY (`iddados_cliene`)
+  INDEX `fk_contato_cliente_dados_cliente1_idx` (`iddados_cliente` ASC),
+  CONSTRAINT `fk_contato_cliente_dados_cliente1`
+    FOREIGN KEY (`iddados_cliente`)
     REFERENCES `instore`.`dados_cliente` (`iddados_cliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `instore`.`audiostoregravadora`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `instore`.`audiostoregravadora` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `instore`.`audiostore_musica`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `instore`.`audiostore_musica` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `gravadora` INT NOT NULL,
+  `categoria1` SMALLINT NOT NULL,
+  `categoria2` SMALLINT NULL,
+  `categoria3` SMALLINT NULL,
+  `varchar` VARCHAR(30) NOT NULL,
+  `interprete` VARCHAR(30) NOT NULL,
+  `tipo_interprete` SMALLINT NOT NULL,
+  `titulo` VARCHAR(30) NOT NULL,
+  `cut` TINYINT(1) NOT NULL,
+  `crossover` TINYINT(1) NOT NULL,
+  `data_vencimento_crossover` DATE NOT NULL,
+  `dias_execucao1` INT(11) NOT NULL,
+  `dias_execucao2` INT(11) NOT NULL,
+  `afinidade1` VARCHAR(30) NOT NULL,
+  `afinidade2` VARCHAR(30) NOT NULL,
+  `afinidade3` VARCHAR(30) NOT NULL,
+  `afinidade4` VARCHAR(30) NOT NULL,
+  `ano_gravacao` INT(11) NOT NULL,
+  `velocidade` SMALLINT NOT NULL,
+  `data` DATE NOT NULL,
+  `ultima_execucao` DATETIME NOT NULL,
+  `ultima_execucao_data` DATE NOT NULL,
+  `tempo_total` TIME NOT NULL,
+  `random` INT(11) NOT NULL,
+  `qtde_player` INT(11) NOT NULL,
+  `qtde` INT(11) NOT NULL,
+  `data_vencimento` DATE NOT NULL,
+  `frame_inicio` INT(11) NOT NULL,
+  `frame_final` INT(11) NOT NULL,
+  `msg` VARCHAR(40) NOT NULL,
+  `sem_som` TINYINT(1) NOT NULL,
+  `super_crossover` TINYINT(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_audiostore_musica_audiostore_categoria1_idx` (`categoria1` ASC),
+  INDEX `fk_audiostore_musica_audiostore_categoria2_idx` (`categoria2` ASC),
+  INDEX `fk_audiostore_musica_audiostore_categoria3_idx` (`categoria3` ASC),
+  INDEX `fk_audiostore_musica_audiostoregravadora1_idx` (`gravadora` ASC),
+  CONSTRAINT `fk_audiostore_musica_audiostore_categoria1`
+    FOREIGN KEY (`categoria1`)
+    REFERENCES `instore`.`audiostore_categoria` (`codigo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_audiostore_musica_audiostore_categoria2`
+    FOREIGN KEY (`categoria2`)
+    REFERENCES `instore`.`audiostore_categoria` (`codigo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_audiostore_musica_audiostore_categoria3`
+    FOREIGN KEY (`categoria3`)
+    REFERENCES `instore`.`audiostore_categoria` (`codigo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_audiostore_musica_audiostoregravadora1`
+    FOREIGN KEY (`gravadora`)
+    REFERENCES `instore`.`audiostoregravadora` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `instore`.`audiostore_comercial_sh`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `instore`.`audiostore_comercial_sh` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `semana` VARCHAR(7) NULL,
+  `horario` TIME NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `instore`.`audiostore_comercial`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `instore`.`audiostore_comercial` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cliente` INT NOT NULL,
+  `categoria` SMALLINT NOT NULL,
+  `audiostore_comercial_sh` INT NOT NULL,
+  `arquivo` VARCHAR(30) NULL,
+  `titulo` VARCHAR(30) NULL,
+  `tipo_interprete` SMALLINT NULL,
+  `periodo_inicial` DATE NULL,
+  `periodo_final` DATE NULL,
+  `tipo_horario` SMALLINT NULL,
+  `dias_semana` VARCHAR(7) NULL,
+  `dias_alternados` TINYINT(1) NULL,
+  `data` DATE NULL,
+  `ultima_execucao` DATETIME NULL,
+  `tempo_total` TIME NULL,
+  `random` INT(11) NULL,
+  `qtde_player` INT(11) NULL,
+  `qtde` INT(11) NULL,
+  `data_vencimento` DATE NULL,
+  `dependencia1` VARCHAR(30) NULL,
+  `dependencia2` VARCHAR(30) NULL,
+  `dependencia3` VARCHAR(30) NULL,
+  `frame_inicio` INT(11) NULL,
+  `frame_final` INT(11) NULL,
+  `msg` VARCHAR(40) NULL,
+  `sem_som` TINYINT(1) NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_audiostore_comercial_cliente1_idx` (`cliente` ASC),
+  INDEX `fk_audiostore_comercial_audiostore_categoria1_idx` (`categoria` ASC),
+  INDEX `fk_audiostore_comercial_audiostore_comercial_sh1_idx` (`audiostore_comercial_sh` ASC),
+  CONSTRAINT `fk_audiostore_comercial_cliente1`
+    FOREIGN KEY (`cliente`)
+    REFERENCES `instore`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_audiostore_comercial_audiostore_categoria1`
+    FOREIGN KEY (`categoria`)
+    REFERENCES `instore`.`audiostore_categoria` (`codigo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_audiostore_comercial_audiostore_comercial_sh1`
+    FOREIGN KEY (`audiostore_comercial_sh`)
+    REFERENCES `instore`.`audiostore_comercial_sh` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

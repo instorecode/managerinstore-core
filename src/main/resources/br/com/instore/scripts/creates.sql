@@ -512,7 +512,7 @@ CREATE TABLE IF NOT EXISTS `instore`.`audiostore_musica` (
   `categoria1` SMALLINT NOT NULL,
   `categoria2` SMALLINT NULL,
   `categoria3` SMALLINT NULL,
-  `varchar` VARCHAR(30) NOT NULL,
+  `arquivo` VARCHAR(30) NOT NULL,
   `interprete` VARCHAR(30) NOT NULL,
   `tipo_interprete` SMALLINT NOT NULL,
   `titulo` VARCHAR(30) NOT NULL,

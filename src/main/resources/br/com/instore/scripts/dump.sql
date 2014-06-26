@@ -98,7 +98,7 @@
     INSERT INTO funcionalidade VALUES (30, '/audiostore-musica/remover/{id}', 'Formulário de remoção da música' , 'fa-volume-up'   , 27 , 0 ); 
     INSERT INTO funcionalidade VALUES (31, '/audiostore-musica/download-exp/{id}', 'Download do arquivo exp' , 'fa-volume-up'   , 27 , 0 ); 
 
-    INSERT INTO funcionalidade VALUES (32, '/configuracao-interna', 'Configurações Internas do Sistema' , 'fa-cog' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (32, '/configuracao-interna', 'Configurações' , 'fa-cog' , 0 , 1 ); 
 
     INSERT INTO funcionalidade VALUES (33, '/audiostore-comercial', 'Comercial' , 'fa-tag' , 0 , 1 ); 
     INSERT INTO funcionalidade VALUES (34, '/audiostore-comercial/cadastrar', 'Formulário de cadastro comercial' , 'fa-tag'    , 33 , 1 ); 

@@ -100,5 +100,21 @@
 
     INSERT INTO funcionalidade VALUES (32, '/configuracao-interna', 'Configurações Internas do Sistema' , 'fa-cog' , 0 , 1 ); 
 
+    INSERT INTO funcionalidade VALUES (33, '/audiostore-comercial', 'Comercial' , 'fa-tag' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (34, '/audiostore-comercial/cadastrar', 'Formulário de cadastro comercial' , 'fa-tag'    , 33 , 1 ); 
+    INSERT INTO funcionalidade VALUES (35, '/audiostore-comercial/atualizar/{id}', 'Formulário de atualização do comercial' , 'fa-tag' , 33 , 0 ); 
+    INSERT INTO funcionalidade VALUES (36, '/audiostore-comercial/remover/{id}', 'Formulário de remoção do comercial' , 'fa-tag'   , 33 , 0 ); 
+    INSERT INTO funcionalidade VALUES (37, '/audiostore-comercial/download-exp/{id}', 'Download do arquivo exp' , 'fa-tag'   , 33 , 0 ); 
+
+    INSERT INTO funcionalidade VALUES (38, '/perfil', 'Perfil' , 'fa-sitemap' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (39, '/perfil/cadastrar', 'Formulário de cadastro perfil' , 'fa-sitemap'    , 38 , 1 ); 
+    INSERT INTO funcionalidade VALUES (40, '/perfil/atualizar/{id}', 'Formulário de atualização do perfil' , 'fa-sitemap' , 38 , 0 ); 
+    INSERT INTO funcionalidade VALUES (41, '/perfil/remover/{id}', 'Formulário de remoção do perfil' , 'fa-sitemap'   , 38 , 0 ); 
+
+    INSERT INTO funcionalidade VALUES (42, '/usuario', 'Usuário' , 'fa-user' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (43, '/usuario/cadastrar', 'Formulário de cadastro usuario' , 'fa-user'    , 42 , 1 ); 
+    INSERT INTO funcionalidade VALUES (44, '/usuario/atualizar/{id}', 'Formulário de atualização do usuario' , 'fa-user' , 42 , 0 ); 
+    INSERT INTO funcionalidade VALUES (45, '/usuario/remover/{id}', 'Formulário de remoção do usuario' , 'fa-user'   , 42 , 0 ); 
+
     insert into perfil_funcionalidade select null, idfuncionalidade , idperfil from perfil , funcionalidade;
     insert into perfil_usuario select null, idperfil , idusuario from perfil , usuario;

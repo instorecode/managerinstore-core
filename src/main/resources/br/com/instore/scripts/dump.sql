@@ -8,6 +8,7 @@
     -- show processlist;
 
     -- empresa origem (INSTORE)
+    INSERT INTO config_app VALUES (1, '/', '/', '/');
     INSERT INTO cliente  VALUES (1, null , 0 , 'Instore', 1 , 1 , 1);
 
     --  usuario padrão
@@ -95,6 +96,9 @@
     INSERT INTO funcionalidade VALUES (28, '/audiostore-musica/cadastrar', 'Formulário de cadastro música' , 'fa-volume-up'    , 27 , 1 ); 
     INSERT INTO funcionalidade VALUES (29, '/audiostore-musica/atualizar/{id}', 'Formulário de atualização da música' , 'fa-volume-up' , 27 , 0 ); 
     INSERT INTO funcionalidade VALUES (30, '/audiostore-musica/remover/{id}', 'Formulário de remoção da música' , 'fa-volume-up'   , 27 , 0 ); 
+    INSERT INTO funcionalidade VALUES (31, '/audiostore-musica/download-exp/{id}', 'Download do arquivo exp' , 'fa-volume-up'   , 27 , 0 ); 
+
+    INSERT INTO funcionalidade VALUES (32, '/configuracao-interna', 'Configurações Internas do Sistema' , 'fa-cog' , 0 , 1 ); 
 
     insert into perfil_funcionalidade select null, idfuncionalidade , idperfil from perfil , funcionalidade;
     insert into perfil_usuario select null, idperfil , idusuario from perfil , usuario;

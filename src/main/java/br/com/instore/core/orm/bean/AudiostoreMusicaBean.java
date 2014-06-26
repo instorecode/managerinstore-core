@@ -22,9 +22,6 @@ public class AudiostoreMusicaBean extends Bean {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     
-    @ManyToOne
-    @JoinColumn(name = "cliente" , nullable = false)
-    private ClienteBean cliente;
 
     @ManyToOne
     @JoinColumn(name = "categoria1" , nullable = false)
@@ -37,6 +34,10 @@ public class AudiostoreMusicaBean extends Bean {
     @ManyToOne
     @JoinColumn(name = "categoria3" , nullable = true)
     private AudiostoreCategoriaBean categoria3;
+    
+    @ManyToOne
+    @JoinColumn(name = "gravadora" , nullable = true)
+    private AudiostoreGravadoraBean gravadora;
     
     @Column(name = "arquivo" , length = 30, nullable = false)
     private String arquivo;
@@ -60,11 +61,11 @@ public class AudiostoreMusicaBean extends Bean {
     @Column(name = "data_vencimento_crossover" , nullable = false)
     private Date dataVencimentoCrossover;
     
-    @Column(name = "dia_execucao1" , nullable = false)
-    private Integer diaExecucao1;
+    @Column(name = "dias_execucao1" , nullable = false)
+    private Integer diasExecucao1;
     
-    @Column(name = "dia_execucao2" , nullable = false)
-    private Integer diaExecucao2;
+    @Column(name = "dias_execucao2" , nullable = false)
+    private Integer diasExecucao2;
     
     @Column(name = "afinidade1" , length = 30, nullable = false)
     private String afinidade1;
@@ -93,8 +94,8 @@ public class AudiostoreMusicaBean extends Bean {
     private Date ultimaExecucao;
     
     @Temporal(TemporalType.DATE)
-    @Column(name = "ultima_execucao_dia" , nullable = false)
-    private Date ultimaExecucaoDia;
+    @Column(name = "ultima_execucao_data" , nullable = false)
+    private Date ultimaExecucaoData;
     
     @Temporal(TemporalType.TIME)
     @Column(name = "tempo_total" , nullable = false)
@@ -143,14 +144,6 @@ public class AudiostoreMusicaBean extends Bean {
         this.id = id;
     }
 
-    public ClienteBean getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(ClienteBean cliente) {
-        this.cliente = cliente;
-    }
-
     public AudiostoreCategoriaBean getCategoria1() {
         return categoria1;
     }
@@ -173,6 +166,14 @@ public class AudiostoreMusicaBean extends Bean {
 
     public void setCategoria3(AudiostoreCategoriaBean categoria3) {
         this.categoria3 = categoria3;
+    }
+
+    public AudiostoreGravadoraBean getGravadora() {
+        return gravadora;
+    }
+
+    public void setGravadora(AudiostoreGravadoraBean gravadora) {
+        this.gravadora = gravadora;
     }
 
     public String getArquivo() {
@@ -231,20 +232,20 @@ public class AudiostoreMusicaBean extends Bean {
         this.dataVencimentoCrossover = dataVencimentoCrossover;
     }
 
-    public Integer getDiaExecucao1() {
-        return diaExecucao1;
+    public Integer getDiasExecucao1() {
+        return diasExecucao1;
     }
 
-    public void setDiaExecucao1(Integer diaExecucao1) {
-        this.diaExecucao1 = diaExecucao1;
+    public void setDiasExecucao1(Integer diasExecucao1) {
+        this.diasExecucao1 = diasExecucao1;
     }
 
-    public Integer getDiaExecucao2() {
-        return diaExecucao2;
+    public Integer getDiasExecucao2() {
+        return diasExecucao2;
     }
 
-    public void setDiaExecucao2(Integer diaExecucao2) {
-        this.diaExecucao2 = diaExecucao2;
+    public void setDiasExecucao2(Integer diasExecucao2) {
+        this.diasExecucao2 = diasExecucao2;
     }
 
     public String getAfinidade1() {
@@ -311,12 +312,12 @@ public class AudiostoreMusicaBean extends Bean {
         this.ultimaExecucao = ultimaExecucao;
     }
 
-    public Date getUltimaExecucaoDia() {
-        return ultimaExecucaoDia;
+    public Date getUltimaExecucaoData() {
+        return ultimaExecucaoData;
     }
 
-    public void setUltimaExecucaoDia(Date ultimaExecucaoDia) {
-        this.ultimaExecucaoDia = ultimaExecucaoDia;
+    public void setUltimaExecucaoData(Date ultimaExecucaoData) {
+        this.ultimaExecucaoData = ultimaExecucaoData;
     }
 
     public Date getTempoTotal() {

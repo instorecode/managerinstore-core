@@ -389,9 +389,11 @@ ENGINE = InnoDB;
 -- Table `instore`.`config_app`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `instore`.`config_app` (
-  `idconfig_app` INT NOT NULL,
+  `id` INT NOT NULL,
   `data_path` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`idconfig_app`))
+  `audiostore_musica_dir_origem` VARCHAR(255) NOT NULL,
+  `audiostore_musica_dir_destino` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 

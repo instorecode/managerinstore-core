@@ -17,26 +17,31 @@ import javax.persistence.Table;
 @Table(name="config_app")
 public class ConfigAppBean extends Bean {
     @Id
-    @Column( name = "idconfig_app" , nullable = false)
-    private Integer configApp;
+    @Column( name = "id" , nullable = false)
+    private Integer id;
     
     @Column( name = "data_path" , nullable = false , length = 255)
     private String dataPath;
+    
+    @Column( name = "audiostore_musica_dir_origem" , nullable = false , length = 255)
+    private String audiostoreMusicaDirOrigem;
+    
+    @Column( name = "audiostore_musica_dir_destino" , nullable = false , length = 255)
+    private String audiostoreMusicaDirDestino;
 
     public ConfigAppBean() {
     }
 
-    public ConfigAppBean(Integer configApp, String dataPath) {
-        this.configApp = configApp;
-        this.dataPath = dataPath;
+    public ConfigAppBean(Integer id) {
+        this.id = id;
     }
 
-    public Integer getConfigApp() {
-        return configApp;
+    public Integer getId() {
+        return id;
     }
 
-    public void setConfigApp(Integer configApp) {
-        this.configApp = configApp;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getDataPath() {
@@ -45,5 +50,21 @@ public class ConfigAppBean extends Bean {
 
     public void setDataPath(String dataPath) {
         this.dataPath = dataPath;
+    }
+
+    public String getAudiostoreMusicaDirOrigem() {
+        return audiostoreMusicaDirOrigem;
+    }
+
+    public void setAudiostoreMusicaDirOrigem(String audiostoreMusicaDirOrigem) {
+        this.audiostoreMusicaDirOrigem = audiostoreMusicaDirOrigem;
+    }
+
+    public String getAudiostoreMusicaDirDestino() {
+        return audiostoreMusicaDirDestino;
+    }
+
+    public void setAudiostoreMusicaDirDestino(String audiostoreMusicaDirDestino) {
+        this.audiostoreMusicaDirDestino = audiostoreMusicaDirDestino;
     }
 }

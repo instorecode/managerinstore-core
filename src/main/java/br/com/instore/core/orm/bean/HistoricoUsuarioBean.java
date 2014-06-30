@@ -18,7 +18,7 @@ import javax.persistence.TemporalType;
 @Auditor
 @Entity
 @Table(name = "historico_usuario")
-public class HistoricoUsuario extends Bean {
+public class HistoricoUsuarioBean extends Bean {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,21 +26,21 @@ public class HistoricoUsuario extends Bean {
     private Integer idhistoricoUsuario;
     
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "login", nullable = false)
+    @Column(name = "login", nullable = true)
     private Date login;
     
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "logout", nullable = false)
+    @Column(name = "logout", nullable = true)
     private Date logout;
 
     @ManyToOne()
     @JoinColumn(name = "idusuario" ,nullable = false)
     private UsuarioBean usuario;
     
-    public HistoricoUsuario() {
+    public HistoricoUsuarioBean() {
     }
 
-    public HistoricoUsuario(Integer idhistoricoUsuario) {
+    public HistoricoUsuarioBean(Integer idhistoricoUsuario) {
         this.idhistoricoUsuario = idhistoricoUsuario;
     }
 

@@ -441,8 +441,8 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `instore`.`historico_usuario` (
   `idhistorico_usuario` INT NOT NULL AUTO_INCREMENT,
   `idusuario` INT NOT NULL,
-  `login` DATETIME NOT NULL,
-  `logout` DATETIME NOT NULL,
+  `login` DATETIME NULL,
+  `logout` DATETIME NULL,
   PRIMARY KEY (`idhistorico_usuario`),
   INDEX `fk_historico_usuario_usuario1_idx` (`idusuario` ASC),
   CONSTRAINT `fk_historico_usuario_usuario1`

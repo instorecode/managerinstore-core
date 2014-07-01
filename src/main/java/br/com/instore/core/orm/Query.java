@@ -751,7 +751,7 @@ public class Query {
         return obs;
     }
 
-    public void executeSQL(DTO object) {
+    public void executeSQL(Each object) {
         try {
             List<String> parts1 = Arrays.asList(querySQL.split("from"));
             String fieldsWithSeparator = parts1.get(0).replace("select", "").trim();
@@ -782,14 +782,12 @@ public class Query {
             }
 
             List objectList = dao.session.createSQLQuery(querySQL).list();
-
             for (Object objectItem : objectList) {
                 Object[] objectArray = (Object[]) objectItem;
                 for (int i = 0; i < objectArray.length; i++) {
                     Object value = objectArray[i];
-                    String column = fields.get(i).toString();
-
-                    Field field = object.getClass().getDeclaredField(column);
+                    
+                    Field field = object.getClass().getDeclaredFields()[i];
                     field.setAccessible(true);
                     field.set(object, field.getType().cast(value));
                 }

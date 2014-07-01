@@ -14,12 +14,12 @@ import javax.persistence.Table;
 
 @Auditor
 @Entity
-@Table(name = "usuario_empresa")
+@Table(name = "usuario_cliente")
 public class UsuarioClienteBean extends Bean {
     @Id
-    @Column(name = "idusuario_empresa", nullable = false)
+    @Column(name = "idusuario_cliente", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idusuarioEmpresa;
+    private Integer idusuarioCliente;
     
     @ManyToOne()
     @JoinColumn(name = "cliente" ,nullable = false)
@@ -32,12 +32,12 @@ public class UsuarioClienteBean extends Bean {
     public UsuarioClienteBean() {
     }
 
-    public UsuarioClienteBean(Integer idusuarioEmpresa) {
-        this.idusuarioEmpresa = idusuarioEmpresa;
+    public Integer getIdusuarioCliente() {
+        return idusuarioCliente;
     }
 
-    public Integer getIdusuarioEmpresa() {
-        return idusuarioEmpresa;
+    public void setIdusuarioCliente(Integer idusuarioCliente) {
+        this.idusuarioCliente = idusuarioCliente;
     }
 
     public ClienteBean getCliente() {

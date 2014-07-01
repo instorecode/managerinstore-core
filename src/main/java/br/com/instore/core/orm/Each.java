@@ -1,5 +1,5 @@
 package br.com.instore.core.orm;
 
-public interface DTO {
+public interface Each {
     public void each();
 }

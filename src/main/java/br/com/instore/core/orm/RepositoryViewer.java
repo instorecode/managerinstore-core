@@ -31,7 +31,7 @@ public class RepositoryViewer {
     protected void verifySession() {
         try {
             if (session == null) {
-                session = SessionFactoryUtils.openSession();
+                session = SessionFactoryUtils.getInstance().session();
                 session.beginTransaction();
                 SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy.hh.mm.ss");
                 System.out.println("SESSION-OPEN-INSTORE-" + sdf.format(new Date()));
@@ -39,7 +39,6 @@ public class RepositoryViewer {
                 if (!session.isOpen() || !session.isConnected()) {
                     session = session.getSessionFactory().openSession();
                     session.beginTransaction();
-
                     SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy.hh.mm.ss");
                     System.out.println("SESSION-REOPEN-INSTORE-" + sdf.format(new Date()));
                 }

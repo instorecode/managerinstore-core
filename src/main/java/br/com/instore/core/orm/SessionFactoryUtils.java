@@ -11,25 +11,46 @@ import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
+
 public class SessionFactoryUtils {
 
-    public static Session openSession() {
-        Configuration configuration = new Configuration();
-        configuration.addProperties(properties());
-        
-        for(Class<?> klass : beans()) {
-            configuration.addAnnotatedClass(klass);
-        }
-        
-        ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry(); 
-        return configuration.buildSessionFactory(serviceRegistry).openSession();
+    private Session sessionLocal;
+    private static SessionFactoryUtils instance;
+
+    private SessionFactoryUtils() {
     }
 
-    protected static List<Class<?>> beans() {
+    public static SessionFactoryUtils getInstance() {
+        if(null == instance) {
+            instance = new SessionFactoryUtils();
+        }
+        return instance;
+    }
+
+    public Session session(){
+        if (null == sessionLocal) {
+            Configuration configuration = new Configuration();
+            configuration.addProperties(properties());
+
+            for (Class<?> klass : beans()) {
+                configuration.addAnnotatedClass(klass);
+            }
+
+            ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
+            sessionLocal = configuration.buildSessionFactory(serviceRegistry).openSession();
+        } else {
+            if(!sessionLocal.isOpen()){
+                sessionLocal = sessionLocal.getSessionFactory().openSession();
+            }
+        }
+        return sessionLocal;
+    }
+
+    private List<Class<?>> beans() {
         return CPScanner.scanClasses(new PackageNameFilter("br.com.instore.core.orm.bean"));
     }
 
-    protected static Properties properties() {
+    private Properties properties() {
         Properties properties = new Properties();
         // padrao
         properties.put("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
@@ -38,7 +59,7 @@ public class SessionFactoryUtils {
         properties.put("hibernate.connection.username", "root");
         properties.put("hibernate.connection.password", "");
         properties.put("javax.persistence.validation.mode", "none");
-        
+
         // pool
         properties.put("hibernate.connection.provider_class", "org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider");
         properties.put("hibernate.connection.pool_size", 1);
@@ -46,10 +67,10 @@ public class SessionFactoryUtils {
         properties.put("c3p0.max_size", 50);
         properties.put("c3p0.max_statements", 0);
         properties.put("c3p0.idle_test_period", 100);
-        properties.put("c3p0.timeout", (60*30));
+        properties.put("c3p0.timeout", (60 * 30));
         properties.put("c3p0.autoCommitOnClose", false);
         properties.put("c3p0.acquire_increment", 5);
-        
+
         return properties;
     }
 }

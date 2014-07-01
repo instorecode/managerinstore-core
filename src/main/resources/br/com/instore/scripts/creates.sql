@@ -351,6 +351,8 @@ CREATE TABLE IF NOT EXISTS `instore`.`audiostore_programacao` (
   `sexta_feira` TINYINT(1) NOT NULL,
   `sabado` TINYINT(1) NOT NULL,
   `domingo` TINYINT(1) NOT NULL,
+  `conteudo` VARCHAR(70) NOT NULL,
+  `loopback` TINYINT(1) NOT NULL,
   INDEX `fk_audiostore_programacao_empresa1_idx` (`idcliente` ASC),
   PRIMARY KEY (`id`),
   UNIQUE INDEX `descricao_UNIQUE` (`descricao` ASC),

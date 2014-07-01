@@ -70,6 +70,12 @@ public class AudiostoreProgramacaoBean extends Bean {
     @Column( name = "domingo" , nullable = false)
     private Boolean domingo;
     
+    @Column( name = "conteudo" , nullable = false, length = 70)
+    private String conteudo;
+    
+    @Column( name = "loopback" , nullable = false)
+    private Boolean loopback;
+    
     public AudiostoreProgramacaoBean() {
     }
 
@@ -187,5 +193,21 @@ public class AudiostoreProgramacaoBean extends Bean {
 
     public void setDomingo(Boolean domingo) {
         this.domingo = domingo;
+    }
+
+    public String getConteudo() {
+        return conteudo;
+    }
+
+    public void setConteudo(String conteudo) {
+        this.conteudo = conteudo;
+    }
+
+    public Boolean getLoopback() {
+        return loopback;
+    }
+
+    public void setLoopback(Boolean loopback) {
+        this.loopback = loopback;
     }
 }

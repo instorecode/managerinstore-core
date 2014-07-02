@@ -573,24 +573,12 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `instore`.`audiostore_comercial_sh`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `instore`.`audiostore_comercial_sh` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `semana` VARCHAR(7) NULL,
-  `horario` TIME NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `instore`.`audiostore_comercial`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `instore`.`audiostore_comercial` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `cliente` INT NOT NULL,
   `categoria` SMALLINT NOT NULL,
-  `audiostore_comercial_sh` INT NOT NULL,
   `arquivo` VARCHAR(30) NOT NULL,
   `titulo` VARCHAR(30) NOT NULL,
   `tipo_interprete` SMALLINT NOT NULL,
@@ -616,7 +604,6 @@ CREATE TABLE IF NOT EXISTS `instore`.`audiostore_comercial` (
   PRIMARY KEY (`id`),
   INDEX `fk_audiostore_comercial_cliente1_idx` (`cliente` ASC),
   INDEX `fk_audiostore_comercial_audiostore_categoria1_idx` (`categoria` ASC),
-  INDEX `fk_audiostore_comercial_audiostore_comercial_sh1_idx` (`audiostore_comercial_sh` ASC),
   CONSTRAINT `fk_audiostore_comercial_cliente1`
     FOREIGN KEY (`cliente`)
     REFERENCES `instore`.`cliente` (`idcliente`)
@@ -626,10 +613,23 @@ CREATE TABLE IF NOT EXISTS `instore`.`audiostore_comercial` (
     FOREIGN KEY (`categoria`)
     REFERENCES `instore`.`audiostore_categoria` (`codigo`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_audiostore_comercial_audiostore_comercial_sh1`
-    FOREIGN KEY (`audiostore_comercial_sh`)
-    REFERENCES `instore`.`audiostore_comercial_sh` (`id`)
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `instore`.`audiostore_comercial_sh`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `instore`.`audiostore_comercial_sh` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `comercial` INT NOT NULL,
+  `semana` VARCHAR(7) NOT NULL,
+  `horario` TIME NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_audiostore_comercial_sh_audiostore_comercial1_idx` (`comercial` ASC),
+  CONSTRAINT `fk_audiostore_comercial_sh_audiostore_comercial1`
+    FOREIGN KEY (`comercial`)
+    REFERENCES `instore`.`audiostore_comercial` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

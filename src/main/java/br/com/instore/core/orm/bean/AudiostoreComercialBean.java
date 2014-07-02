@@ -27,10 +27,6 @@ public class AudiostoreComercialBean extends Bean {
     private ClienteBean cliente;
     
     @ManyToOne
-    @JoinColumn(name = "audiostore_comercial_sh" , nullable = false)
-    private AudiostoreComercialShBean audiostoreComercialSh;
-    
-    @ManyToOne
     @JoinColumn(name = "categoria" , nullable = false)
     private AudiostoreCategoriaBean audiostoreCategoria;
     
@@ -127,14 +123,6 @@ public class AudiostoreComercialBean extends Bean {
 
     public void setCliente(ClienteBean cliente) {
         this.cliente = cliente;
-    }
-
-    public AudiostoreComercialShBean getAudiostoreComercialSh() {
-        return audiostoreComercialSh;
-    }
-
-    public void setAudiostoreComercialSh(AudiostoreComercialShBean audiostoreComercialSh) {
-        this.audiostoreComercialSh = audiostoreComercialSh;
     }
 
     public AudiostoreCategoriaBean getAudiostoreCategoria() {

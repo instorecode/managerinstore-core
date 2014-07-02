@@ -577,7 +577,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `instore`.`audiostore_comercial` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `cliente` INT NOT NULL,
   `categoria` SMALLINT NOT NULL,
   `arquivo` VARCHAR(30) NOT NULL,
   `titulo` VARCHAR(30) NOT NULL,
@@ -602,13 +601,7 @@ CREATE TABLE IF NOT EXISTS `instore`.`audiostore_comercial` (
   `msg` VARCHAR(40) NOT NULL,
   `sem_som` TINYINT(1) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_audiostore_comercial_cliente1_idx` (`cliente` ASC),
   INDEX `fk_audiostore_comercial_audiostore_categoria1_idx` (`categoria` ASC),
-  CONSTRAINT `fk_audiostore_comercial_cliente1`
-    FOREIGN KEY (`cliente`)
-    REFERENCES `instore`.`cliente` (`idcliente`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_audiostore_comercial_audiostore_categoria1`
     FOREIGN KEY (`categoria`)
     REFERENCES `instore`.`audiostore_categoria` (`codigo`)

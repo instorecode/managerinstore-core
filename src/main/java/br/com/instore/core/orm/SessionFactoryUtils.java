@@ -55,9 +55,10 @@ public class SessionFactoryUtils {
         // padrao
         properties.put("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
         properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
-        properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/instore?autoReconnectForPools=true");
+        properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/managerinstore?autoReconnectForPools=true");
         properties.put("hibernate.connection.username", "root");
-        properties.put("hibernate.connection.password", "");
+        properties.put("hibernate.connection.password", "instore@#");
+//        properties.put("hibernate.connection.password", "");
         properties.put("javax.persistence.validation.mode", "none");
 
         // pool

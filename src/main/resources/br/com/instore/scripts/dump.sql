@@ -122,5 +122,15 @@
     INSERT INTO funcionalidade VALUES (50, '/usuario/atualizar/{id}', 'Formulário de atualização do usuario' , 'fa-user' , 48 , 0 ); 
     INSERT INTO funcionalidade VALUES (51, '/usuario/remover/{id}', 'Formulário de remoção do usuario' , 'fa-user'   , 48 , 0 ); 
 
+    INSERT INTO funcionalidade VALUES (52, '/lancamento-entidade', 'Entidade' , 'fa-building' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (53, '/lancamento-entidade/cadastrar', 'Formulário de cadastro entidade' , 'fa-building'    , 52 , 1 ); 
+    INSERT INTO funcionalidade VALUES (54, '/lancamento-entidade/atualizar/{id}', 'Formulário de atualização do entidade' , 'fa-building' , 52 , 0 ); 
+    INSERT INTO funcionalidade VALUES (55, '/lancamento-entidade/remover/{id}', 'Formulário de remoção do entidade' , 'fa-building'   , 52 , 0 ); 
+    
+    INSERT INTO funcionalidade VALUES (56, '/lancamento', 'Lançamentos' , 'fa-user' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (57, '/lancamento/cadastrar', 'Formulário de cadastro lançamento' , 'fa-user'    , 56 , 1 ); 
+    INSERT INTO funcionalidade VALUES (58, '/lancamento/atualizar/{id}', 'Formulário de atualização do lançamento' , 'fa-user' , 56 , 0 ); 
+    INSERT INTO funcionalidade VALUES (59, '/lancamento/remover/{id}', 'Formulário de remoção do lançamento' , 'fa-user'   , 56 , 0 ); 
+
     insert into perfil_funcionalidade select null, idfuncionalidade , idperfil from perfil , funcionalidade;
     insert into perfil_usuario select null, idperfil , idusuario from perfil , usuario;

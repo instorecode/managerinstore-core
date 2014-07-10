@@ -1,5 +1,6 @@
 package br.com.instore.core.orm;
 
+import br.com.instore.core.orm.bean.UsuarioBean;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +8,12 @@ import java.util.List;
 
 public class Test2 {
     public static void main(String[] args) {
-        ItemJson root = new ItemJson();
-        loadmenu(root , 0, 0);
-        System.out.println(root);
+//        ItemJson root = new ItemJson();
+//        loadmenu(root , 0, 0);
+//        System.out.println(root);
+        System.out.println(Environment.env());
+        RepositoryViewer rv = new RepositoryViewer();
+        System.out.println(rv.query(UsuarioBean.class).findAll());
     }
     
     public static class ItemJson extends Bean {

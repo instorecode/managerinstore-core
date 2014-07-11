@@ -3,10 +3,10 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema instore
+-- Schema managerinstore
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `instore` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
-USE `instore` ;
+CREATE SCHEMA IF NOT EXISTS `managerinstore` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `managerinstore` ;
 
 -- -----------------------------------------------------
 -- Table `managerinstore`.`regiao`
@@ -623,6 +623,70 @@ CREATE TABLE IF NOT EXISTS `managerinstore`.`audiostore_comercial_sh` (
   CONSTRAINT `fk_audiostore_comercial_sh_audiostore_comercial1`
     FOREIGN KEY (`comercial`)
     REFERENCES `managerinstore`.`audiostore_comercial` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `managerinstore`.`lancamento_cnpj`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `managerinstore`.`lancamento_cnpj` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cnpj` VARCHAR(18) NOT NULL,
+  `nome` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `managerinstore`.`lancamento`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `managerinstore`.`lancamento` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `lancamento_cnpj` INT NOT NULL,
+  `usuario` INT NOT NULL,
+  `descricao` TEXT NOT NULL,
+  `valor` DECIMAL(10,2) NOT NULL,
+  `debito` TINYINT(1) NOT NULL DEFAULT 0,
+  `credito` TINYINT(1) NOT NULL DEFAULT 0,
+  `mes` DATE NOT NULL,
+  `data_fechamento` DATE NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_lancamento_lancamento_cnpj1_idx` (`lancamento_cnpj` ASC),
+  INDEX `fk_lancamento_usuario1_idx` (`usuario` ASC),
+  CONSTRAINT `fk_lancamento_lancamento_cnpj1`
+    FOREIGN KEY (`lancamento_cnpj`)
+    REFERENCES `managerinstore`.`lancamento_cnpj` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_lancamento_usuario1`
+    FOREIGN KEY (`usuario`)
+    REFERENCES `managerinstore`.`usuario` (`idusuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `managerinstore`.`lancamento_finalizado`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `managerinstore`.`lancamento_finalizado` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `lancamento` INT NOT NULL,
+  `usuario` INT NOT NULL,
+  `data` DATE NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_lancamento_finalizado_lancamento1_idx` (`lancamento` ASC),
+  INDEX `fk_lancamento_finalizado_usuario1_idx` (`usuario` ASC),
+  CONSTRAINT `fk_lancamento_finalizado_lancamento1`
+    FOREIGN KEY (`lancamento`)
+    REFERENCES `managerinstore`.`lancamento` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_lancamento_finalizado_usuario1`
+    FOREIGN KEY (`usuario`)
+    REFERENCES `managerinstore`.`usuario` (`idusuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

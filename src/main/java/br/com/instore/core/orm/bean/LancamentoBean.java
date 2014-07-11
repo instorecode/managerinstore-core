@@ -3,11 +3,14 @@ package br.com.instore.core.orm.bean;
 import br.com.instore.core.orm.Bean;
 import br.com.instore.core.orm.bean.annotation.Auditor;
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -25,22 +28,16 @@ public class LancamentoBean extends Bean {
     @Column(name = "descricao", nullable = false)
     private String descricao;
 
-    @Column(name = "loop", nullable = false)
-    private Boolean loop;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "loop_data_inicio", nullable = false)
-    private Date loopDataInicio;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "loop_data_fim", nullable = false)
-    private Date loopDataFim;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "mes", nullable = false)
     private Date mes;
 
-    @Column(name = "valor", nullable = false)
+    @Temporal(TemporalType.DATE)
+    @Column(name = "data_fechamento", nullable = true)
+    private Date datFechamento;
+
+    @Column(name = "valor", nullable = false, precision = 10, scale = 2)
     private Double valor;
 
     @Column(name = "debito", nullable = false)
@@ -48,6 +45,14 @@ public class LancamentoBean extends Bean {
 
     @Column(name = "credito", nullable = false)
     private Boolean credito;
+    
+    @ManyToOne()
+    @JoinColumn(name = "usuario" ,nullable = false)
+    private UsuarioBean usuario;
+    
+    @ManyToOne()
+    @JoinColumn(name = "lancamento_cnpj" ,nullable = false)
+    private LancamentoCnpjBean lancamentoCnpj;
 
     public LancamentoBean() {
     }
@@ -72,36 +77,20 @@ public class LancamentoBean extends Bean {
         this.descricao = descricao;
     }
 
-    public Boolean isLoop() {
-        return loop;
-    }
-
-    public void setLoop(Boolean loop) {
-        this.loop = loop;
-    }
-
-    public Date getLoopDataInicio() {
-        return loopDataInicio;
-    }
-
-    public void setLoopDataInicio(Date loopDataInicio) {
-        this.loopDataInicio = loopDataInicio;
-    }
-
-    public Date getLoopDataFim() {
-        return loopDataFim;
-    }
-
-    public void setLoopDataFim(Date loopDataFim) {
-        this.loopDataFim = loopDataFim;
-    }
-
     public Date getMes() {
         return mes;
     }
 
     public void setMes(Date mes) {
         this.mes = mes;
+    }
+
+    public Date getDatFechamento() {
+        return datFechamento;
+    }
+
+    public void setDatFechamento(Date datFechamento) {
+        this.datFechamento = datFechamento;
     }
 
     public Double getValor() {
@@ -112,7 +101,7 @@ public class LancamentoBean extends Bean {
         this.valor = valor;
     }
 
-    public Boolean isDebito() {
+    public Boolean getDebito() {
         return debito;
     }
 
@@ -120,11 +109,27 @@ public class LancamentoBean extends Bean {
         this.debito = debito;
     }
 
-    public Boolean isCredito() {
+    public Boolean getCredito() {
         return credito;
     }
 
     public void setCredito(Boolean credito) {
         this.credito = credito;
-    }    
+    }
+
+    public UsuarioBean getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioBean usuario) {
+        this.usuario = usuario;
+    }
+
+    public LancamentoCnpjBean getLancamentoCnpj() {
+        return lancamentoCnpj;
+    }
+
+    public void setLancamentoCnpj(LancamentoCnpjBean lancamentoCnpj) {
+        this.lancamentoCnpj = lancamentoCnpj;
+    }
 }

@@ -22,6 +22,9 @@ public class LancamentoCnpjBean extends Bean {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    @Column(name = "cnpj", nullable = false, length = 18)
+    private String cnpj;
+    
     @Column(name = "nome", nullable = false, length = 255)
     private String nome;
 
@@ -38,6 +41,14 @@ public class LancamentoCnpjBean extends Bean {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 
     public String getNome() {

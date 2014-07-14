@@ -53,6 +53,9 @@ public class LancamentoBean extends Bean {
     @ManyToOne()
     @JoinColumn(name = "lancamento_cnpj" ,nullable = false)
     private LancamentoCnpjBean lancamentoCnpj;
+    
+    @Column(name = "positivo", nullable = false)
+    private Boolean positivo;
 
     public LancamentoBean() {
     }
@@ -131,5 +134,13 @@ public class LancamentoBean extends Bean {
 
     public void setLancamentoCnpj(LancamentoCnpjBean lancamentoCnpj) {
         this.lancamentoCnpj = lancamentoCnpj;
+    }
+
+    public Boolean getPositivo() {
+        return positivo;
+    }
+
+    public void setPositivo(Boolean positivo) {
+        this.positivo = positivo;
     }
 }

@@ -27,6 +27,9 @@ public class LancamentoCnpjBean extends Bean {
     
     @Column(name = "nome", nullable = false, length = 255)
     private String nome;
+    
+    @Column(name = "saldo_disponivel", nullable = false, precision = 10, scale = 2)
+    private Double saldoDisponivel;
 
     public LancamentoCnpjBean() {
     }
@@ -57,5 +60,13 @@ public class LancamentoCnpjBean extends Bean {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Double getSaldoDisponivel() {
+        return saldoDisponivel;
+    }
+
+    public void setSaldoDisponivel(Double saldoDisponivel) {
+        this.saldoDisponivel = saldoDisponivel;
     }
 }

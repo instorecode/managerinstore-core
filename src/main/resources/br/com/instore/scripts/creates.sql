@@ -635,6 +635,7 @@ CREATE TABLE IF NOT EXISTS `managerinstore`.`lancamento_cnpj` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `cnpj` VARCHAR(18) NOT NULL,
   `nome` VARCHAR(255) NOT NULL,
+  `saldo_disponivel` DECIMAL(10,2) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -652,6 +653,7 @@ CREATE TABLE IF NOT EXISTS `managerinstore`.`lancamento` (
   `credito` TINYINT(1) NOT NULL DEFAULT 0,
   `mes` DATE NOT NULL,
   `data_fechamento` DATE NULL,
+  `positivo` TINYINT(1) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_lancamento_lancamento_cnpj1_idx` (`lancamento_cnpj` ASC),
   INDEX `fk_lancamento_usuario1_idx` (`usuario` ASC),

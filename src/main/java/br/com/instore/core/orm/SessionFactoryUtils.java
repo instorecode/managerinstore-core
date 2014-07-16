@@ -85,17 +85,27 @@ public class SessionFactoryUtils {
 //        }
 //        return properties;
 //    }
-    
     private Properties properties() {
         Properties properties = new Properties();
         // padrao
         properties.put("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
         properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
         properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/managerinstore?autoReconnectForPools=true");
-        properties.put("hibernate.connection.username", "root");
-        properties.put("hibernate.connection.password", "");
         properties.put("hibernate.show_sql", true);
         properties.put("javax.persistence.validation.mode", "none");
+        properties.put("hibernate.connection.username", "root");
+        properties.put("hibernate.connection.password", "instore@#");
+//        properties.put("hibernate.connection.password", "");
+
+//        if (Environment.env() == Environment.Env.DEVELOPMENT) {
+//            properties.put("hibernate.connection.username", "root");
+//            properties.put("hibernate.connection.password", "");
+//        } else {
+//            properties.put("hibernate.connection.username", "root");
+//            properties.put("hibernate.connection.password", "instore@#");
+//        }
+
+
 
         // pool
         properties.put("hibernate.connection.provider_class", "org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider");

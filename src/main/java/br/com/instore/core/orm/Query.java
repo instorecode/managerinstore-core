@@ -3,6 +3,7 @@ package br.com.instore.core.orm;
 import br.com.instore.core.orm.bean.AuditoriaBean;
 import br.com.instore.core.orm.bean.UsuarioBean;
 import java.lang.reflect.Field;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -867,5 +868,52 @@ public class Query {
         dao.save(auditoria);
         dao.session.createSQLQuery(querySQL).executeUpdate();
         dao.finalize();
+    }
+    
+    public Long executeSQLCount() {
+        try {
+            List<String> parts1 = Arrays.asList(querySQL.split("from"));
+            String fieldsWithSeparator = parts1.get(0).replace("select", "").trim();
+            List<String> fieldsWithAS = Arrays.asList(fieldsWithSeparator.split(","));
+
+            List<String> fields = new ArrayList<String>();
+
+            for (String fwas : fieldsWithAS) {
+                if (fwas.contains(" as ")) {
+                    fields.add(Arrays.asList(fwas.split(" as ")).get(1).toString());
+                    continue;
+                }
+
+                if (fwas.contains(" ")) {
+                    List<String> fs = Arrays.asList(fwas.split(" "));
+                    if (fs.size() > 1) {
+                        fields.add(fs.get(fs.size() - 1).toString().trim());
+                    } else {
+                        fields.add(fwas.trim());
+                    }
+                    continue;
+                }
+
+                if (!fwas.contains(" as ") && !fwas.contains(" ")) {
+                    fields.add(fwas.trim().replace(" ", ""));
+                    continue;
+                }
+            }
+
+            List objectList = dao.session.createSQLQuery(querySQL).list();
+            
+            Long ret = 0L;
+
+            for (Object objectItem : objectList) {
+                BigInteger bi = (BigInteger) objectItem;
+                ret = bi.longValue();
+            }
+            
+            return ret;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return null;
     }
 }

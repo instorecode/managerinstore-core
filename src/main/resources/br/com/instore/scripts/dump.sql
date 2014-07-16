@@ -6,6 +6,8 @@
 
     -- SHOW GLOBAL STATUS like 'Threads_connected';
     -- show processlist;
+    
+    use managerinstore;
 
     -- empresa origem (INSTORE)
     INSERT INTO config_app VALUES (1, '/', '/', '/');
@@ -122,7 +124,7 @@
     INSERT INTO funcionalidade VALUES (50, '/usuario/atualizar/{id}', 'Formulário de atualização do usuario' , 'fa-user' , 48 , 0 ); 
     INSERT INTO funcionalidade VALUES (51, '/usuario/remover/{id}', 'Formulário de remoção do usuario' , 'fa-user'   , 48 , 0 ); 
 
-    INSERT INTO funcionalidade VALUES (52, '/lancamento-entidade', 'Entidade' , 'fa-building' , 0 , 1 ); 
+    INSERT INTO funcionalidade VALUES (52, '/lancamento-entidade', 'Entidade Financeira' , 'fa-building' , 0 , 1 ); 
     INSERT INTO funcionalidade VALUES (53, '/lancamento-entidade/cadastrar', 'Formulário de cadastro entidade' , 'fa-building'    , 52 , 1 ); 
     INSERT INTO funcionalidade VALUES (54, '/lancamento-entidade/atualizar/{id}', 'Formulário de atualização do entidade' , 'fa-building' , 52 , 0 ); 
     INSERT INTO funcionalidade VALUES (55, '/lancamento-entidade/remover/{id}', 'Formulário de remoção do entidade' , 'fa-building'   , 52 , 0 ); 

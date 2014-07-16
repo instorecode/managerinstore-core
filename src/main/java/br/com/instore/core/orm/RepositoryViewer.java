@@ -298,4 +298,17 @@ public class RepositoryViewer {
     public void setUsuario(UsuarioBean usuario) {
         this.usuario = usuario;
     }
+    
+    public static void main(String[] args) {
+        RepositoryViewer rv = new RepositoryViewer();
+        String q = "";
+        q = "select \n"
+                + "    count(*) as size\n"
+                + "from\n"
+                + "    perfil_funcionalidade\n"
+                + "left join perfil_usuario using(idperfil)\n"
+                + "inner join funcionalidade using(idfuncionalidade)\n"
+                + "where mapping_id = '/usuario' and idusuario = " + 1 + " \n group by idfuncionalidade";
+        System.out.println(rv.query(q).executeSQLCount());;
+    }
 }

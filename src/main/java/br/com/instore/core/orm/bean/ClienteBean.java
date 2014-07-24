@@ -40,6 +40,9 @@ public class ClienteBean extends Bean {
     @Column(name = "situacao", nullable = false)
     private Boolean situacao;
     
+    @Column(name = "faturameno_matriz", nullable = false)
+    private Boolean faturamenoMatriz;
+    
 
     public ClienteBean() {
     }
@@ -102,5 +105,13 @@ public class ClienteBean extends Bean {
 
     public void setSituacao(Boolean situacao) {
         this.situacao = situacao;
+    }
+
+    public Boolean getFaturamenoMatriz() {
+        return faturamenoMatriz;
+    }
+
+    public void setFaturamenoMatriz(Boolean faturamenoMatriz) {
+        this.faturamenoMatriz = faturamenoMatriz;
     }
 }

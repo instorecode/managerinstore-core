@@ -38,6 +38,8 @@ public class DadosBancarioBean extends Bean {
     
     @Column( name = "ultimo_documento" , nullable = false , length = 45)
     private String ultimoDocumento;
+    
+    
 
     public DadosBancarioBean() {
     }

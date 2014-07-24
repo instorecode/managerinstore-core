@@ -49,6 +49,9 @@ public class DadosClienteBean extends Bean {
     
     @Column(name = "renovacao_automatica", nullable = false)
     private Boolean renovacaoAutomatica;
+    
+    @Column( name = "valor_contrato" , nullable = true)
+    private Double valorContrato;
 
     public DadosClienteBean() {
     }
@@ -127,5 +130,13 @@ public class DadosClienteBean extends Bean {
 
     public void setRenovacaoAutomatica(Boolean renovacaoAutomatica) {
         this.renovacaoAutomatica = renovacaoAutomatica;
+    }
+
+    public Double getValorContrato() {
+        return valorContrato;
+    }
+
+    public void setValorContrato(Double valorContrato) {
+        this.valorContrato = valorContrato;
     }
 }

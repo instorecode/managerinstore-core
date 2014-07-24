@@ -64,7 +64,7 @@ public class DumpEmpresas {
                 String script2 = "INSERT INTO bairro VALUES([idbairro] , [idcidade], '[nome]' , '[rua]');";
                 String script3 = "INSERT INTO cep VALUES([idcep] , [idbairro] , '[numero]');";
                 String script4 = "INSERT INTO endereco VALUES([idendereco] , [idcep] , '[numero]' , '[complemento]');";
-                String script5 = "INSERT INTO cliente VALUES([idcliente] , [idendereco] , 0 , '[nome]' , 0 , 0 , 1);";
+                String script5 = "INSERT INTO cliente VALUES([idcliente] , [idendereco] , 1 , '[nome]' , 0 , 0 , 1);";
                 String script6 = "INSERT INTO dados_cliente VALUES([iddados_cliente] , [idcliente] , '[cnpj]' , '[razao_social]' , '[nome_fantasia]' , 0 , now() , now() , 1);";
                 String script7 = "INSERT INTO contato_cliente VALUES([idcontato_cliente] , [iddados_cliente] , '[nome]' , 0 , '[email]' , '[tel]' , '[setor]');";
                 

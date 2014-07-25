@@ -2,12 +2,15 @@ package br.com.instore.core.orm.bean;
 
 import br.com.instore.core.orm.Bean;
 import br.com.instore.core.orm.bean.annotation.Auditor;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Auditor
 @Entity
@@ -20,6 +23,10 @@ public class OcorrenciaSolucaoBean extends Bean {
     
     @Column( name = "descricao" , nullable = false)
     private String descricao;
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column( name = "prazo_resolucao" , nullable = false)
+    private Date prazoPesolucao;
 
     public OcorrenciaSolucaoBean() {
     }
@@ -42,5 +49,13 @@ public class OcorrenciaSolucaoBean extends Bean {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public Date getPrazoPesolucao() {
+        return prazoPesolucao;
+    }
+
+    public void setPrazoPesolucao(Date prazoPesolucao) {
+        this.prazoPesolucao = prazoPesolucao;
     }
 }

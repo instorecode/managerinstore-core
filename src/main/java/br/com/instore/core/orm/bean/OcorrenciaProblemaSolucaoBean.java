@@ -14,18 +14,18 @@ import javax.persistence.Table;
 
 @Auditor
 @Entity
-@Table(name="ocorrencia_orgiem")
+@Table(name="ocorrencia_problema_solucao")
 public class OcorrenciaProblemaSolucaoBean extends Bean {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column( name = "id" , nullable = false)
     private Integer id;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "ocorrencia_problema" , nullable = false)
     private OcorrenciaProblemaBean ocorrenciaProblema;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "ocorrencia_solucao" , nullable = false)
     private OcorrenciaSolucaoBean ocorrenciaSolucao;
 

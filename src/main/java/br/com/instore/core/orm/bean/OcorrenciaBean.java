@@ -31,15 +31,13 @@ public class OcorrenciaBean extends Bean {
     @Column( name = "data_cadastro" , nullable = false)
     private Date dataCadastro;
     
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ocorrencia_problema" , nullable = true)
-    private OcorrenciaProblemaBean ocorrenciaProblema;
+    @Column(name = "ocorrencia_problema" , nullable = true)
+    private Integer ocorrenciaProblema;
     
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ocorrencia_solucao" , nullable = true)
-    private OcorrenciaSolucaoBean ocorrenciaSolucao;
+    @Column(name = "ocorrencia_solucao" , nullable = true)
+    private Integer ocorrenciaSolucao;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "ocorrencia_origem" , nullable = false)
     private OcorrenciaOrigemBean ocorrenciaOrigem;
     
@@ -47,15 +45,15 @@ public class OcorrenciaBean extends Bean {
     @Column( name = "data_resolucao" , nullable = false)
     private Date dataResolucao;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "usuario_criacao" , nullable = false)
     private UsuarioBean usuarioCriacao;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "ocorrencia_prioridade" , nullable = false)
     private OcorrenciaPrioridadeBean ocorrenciaPrioridade;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "cliente" , nullable = false)
     private ClienteBean cliente;
     
@@ -64,7 +62,7 @@ public class OcorrenciaBean extends Bean {
 
     public OcorrenciaBean(Integer id) {
         this.id = id;
-    }
+    }   
 
     public Integer getId() {
         return id;
@@ -90,19 +88,19 @@ public class OcorrenciaBean extends Bean {
         this.dataCadastro = dataCadastro;
     }
 
-    public OcorrenciaProblemaBean getOcorrenciaProblema() {
+    public Integer getOcorrenciaProblema() {
         return ocorrenciaProblema;
     }
 
-    public void setOcorrenciaProblema(OcorrenciaProblemaBean ocorrenciaProblema) {
+    public void setOcorrenciaProblema(Integer ocorrenciaProblema) {
         this.ocorrenciaProblema = ocorrenciaProblema;
     }
 
-    public OcorrenciaSolucaoBean getOcorrenciaSolucao() {
+    public Integer getOcorrenciaSolucao() {
         return ocorrenciaSolucao;
     }
 
-    public void setOcorrenciaSolucao(OcorrenciaSolucaoBean ocorrenciaSolucao) {
+    public void setOcorrenciaSolucao(Integer ocorrenciaSolucao) {
         this.ocorrenciaSolucao = ocorrenciaSolucao;
     }
 

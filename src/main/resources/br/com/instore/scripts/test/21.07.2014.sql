@@ -1,4 +1,5 @@
 use managerinstore2;
+
 -- adiciona valor do contrato
 alter table dados_cliente add column valor_contrato decimal(10,2) not null default '0.0';
 

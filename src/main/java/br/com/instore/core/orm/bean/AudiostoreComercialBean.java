@@ -97,6 +97,10 @@ public class AudiostoreComercialBean extends Bean {
     
     @Column(name = "sem_som" , nullable = false)
     private Boolean semSom;
+    
+    @ManyToOne
+    @JoinColumn(name = "cliente" , nullable = false)
+    private ClienteBean cliente;
 
     public AudiostoreComercialBean() {
     }
@@ -295,5 +299,13 @@ public class AudiostoreComercialBean extends Bean {
 
     public void setSemSom(Boolean semSom) {
         this.semSom = semSom;
+    }
+
+    public ClienteBean getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ClienteBean cliente) {
+        this.cliente = cliente;
     }
 }

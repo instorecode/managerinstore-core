@@ -22,12 +22,6 @@ public class ConfigAppBean extends Bean {
     
     @Column( name = "data_path" , nullable = false , length = 255)
     private String dataPath;
-    
-    @Column( name = "audiostore_musica_dir_origem" , nullable = false , length = 255)
-    private String audiostoreMusicaDirOrigem;
-    
-    @Column( name = "audiostore_musica_dir_destino" , nullable = false , length = 255)
-    private String audiostoreMusicaDirDestino;
 
     public ConfigAppBean() {
     }
@@ -50,21 +44,5 @@ public class ConfigAppBean extends Bean {
 
     public void setDataPath(String dataPath) {
         this.dataPath = dataPath;
-    }
-
-    public String getAudiostoreMusicaDirOrigem() {
-        return audiostoreMusicaDirOrigem;
-    }
-
-    public void setAudiostoreMusicaDirOrigem(String audiostoreMusicaDirOrigem) {
-        this.audiostoreMusicaDirOrigem = audiostoreMusicaDirOrigem;
-    }
-
-    public String getAudiostoreMusicaDirDestino() {
-        return audiostoreMusicaDirDestino;
-    }
-
-    public void setAudiostoreMusicaDirDestino(String audiostoreMusicaDirDestino) {
-        this.audiostoreMusicaDirDestino = audiostoreMusicaDirDestino;
     }
 }

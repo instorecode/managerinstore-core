@@ -128,6 +128,12 @@ public class AudiostoreMusicaBean extends Bean {
     
     @Column(name = "super_crossover" , nullable = false)
     private Boolean superCrossover;
+    
+    @ManyToOne
+    @JoinColumn(name = "cliente" , nullable = false)
+    private ClienteBean cliente;
+    
+    
 
     public AudiostoreMusicaBean() {
     }
@@ -399,4 +405,13 @@ public class AudiostoreMusicaBean extends Bean {
     public void setSuperCrossover(Boolean superCrossover) {
         this.superCrossover = superCrossover;
     }
+
+    public ClienteBean getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ClienteBean cliente) {
+        this.cliente = cliente;
+    }
+    
 }

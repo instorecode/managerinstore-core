@@ -23,9 +23,6 @@ public class OcorrenciaUsuarioBean extends Bean {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column( name = "id" , nullable = false)
     private Integer id;
-    
-    @Column( name = "descricao" , nullable = false)
-    private String descricao;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ocorrencia" , nullable = true)
@@ -40,7 +37,7 @@ public class OcorrenciaUsuarioBean extends Bean {
     private Date prazoResolucao;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ocorrencia_solucao" , nullable = true)
+    @JoinColumn(name = "ocorrencia_status" , nullable = true)
     private OcorrenciaStatusBean ocorrenciaStatus;
     
     public OcorrenciaUsuarioBean() {
@@ -57,15 +54,6 @@ public class OcorrenciaUsuarioBean extends Bean {
     public void setId(Integer id) {
         this.id = id;
     }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
     public OcorrenciaBean getOcorrenciaBean() {
         return ocorrenciaBean;
     }

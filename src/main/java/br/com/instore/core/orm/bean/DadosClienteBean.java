@@ -52,6 +52,21 @@ public class DadosClienteBean extends Bean {
     
     @Column( name = "valor_contrato" , nullable = true)
     private Double valorContrato;
+    
+    @Column(name = "local_origem_musica", nullable = false , length = 255)
+    private String localOrigemMusica;
+    
+    @Column(name = "local_destino_musica", nullable = false , length = 255)
+    private String localDestinoMusica;
+    
+    @Column(name = "local_origem_spot", nullable = false , length = 255)
+    private String localOrigemSpot;
+    
+    @Column(name = "local_destino_spot", nullable = false , length = 255)
+    private String localDestinoSpot;
+    
+    @Column(name = "local_destino_exp", nullable = false , length = 255)
+    private String localDestinoExp;
 
     public DadosClienteBean() {
     }
@@ -138,5 +153,45 @@ public class DadosClienteBean extends Bean {
 
     public void setValorContrato(Double valorContrato) {
         this.valorContrato = valorContrato;
+    }
+
+    public String getLocalOrigemMusica() {
+        return localOrigemMusica;
+    }
+
+    public void setLocalOrigemMusica(String localOrigemMusica) {
+        this.localOrigemMusica = localOrigemMusica;
+    }
+
+    public String getLocalDestinoMusica() {
+        return localDestinoMusica;
+    }
+
+    public void setLocalDestinoMusica(String localDestinoMusica) {
+        this.localDestinoMusica = localDestinoMusica;
+    }
+
+    public String getLocalOrigemSpot() {
+        return localOrigemSpot;
+    }
+
+    public void setLocalOrigemSpot(String localOrigemSpot) {
+        this.localOrigemSpot = localOrigemSpot;
+    }
+
+    public String getLocalDestinoSpot() {
+        return localDestinoSpot;
+    }
+
+    public void setLocalDestinoSpot(String localDestinoSpot) {
+        this.localDestinoSpot = localDestinoSpot;
+    }
+
+    public String getLocalDestinoExp() {
+        return localDestinoExp;
+    }
+
+    public void setLocalDestinoExp(String localDestinoExp) {
+        this.localDestinoExp = localDestinoExp;
     }
 }

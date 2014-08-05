@@ -24,19 +24,15 @@ public class OcorrenciaUsuarioBean extends Bean {
     @Column( name = "id" , nullable = false)
     private Integer id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "ocorrencia" , nullable = true)
     private OcorrenciaBean ocorrenciaBean;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "usuario" , nullable = false)
     private UsuarioBean usuario;
     
-    @Temporal(TemporalType.DATE)
-    @Column( name = "prazo_resolucao" , nullable = false)
-    private Date prazoResolucao;
-    
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "ocorrencia_status" , nullable = true)
     private OcorrenciaStatusBean ocorrenciaStatus;
     
@@ -68,14 +64,6 @@ public class OcorrenciaUsuarioBean extends Bean {
 
     public void setUsuario(UsuarioBean usuario) {
         this.usuario = usuario;
-    }
-
-    public Date getPrazoResolucao() {
-        return prazoResolucao;
-    }
-
-    public void setPrazoResolucao(Date prazoResolucao) {
-        this.prazoResolucao = prazoResolucao;
     }
 
     public OcorrenciaStatusBean getOcorrenciaStatus() {

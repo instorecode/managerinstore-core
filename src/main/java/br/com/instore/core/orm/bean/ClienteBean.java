@@ -43,6 +43,12 @@ public class ClienteBean extends Bean {
     @Column(name = "faturameno_matriz", nullable = false)
     private Boolean faturamenoMatriz;
     
+    @Column(name = "codigo_interno", nullable = false)
+    private String codigoInterno;
+    
+    @Column(name = "codigo_externo", nullable = false)
+    private String codigoExterno;
+    
 
     public ClienteBean() {
     }
@@ -113,5 +119,21 @@ public class ClienteBean extends Bean {
 
     public void setFaturamenoMatriz(Boolean faturamenoMatriz) {
         this.faturamenoMatriz = faturamenoMatriz;
+    }
+
+    public String getCodigoInterno() {
+        return codigoInterno;
+    }
+
+    public void setCodigoInterno(String codigoInterno) {
+        this.codigoInterno = codigoInterno;
+    }
+
+    public String getCodigoExterno() {
+        return codigoExterno;
+    }
+
+    public void setCodigoExterno(String codigoExterno) {
+        this.codigoExterno = codigoExterno;
     }
 }

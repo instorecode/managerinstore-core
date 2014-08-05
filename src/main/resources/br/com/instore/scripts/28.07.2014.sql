@@ -18,3 +18,13 @@ alter table audiostore_musica add foreign key (cliente) references cliente(idcli
 
 alter table audiostore_comercial add column cliente integer(11) not null default 1;
 alter table audiostore_comercial add foreign key (cliente) references cliente(idcliente);
+
+alter table ocorrencia_usuario drop column prazo_resolucao;
+CREATE TABLE IF NOT EXISTS  ocorrencia_usuario_info (
+	id integer(11) not null auto_increment,
+	ocorrencia_usuario integer(11),
+	comentario text,
+	tempo time,
+	primary key(id),
+	foreign key(ocorrencia_usuario) references ocorrencia_usuario(id)
+);

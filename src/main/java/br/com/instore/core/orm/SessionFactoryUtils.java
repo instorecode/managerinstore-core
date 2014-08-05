@@ -1,15 +1,8 @@
 package br.com.instore.core.orm;
 
-import br.com.instore.core.orm.bean.PerfilBean;
-import br.com.instore.core.orm.bean.UsuarioBean;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 import net.sf.corn.cps.CPScanner;
-import net.sf.corn.cps.ClassFilter;
 import net.sf.corn.cps.PackageNameFilter;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
@@ -95,8 +88,8 @@ public class SessionFactoryUtils {
         properties.put("hibernate.show_sql", true);
         properties.put("javax.persistence.validation.mode", "none");
         properties.put("hibernate.connection.username", "root");
-//        properties.put("hibernate.connection.password", "instore@#");
-        properties.put("hibernate.connection.password", "");
+        properties.put("hibernate.connection.password", "instore@#");
+//        properties.put("hibernate.connection.password", "");
 
 //        if (Environment.env() == Environment.Env.DEVELOPMENT) {
 //            properties.put("hibernate.connection.username", "root");

@@ -27,6 +27,9 @@ public class BairroBean extends Bean {
     @Column( name = "rua" , nullable = false , length = 255)
     private String rua;
     
+    @Column( name = "tipo" , nullable = false , length = 255)
+    private String tipo;
+    
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "idcidade" , nullable = false)
     private CidadeBean cidade;
@@ -68,5 +71,13 @@ public class BairroBean extends Bean {
 
     public void setCidade(CidadeBean cidade) {
         this.cidade = cidade;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }

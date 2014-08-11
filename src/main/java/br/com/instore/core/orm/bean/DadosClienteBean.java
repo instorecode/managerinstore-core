@@ -67,6 +67,10 @@ public class DadosClienteBean extends Bean {
     
     @Column(name = "local_destino_exp", nullable = false , length = 255)
     private String localDestinoExp;
+    
+    @ManyToOne
+    @JoinColumn(name = "indice_reajuste")
+    private IndiceReajusteBean indiceReajuste;
 
     public DadosClienteBean() {
     }
@@ -193,5 +197,13 @@ public class DadosClienteBean extends Bean {
 
     public void setLocalDestinoExp(String localDestinoExp) {
         this.localDestinoExp = localDestinoExp;
+    }
+
+    public IndiceReajusteBean getIndiceReajuste() {
+        return indiceReajuste;
+    }
+
+    public void setIndiceReajuste(IndiceReajusteBean indiceReajuste) {
+        this.indiceReajuste = indiceReajuste;
     }
 }

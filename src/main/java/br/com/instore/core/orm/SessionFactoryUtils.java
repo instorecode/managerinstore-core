@@ -84,12 +84,12 @@ public class SessionFactoryUtils {
         properties.put("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
         properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
 //        properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/managerinstore2?autoReconnectForPools=true");
-        properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/managerinstore?autoReconnectForPools=true");
+        properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/managerinstore?autoRe?connectForPools=true");
         properties.put("hibernate.show_sql", true);
         properties.put("javax.persistence.validation.mode", "none");
         properties.put("hibernate.connection.username", "root");
-        properties.put("hibernate.connection.password", "instore@#");
-//        properties.put("hibernate.connection.password", "");
+//        properties.put("hibernate.connection.password", "instore@#");
+        properties.put("hibernate.connection.password", "");
 
 //        if (Environment.env() == Environment.Env.DEVELOPMENT) {
 //            properties.put("hibernate.connection.username", "root");
@@ -105,10 +105,10 @@ public class SessionFactoryUtils {
         properties.put("hibernate.connection.provider_class", "org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider");
         properties.put("hibernate.connection.pool_size", 1);
         properties.put("c3p0.min_size", 5);
-        properties.put("c3p0.max_size", 50);
-        properties.put("c3p0.max_statements", 0);
-        properties.put("c3p0.idle_test_period", 100);
-        properties.put("c3p0.timeout", (60 * 30));
+        properties.put("c3p0.max_size", 200);
+        properties.put("c3p0.max_statements", 50);
+        properties.put("c3p0.idle_test_period", 3000);
+        properties.put("c3p0.timeout", ((60 * 60) * 24));
         properties.put("c3p0.autoCommitOnClose", false);
         properties.put("c3p0.acquire_increment", 5);
         return properties;

@@ -105,7 +105,7 @@ public class SessionFactoryUtils {
         properties.put("hibernate.connection.provider_class", "org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider");
         properties.put("hibernate.connection.pool_size", 1);
         properties.put("c3p0.min_size", 5);
-        properties.put("c3p0.max_size", 200);
+//        properties.put("c3p0.max_size", 200);
         properties.put("c3p0.max_statements", 50);
         properties.put("c3p0.idle_test_period", 3000);
         properties.put("c3p0.timeout", ((60 * 60) * 24));

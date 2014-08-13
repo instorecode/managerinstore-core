@@ -1,6 +1,7 @@
 package br.com.instore.core.orm.bean;
 
 import br.com.instore.core.orm.Bean;
+import br.com.instore.core.orm.ViewLabel;
 import br.com.instore.core.orm.bean.annotation.Auditor;
 import java.util.Date;
 import java.util.List;
@@ -27,18 +28,30 @@ public class UsuarioBean extends Bean {
     @Column(name = "idusuario", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idusuario;
+    
+    @ViewLabel("endereço completo")
     @ManyToOne
     @JoinColumn(name = "idendereco", nullable = true)
     private EnderecoBean endereco;
+    
+    @ViewLabel("data de cadastro do usuário")
     @Column(name = "data_cadastro", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataCadastro;
+    
+    @ViewLabel("nome do usuário")
     @Column(name = "nome", nullable = false, length = 255)
     private String nome;
+    
+    @ViewLabel("cpf do usuário")
     @Column(name = "cpf", nullable = false, length = 14)
     private String cpf;
+    
+    @ViewLabel("e-mail do usuário")
     @Column(name = "email", nullable = false, length = 255)
     private String email;
+    
+    @ViewLabel("senha do usuário")
     @Column(name = "senha", nullable = false, length = 32)
     private String senha;
     

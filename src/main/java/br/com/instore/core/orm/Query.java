@@ -858,7 +858,7 @@ public class Query {
     }
     
     
-    public void executeSQLCommand() {
+    public void executeSQLCommand() throws DataValidatorException {
         AuditoriaBean auditoria = new AuditoriaBean();
         auditoria.setAcao((short)4);
         auditoria.setEntidade("Script executado: " + querySQL);

@@ -61,7 +61,7 @@ public class MusicaGeralBean extends Bean {
     private String afinidade4;
     
     @Column( name = "arquivo" , nullable = false , length = 255)
-    private Integer arquivo;
+    private String arquivo;
 
     public MusicaGeralBean() {
     }
@@ -190,11 +190,11 @@ public class MusicaGeralBean extends Bean {
         this.afinidade4 = afinidade4;
     }
 
-    public Integer getArquivo() {
+    public String getArquivo() {
         return arquivo;
     }
 
-    public void setArquivo(Integer arquivo) {
+    public void setArquivo(String arquivo) {
         this.arquivo = arquivo;
     }
 }

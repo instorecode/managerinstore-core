@@ -45,6 +45,13 @@ CREATE TABLE musica_geral (
 	PRIMARY KEY (id)
 ) ENGINE=MyISAM;
 
+CREATE TABLE IF NOT EXISTS categoria_musica_geral (
+	id integer(11) not null auto_increment,
+	categoria integer(11) not null,
+	musica integer(11) not null,
+	primary key(id)
+) ENGINE = MyISAM ;
+
 
 INSERT INTO funcionalidade VALUES (152, '/musica', 'Arquivos de Músicas' , 'fa-music'   , 0 , 1 ); 
 INSERT INTO funcionalidade VALUES (153, '/musica/cadastrar', 'Cadastrar Arquivos de Músicas' , 'fa-music'   , 152 , 0 ); 

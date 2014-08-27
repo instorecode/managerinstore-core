@@ -726,9 +726,15 @@ public class Query {
         not = false;
         return this;
     }
-    
-    public <T> Query limit( Integer limit) {
+
+    public <T> Query limit(Integer limit) {
         criteria.setMaxResults(limit);
+        return this;
+    }
+
+    public <T> Query limit(Integer begin, Integer end) {
+        criteria.setFirstResult(begin);
+        criteria.setMaxResults(end);
         return this;
     }
 
@@ -787,7 +793,7 @@ public class Query {
                 Object[] objectArray = (Object[]) objectItem;
                 for (int i = 0; i < objectArray.length; i++) {
                     Object value = objectArray[i];
-                    
+
                     Field field = object.getClass().getDeclaredFields()[i];
                     field.setAccessible(true);
                     field.set(object, field.getType().cast(value));
@@ -848,19 +854,18 @@ public class Query {
                 }
                 list.add(t);
             }
-            
+
             return list;
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         return null;
     }
-    
-    
+
     public void executeSQLCommand() throws DataValidatorException {
         AuditoriaBean auditoria = new AuditoriaBean();
-        auditoria.setAcao((short)4);
+        auditoria.setAcao((short) 4);
         auditoria.setEntidade("Script executado: " + querySQL);
         auditoria.setUsuario(dao.usuario);
         auditoria.setData(new Date());
@@ -869,7 +874,7 @@ public class Query {
         dao.session.createSQLQuery(querySQL).executeUpdate();
         dao.finalize();
     }
-    
+
     public Long executeSQLCount() {
         try {
             List<String> parts1 = Arrays.asList(querySQL.split("from"));
@@ -901,19 +906,19 @@ public class Query {
             }
 
             List objectList = dao.session.createSQLQuery(querySQL).list();
-            
+
             Long ret = 0L;
 
             for (Object objectItem : objectList) {
                 BigInteger bi = (BigInteger) objectItem;
                 ret = bi.longValue();
             }
-            
+
             return ret;
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         return null;
     }
 }

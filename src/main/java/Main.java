@@ -1,50 +1,37 @@
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import org.apache.commons.compress.utils.IOUtils;
+import br.com.instore.core.orm.RepositoryViewer;
+import br.com.instore.core.orm.bean.MusicaGeralBean;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static class Test {
+        Integer id;
+        String param_a;
+        String param_b;
+        String param_c;
     }
 
-    public static void main2(String[] args) {
-//        RepositoryViewer rv = new RepositoryViewer();
-//        rv.setUsuario( new UsuarioBean(1));
-//        
-//        OcorrenciaBean bean = new OcorrenciaBean();
-//        bean.setCliente(new ClienteBean(1));
-//        bean.setDataCadastro(new Date());
-//        bean.setDataResolucao(new Date());
-//        bean.setUsuarioCriacao(new UsuarioBean(1));
-//        bean.setOcorrenciaOrigem(new OcorrenciaOrigemBean(2));
-//        bean.setOcorrenciaPrioridade(new OcorrenciaPrioridadeBean(1));
-//        bean.setDescricao("");
-//        
-//        rv.save(bean);
-//        rv.finalize();
-        // \\ftp\Clientes\audiostore\audiostore2
-
-        try {
-
-            File origem = new File("\\\\ftp\\Clientes\\arquivo_exp.csv");
-            FileInputStream fis = new FileInputStream(origem);
-
-            File destino = new File("\\\\ftp\\Clientes\\audiostore\\audiostore2\\arquivo_exp.csv");
-            FileOutputStream fos = new FileOutputStream(destino);
-
-            IOUtils.copy(fis, fos);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
+    public static void main(String[] args) {
+        RepositoryViewer rv = new RepositoryViewer();
+        List<Test> tests = rv.query("select \n"
+                + "    mg.id as id,\n"
+                + "	'param_a' as param_a,\n"
+                + "	'param_b' as param_b,\n"
+                + "	'param_c' as param_c\n"
+                + "from\n"
+                + "    categoria_musica_geral as cmg\n"
+                + "inner join categoria_geral as cg on cg.id = cmg.categoria\n"
+                + "inner join musica_geral as mg on mg.id = cmg.musica\n"
+                + "where cg.nome like  '%po%'").executeSQL(Test.class);
+        
+        List<Integer> integerList = new ArrayList<Integer>();
+        
+        for (Test test : tests) {
+            integerList.add(test.id);
         }
-
-
+        
+        System.out.println(rv.query(MusicaGeralBean.class).in("id", integerList.toArray( new Integer[integerList.size()])).findAll());
     }
 }

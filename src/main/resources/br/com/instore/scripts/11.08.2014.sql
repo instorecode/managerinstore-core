@@ -1,4 +1,4 @@
-use managerinstore;
+use managerinstore2;
 create table if not exists cliente_suspenso (
 	id integer(11) not null auto_increment,
 	cliente integer(11),

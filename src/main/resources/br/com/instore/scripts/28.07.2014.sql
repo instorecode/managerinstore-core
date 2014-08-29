@@ -28,3 +28,6 @@ CREATE TABLE IF NOT EXISTS  ocorrencia_usuario_info (
 	primary key(id),
 	foreign key(ocorrencia_usuario) references ocorrencia_usuario(id)
 );
+
+ALTER TABLE `managerinstore`.`auditoria` 
+CHANGE COLUMN `entidade` `entidade` TEXT NOT NULL ;

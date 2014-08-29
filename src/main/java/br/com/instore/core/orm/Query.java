@@ -874,6 +874,11 @@ public class Query {
         dao.session.createSQLQuery(querySQL).executeUpdate();
         dao.finalize();
     }
+    
+    public void executeSQLCommand2() throws DataValidatorException {
+        dao.session.createSQLQuery(querySQL).executeUpdate();
+        dao.finalize();
+    }
 
     public Long executeSQLCount() {
         try {

@@ -22,6 +22,8 @@ public class AudiostoreMusicaBean extends Bean {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     
+    @Column(name = "musica_geral" , nullable = false)
+    private Integer musicaGeral;
 
     @ManyToOne
     @JoinColumn(name = "categoria1" , nullable = false)
@@ -34,22 +36,6 @@ public class AudiostoreMusicaBean extends Bean {
     @ManyToOne
     @JoinColumn(name = "categoria3" , nullable = true)
     private AudiostoreCategoriaBean categoria3;
-    
-    @ManyToOne
-    @JoinColumn(name = "gravadora" , nullable = true)
-    private AudiostoreGravadoraBean gravadora;
-    
-    @Column(name = "arquivo" , length = 30, nullable = false)
-    private String arquivo;
-    
-    @Column(name = "interprete" , length = 30, nullable = false)
-    private String interprete;
-    
-    @Column(name = "tipo_interprete" , nullable = false)
-    private short tipoInterprete;
-    
-    @Column(name = "titulo" , length = 30, nullable = false)
-    private String titulo;
     
     @Column(name = "cut" , nullable = false)
     private Boolean cut;
@@ -67,24 +53,6 @@ public class AudiostoreMusicaBean extends Bean {
     @Column(name = "dias_execucao2" , nullable = false)
     private Integer diasExecucao2;
     
-    @Column(name = "afinidade1" , length = 30, nullable = false)
-    private String afinidade1;
-    
-    @Column(name = "afinidade2" , length = 30, nullable = false)
-    private String afinidade2;
-    
-    @Column(name = "afinidade3" , length = 30, nullable = false)
-    private String afinidade3;
-    
-    @Column(name = "afinidade4" , length = 30, nullable = false)
-    private String afinidade4;
-    
-    @Column(name = "ano_gravacao" , nullable = false)
-    private Integer anoGravacao;
-    
-    @Column(name = "velocidade" , nullable = false)
-    private short velocidade;
-    
     @Temporal(TemporalType.DATE)
     @Column(name = "data" , nullable = false)
     private Date data;
@@ -96,10 +64,6 @@ public class AudiostoreMusicaBean extends Bean {
     @Temporal(TemporalType.DATE)
     @Column(name = "ultima_execucao_data" , nullable = false)
     private Date ultimaExecucaoData;
-    
-    @Temporal(TemporalType.TIME)
-    @Column(name = "tempo_total" , nullable = false)
-    private Date tempoTotal;
     
     @Column(name = "random" , nullable = false)
     private Integer random;
@@ -132,8 +96,6 @@ public class AudiostoreMusicaBean extends Bean {
     @ManyToOne
     @JoinColumn(name = "cliente" , nullable = false)
     private ClienteBean cliente;
-    
-    
 
     public AudiostoreMusicaBean() {
     }
@@ -148,6 +110,14 @@ public class AudiostoreMusicaBean extends Bean {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getMusicaGeral() {
+        return musicaGeral;
+    }
+
+    public void setMusicaGeral(Integer musicaGeral) {
+        this.musicaGeral = musicaGeral;
     }
 
     public AudiostoreCategoriaBean getCategoria1() {
@@ -172,46 +142,6 @@ public class AudiostoreMusicaBean extends Bean {
 
     public void setCategoria3(AudiostoreCategoriaBean categoria3) {
         this.categoria3 = categoria3;
-    }
-
-    public AudiostoreGravadoraBean getGravadora() {
-        return gravadora;
-    }
-
-    public void setGravadora(AudiostoreGravadoraBean gravadora) {
-        this.gravadora = gravadora;
-    }
-
-    public String getArquivo() {
-        return arquivo;
-    }
-
-    public void setArquivo(String arquivo) {
-        this.arquivo = arquivo;
-    }
-
-    public String getInterprete() {
-        return interprete;
-    }
-
-    public void setInterprete(String interprete) {
-        this.interprete = interprete;
-    }
-
-    public short getTipoInterprete() {
-        return tipoInterprete;
-    }
-
-    public void setTipoInterprete(short tipoInterprete) {
-        this.tipoInterprete = tipoInterprete;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
     }
 
     public Boolean getCut() {
@@ -254,54 +184,6 @@ public class AudiostoreMusicaBean extends Bean {
         this.diasExecucao2 = diasExecucao2;
     }
 
-    public String getAfinidade1() {
-        return afinidade1;
-    }
-
-    public void setAfinidade1(String afinidade1) {
-        this.afinidade1 = afinidade1;
-    }
-
-    public String getAfinidade2() {
-        return afinidade2;
-    }
-
-    public void setAfinidade2(String afinidade2) {
-        this.afinidade2 = afinidade2;
-    }
-
-    public String getAfinidade3() {
-        return afinidade3;
-    }
-
-    public void setAfinidade3(String afinidade3) {
-        this.afinidade3 = afinidade3;
-    }
-
-    public String getAfinidade4() {
-        return afinidade4;
-    }
-
-    public void setAfinidade4(String afinidade4) {
-        this.afinidade4 = afinidade4;
-    }
-
-    public Integer getAnoGravacao() {
-        return anoGravacao;
-    }
-
-    public void setAnoGravacao(Integer anoGravacao) {
-        this.anoGravacao = anoGravacao;
-    }
-
-    public short getVelocidade() {
-        return velocidade;
-    }
-
-    public void setVelocidade(short velocidade) {
-        this.velocidade = velocidade;
-    }
-
     public Date getData() {
         return data;
     }
@@ -324,14 +206,6 @@ public class AudiostoreMusicaBean extends Bean {
 
     public void setUltimaExecucaoData(Date ultimaExecucaoData) {
         this.ultimaExecucaoData = ultimaExecucaoData;
-    }
-
-    public Date getTempoTotal() {
-        return tempoTotal;
-    }
-
-    public void setTempoTotal(Date tempoTotal) {
-        this.tempoTotal = tempoTotal;
     }
 
     public Integer getRandom() {
@@ -413,5 +287,4 @@ public class AudiostoreMusicaBean extends Bean {
     public void setCliente(ClienteBean cliente) {
         this.cliente = cliente;
     }
-    
 }

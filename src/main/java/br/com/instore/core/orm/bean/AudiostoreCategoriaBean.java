@@ -38,6 +38,9 @@ public class AudiostoreCategoriaBean extends Bean {
     @Column( name = "tipo" , nullable = false )
     private short tipo;
     
+    @Column( name = "cod_interno" , nullable = false , length = 3 )
+    private String codInterno;
+    
     @Temporal(TemporalType.TIME)
     @Column( name = "tempo" , nullable = false)
     private Date tempo;
@@ -111,5 +114,13 @@ public class AudiostoreCategoriaBean extends Bean {
 
     public void setCliente(ClienteBean cliente) {
         this.cliente = cliente;
+    }
+
+    public String getCodInterno() {
+        return codInterno;
+    }
+
+    public void setCodInterno(String codInterno) {
+        this.codInterno = codInterno;
     }
 }

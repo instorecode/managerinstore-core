@@ -99,8 +99,6 @@ public class SessionFactoryUtils {
 //            properties.put("hibernate.connection.password", "instore@#");
 //        }
 
-
-
         // pool
         properties.put("hibernate.connection.provider_class", "org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider");
         properties.put("hibernate.connection.pool_size", 1);

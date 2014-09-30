@@ -1,0 +1,1 @@
+alter table audiostore_categoria MODIFY column cod_interno char(3) not null default '000';

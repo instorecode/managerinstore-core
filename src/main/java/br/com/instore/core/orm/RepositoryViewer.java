@@ -141,7 +141,40 @@ public class RepositoryViewer {
             e.printStackTrace();
         }
     }
+    
+    
+    public <T extends Bean> void save2(T t) {
+        try {
+            Class<?> clazz = t.getClass();
 
+            String fieldName = null;
+            for (Field field : clazz.getDeclaredFields()) {
+                if (field.isAnnotationPresent(Id.class)) {
+                    fieldName = field.getName();
+                    break;
+                }
+            }
+
+            Field f = clazz.getDeclaredField(fieldName);
+            f.setAccessible(true);
+            
+            if (null == f.get(t)) {
+                verifySession();
+                session.save(t);
+            } else {
+                verifySession();
+                session.update(t);
+            }
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
     
     public <T extends Bean> void delete(T t) {
         verifySession();

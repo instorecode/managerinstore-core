@@ -1,4 +1,4 @@
-package br.com.instore.dump;
+package br.com.instore.dump.cliente;
 
 
 import br.com.instore.core.orm.Bean;
@@ -23,4 +23,5 @@ public class Node extends Bean {
     public String cep;
     public String cidade;
     public String estado;
+    public String numero;
 }

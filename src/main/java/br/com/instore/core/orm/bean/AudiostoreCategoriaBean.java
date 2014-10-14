@@ -1,6 +1,7 @@
 package br.com.instore.core.orm.bean;
 
 import br.com.instore.core.orm.Bean;
+import br.com.instore.core.orm.ViewLabel;
 import br.com.instore.core.orm.bean.annotation.Auditor;
 import java.util.Date;
 import javax.persistence.Column;
@@ -10,7 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -21,28 +21,34 @@ import javax.persistence.TemporalType;
 public class AudiostoreCategoriaBean extends Bean {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column( name = "codigo" , nullable = false)
+    @Column( name = "codigo" , nullable = false)    
     private Integer codigo;
     
     @Column( name = "categoria" , nullable = false , length = 30)
+    @ViewLabel("Nome")
     private String categoria;
     
     @Temporal(TemporalType.DATE)
-    @Column( name = "data_inicio" , nullable = false )
+    @Column( name = "data_inicio" , nullable = false )    
+    @ViewLabel("Data de ínicio")
     private Date dataInicio;
     
     @Temporal(TemporalType.DATE)
     @Column( name = "data_final" , nullable = false)
+    @ViewLabel("Data de terminos")
     private Date dataFinal;
     
     @Column( name = "tipo" , nullable = false )
+    @ViewLabel("Tipo")
     private short tipo;
     
     @Column( name = "cod_interno" , nullable = false , length = 3 )
+    @ViewLabel("Código")
     private String codInterno;
     
     @Temporal(TemporalType.TIME)
     @Column( name = "tempo" , nullable = false)
+    @ViewLabel("Tempo de duração")
     private Date tempo;
     
     @ManyToOne

@@ -54,7 +54,7 @@ public class DataValidator {
                 }
                 if (field.getType() == String.class && column.length() > 0) {
                     if (field.get(t).toString().length() > column.length()) {
-                        message += nameField + " não deve conter mais de " + column.length() + " itens.";
+                        message += nameField + " não deve conter mais de " + column.length() + " caracteres.";
                         throw new DataValidatorException(message);
                     }
                 }

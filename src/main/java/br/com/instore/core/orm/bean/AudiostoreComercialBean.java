@@ -98,6 +98,9 @@ public class AudiostoreComercialBean extends Bean {
     @Column(name = "sem_som" , nullable = false)
     private Boolean semSom;
     
+    @Column(name = "interromper_musica_tocada" , nullable = false)
+    private Boolean interromperMusicaTocada;
+    
     @ManyToOne
     @JoinColumn(name = "cliente" , nullable = false)
     private ClienteBean cliente;
@@ -307,5 +310,13 @@ public class AudiostoreComercialBean extends Bean {
 
     public void setCliente(ClienteBean cliente) {
         this.cliente = cliente;
+    }
+
+    public Boolean getInterromperMusicaTocada() {
+        return interromperMusicaTocada;
+    }
+
+    public void setInterromperMusicaTocada(Boolean interromperMusicaTocada) {
+        this.interromperMusicaTocada = interromperMusicaTocada;
     }
 }

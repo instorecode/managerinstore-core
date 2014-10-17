@@ -1,6 +1,9 @@
 INSERT INTO funcionalidade VALUES (180, '/gerarexp', 'Gerar Arquivo de Exportação' , 'fa-file-excel-o'   , 0 , 1 ); 
 insert into perfil_funcionalidade select null, idfuncionalidade , idperfil from perfil , funcionalidade 
+
 where idperfil = 1 and funcionalidade.idfuncionalidade = 180;
+ALTER TABLE audiostore_comercial add column interromper_musica_tocada tinyint(1) not null default '0';
+ALTER TABLE audiostore_comercial_sh add column interromper_musica_tocada tinyint(1) not null default '0';
 
 create table IF NOT EXISTS ajuda (
 id int (11) NOT NULL AUTO_INCREMENT ,

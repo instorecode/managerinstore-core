@@ -21,16 +21,12 @@ public class PerfilUsuarioBean extends Bean {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idperfilUsuario;
     
-    @ManyToOne(cascade = {
-        CascadeType.REMOVE
-    })
-    @JoinColumn(name = "idperfil" ,nullable = false )
+    @ManyToOne
+    @JoinColumn(name = "idperfil" ,nullable = false , insertable = false , updatable = false  )
     private PerfilBean perfil;
     
-    @ManyToOne(cascade = {
-        CascadeType.REMOVE
-    })
-    @JoinColumn(name = "idusuario" ,nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "idusuario" ,nullable = false , insertable = false , updatable = false)
     private UsuarioBean usuario;
 
     public PerfilUsuarioBean() {

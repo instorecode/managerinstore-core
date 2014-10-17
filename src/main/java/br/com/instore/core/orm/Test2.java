@@ -11,7 +11,7 @@ public class Test2 {
 //        ItemJson root = new ItemJson();
 //        loadmenu(root , 0, 0);
 //        System.out.println(root);
-        System.out.println(Environment.env());
+        
         RepositoryViewer rv = new RepositoryViewer();
         System.out.println(rv.query(UsuarioBean.class).findAll());
     }

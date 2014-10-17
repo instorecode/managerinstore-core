@@ -5,7 +5,6 @@ import br.com.instore.core.orm.ViewLabel;
 import br.com.instore.core.orm.bean.annotation.Auditor;
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -59,7 +58,7 @@ public class UsuarioBean extends Bean {
     @OneToMany
     @JoinTable(
                 name = "perfil_usuario", 
-                joinColumns = @JoinColumn(name = "idusuario"),
+                joinColumns = @JoinColumn(name = "idusuario" , insertable = false , updatable = false),
                 inverseJoinColumns = @JoinColumn(name = "idperfil")
             )
     private List<PerfilBean> perfilBeanList;

@@ -77,8 +77,11 @@ public class Query {
                 criteria.add(criterion);
             }
         }
-
-        return new Long(criteria.setProjection(Projections.rowCount()).uniqueResult().toString());
+        Object object = criteria.setProjection(Projections.rowCount()).uniqueResult();
+        if(null != object) {
+            return new Long(object.toString());
+        }
+        return 0l;
     }
 
     public <T> Query orderAsc(String column) {

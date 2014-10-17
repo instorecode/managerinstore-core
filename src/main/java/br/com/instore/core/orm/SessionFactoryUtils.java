@@ -85,8 +85,6 @@ public class SessionFactoryUtils {
         properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 //        properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/test?autoReconnectForPools=true");
         properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/intranet?autoReconnectForPools=true");
-//        properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/managerinstore2?autoReconnectForPools=true");
-//        properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/managerinstore?autoRe?connectForPools=true");
         properties.put("hibernate.show_sql", true);
         properties.put("javax.persistence.validation.mode", "none"); 
         properties.put("hibernate.connection.username", "root");

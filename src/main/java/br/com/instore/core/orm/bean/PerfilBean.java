@@ -28,9 +28,7 @@ public class PerfilBean extends Bean {
     @Column(name = "nome", nullable = false)
     private String nome;
     
-    @OneToMany(cascade = {
-        CascadeType.ALL
-    })
+    @OneToMany()
     @JoinTable(
                 name = "perfil_funcionalidade", 
                 joinColumns = @JoinColumn(name = "idperfil"),

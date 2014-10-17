@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -32,7 +33,7 @@ public class FuncionalidadeBean extends Bean {
     
     @Column(name = "visivel", nullable = false )
     private Boolean visivel;
-
+    
     public FuncionalidadeBean() {
     }
 

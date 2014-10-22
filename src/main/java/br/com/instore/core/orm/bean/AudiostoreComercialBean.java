@@ -104,6 +104,10 @@ public class AudiostoreComercialBean extends Bean {
     @ManyToOne
     @JoinColumn(name = "cliente" , nullable = false)
     private ClienteBean cliente;
+    
+    
+    @Column(name = "texto" , nullable = false)
+    private String texto;
 
     public AudiostoreComercialBean() {
     }
@@ -318,5 +322,13 @@ public class AudiostoreComercialBean extends Bean {
 
     public void setInterromperMusicaTocada(Boolean interromperMusicaTocada) {
         this.interromperMusicaTocada = interromperMusicaTocada;
+    }
+
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
     }
 }

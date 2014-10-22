@@ -1,1 +1,0 @@
-alter table audiostore_categoria add column cod_interno char(3) not null default '000';

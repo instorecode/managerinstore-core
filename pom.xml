@@ -76,10 +76,10 @@
             <version>1.3.17</version>
         </dependency>
         
-        <dependency>
+<!--        <dependency>
             <groupId>hxtt</groupId>
             <artifactId>pxjdbc</artifactId>
             <version>1.0</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 </project>

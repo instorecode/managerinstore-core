@@ -3571,3 +3571,13 @@ insert into perfil_funcionalidade values (null, 202,1);
 insert into perfil_funcionalidade values (null, 203,1);
 
 alter table audiostore_comercial add column texto longtext not null default '';
+
+UPDATE funcionalidade SET mapping_id='/musica/programacao-audiostore', visivel='1', parente = 0 WHERE idfuncionalidade='160';
+UPDATE funcionalidade SET mapping_id='/musica/programacao-audiostore/atualizar/{id}' WHERE idfuncionalidade='162';
+UPDATE funcionalidade SET mapping_id='/musica/programacao-audiostore/remover/{id}' WHERE idfuncionalidade='163';
+UPDATE funcionalidade SET parente='0' WHERE idfuncionalidade='160';
+UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='160';
+UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='161';
+UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='162';
+UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='163';
+UPDATE funcionalidade SET icone='fa-file-audio-o' WHERE idfuncionalidade >= 160 and idfuncionalidade <= 163;

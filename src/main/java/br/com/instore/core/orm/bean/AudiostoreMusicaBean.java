@@ -3,6 +3,7 @@ package br.com.instore.core.orm.bean;
 import br.com.instore.core.orm.Bean;
 import br.com.instore.core.orm.bean.annotation.Auditor;
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,15 +27,15 @@ public class AudiostoreMusicaBean extends Bean {
     private Integer musicaGeral;
 
     @ManyToOne
-    @JoinColumn(name = "categoria1" , nullable = false)
+    @JoinColumn(name = "categoria1" , nullable = false , insertable = false, updatable = false)
     private AudiostoreCategoriaBean categoria1;
     
-    @ManyToOne
-    @JoinColumn(name = "categoria2" , nullable = true)
+    @ManyToOne(cascade = {CascadeType.REMOVE})
+    @JoinColumn(name = "categoria2" , nullable = true, insertable = false, updatable = false)
     private AudiostoreCategoriaBean categoria2;
     
-    @ManyToOne
-    @JoinColumn(name = "categoria3" , nullable = true)
+    @ManyToOne(cascade = {CascadeType.REMOVE})
+    @JoinColumn(name = "categoria3" , nullable = true, insertable = false, updatable = false)
     private AudiostoreCategoriaBean categoria3;
     
     @Column(name = "cut" , nullable = false)

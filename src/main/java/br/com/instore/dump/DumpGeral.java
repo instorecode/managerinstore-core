@@ -30,7 +30,7 @@ public class DumpGeral {
     public static void main(String[] args) {
         String urlparadox = "jdbc:paradox:/c:/Users/TI-Caio/Desktop/bancos/San Marino/paradox2/";
         String urlexp = "C:\\Users\\TI-Caio\\Desktop\\bancos\\San Marino\\EXP\\musica.exp";
-//        lerCategoriasDoBanco(urlparadox);
+        lerCategoriasDoBanco(urlparadox);
 //        lerProgramacaoDoBanco(urlparadox);
         lerComercialDoBanco(urlparadox);
 //        lerMusicasDoExp(urlexp);
@@ -79,13 +79,12 @@ public class DumpGeral {
             int iNumCols = resultSetMetaData.getColumnCount();
 
             for (int i = 1; i <= iNumCols; i++) {
-                System.out.println(resultSetMetaData.getColumnLabel(i) + "  " + resultSetMetaData.getColumnTypeName(i));
+                // System.out.println(resultSetMetaData.getColumnLabel(i) + "  " + resultSetMetaData.getColumnTypeName(i));
             }
 
             String inserts = "";
-            String inserts2 = "";
             while (rs.next()) {
-                inserts += "INSERT INTO audiostore_comercial VALUES(null , [categoria] , [arquivo], [titulo] , [tipo_interprete] , [periodo_inicial] , [periodo_final] , [tipo_horario] , [dias_semana] , [dias_alternados] , [data] , [ultima_execucao] , [tempo_total] , [random] , [qtde_player] , [qtde] , [data_vencimento], [dependencia1] , [dependencia2] , [dependencia3] , [frame_inicio] , [frame_final] , [msg] , [sem_som] , " + idclienteFinal + " , 0  , '' )";
+                inserts = "\nINSERT INTO audiostore_comercial VALUES(null , [categoria] , [arquivo], [titulo] , [tipo_interprete] , [periodo_inicial] , [periodo_final] , [tipo_horario] , [dias_semana] , [dias_alternados] , [data] , [ultima_execucao] , [tempo_total] , [random] , [qtde_player] , [qtde] , [data_vencimento], [dependencia1] , [dependencia2] , [dependencia3] , [frame_inicio] , [frame_final] , [msg] , [sem_som] , " + idclienteFinal + " , 0  , '' )";
 
                 for (int i = 1; i <= iNumCols; i++) {
 
@@ -210,20 +209,14 @@ public class DumpGeral {
                     }
                 }
                 inserts += ";";
-                inserts2 = "";
                 
-                System.out.println("Nome: " + resultSetMetaData.getColumnLabel(7).trim());
-                System.out.println("Nome: " + resultSetMetaData.getColumnLabel(8).trim());
-                System.out.println("Nome: " + resultSetMetaData.getColumnLabel(9).trim());
-                System.out.println("Nome: " + resultSetMetaData.getColumnLabel(10).trim());
-
-                for (int i = 8; i < 32; i++) {
-                    String sm1 = "" + (null == rs.getString(8) ? "0" : rs.getString(i-1));
-                    Date hr1d = rs.getDate(i);
-                    
+                for (int i = 8; i < 56; i = i+2) {
+                    String sm1 = (null == rs.getString(8) ? "0" : rs.getString(i+1));
+                    Date hr1d = rs.getDate(i+2);
+//                    System.out.println(resultSetMetaData.getColumnLabel(1).trim() +" -> " + rs.getString(1) + "  -> " + resultSetMetaData.getColumnLabel(i+1).trim() + " : " + sm1);
                     String hr1 = "" + new SimpleDateFormat("HH:mm:ss").format( null ==  hr1d ? new Date() : hr1d);
 
-                    if (!sm1.trim().equals("0")) {
+                    if (null != sm1 && !sm1.trim().equals("0")) {
                         boolean segunda = (!sm1.substring(0, 1).equals(" ") ? true : false);
                         boolean segundaNX = (!sm1.substring(0, 1).equals("N") ? true : false);
 
@@ -247,37 +240,35 @@ public class DumpGeral {
 
 
                         if (segunda) {
-                            inserts2 += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'segunda' , '" + hr1 + "' , '" + (segundaNX ? 1 : 0) + "' );";
+                            inserts += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'segunda' , '" + hr1 + "' , '" + (segundaNX ? 1 : 0) + "' );";
                         }
 
                         if (terca) {
-                            inserts2 += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'terca' , '" + hr1 + "' , '" + (tercaNX ? 1 : 0) + "' );";
+                            inserts += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'terca' , '" + hr1 + "' , '" + (tercaNX ? 1 : 0) + "' );";
                         }
 
                         if (quarta) {
-                            inserts2 += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'quarta' , '" + hr1 + "' , '" + (quartaNX ? 1 : 0) + "' );";
+                            inserts += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'quarta' , '" + hr1 + "' , '" + (quartaNX ? 1 : 0) + "' );";
                         }
 
                         if (quinta) {
-                            inserts2 += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'quinta' , '" + hr1 + "' , '" + (quintaNX ? 1 : 0) + "' );";
+                            inserts += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'quinta' , '" + hr1 + "' , '" + (quintaNX ? 1 : 0) + "' );";
                         }
 
                         if (sexta) {
-                            inserts2 += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'sexta' , '" + hr1 + "' , '" + (sextaNX ? 1 : 0) + "' );";
+                            inserts += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'sexta' , '" + hr1 + "' , '" + (sextaNX ? 1 : 0) + "' );";
                         }
 
                         if (sabado) {
-                            inserts2 += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'sabado' , '" + hr1 + "' , '" + (sabadoNX ? 1 : 0) + "' );";
+                            inserts += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'sabado' , '" + hr1 + "' , '" + (sabadoNX ? 1 : 0) + "' );";
                         }
 
                         if (domingo) {
-                            inserts2 += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'domingo' , '" + hr1 + "' , '" + (domingoNX ? 1 : 0) + "' );";
+                            inserts += "\nINSERT INTO audiostore_comercial_sh VALUES(null , (select id from audiostore_comercial order by id desc limit 1) , 'domingo' , '" + hr1 + "' , '" + (domingoNX ? 1 : 0) + "' );";
                         }
                     }
                 }
-
-
-//                System.out.println(inserts + inserts2);
+                System.out.println(inserts);
             }
             rs.close();
 
@@ -355,7 +346,7 @@ public class DumpGeral {
             System.out.println(inserts);
             System.out.println(inserts2);
             rs.close();
-
+            
             con.close();
         } catch (Exception e) {
             e.printStackTrace();

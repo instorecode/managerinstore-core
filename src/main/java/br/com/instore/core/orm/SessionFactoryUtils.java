@@ -88,7 +88,7 @@ public class SessionFactoryUtils {
         properties.put("hibernate.show_sql", true);
         properties.put("javax.persistence.validation.mode", "none"); 
         properties.put("hibernate.connection.username", "root");
-//        properties.put("hibernate.connection.password", "instore@#");
+        properties.put("hibernate.connection.password", "instore@#");
 //        properties.put("hibernate.connection.password", "");
 
 //        if (Environment.env() == Environment.Env.DEVELOPMENT) {

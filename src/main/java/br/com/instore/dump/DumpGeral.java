@@ -22,22 +22,24 @@ import java.util.List;
 import jcifs.smb.NtlmPasswordAuthentication;
 import jcifs.smb.SmbException;
 import jcifs.smb.SmbFile;
+import org.apache.commons.lang.StringUtils;
 
 public class DumpGeral {
 
     public final static Integer idclienteFinal = 1063;
 
     public static void main(String[] args) {
-        String urlparadox = "jdbc:paradox:/c:/Users/TI-Caio/Desktop/bancos/San Marino/paradox2/";
+        String urlparadox = "jdbc:paradox:/c:/Users/TI-Caio/Desktop/bancos/San Marino/paradox/";
         String urlexp = "C:\\Users\\TI-Caio\\Desktop\\bancos\\San Marino\\EXP\\musica.exp";
-        lerCategoriasDoBanco(urlparadox);
+//        lerCategoriasDoBanco(urlparadox);
 //        lerProgramacaoDoBanco(urlparadox);
-        lerComercialDoBanco(urlparadox);
-//        lerMusicasDoExp(urlexp);
+//        lerComercialDoBanco(urlparadox);
+        lerMusicasDoExp(urlexp);
     }
 
     public static void lerComercialDoBanco(String url) {
         RepositoryViewer rv = new RepositoryViewer();
+
         final List<Integer> countList = new ArrayList<Integer>();
         rv.query("select count(codigo) as count, '' as param from audiostore_categoria where idcliente = " + idclienteFinal + " and categoria = 'NENHUM'").executeSQL(new Each() {
             public BigInteger count;
@@ -47,6 +49,7 @@ public class DumpGeral {
                 countList.add(count.intValue());
             }
         });
+
         if (null != countList && !countList.isEmpty()) {
             if (countList.get(0) <= 0) {
                 try {
@@ -96,7 +99,7 @@ public class DumpGeral {
                     if ("Categoria".equals(resultSetMetaData.getColumnLabel(i).trim())) {
                         String value = "" + (rs.getShort(i) + idclienteFinal);
                         if (0 == rs.getShort(i)) {
-                            inserts = inserts.replace("[categoria]", "(select codigo from audiostore_categoria order by codigo desc limit 1)");
+                            inserts = inserts.replace("[categoria]", "(select codigo from audiostore_categoria where idcliente = "+idclienteFinal+" order by codigo desc limit 1)");
                         } else {
                             inserts = inserts.replace("[categoria]", "'" + value.replace("'", "\"") + "'");
                         }
@@ -199,7 +202,7 @@ public class DumpGeral {
                     }
 
                     if ("Msg".equals(resultSetMetaData.getColumnLabel(i).trim())) {
-                        String value = "" + rs.getString(i);
+                        String value = "" + (null == rs.getString(i) ? "" : rs.getString(i));
                         inserts = inserts.replace("[msg]", "'" + value.replace("'", "\"") + "'");
                     }
 
@@ -209,14 +212,15 @@ public class DumpGeral {
                     }
                 }
                 inserts += ";";
-                
-                for (int i = 8; i < 56; i = i+2) {
-                    String sm1 = (null == rs.getString(8) ? "0" : rs.getString(i+1));
-                    Date hr1d = rs.getDate(i+2);
-//                    System.out.println(resultSetMetaData.getColumnLabel(1).trim() +" -> " + rs.getString(1) + "  -> " + resultSetMetaData.getColumnLabel(i+1).trim() + " : " + sm1);
-                    String hr1 = "" + new SimpleDateFormat("HH:mm:ss").format( null ==  hr1d ? new Date() : hr1d);
 
+                for (int i = 8; i < 56; i = i + 2) {
+                    String sm1 = (null == rs.getString(8) ? "0" : rs.getString(i + 1));
+                    Date hr1d = rs.getDate(i + 2);
+//                    System.out.println(resultSetMetaData.getColumnLabel(1).trim() +" -> " + rs.getString(1) + "  -> " + resultSetMetaData.getColumnLabel(i+1).trim() + " : " + sm1);
+                    String hr1 = "" + new SimpleDateFormat("HH:mm:ss").format(null == hr1d ? new Date() : hr1d);
+                    
                     if (null != sm1 && !sm1.trim().equals("0")) {
+                        
                         boolean segunda = (!sm1.substring(0, 1).equals(" ") ? true : false);
                         boolean segundaNX = (!sm1.substring(0, 1).equals("N") ? true : false);
 
@@ -310,9 +314,19 @@ public class DumpGeral {
 
                     if ("Codigo".equals(resultSetMetaData.getColumnLabel(i).trim())) {
                         String value = "" + (rs.getShort(i) + idclienteFinal);
+                        String cintern = ("" + rs.getShort(i)).replace("'", "\"");
+
+                        if (cintern.length() > 3) {
+                            cintern = cintern.substring(0, 3);
+                        } else {
+                            if (cintern.length() < 3 ) {
+                                cintern = StringUtils.leftPad(cintern, 3, "0");
+                            }
+                        } 
+
                         inserts = inserts.replace("[C]", "'" + value.replace("'", "\"") + "'");
                         inserts2 = inserts2.replace("[codigo]", "'" + value.replace("'", "\"") + "'");
-                        inserts2 = inserts2.replace("[cod_interno]", "'" + value.replace("'", "\"") + "'");
+                        inserts2 = inserts2.replace("[cod_interno]", "'" + cintern + "'");
                     }
 
                     if ("Categoria".equals(resultSetMetaData.getColumnLabel(i).trim())) {
@@ -346,7 +360,7 @@ public class DumpGeral {
             System.out.println(inserts);
             System.out.println(inserts2);
             rs.close();
-            
+
             con.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -546,46 +560,77 @@ public class DumpGeral {
 
                     if ("DiaSemana".equals(resultSetMetaData.getColumnLabel(i).trim())) {
                         String value = "" + rs.getString(i);
+                        try {
+                            if ("X".equals(value.substring(0, 1))) {
+                                inserts = inserts.replace("[segunda_feira]", "'1'");
+                            } else {
+                                inserts = inserts.replace("[segunda_feira]", "'0'");
+                            }
 
-                        if ("X".equals(value.substring(0, 1))) {
-                            inserts = inserts.replace("[segunda_feira]", "'1'");
-                        } else {
+                        } catch (StringIndexOutOfBoundsException e) {
                             inserts = inserts.replace("[segunda_feira]", "'0'");
                         }
 
-                        if ("X".equals(value.substring(1, 2))) {
-                            inserts = inserts.replace("[terca_feira]", "'1'");
-                        } else {
+                        try {
+                            if ("X".equals(value.substring(1, 2))) {
+                                inserts = inserts.replace("[terca_feira]", "'1'");
+                            } else {
+                                inserts = inserts.replace("[terca_feira]", "'0'");
+                            }
+                        } catch (StringIndexOutOfBoundsException e) {
                             inserts = inserts.replace("[terca_feira]", "'0'");
                         }
 
-                        if ("X".equals(value.substring(2, 3))) {
-                            inserts = inserts.replace("[quarta_feira]", "'1'");
-                        } else {
+
+                        try {
+                            if ("X".equals(value.substring(2, 3))) {
+                                inserts = inserts.replace("[quarta_feira]", "'1'");
+                            } else {
+                                inserts = inserts.replace("[quarta_feira]", "'0'");
+                            }
+                        } catch (StringIndexOutOfBoundsException e) {
                             inserts = inserts.replace("[quarta_feira]", "'0'");
                         }
 
-                        if ("X".equals(value.substring(3, 4))) {
-                            inserts = inserts.replace("[quinta_feira]", "'1'");
-                        } else {
+
+                        try {
+                            if ("X".equals(value.substring(3, 4))) {
+                                inserts = inserts.replace("[quinta_feira]", "'1'");
+                            } else {
+                                inserts = inserts.replace("[quinta_feira]", "'0'");
+                            }
+                        } catch (StringIndexOutOfBoundsException e) {
                             inserts = inserts.replace("[quinta_feira]", "'0'");
                         }
 
-                        if ("X".equals(value.substring(4, 5))) {
-                            inserts = inserts.replace("[sexta_feira]", "'1'");
-                        } else {
+
+                        try {
+                            if ("X".equals(value.substring(4, 5))) {
+                                inserts = inserts.replace("[sexta_feira]", "'1'");
+                            } else {
+                                inserts = inserts.replace("[sexta_feira]", "'0'");
+                            }
+                        } catch (StringIndexOutOfBoundsException e) {
                             inserts = inserts.replace("[sexta_feira]", "'0'");
                         }
 
-                        if ("X".equals(value.substring(5, 6))) {
-                            inserts = inserts.replace("[sabado]", "'1'");
-                        } else {
+                        try {
+                            if ("X".equals(value.substring(5, 6))) {
+                                inserts = inserts.replace("[sabado]", "'1'");
+                            } else {
+                                inserts = inserts.replace("[sabado]", "'0'");
+                            }
+                        } catch (StringIndexOutOfBoundsException e) {
                             inserts = inserts.replace("[sabado]", "'0'");
                         }
 
-                        if ("X".equals(value.substring(6, 7))) {
-                            inserts = inserts.replace("[domingo]", "'1'");
-                        } else {
+                        try {
+                            if ("X".equals(value.substring(6, 7))) {
+                                inserts = inserts.replace("[domingo]", "'1'");
+                            } else {
+                                inserts = inserts.replace("[domingo]", "'0'");
+                            }
+                        } catch (StringIndexOutOfBoundsException e) {
                             inserts = inserts.replace("[domingo]", "'0'");
                         }
                     }

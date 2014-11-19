@@ -1380,3 +1380,17 @@ INSERT INTO categoria_geral VALUES('995',1,'CRIANÇA ESPECIAL');
 INSERT INTO categoria_geral VALUES('996',1,'CARNA AXE');
 INSERT INTO categoria_geral VALUES('997',1,'BOSSA NOVA');
 INSERT INTO categoria_geral VALUES('999',1,'ESPERA TELEFONICA');
+
+
+CREATE TABLE plantao (
+	id int not null,
+	idusuario int not null,
+	data int not null,
+	primary key(id)
+);
+
+CREATE TABLE inauguracao (
+	id int not null,
+	texto varchar(255) not null, 
+	primary key(id)
+);

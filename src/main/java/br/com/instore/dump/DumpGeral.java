@@ -404,12 +404,12 @@ public class DumpGeral {
                 String data_da_ultima_execucao = (line.substring(250, 269).trim().length() == 19 ? line.substring(250, 269).trim() : line.substring(250, 269).trim() + " 00:01:01").replace("'", "\"");
                 String tempo_total_da_música = line.substring(269, 277).trim().replace("'", "\"");
                 String qtde_de_player_total = line.substring(277, 280).trim().replace("'", "\"");
-                String data_vencimento = line.substring(280, 287).trim().replace("'", "\"");
-                String data_vencimento_crossover = line.substring(287, 296).trim().replace("'", "\"");
-                String frame_inicial = line.substring(296, 304).trim().replace("'", "\"");
-                String frame_final = line.substring(304, 312).trim().replace("'", "\"");
-                String msg = line.substring(312, 352).trim().replace("'", "\"");
-                String sem_som = line.substring(352, 353).trim().replace("'", "\"");
+                String data_vencimento = line.substring(280, 286).trim().replace("'", "\"")+"20"+line.substring(286, 288);
+                String data_vencimento_crossover = line.substring(288, 297).trim().replace("'", "\"");
+                String frame_inicial = line.substring(297, 305).trim().replace("'", "\"");
+                String frame_final = line.substring(305, 313).trim().replace("'", "\"");
+                String msg = line.substring(313, 353).trim().replace("'", "\"");
+                String sem_som = line.substring(353, 353).trim().replace("'", "\"");
 
                 final List<Integer> countList = new ArrayList<Integer>();
                 rv.query("select count(id) as count , '' as param from musica_geral where titulo = '" + Titulo + "'").executeSQL(new Each() {
@@ -436,6 +436,7 @@ public class DumpGeral {
                     } else {
                         inserts = inserts.replace("[categoria3]", "null");
                     }
+                    
                     inserts = inserts.replace("[cut]", "'" + Cut + "'");
                     inserts = inserts.replace("[crossover]", "'" + crossover.replace("'", "\"") + "'");
                     inserts = inserts.replace("[data_vencimento_crossover]", "'" + new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd/MM/yy").parse(data_vencimento_crossover)) + "'");
@@ -446,13 +447,12 @@ public class DumpGeral {
                     inserts = inserts.replace("[ultima_execucao_data]", "'" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new SimpleDateFormat("dd/MM/yyyy hh:mm:ss").parse(data_da_ultima_execucao)) + "'");
                     inserts = inserts.replace("[qtde_player]", "'" + qtde_de_player_total.replace("'", "\"") + "'");
                     inserts = inserts.replace("[qtde]", "'" + qtde_de_player_total.replace("'", "\"") + "'");
-                    inserts = inserts.replace("[data_vencimento]", "'" + new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd/MM/yy").parse(data_vencimento)) + "'");
+                    inserts = inserts.replace("[data_vencimento]", "'" + new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd/MM/yyyy").parse(data_vencimento)) + "'");
                     inserts = inserts.replace("[frame_inicio]", "'" + frame_inicial.replace("'", "\"") + "'");
                     inserts = inserts.replace("[frame_final]", "'" + frame_final.replace("'", "\"") + "'");
                     inserts = inserts.replace("[msg]", "'" + msg.replace("'", "\"") + "'");
                     inserts = inserts.replace("[sem_som]", "'" + sem_som.replace("'", "\"") + "'");
                     inserts = inserts.replace("[super_crossover]", "'0'");
-
 
 //                System.out.println("select count(id) as total , '"+Titulo+"' from musica_geral where titulo = '"+Titulo+"' \n union");
                 } else {

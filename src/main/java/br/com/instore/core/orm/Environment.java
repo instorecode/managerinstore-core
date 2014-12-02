@@ -20,6 +20,7 @@ public class Environment {
         PRODUCTION,
         TEST,
     }
+    
     private static Env env;
     
     public static void main(String[] args) {

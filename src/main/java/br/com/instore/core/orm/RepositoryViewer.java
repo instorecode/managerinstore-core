@@ -23,8 +23,18 @@ public class RepositoryViewer {
     public RepositoryViewer() {
         verifySession();
     }
-    
-    
+
+    public RepositoryViewer(Session session) {
+        this.session = session;
+    }
+
+    public Session getSession() {
+        return session;
+    }
+
+    public void setSession(Session session) {
+        this.session = session;
+    }
 
     protected void verifySession() {
         try {
@@ -41,7 +51,6 @@ public class RepositoryViewer {
                     System.out.println("SESSION-REOPEN-INSTORE-" + sdf.format(new Date()));
                 }
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }

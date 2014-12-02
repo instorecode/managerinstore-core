@@ -1382,15 +1382,129 @@ INSERT INTO categoria_geral VALUES('997',1,'BOSSA NOVA');
 INSERT INTO categoria_geral VALUES('999',1,'ESPERA TELEFONICA');
 
 
-CREATE TABLE plantao (
-	id int not null,
-	idusuario int not null,
-	data int not null,
-	primary key(id)
-);
+CREATE TABLE IF NOT EXISTS tipo_produto (
+  id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id))
+ENGINE = InnoDB;
 
-CREATE TABLE inauguracao (
-	id int not null,
-	texto varchar(255) not null, 
-	primary key(id)
-);
+
+-- -----------------------------------------------------
+-- Tableproduto
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS produto (
+  id INT NOT NULL AUTO_INCREMENT,
+  tipo_produto INT NOT NULL,
+  nome VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id),
+  INDEX fk_produto_tipo_produto_idx (tipo_produto ASC),
+  CONSTRAINT fk_produto_tipo_produto
+    FOREIGN KEY (tipo_produto)
+    REFERENCES tipo_produto (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Tableproduto_cliente
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS produto_cliente (
+  id INT NOT NULL AUTO_INCREMENT,
+  cliente INT NOT NULL,
+  produto INT NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (cliente) REFERENCES cliente (idcliente) ,
+  FOREIGN KEY (produto) REFERENCES produto (id)) 
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Tableproduto_cliente_detalhes
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS produto_cliente_detalhes (
+  id INT NOT NULL AUTO_INCREMENT,
+  produto_cliente INT NOT NULL,
+  versao VARCHAR(255) NOT NULL,
+  horario VARCHAR(8) NOT NULL,
+  desktop_servico TINYINT(1) NOT NULL,
+  PRIMARY KEY (id),
+  INDEX fk_produto_cliente_detalhes_produto_cliente1_idx (produto_cliente ASC),
+  CONSTRAINT fk_produto_cliente_detalhes_produto_cliente1
+    FOREIGN KEY (produto_cliente)
+    REFERENCES produto_cliente (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Tabletipo_acesso_remoto
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS tipo_acesso_remoto (
+  id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(255) NULL,
+  PRIMARY KEY (id))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Tableacesso_remoto
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS acesso_remoto (
+  id INT NOT NULL AUTO_INCREMENT,
+  tipo_acesso_remoto INT NOT NULL,
+  metadata TEXT NOT NULL,
+  PRIMARY KEY (id),
+  INDEX fk_acesso_remoto_tipo_acesso_remoto1_idx (tipo_acesso_remoto ASC),
+  CONSTRAINT fk_acesso_remoto_tipo_acesso_remoto1
+    FOREIGN KEY (tipo_acesso_remoto)
+    REFERENCES tipo_acesso_remoto (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+
+-- -----------------------------------------------------
+-- Tableproduto_cliente_acesso_remoto
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS produto_cliente_acesso_remoto (
+  id INT NOT NULL AUTO_INCREMENT,
+  produto_cliente INT NOT NULL,
+  acesso_remoto INT NOT NULL,
+  PRIMARY KEY (id),
+  INDEX fk_produto_cliente_acesso_remoto_produto_cliente1_idx (produto_cliente ASC),
+  INDEX fk_produto_cliente_acesso_remoto_acesso_remoto1_idx (acesso_remoto ASC),
+  CONSTRAINT fk_produto_cliente_acesso_remoto_produto_cliente1
+    FOREIGN KEY (produto_cliente)
+    REFERENCES produto_cliente (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT fk_produto_cliente_acesso_remoto_acesso_remoto1
+    FOREIGN KEY (acesso_remoto)
+    REFERENCES acesso_remoto (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Tableutil
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS util (
+  id INT NOT NULL AUTO_INCREMENT,
+  produto_cliente INT NOT NULL,
+  metadata TEXT NOT NULL,
+  PRIMARY KEY (id),
+  INDEX fk_util_produto_cliente1_idx (produto_cliente ASC),
+  CONSTRAINT fk_util_produto_cliente1
+    FOREIGN KEY (produto_cliente)
+    REFERENCES produto_cliente (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+
+

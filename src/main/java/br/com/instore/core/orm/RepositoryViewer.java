@@ -351,4 +351,11 @@ public class RepositoryViewer {
                 + "where mapping_id = '/usuario' and idusuario = " + 1 + " \n group by idfuncionalidade";
         System.out.println(rv.query(q).executeSQLCount());;
     }
+    
+    public void clearAndClose() {
+//        if (null != session && session.isOpen()) {
+//            session.clear();
+//            session.close();
+//        }
+    }
 }

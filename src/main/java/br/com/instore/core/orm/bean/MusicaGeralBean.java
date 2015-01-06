@@ -18,6 +18,18 @@ public class MusicaGeralBean extends Bean {
     @Column( name = "id" , nullable = false)
     private Integer id;
     
+    @Column( name = "comun_jamendo_megatrax", nullable = false)
+    private Integer comunJamendoMegatrax;
+    
+    @Column( name = "codigo_interno", nullable = false)
+    private String codigoInterno;
+    
+    @Column( name = "codigo_externo", nullable = false)
+    private String codigoExterno;
+    
+    @Column( name = "velocidade", nullable = false)
+    private Integer velocidade;
+    
     @Column( name = "categoria_geral" , nullable = false)
     private Integer categoriaGeral;
     

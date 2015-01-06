@@ -39,6 +39,7 @@ public class Query {
     }
 
     public <T extends Bean> T findOne() {
+        T ret = null;
         if (criterionList.size() > 0) {
             for (Criterion criterion : criterionList) {
                 criteria.add(criterion);
@@ -50,10 +51,12 @@ public class Query {
         List resultSet = criteria.list();
 
         if (resultSet.size() > 0) {
-            return (T) resultSet.get(0);
+            ret = (T) resultSet.get(0);
         }
-
-        return null;
+        
+        
+        dao.clearAndClose();
+        return ret;
     }
 
     public <T> T findAll() {
@@ -68,10 +71,13 @@ public class Query {
                 criteria.addOrder(order);
             }
         }
-        return (T) criteria.list();
+        T ret = (T) criteria.list();
+        dao.clearAndClose();
+        return ret;
     }
 
     public Long count() {
+        Long ret = 0l;
         if (criterionList.size() > 0) {
             for (Criterion criterion : criterionList) {
                 criteria.add(criterion);
@@ -79,9 +85,11 @@ public class Query {
         }
         Object object = criteria.setProjection(Projections.rowCount()).uniqueResult();
         if(null != object) {
-            return new Long(object.toString());
+            ret = new Long(object.toString());
         }
-        return 0l;
+        
+        dao.clearAndClose();
+        return ret;
     }
 
     public <T> Query orderAsc(String column) {

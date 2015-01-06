@@ -23,7 +23,7 @@ public class AudiostoreComercialBean extends Bean {
     private Integer id;
     
     @ManyToOne
-    @JoinColumn(name = "categoria" , nullable = false)
+    @JoinColumn(name = "categoria" )
     private AudiostoreCategoriaBean audiostoreCategoria;
     
     @Column(name = "arquivo" , length = 30, nullable = false)

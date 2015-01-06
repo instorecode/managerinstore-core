@@ -1508,3 +1508,25 @@ ENGINE = InnoDB;
 
 
 
+ALTER TABLE `intranet`.`audiostore_comercial` 
+DROP FOREIGN KEY `fk_audiostore_comercial_audiostore_categoria1`;
+ALTER TABLE `intranet`.`audiostore_comercial` 
+CHANGE COLUMN `categoria` `categoria` SMALLINT(6) NULL ;
+ALTER TABLE `intranet`.`audiostore_comercial` 
+ADD CONSTRAINT `fk_audiostore_comercial_audiostore_categoria1`
+  FOREIGN KEY (`categoria`)
+  REFERENCES `intranet`.`audiostore_categoria` (`codigo`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+CREATE TABLE `intranet`.`audiostore_programacao_comercial` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `programacao` INT NOT NULL,
+  `comercial` INT NOT NULL,
+  `inicial_final` TINYINT(1) NOT NULL,
+  `intervalo` VARCHAR(5) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+ALTER TABLE `intranet`.`audiostore_programacao_comercial` 
+CHANGE COLUMN `intervalo` `intervalo` VARCHAR(8) NOT NULL ;

@@ -94,6 +94,9 @@ public class AudiostoreMusicaBean extends Bean {
     @Column(name = "super_crossover" , nullable = false)
     private Boolean superCrossover;
     
+    @Column(name = "ultima_importacao" , nullable = false)
+    private Boolean ultimaImportacao;
+    
     @ManyToOne
     @JoinColumn(name = "cliente" , nullable = false)
     private ClienteBean cliente;
@@ -287,5 +290,13 @@ public class AudiostoreMusicaBean extends Bean {
 
     public void setCliente(ClienteBean cliente) {
         this.cliente = cliente;
+    }
+
+    public Boolean getUltimaImportacao() {
+        return ultimaImportacao;
+    }
+
+    public void setUltimaImportacao(Boolean ultimaImportacao) {
+        this.ultimaImportacao = ultimaImportacao;
     }
 }

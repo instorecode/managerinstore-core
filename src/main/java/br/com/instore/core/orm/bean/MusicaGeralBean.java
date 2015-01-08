@@ -74,6 +74,9 @@ public class MusicaGeralBean extends Bean {
     
     @Column( name = "arquivo" , nullable = false , length = 255)
     private String arquivo;
+    
+    @Column(name = "ultima_importacao" , nullable = false)
+    private Boolean ultimaImportacao;
 
     public MusicaGeralBean() {
     }
@@ -208,5 +211,45 @@ public class MusicaGeralBean extends Bean {
 
     public void setArquivo(String arquivo) {
         this.arquivo = arquivo;
+    }
+
+    public Integer getComunJamendoMegatrax() {
+        return comunJamendoMegatrax;
+    }
+
+    public void setComunJamendoMegatrax(Integer comunJamendoMegatrax) {
+        this.comunJamendoMegatrax = comunJamendoMegatrax;
+    }
+
+    public String getCodigoInterno() {
+        return codigoInterno;
+    }
+
+    public void setCodigoInterno(String codigoInterno) {
+        this.codigoInterno = codigoInterno;
+    }
+
+    public String getCodigoExterno() {
+        return codigoExterno;
+    }
+
+    public void setCodigoExterno(String codigoExterno) {
+        this.codigoExterno = codigoExterno;
+    }
+
+    public Integer getVelocidade() {
+        return velocidade;
+    }
+
+    public void setVelocidade(Integer velocidade) {
+        this.velocidade = velocidade;
+    }
+
+    public Boolean getUltimaImportacao() {
+        return ultimaImportacao;
+    }
+
+    public void setUltimaImportacao(Boolean ultimaImportacao) {
+        this.ultimaImportacao = ultimaImportacao;
     }
 }

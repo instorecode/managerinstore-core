@@ -71,6 +71,7 @@ public class Query {
                 criteria.addOrder(order);
             }
         }
+        dao.verifySession();
         T ret = (T) criteria.list();
         dao.clearAndClose();
         return ret;

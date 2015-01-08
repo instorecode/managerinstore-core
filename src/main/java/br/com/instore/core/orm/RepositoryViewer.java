@@ -11,7 +11,9 @@ import java.util.List;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import org.hibernate.ResourceClosedException;
 import org.hibernate.Session;
+import org.hibernate.TransactionException;
 import org.hibernate.criterion.Restrictions;
 
 public class RepositoryViewer {
@@ -19,9 +21,9 @@ public class RepositoryViewer {
     protected Session session;
     private Query query;
     protected UsuarioBean usuario;
-
+    
     public RepositoryViewer() {
-        verifySession();
+        
     }
 
     public RepositoryViewer(Session session) {
@@ -51,6 +53,18 @@ public class RepositoryViewer {
                     System.out.println("SESSION-REOPEN-INSTORE-" + sdf.format(new Date()));
                 }
             }
+        } catch (TransactionException e) {
+            if (null != session && session.isOpen()) {
+                session.clear();
+                session.close();
+            }
+            verifySession();
+        } catch (ResourceClosedException e) {
+            if (null != session && session.isOpen()) {
+                session.clear();
+                session.close();
+            }
+            verifySession();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -128,7 +142,7 @@ public class RepositoryViewer {
 
             Field f = clazz.getDeclaredField(fieldName);
             f.setAccessible(true);
-            
+
             if (null == f.get(t)) {
                 verifySession();
                 auditar(usuario, t, (short) 1);
@@ -148,8 +162,7 @@ public class RepositoryViewer {
             e.printStackTrace();
         }
     }
-    
-    
+
     public <T extends Bean> void save2(T t) {
         try {
             Class<?> clazz = t.getClass();
@@ -164,7 +177,7 @@ public class RepositoryViewer {
 
             Field f = clazz.getDeclaredField(fieldName);
             f.setAccessible(true);
-            
+
             if (null == f.get(t)) {
                 verifySession();
                 session.save(t);
@@ -182,7 +195,7 @@ public class RepositoryViewer {
             e.printStackTrace();
         }
     }
-    
+
     public <T extends Bean> void delete(T t) {
         verifySession();
         session.delete(t);
@@ -200,11 +213,11 @@ public class RepositoryViewer {
     }
 
     private <T extends Bean> void auditar(UsuarioBean usuario, T object, short tipo) {
-        
-        if(!object.getClass().isAnnotationPresent(Auditor.class)) {
+
+        if (!object.getClass().isAnnotationPresent(Auditor.class)) {
             return;
         }
-        
+
         AuditoriaBean auditoria = new AuditoriaBean();
         auditoria.setAcao(tipo);
         auditoria.setEntidade("Módulo " + object.getClass().getSimpleName().replace("Bean", ""));
@@ -212,7 +225,7 @@ public class RepositoryViewer {
         auditoria.setData(new Date());
 
         save(auditoria);
-        
+
         // CREATE
         if (tipo == 1) {
             diff(object, auditoria);
@@ -338,7 +351,7 @@ public class RepositoryViewer {
     public void setUsuario(UsuarioBean usuario) {
         this.usuario = usuario;
     }
-    
+
     public static void main(String[] args) {
         RepositoryViewer rv = new RepositoryViewer();
         String q = "";
@@ -351,7 +364,7 @@ public class RepositoryViewer {
                 + "where mapping_id = '/usuario' and idusuario = " + 1 + " \n group by idfuncionalidade";
         System.out.println(rv.query(q).executeSQLCount());;
     }
-    
+
     public void clearAndClose() {
 //        if (null != session && session.isOpen()) {
 //            session.clear();

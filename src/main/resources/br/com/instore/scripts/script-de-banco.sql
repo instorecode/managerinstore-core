@@ -1530,3 +1530,9 @@ CREATE TABLE `intranet`.`audiostore_programacao_comercial` (
 
 ALTER TABLE `intranet`.`audiostore_programacao_comercial` 
 CHANGE COLUMN `intervalo` `intervalo` VARCHAR(8) NOT NULL ;
+
+ALTER TABLE `intranet`.`audiostore_musica` 
+ADD COLUMN `ultima_importacao` TINYINT(1) NULL DEFAULT 0 AFTER `cliente`;
+
+ALTER TABLE `intranet`.`musica_geral` 
+ADD COLUMN `ultima_importacao` TINYINT(1) NULL DEFAULT 0 AFTER `cliente`;

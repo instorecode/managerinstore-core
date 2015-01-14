@@ -2,81 +2,68 @@ package br.com.instore.core.orm.bean;
 
 import br.com.instore.core.orm.Bean;
 import br.com.instore.core.orm.bean.annotation.Auditor;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Auditor
 @Entity
-@Table(name="musica_geral")
+@Table(name = "musica_geral")
 public class MusicaGeralBean extends Bean {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column( name = "id" , nullable = false)
+    @Column(name = "id", nullable = false)
     private Integer id;
-    
-    @Column( name = "comun_jamendo_megatrax", nullable = false)
+    @Column(name = "comun_jamendo_megatrax", nullable = false)
     private Integer comunJamendoMegatrax;
-    
-    @Column( name = "codigo_interno", nullable = false)
+    @Column(name = "codigo_interno", nullable = false)
     private String codigoInterno;
-    
-    @Column( name = "codigo_externo", nullable = false)
+    @Column(name = "codigo_externo", nullable = false)
     private String codigoExterno;
-    
-    @Column( name = "velocidade", nullable = false)
+    @Column(name = "velocidade", nullable = false)
     private Integer velocidade;
-    
-    @Column( name = "categoria_geral" , nullable = false)
+    @Column(name = "categoria_geral", nullable = false)
     private Integer categoriaGeral;
-    
-    @Column( name = "usuario" , nullable = false)
+    @Column(name = "usuario", nullable = false)
     private Integer usuario;
-    
-    @Column( name = "gravadora" , nullable = false)
+    @Column(name = "gravadora", nullable = false)
     private Integer gravadora;
-    
-    @Column( name = "titulo" , nullable = false, length = 255)
+    @Column(name = "titulo", nullable = false, length = 255)
     private String titulo;
-    
-    @Column( name = "interprete" , nullable = false)
+    @Column(name = "interprete", nullable = false)
     private String interprete;
-    
-    @Column( name = "tipo_interprete" , nullable = false)
+    @Column(name = "tipo_interprete", nullable = false)
     private short tipoInterprete;
-    
-    @Column( name = "letra" , nullable = false)
+    @Column(name = "letra", nullable = false)
     private String letra;
-    
-    @Column( name = "bpm" , nullable = false)
+    @Column(name = "bpm", nullable = false)
     private short bpm;
-    
-    @Column( name = "tempo_total" , nullable = false , length = 30)
+    @Column(name = "tempo_total", nullable = false, length = 30)
     private String tempoTotal;
-    
-    @Column( name = "ano_gravacao" , nullable = false)
+    @Column(name = "ano_gravacao", nullable = false)
     private Integer anoGravacao;
-    
-    @Column( name = "afinidade1" , nullable = false , length = 255)
+    @Column(name = "afinidade1", nullable = false, length = 255)
     private String afinidade1;
-    
-    @Column( name = "afinidade2" , nullable = false , length = 255)
+    @Column(name = "afinidade2", nullable = false, length = 255)
     private String afinidade2;
-    
-    @Column( name = "afinidade3" , nullable = false , length = 255)
+    @Column(name = "afinidade3", nullable = false, length = 255)
     private String afinidade3;
-    
-    @Column( name = "afinidade4" , nullable = false , length = 255)
+    @Column(name = "afinidade4", nullable = false, length = 255)
     private String afinidade4;
-    
-    @Column( name = "arquivo" , nullable = false , length = 255)
+    @Column(name = "arquivo", nullable = false, length = 255)
     private String arquivo;
-    
-    @Column(name = "ultima_importacao" , nullable = false)
+    @Column(name = "ultima_importacao", nullable = false)
     private Boolean ultimaImportacao;
+    @Temporal(TemporalType.DATE)
+    @Column(name = "data_cadastro", nullable = false)
+    private Date dataCadastro;
 
     public MusicaGeralBean() {
     }
@@ -251,5 +238,13 @@ public class MusicaGeralBean extends Bean {
 
     public void setUltimaImportacao(Boolean ultimaImportacao) {
         this.ultimaImportacao = ultimaImportacao;
+    }
+
+    public Date getDataCadastro() {
+        return dataCadastro;
+    }
+
+    public void setDataCadastro(Date dataCadastro) {
+        this.dataCadastro = dataCadastro;
     }
 }

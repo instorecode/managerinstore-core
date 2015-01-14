@@ -1,0 +1,1195 @@
+<clientes>
+    <cliente>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <codigoInterno>AIMPECAVEL</codigoInterno>
+        <nome>A IMPECÁVEL</nome>
+        <situacao>1</situacao>
+        <cep>20.080-003</cep>
+        <rua>AVENIDA MARECHAL FLORIANO, </rua>
+        <bairro>CENTRO</bairro>
+        <cidade>RIO DE JANEIRO</cidade>
+        <estado>RJ</estado>
+        <dataInicio>2007-12-12</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>55</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <codigoInterno>AGUIASHOES</codigoInterno>
+        <nome>ÁGUIA SHOES </nome>
+        <situacao>1</situacao>
+        <cep>05.787-000</cep>
+        <rua>ESTRADA DO CAMPO LIMPO, </rua>
+        <bairro>PIRAJUSSARA</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2008-10-07</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>4263</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <codigoInterno>AMOEDO</codigoInterno>
+        <nome>AMOEDO</nome>
+        <situacao>1</situacao>
+        <cep>22.790-877</cep>
+        <rua>EST. DO PONTAL</rua>
+        <bairro>RECREIO</bairro>
+        <cidade>RIO DE JANEIRO</cidade>
+        <estado>RJ</estado>
+        <dataInicio>2014-02-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>843</ruaNumero>
+        <complemento> CASA 845 E 847</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <codigoInterno>ARTEX</codigoInterno>
+        <nome>ARTEX </nome>
+        <situacao>1</situacao>
+        <cep>01.310-920</cep>
+        <rua>AVENIDA PAULISTA</rua>
+        <bairro>BELA VISTA</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2011-10-14</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10004</identificadorDaMatriz>
+        <codigoInterno>AFEET</codigoInterno>
+        <nome>ARTWALK</nome>
+        <situacao>1</situacao>
+        <cep>01.227-200</cep>
+        <rua>AVENIDA ANGÉLICA</rua>
+        <bairro>CONSOLAÇÃO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-03-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>2163</ruaNumero>
+        <complemento>8 ANDAR</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10005</identificadorDaMatriz>
+        <codigoInterno>AFEET</codigoInterno>
+        <nome>AUTHENTIC FEET</nome>
+        <situacao>1</situacao>
+        <cep>01.227-200</cep>
+        <rua>AVENIDA ANGÉLICA</rua>
+        <bairro>CONSOLAÇÃO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-03-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>2163</ruaNumero>
+        <complemento> 8 ANDAR</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10006</identificadorDaMatriz>
+        <codigoInterno>AFEET</codigoInterno>
+        <nome>AUTHENTICAL</nome>
+        <situacao>1</situacao>
+        <cep>96.015-000</cep>
+        <rua>RUA QUINZE DE NOVEMBRO</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>PELOTAS</cidade>
+        <estado>RS</estado>
+        <dataInicio>2013-08-07</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>667</ruaNumero>
+        <complemento>LOJA 19</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10007</identificadorDaMatriz>
+        <codigoInterno>AVENIDA</codigoInterno>
+        <nome>AVENIDA</nome>
+        <situacao>1</situacao>
+        <cep>78.020-600</cep>
+        <rua>AVENIDA SENADOR METELO</rua>
+        <bairro>CENTRO SUL</bairro>
+        <cidade>CUIABÁ</cidade>
+        <estado>MT</estado>
+        <dataInicio>2011-02-18</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>556</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10008</identificadorDaMatriz>
+        <codigoInterno>BANANEIRA</codigoInterno>
+        <nome>BANANEIRA</nome>
+        <situacao>1</situacao>
+        <cep>05.641-000</cep>
+        <rua>RUA MARECHAL HASTINFILO DE MOURA</rua>
+        <bairro>VILA SUZANA</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-10-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>417</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10009</identificadorDaMatriz>
+        <codigoInterno>BURBANA</codigoInterno>
+        <nome>BELEZA URBANA HAIR</nome>
+        <situacao>1</situacao>
+        <cep>03.310-000</cep>
+        <rua>RUA ITAPURA, </rua>
+        <bairro>VILA GOMES CARDIN</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2014-05-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>829</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10010</identificadorDaMatriz>
+        <codigoInterno>BESNI</codigoInterno>
+        <nome>BESNI</nome>
+        <situacao>1</situacao>
+        <cep>01.037-910</cep>
+        <rua>PRAÇA RAMOS DE AZEVEDO</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>1999-08-24</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>206</ruaNumero>
+        <complemento> 206 - CONJ. 2730</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10011</identificadorDaMatriz>
+        <codigoInterno>FOURTOWERS</codigoInterno>
+        <nome>BRISTOL FOUR TOWERS</nome>
+        <situacao>1</situacao>
+        <cep>29.055-180</cep>
+        <rua>AVENIDA SATURNINO DE BRITO</rua>
+        <bairro>PRAIA DO CANTO</bairro>
+        <cidade>VITÓRIA</cidade>
+        <estado>ES</estado>
+        <dataInicio>2011-05-19</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>1327</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10012</identificadorDaMatriz>
+        <codigoInterno>CEA</codigoInterno>
+        <nome>C&amp;A </nome>
+        <situacao>1</situacao>
+        <cep>06.455-000</cep>
+        <rua>ALAMEDA ARAGUAIA</rua>
+        <bairro>ALPHAVILLE INDUSTRIAL</bairro>
+        <cidade>BARUERI</cidade>
+        <estado>SP</estado>
+        <dataInicio>1998-07-15</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>1022</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10013</identificadorDaMatriz>
+        <codigoInterno>CAEDU</codigoInterno>
+        <nome>CAEDU </nome>
+        <situacao>1</situacao>
+        <cep>03.190-170</cep>
+        <rua>RUA PIRAJÁ</rua>
+        <bairro>AGUA RASA</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2011-06-29</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>803</ruaNumero>
+        <complemento>815, 817 TERREO ANDAR 2</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10014</identificadorDaMatriz>
+        <codigoInterno>CASASHOW</codigoInterno>
+        <nome>CASA SHOW</nome>
+        <situacao>1</situacao>
+        <cep>25.575-825</cep>
+        <rua>RUA MARIA SOARES SENDAS, 111 - LOTE A - UNIDADE G</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>SÃO JOÃO DE MERITI</cidade>
+        <estado>RJ</estado>
+        <dataInicio>2013-04-15</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>360</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10015</identificadorDaMatriz>
+        <codigoInterno>CATSHAIR</codigoInterno>
+        <nome>CATS HAIR</nome>
+        <situacao>1</situacao>
+        <cep>04.551-000</cep>
+        <rua>RUA OLIMPÍADAS</rua>
+        <bairro>VILA OLÍMPIA</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2011-03-21</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>259</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10016</identificadorDaMatriz>
+        <codigoInterno>CONFESSION</codigoInterno>
+        <nome>CONFESSION</nome>
+        <situacao>1</situacao>
+        <cep>01.122-021</cep>
+        <rua>RUA PROFESSOR CESARE LOMBROSO </rua>
+        <bairro>BOM RETIRO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-02-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>3661</ruaNumero>
+        <complemento>LADO ÍMPAR,  - LOJA 17</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10017</identificadorDaMatriz>
+        <codigoInterno>DENALI</codigoInterno>
+        <nome>DENALI HOTEL</nome>
+        <situacao>1</situacao>
+        <cep>75.132-400</cep>
+        <rua>RODOVIA BR 153</rua>
+        <bairro>FAZENDA BARREIRO DO MEIO</bairro>
+        <cidade>ANÁPOLIS</cidade>
+        <estado>GO</estado>
+        <dataInicio>2014-03-10</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>337</ruaNumero>
+        <complemento>KM 2 - SALA 1</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10018</identificadorDaMatriz>
+        <codigoInterno>DIBS</codigoInterno>
+        <nome>DIBS</nome>
+        <situacao>1</situacao>
+        <cep>01.219-011</cep>
+        <rua>LARGO DO AROUCHE</rua>
+        <bairro>REPÚBLICA</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2012-10-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>3221</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10019</identificadorDaMatriz>
+        <codigoInterno>SACCARIA</codigoInterno>
+        <nome>EMPORIO SACCARIA</nome>
+        <situacao>1</situacao>
+        <cep>74.810-100</cep>
+        <rua>AVENIDA DEPUTADO JAMEL CECÍLIO</rua>
+        <bairro>JARDIM GOIÁS</bairro>
+        <cidade>GOIÂNIA</cidade>
+        <estado>GO</estado>
+        <dataInicio>2013-01-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>2559</ruaNumero>
+        <complemento>QDB31 - LT. 17</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10020</identificadorDaMatriz>
+        <codigoInterno>ESKALA</codigoInterno>
+        <nome>ESKALA</nome>
+        <situacao>1</situacao>
+        <cep>05.405-250</cep>
+        <rua>RUA TEODORO SAMPAIO</rua>
+        <bairro>PINHEIROS</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-08-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>98</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10021</identificadorDaMatriz>
+        <codigoInterno>STEIN</codigoInterno>
+        <nome>ETEL CALÇADOS (STEIN)</nome>
+        <situacao>1</situacao>
+        <cep>25.953-010</cep>
+        <rua>RUA FRANCISCO SÁ</rua>
+        <bairro>VÁRZEA</bairro>
+        <cidade>TERESÓPOLIS</cidade>
+        <estado>RJ</estado>
+        <dataInicio>2014-06-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>83</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10022</identificadorDaMatriz>
+        <codigoInterno>STEIN</codigoInterno>
+        <nome>FEIRÃO DOS CALÇADOS (STEIN)</nome>
+        <situacao>1</situacao>
+        <cep>25.953-011</cep>
+        <rua>RUA FRANCISCO SÁ</rua>
+        <bairro>VÁRZEA</bairro>
+        <cidade>TERESÓPOLIS</cidade>
+        <estado>RJ</estado>
+        <dataInicio>2014-06-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>1383</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10023</identificadorDaMatriz>
+        <codigoInterno>FLAVIOS</codigoInterno>
+        <nome>FLÁVIO&apos;S</nome>
+        <situacao>1</situacao>
+        <cep>74.505-011</cep>
+        <rua>AVENIDA 24 DE OUTUBRO</rua>
+        <bairro>SETOR CAMPINAS</bairro>
+        <cidade>GOIÂNIA</cidade>
+        <estado>GO</estado>
+        <dataInicio>2012-12-22</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10024</identificadorDaMatriz>
+        <codigoInterno>GABRIELA</codigoInterno>
+        <nome>GABRIELA</nome>
+        <situacao>1</situacao>
+        <cep>88.130-000</cep>
+        <rua>RUA RONEY HENRIQUE HEIDERSHIDT, SN</rua>
+        <bairro>JARDIM ELDORADO</bairro>
+        <cidade>PALHOÇA</cidade>
+        <estado>SC</estado>
+        <dataInicio>2011-12-15</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>556</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10025</identificadorDaMatriz>
+        <codigoInterno>GIOVANNA</codigoInterno>
+        <nome>GIOVANNA</nome>
+        <situacao>1</situacao>
+        <cep>78.020-600</cep>
+        <rua>AVENIDA SENADOR METELO</rua>
+        <bairro>CENTRO SUL</bairro>
+        <cidade>CUIABÁ</cidade>
+        <estado>MT</estado>
+        <dataInicio>2011-02-18</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>1355</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10026</identificadorDaMatriz>
+        <codigoInterno>MERCURE</codigoInterno>
+        <nome>GRANDMERCURE</nome>
+        <situacao>1</situacao>
+        <cep>04.021-051</cep>
+        <rua>RUA SENA MADUREIRA</rua>
+        <bairro>VILA CLEMENTINO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-04-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>2448</ruaNumero>
+        <complemento>BLOCO I</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10027</identificadorDaMatriz>
+        <codigoInterno>HAVAN</codigoInterno>
+        <nome>HAVAN</nome>
+        <situacao>1</situacao>
+        <cep>88.353-100</cep>
+        <rua>VIA RODOVIA ANTÔNIO HEIL</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>BRUSQUE</cidade>
+        <estado>SC</estado>
+        <dataInicio>2013-04-23</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <complemento>DO KM 28,000 AO FIM, 200</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10028</identificadorDaMatriz>
+        <codigoInterno>HOTELVV</codigoInterno>
+        <nome>HOTEL VICTORIA VILLA</nome>
+        <situacao>1</situacao>
+        <cep>80.230-010</cep>
+        <rua>AV. SETE DE SETEMBRO</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>CURITIBA</cidade>
+        <estado>PR</estado>
+        <dataInicio>2014-05-15</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10029</identificadorDaMatriz>
+        <codigoInterno>IBIS</codigoInterno>
+        <nome>IBIS </nome>
+        <situacao>1</situacao>
+        <cep>05.425-070 </cep>
+        <rua>AV. NAÇÕES UNIDAS</rua>
+        <bairro>PINHEIROS</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-12-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <complemento>7.815 - 10º ANDAR</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10030</identificadorDaMatriz>
+        <codigoInterno>IBISSTYLES</codigoInterno>
+        <nome>IBISSTYLES</nome>
+        <situacao>1</situacao>
+        <cep>05.425-070 </cep>
+        <rua>AV. NAÇÕES UNIDAS</rua>
+        <bairro>PINHEIROS</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-12-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <complemento>7.815 - 10º ANDAR</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10031</identificadorDaMatriz>
+        <codigoInterno>JERRAMJEANS</codigoInterno>
+        <nome>JERRAMJEANS</nome>
+        <situacao>1</situacao>
+        <cep>12.900-002</cep>
+        <rua>RUA CORONEL TEÓFILO LEME</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>BRAGANÇA PAULISTA</cidade>
+        <estado>SP</estado>
+        <dataInicio>2011-04-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>1360</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10032</identificadorDaMatriz>
+        <codigoInterno>JOFASHION</codigoInterno>
+        <nome>JOFASHION</nome>
+        <situacao>1</situacao>
+        <cep>01.122-011</cep>
+        <rua>RUA AIMORÉS</rua>
+        <bairro>BOM RETIRO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2014-02-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>75</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10033</identificadorDaMatriz>
+        <codigoInterno>JBISHOFF</codigoInterno>
+        <nome>JORGE BISCHOFF</nome>
+        <situacao>1</situacao>
+        <cep>95.650-000</cep>
+        <rua>RUA 7 DE JULHO</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>IGREJINHA</cidade>
+        <estado>RS</estado>
+        <dataInicio>2012-04-20</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>416</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10034</identificadorDaMatriz>
+        <codigoInterno>KALLAN</codigoInterno>
+        <nome>KALLAN </nome>
+        <situacao>1</situacao>
+        <cep> 04.552-000</cep>
+        <rua>RUA DO RÓCIO</rua>
+        <bairro>VL. OLÌMPIA</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2014-05-15</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>267</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10035</identificadorDaMatriz>
+        <codigoInterno>KANPAI</codigoInterno>
+        <nome>KANPAI BLUE RESTAURANTE</nome>
+        <situacao>1</situacao>
+        <cep>74.810-100</cep>
+        <rua>AVENIDA DEPUTADO JAMEL CECÍLIO</rua>
+        <bairro>JD. GOIÁS</bairro>
+        <cidade>GOIÂNIA</cidade>
+        <estado>GO</estado>
+        <dataInicio>2014-04-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>3300</ruaNumero>
+        <complemento> - SHOPPING FLAMBOYANT</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10036</identificadorDaMatriz>
+        <codigoInterno>LASEMILLA</codigoInterno>
+        <nome>LA SEMILLA</nome>
+        <situacao>1</situacao>
+        <cep>04.535-012</cep>
+        <rua>RUA JOÃO CACHOEIRA</rua>
+        <bairro>ITAIM BIBI</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2014-07-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>673</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10037</identificadorDaMatriz>
+        <codigoInterno>LEADER</codigoInterno>
+        <nome>LEADER </nome>
+        <situacao>1</situacao>
+        <cep>22.210-010</cep>
+        <rua>RUA DO RUSSEL</rua>
+        <bairro>GLÓRIA</bairro>
+        <cidade>RIO DE JANEIRO</cidade>
+        <estado>RJ</estado>
+        <dataInicio>2011-04-16</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <complemento> 804- 201, 301 E 302 </complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10038</identificadorDaMatriz>
+        <codigoInterno>LEVIS</codigoInterno>
+        <nome>LEVI&apos;S</nome>
+        <situacao>1</situacao>
+        <cep>05.409-012</cep>
+        <rua>RUA OSCAR FREIRE</rua>
+        <bairro>CERQUEIRA CÉSAR</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-04-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>2379</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10039</identificadorDaMatriz>
+        <codigoInterno>LINGUICERIA</codigoInterno>
+        <nome>LINGUICERIA</nome>
+        <situacao>1</situacao>
+        <cep>05.205-220</cep>
+        <rua>RUA BARÃO GERALDO DE REZENDE, 220</rua>
+        <bairro>BOTAFOGO</bairro>
+        <cidade>CAMPINAS</cidade>
+        <estado>SP</estado>
+        <dataInicio>2014-11-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10040</identificadorDaMatriz>
+        <codigoInterno>LIQUIDO</codigoInterno>
+        <nome>LIQUIDO</nome>
+        <situacao>1</situacao>
+        <cep>06.453-017</cep>
+        <rua>CALÇADA DAS HORTÊNCIAS, 12</rua>
+        <bairro>ALPHAVILLE COMERCIAL</bairro>
+        <cidade>BARUERI</cidade>
+        <estado>SP</estado>
+        <dataInicio>2014-07-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10041</identificadorDaMatriz>
+        <codigoInterno>LMORTARI</codigoInterno>
+        <nome>LITA MORTARI</nome>
+        <situacao>1</situacao>
+        <cep>05.415-040</cep>
+        <rua>RUA MATEUS GROU - LADO PAR</rua>
+        <bairro>PINHEIROS</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2012-04-02</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>412</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10042</identificadorDaMatriz>
+        <nome>LOUCOS &amp; SANTOS</nome>
+        <situacao>1</situacao>
+        <cep>95.650-000</cep>
+        <rua>RUA 7 DE JULHO</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>IGREJINHA</cidade>
+        <estado>RS</estado>
+        <dataInicio>2013-07-20</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>416</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10043</identificadorDaMatriz>
+        <codigoInterno>AFFET</codigoInterno>
+        <nome>MAGIC FEET</nome>
+        <situacao>1</situacao>
+        <cep>01.227-200</cep>
+        <rua>AVENIDA ANGÉLICA</rua>
+        <bairro>CONSOLAÇÃO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-03-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>2163</ruaNumero>
+        <complemento>8 ANDAR</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10044</identificadorDaMatriz>
+        <codigoInterno>MARISA</codigoInterno>
+        <nome>MARISA</nome>
+        <situacao>1</situacao>
+        <cep>01.138-901</cep>
+        <rua>RUA JAMES HOLLAND</rua>
+        <bairro>BARRA FUNDA</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2014-07-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>422</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10045</identificadorDaMatriz>
+        <codigoInterno>MAXIOR</codigoInterno>
+        <nome>MAXIOR RELOJOARIA</nome>
+        <situacao>1</situacao>
+        <cep>04.707-000</cep>
+        <rua>AV ROQUE PETRONI JUNIOR</rua>
+        <bairro>MORUMBI</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2014-01-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <complemento> N° 1087 - LOJA 209/210 - SHOPPING MORUMBI</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10046</identificadorDaMatriz>
+        <codigoInterno>MAXSUSHI</codigoInterno>
+        <nome>MAXSUSHI</nome>
+        <situacao>1</situacao>
+        <cep>71.936-250</cep>
+        <rua>AV DAS ARAUCÁRIAS</rua>
+        <bairro>SUL (ÁGUAS CLARAS)</bairro>
+        <cidade>BRASÍLIA</cidade>
+        <estado>DF</estado>
+        <dataInicio>2012-09-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <complemento>, 1525, LOJA 34/36</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10047</identificadorDaMatriz>
+        <codigoInterno>MEGAJEANS</codigoInterno>
+        <nome>MEGA JEANS</nome>
+        <situacao>1</situacao>
+        <cep>79.002-331</cep>
+        <rua>RUA QUATORZE DE JULHO</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>CAMPO GRANDE</cidade>
+        <estado>MS</estado>
+        <dataInicio>2013-05-20</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>2285</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10048</identificadorDaMatriz>
+        <codigoInterno>MERCURE</codigoInterno>
+        <nome>MERCURE</nome>
+        <situacao>1</situacao>
+        <cep>05.425-070 </cep>
+        <rua>AV. NAÇÕES UNIDAS</rua>
+        <bairro>PINHEIROS</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-04-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <complemento>7.815 - 10º ANDAR</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10049</identificadorDaMatriz>
+        <codigoInterno>MIRANVVILLE</codigoInterno>
+        <nome>MIRANVILLE</nome>
+        <situacao>1</situacao>
+        <cep>06.460-030</cep>
+        <rua>AVENIDA PIRACEMA</rua>
+        <bairro>TAMBORÉ</bairro>
+        <cidade>BARUERI</cidade>
+        <estado>SP</estado>
+        <dataInicio>2011-11-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>669</ruaNumero>
+        <complemento>LOJAS 44/45 - SHOPPING TAMBORÉ</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10050</identificadorDaMatriz>
+        <codigoInterno>MIXED</codigoInterno>
+        <nome>MIXED </nome>
+        <situacao>1</situacao>
+        <cep>71.625-500</cep>
+        <rua>SHIS QI 11 BLOCO A, </rua>
+        <bairro>SETOR DE HABITAÇÕES INDIVIDUAI</bairro>
+        <cidade>BRASÍLIA</cidade>
+        <estado>DF</estado>
+        <dataInicio>2011-05-27</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>11</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10051</identificadorDaMatriz>
+        <codigoInterno>NALIN</codigoInterno>
+        <nome>NALIN</nome>
+        <situacao>1</situacao>
+        <cep>25.915-000</cep>
+        <rua>AVENIDA SANTOS DUMONT, 18</rua>
+        <bairro>PIABETÁ</bairro>
+        <cidade>MAGÉ</cidade>
+        <estado>RJ</estado>
+        <dataInicio>2012-04-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10052</identificadorDaMatriz>
+        <codigoInterno>NALINSHOPPING</codigoInterno>
+        <nome>NALIN SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>25.900-000</cep>
+        <rua>RUA DR. SIQUEIRA, 137</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>MAGÉ</cidade>
+        <estado>RJ</estado>
+        <dataInicio>2013-08-21</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10053</identificadorDaMatriz>
+        <codigoInterno>NETSHOES</codigoInterno>
+        <nome>NETSHOES</nome>
+        <situacao>1</situacao>
+        <cep>01.504-001</cep>
+        <rua>RUA VERGUEIRO</rua>
+        <bairro>LIBERDADE</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-07-05</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>943</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10054</identificadorDaMatriz>
+        <nome>NOVOTEL </nome>
+        <situacao>1</situacao>
+        <cep>02.029-000</cep>
+        <rua>AV ZAKI NARCHI</rua>
+        <bairro>VILA GUILHERME</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2012-08-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>500</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10055</identificadorDaMatriz>
+        <codigoInterno>OBA</codigoInterno>
+        <nome>OBA HORTIFRUTI</nome>
+        <situacao>1</situacao>
+        <cep>13.082-120</cep>
+        <rua>VIA RODOVIA DOM PEDRO I</rua>
+        <bairro>JARDIM SANTA MÔNICA</bairro>
+        <cidade>CAMPINAS</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-08-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <complemento> KM, 140,5</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10056</identificadorDaMatriz>
+        <codigoInterno>OKSATACADO</codigoInterno>
+        <nome>OK SUPER ATACADO</nome>
+        <situacao>1</situacao>
+        <cep>29.165-680</cep>
+        <rua>AVENIDA EUDES SCHERRER DE SOUZA</rua>
+        <bairro>PARQUE RESIDENCIAL LARANJEIRAS</bairro>
+        <cidade>SERRA</cidade>
+        <estado>ES</estado>
+        <dataInicio>2013-11-15</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <complemento> N° 2001 - GALPÃO 09</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10057</identificadorDaMatriz>
+        <codigoInterno>PADARIAAMERICA</codigoInterno>
+        <nome>PADARIA AMERICA</nome>
+        <situacao>1</situacao>
+        <cep>78.060-634</cep>
+        <rua>AVENIDA HAITI</rua>
+        <bairro>JARDIM DAS AMÉRICAS</bairro>
+        <cidade>CUIABÁ</cidade>
+        <estado>MT</estado>
+        <dataInicio>2012-11-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>344</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10058</identificadorDaMatriz>
+        <codigoInterno>SANTAROSALIA</codigoInterno>
+        <nome>PADARIA SANTA ROSALIA</nome>
+        <situacao>1</situacao>
+        <cep>18.095-000</cep>
+        <rua>RUA APARECIDA, 322</rua>
+        <bairro>JARDIM SANTA ROSÁLIA</bairro>
+        <cidade>SOROCABA</cidade>
+        <estado>SP</estado>
+        <dataInicio>2012-11-06</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10059</identificadorDaMatriz>
+        <nome>PAIOL </nome>
+        <situacao>1</situacao>
+        <cep>78.020-280</cep>
+        <rua>TRAVESSA PAIAGUÁS</rua>
+        <bairro>CENTRO SUL</bairro>
+        <cidade>CUIABÁ</cidade>
+        <estado>MT</estado>
+        <dataInicio>2011-10-17</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>116</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10060</identificadorDaMatriz>
+        <codigoInterno>PASSARELA</codigoInterno>
+        <nome>PASSARELA CALÇADOS</nome>
+        <situacao>1</situacao>
+        <cep>79.002-336</cep>
+        <rua>RUA QUATORZE DE JULHO</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>CAMPO GRANDE</cidade>
+        <estado>MS</estado>
+        <dataInicio>2013-04-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>2164</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10061</identificadorDaMatriz>
+        <codigoInterno>PAGTBO</codigoInterno>
+        <nome>PATBO</nome>
+        <situacao>1</situacao>
+        <cep>38.400-128</cep>
+        <rua>AVENIDA AFONSO PENA</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>UBERLÂNDIA</cidade>
+        <estado>MG</estado>
+        <dataInicio>2014-02-15</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>119</ruaNumero>
+        <complemento>SUBSOLO 1</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10062</identificadorDaMatriz>
+        <codigoInterno>PEPPER</codigoInterno>
+        <nome>PEPPER</nome>
+        <situacao>1</situacao>
+        <cep>05.522-010</cep>
+        <rua>VIA RUA CORONEL OTAVIANO DA SILVEIRA</rua>
+        <bairro>VILA SONIA</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2012-10-04</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>97</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10063</identificadorDaMatriz>
+        <codigoInterno>STEIN</codigoInterno>
+        <nome>PERALTA CALÇADOS (STEIN)</nome>
+        <situacao>1</situacao>
+        <cep>25.953-011</cep>
+        <rua>RUA FRANCISCO SÁ</rua>
+        <bairro>VÁRZEA</bairro>
+        <cidade>TERESÓPOLIS</cidade>
+        <estado>RJ</estado>
+        <dataInicio>2014-06-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10064</identificadorDaMatriz>
+        <codigoInterno>PERNAMBUCANAS</codigoInterno>
+        <nome>PERNAMBUCANAS </nome>
+        <situacao>1</situacao>
+        <cep>01.301-100</cep>
+        <rua>RUA DA CONSOLAÇÃO</rua>
+        <bairro>CONSOLAÇÃO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataFim>2035-12-31</dataFim>
+        <complemento>DE 1101 A 2459 - LADO ÍMPAR, 2387 - 2411</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10065</identificadorDaMatriz>
+        <codigoInterno>PEUGEOTL</codigoInterno>
+        <nome>PEUGEOTL</nome>
+        <situacao>1</situacao>
+        <cep>90.610-000</cep>
+        <rua>AVENIDA IPIRANGA</rua>
+        <bairro>PETRÓPOLIS</bairro>
+        <cidade>PORTO ALEGRE</cidade>
+        <estado>RS</estado>
+        <dataInicio>2013-04-15</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>51</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10066</identificadorDaMatriz>
+        <codigoInterno>PHENICIA</codigoInterno>
+        <nome>PHENICIA </nome>
+        <situacao>1</situacao>
+        <cep>01.442-001</cep>
+        <rua>ALAMEDA GABRIEL MONTEIRO DA SILVA</rua>
+        <bairro>JARDIM AMÉRICA</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2011-06-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>5570</ruaNumero>
+        <complemento>DE 1358 A 2298 - LADO PAR, 1950 E</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10067</identificadorDaMatriz>
+        <codigoInterno>POSTOSANMARINO</codigoInterno>
+        <nome>POSTO SAN MARINO </nome>
+        <situacao>1</situacao>
+        <cep>77.023-056</cep>
+        <rua>AVENIDA 806 SUL </rua>
+        <bairro>PLANO DIRETOR SUL</bairro>
+        <cidade>PALMAS</cidade>
+        <estado>TO</estado>
+        <dataInicio>2011-11-10</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>10</ruaNumero>
+        <complemento> NS 10, 10 - LT PAC 24A</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10068</identificadorDaMatriz>
+        <codigoInterno>PUSCO</codigoInterno>
+        <nome>PUSCO</nome>
+        <situacao>1</situacao>
+        <cep>04.005-003</cep>
+        <rua>RUA ABÍLIO SOARES</rua>
+        <bairro>PARAÍSO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2012-03-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>876</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10069</identificadorDaMatriz>
+        <codigoInterno>RODO</codigoInterno>
+        <nome>RODÓ RESTAURANTE</nome>
+        <situacao>1</situacao>
+        <cep>05.445-000</cep>
+        <rua>RUA PASCOAL VITA</rua>
+        <bairro>VILA MADALENA</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-08-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>329</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10070</identificadorDaMatriz>
+        <codigoInterno>SERGIOK</codigoInterno>
+        <nome>SERGIOK </nome>
+        <situacao>1</situacao>
+        <cep>01.426-001</cep>
+        <rua>RUA OSCAR FREIRE</rua>
+        <bairro>CERQUEIRA CÉSAR</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>1143</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10071</identificadorDaMatriz>
+        <codigoInterno>SHMONTESCLAROS</codigoInterno>
+        <nome>SHOPPING MONTES CLAROS</nome>
+        <situacao>1</situacao>
+        <cep>39.400-546</cep>
+        <rua>AVENIDA DONATO QUINTINO</rua>
+        <bairro>CIDADE NOVA</bairro>
+        <cidade>MONTES CLAROS</cidade>
+        <estado>MG</estado>
+        <dataInicio>2013-03-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>90</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10072</identificadorDaMatriz>
+        <codigoInterno>GABRIELA</codigoInterno>
+        <nome>STUDIOZ</nome>
+        <situacao>1</situacao>
+        <cep>88.130-000</cep>
+        <rua>RUA RONEY HENRIQUE HEIDERSHIDT, SN</rua>
+        <bairro>JARDIM ELDORADO</bairro>
+        <cidade>PALHOÇA</cidade>
+        <estado>SC</estado>
+        <dataInicio>2011-12-15</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10073</identificadorDaMatriz>
+        <codigoInterno>TANGER</codigoInterno>
+        <nome>TANGER</nome>
+        <situacao>1</situacao>
+        <cep>16.400-101</cep>
+        <rua>RUA FLORIANO PEIXOTO</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>LINS</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-11-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10074</identificadorDaMatriz>
+        <codigoInterno>TENDTUDO</codigoInterno>
+        <nome>TENDTUDO</nome>
+        <situacao>1</situacao>
+        <cep>74.911-815</cep>
+        <rua>RUA TAPAUÁ, SN</rua>
+        <bairro>VILA BRASÍLIA COMPLEMENTO</bairro>
+        <cidade>APARECIDA DE GOIÂNIA</cidade>
+        <estado>GO</estado>
+        <dataInicio>2013-04-15</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>1777</ruaNumero>
+        <complemento>LOTE 06 A 15, QUADRA 02, SALA 01</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10075</identificadorDaMatriz>
+        <codigoInterno>AFEET</codigoInterno>
+        <nome>TENNIS EXPRESS</nome>
+        <situacao>1</situacao>
+        <cep>01.227-200</cep>
+        <rua>AVENIDA ANGÉLICA</rua>
+        <bairro>CONSOLAÇÃO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-03-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>2163</ruaNumero>
+        <complemento>8 ANDAR</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10076</identificadorDaMatriz>
+        <codigoInterno>BEAUTYBOX</codigoInterno>
+        <nome>THE BEAUTY BOX</nome>
+        <situacao>1</situacao>
+        <cep>18.110-650</cep>
+        <rua>AVENIDA GISELE CONSTANTINO</rua>
+        <bairro>PARQUE BELA VISTA</bairro>
+        <cidade>VOTORANTIM</cidade>
+        <estado>SP</estado>
+        <dataInicio>2013-07-15</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>1800</ruaNumero>
+        <complemento>LOJA 261-262 - PISO SOROCABA</complemento>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10077</identificadorDaMatriz>
+        <codigoInterno>FLATTC</codigoInterno>
+        <nome>THE CAPITAL FLAT</nome>
+        <situacao>1</situacao>
+        <cep>04.530-030</cep>
+        <rua>RUA TENENTE NEGRÃO</rua>
+        <bairro>ITAIM BIBI</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <dataInicio>2011-10-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>200</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10078</identificadorDaMatriz>
+        <codigoInterno>TODESCHINI</codigoInterno>
+        <nome>TODESCHINI</nome>
+        <situacao>1</situacao>
+        <cep>78.032-015</cep>
+        <rua>AVENIDA ISAAC PÓVOAS</rua>
+        <bairro>GOIABEIRAS</bairro>
+        <cidade>CUIABÁ</cidade>
+        <estado>MT</estado>
+        <dataInicio>2012-09-10</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>1039</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10079</identificadorDaMatriz>
+        <codigoInterno>TODESCHINIFC</codigoInterno>
+        <nome>TODESCHINIFC</nome>
+        <situacao>1</situacao>
+        <cep>78.015-600</cep>
+        <rua>AVENIDA FERNANDO CORREA</rua>
+        <bairro>POÇÃO</bairro>
+        <cidade>CUIABÁ</cidade>
+        <estado>MT</estado>
+        <dataInicio>2012-09-10</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>1100</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10080</identificadorDaMatriz>
+        <codigoInterno>TORRATORRA</codigoInterno>
+        <nome>TORRA TORRA</nome>
+        <situacao>1</situacao>
+        <cep>12.210-260</cep>
+        <rua>RUA SETE DE SETEMBRO</rua>
+        <bairro>CENTRO</bairro>
+        <cidade>SÃO JOSÉ DOS CAMPOS</cidade>
+        <estado>SP</estado>
+        <dataInicio>2014-05-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>211</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10081</identificadorDaMatriz>
+        <codigoInterno>TRANSATOM</codigoInterno>
+        <nome>TRANSATOM</nome>
+        <situacao>1</situacao>
+        <cep>75.800-012</cep>
+        <rua>AVENIDA GOIÁS</rua>
+        <bairro>SETOR CENTRAL</bairro>
+        <cidade>JATAÍ</cidade>
+        <estado>GO</estado>
+        <dataInicio>2014-02-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>843</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10082</identificadorDaMatriz>
+        <codigoInterno>STEIN</codigoInterno>
+        <nome>VOGUE CALÇADOS (STEIN)</nome>
+        <situacao>1</situacao>
+        <cep>25.953-010</cep>
+        <rua>RUA FRANCISCO SÁ</rua>
+        <bairro>VÁRZEA</bairro>
+        <cidade>TERESÓPOLIS</cidade>
+        <estado>RJ</estado>
+        <dataInicio>2014-06-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>98</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10083</identificadorDaMatriz>
+        <codigoInterno>STEIN</codigoInterno>
+        <nome>VOGUE SPORT (STEIN)</nome>
+        <situacao>1</situacao>
+        <cep>25.953-011</cep>
+        <rua>RUA FRANCISCO SÁ</rua>
+        <bairro>VÁRZEA</bairro>
+        <cidade>TERESÓPOLIS</cidade>
+        <estado>RJ</estado>
+        <dataInicio>2014-06-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>151</ruaNumero>
+    </cliente>
+    <cliente>
+        <identificadorDaMatriz>10084</identificadorDaMatriz>
+        <codigoInterno>YUKAI</codigoInterno>
+        <nome>YUKAI</nome>
+        <situacao>1</situacao>
+        <cep>30.315-600</cep>
+        <rua>RUA GRÃO MOGOL</rua>
+        <bairro>SION</bairro>
+        <cidade>BELO HORIZONTE</cidade>
+        <estado>MG</estado>
+        <dataInicio>2012-04-01</dataInicio>
+        <dataFim>2035-12-31</dataFim>
+        <ruaNumero>1045</ruaNumero>
+    </cliente>
+</clientes>

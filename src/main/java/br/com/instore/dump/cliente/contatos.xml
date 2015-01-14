@@ -1,0 +1,278 @@
+<contatos>
+    <contato>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <nome>Raphael</nome>
+        <email>raphael.barros@impecavel.com.br</email>
+        <tel>(21)99671-9797</tel>
+        <setor>TI</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <nome>Rodrigo</nome>
+        <email>rodrigo@aguiashoes.com.br</email>
+        <tel>(11) 3018-3670</tel>
+        <setor>TI</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <nome>Rodrigo</nome>
+        <email>rodrigo_aguia@terra.com.br</email>
+        <tel>(11) 8138-7176</tel>
+        <setor>TI</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00011</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011) 5844-2956 </tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00011</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011) 5842-2082 </tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00011</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011) 5842-0923</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00012</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(11) 5844-8998 </tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00012</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(11) 5844-6528</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00013</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011) 5833-1658 </tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00013</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011) 5833-2204</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00014</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011) 5893-2373 </tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00014</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011) 5893-3834 </tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00014</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011) 5897-4690</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00015</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011) 2011-2894 </tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00016</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011) 5514-3641</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00017</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011) 5892-6286 </tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00019</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>4546-4105</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00020</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>2010-7229</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00021</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(012) 3913-1388</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00022</identificadorDaUnidade>
+        <nome>Não foi informado</nome>
+        <email>Não foi informado</email>
+        <tel>Não foi informado</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00023</identificadorDaUnidade>
+        <nome>Não foi informado</nome>
+        <email>Não foi informado</email>
+        <tel>Não foi informado</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00024</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <email>Não foi informado</email>
+        <tel>(011)2554-2884 </tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00025</identificadorDaUnidade>
+        <nome>Não foi informado</nome>
+        <email>Não foi informado</email>
+        <tel>Não foi informado</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <nome>Renato Guedes</nome>
+        <email>renato.guedes@amoedo.com.br</email>
+        <tel>Não foi informado</tel>
+        <setor>MKT</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <nome>Joice Ibraim </nome>
+        <email>joiceb@amoedo.com.br</email>
+        <tel>(21) 2490-9110 </tel>
+        <setor>MKT</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <nome>Joice Ibraim </nome>
+        <tel>(21)  2199-1249</tel>
+        <setor>MKT</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <nome>Marcus Figueiredo</nome>
+        <email>marcusvf@amoedo.com.br</email>
+        <tel>(21) 2490 - 9118</tel>
+        <setor>TI</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <nome>Não foi informado</nome>
+        <email>Não foi informado</email>
+        <tel>(21) 9354-8412</tel>
+        <setor>TI</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <nome>Fernando Santos  </nome>
+        <email>fernandofs@amoedo.com.br</email>
+        <tel>Não foi informado</tel>
+        <setor>TI</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <nome>Marcos Gils</nome>
+        <email> marcoss@amoedo.com.br</email>
+        <tel>Não foi informado</tel>
+        <setor>TI</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <nome>Aderson</nome>
+        <email>aderson@operaprimanet</email>
+        <tel>(21) 2225-5749 </tel>
+        <setor>Prestador serviço</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <nome>Aderson</nome>
+        <tel>(21) 9800-7007</tel>
+        <setor>Prestador serviço</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <identificadorDaUnidade>00026</identificadorDaUnidade>
+        <nome>Gerente</nome>
+        <tel>(21) 2490-1200</tel>
+        <setor>Não foi informado</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <nome>Dionizio</nome>
+        <email>dionizio@mmartan.com.br</email>
+        <tel>(19) 2102-2339</tel>
+        <setor>TI</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <nome>Ericlebio</nome>
+        <email>ericlebio@mmartan.com.br</email>
+        <tel>(19) 2102-2260 R:2339</tel>
+        <setor>TI</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <nome>Ronny</nome>
+        <email>ronny.alvarenga@mmartan.com.br</email>
+        <tel>(19) 2102-2282</tel>
+        <setor>TI</setor>
+    </contato>
+    <contato>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <nome>Andre</nome>
+        <email>andre.silva@mmartan.com.br</email>
+        <setor>TI</setor>
+    </contato>
+</contatos>

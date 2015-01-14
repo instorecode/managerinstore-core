@@ -1,0 +1,1547 @@
+<unidades>
+    <unidade>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <identificadorDaUnidade>00001</identificadorDaUnidade>
+        <codigoInterno>IMP01</codigoInterno>
+        <nome>MATRIZ</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <identificadorDaUnidade>00002</identificadorDaUnidade>
+        <codigoInterno>IMP02</codigoInterno>
+        <nome>MADUREIRA</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <identificadorDaUnidade>00003</identificadorDaUnidade>
+        <codigoInterno>IMP03</codigoInterno>
+        <nome>CAXIAS</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <identificadorDaUnidade>00004</identificadorDaUnidade>
+        <codigoInterno>IMP04</codigoInterno>
+        <nome>NITERÓI</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <identificadorDaUnidade>00005</identificadorDaUnidade>
+        <codigoInterno>IMP05</codigoInterno>
+        <nome>NOVA IGUAÇU</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <identificadorDaUnidade>00006</identificadorDaUnidade>
+        <codigoInterno>IMP06</codigoInterno>
+        <nome>CAMPO GRANDE</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <identificadorDaUnidade>00007</identificadorDaUnidade>
+        <codigoInterno>IMP07</codigoInterno>
+        <nome>ALCANTÂRA</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <identificadorDaUnidade>00008</identificadorDaUnidade>
+        <codigoInterno>IMP08</codigoInterno>
+        <nome>MEYER</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <identificadorDaUnidade>00009</identificadorDaUnidade>
+        <codigoInterno>IMP09</codigoInterno>
+        <nome>S J DE MERITI </nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <identificadorDaUnidade>00010</identificadorDaUnidade>
+        <codigoInterno>IMP10</codigoInterno>
+        <nome>ITABORAÍ</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10000</identificadorDaMatriz>
+        <identificadorDaUnidade>00011</identificadorDaUnidade>
+        <codigoInterno>IMP11</codigoInterno>
+        <nome>OUVIDOR</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00011</identificadorDaUnidade>
+        <codigoInterno>AGUIA01</codigoInterno>
+        <nome>CAMPO LIMPO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ESTRADA DO CAMPO LIMPO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>4263</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00012</identificadorDaUnidade>
+        <codigoInterno>AGUIA02</codigoInterno>
+        <nome>CAMPO LIMPO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ESTRADA DO CAMPO LIMPO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>3908/3912</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00013</identificadorDaUnidade>
+        <codigoInterno>AGUIA03</codigoInterno>
+        <nome>JD. ANGELA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ESTRADA DO M´BOI MIRIM</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>4542</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00014</identificadorDaUnidade>
+        <codigoInterno>AGUIA04</codigoInterno>
+        <nome>PIRAPORINHA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ESTRADA DO M´BOI MIRIM</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>1049</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00015</identificadorDaUnidade>
+        <codigoInterno>AGUIA05</codigoInterno>
+        <nome>SÃO MATEUS</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. MATEO BEI</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>3443</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00016</identificadorDaUnidade>
+        <codigoInterno>AGUIA06</codigoInterno>
+        <nome>PIRAPORINHA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ESTRADA DO M&apos; BOI MIRIM</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>1145</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00017</identificadorDaUnidade>
+        <codigoInterno>AGUIA07</codigoInterno>
+        <nome>PIRAPORINHA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. INÁCIO DIAS DA SILVA</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>226</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00018</identificadorDaUnidade>
+        <codigoInterno>AGUIA08</codigoInterno>
+        <nome>MAUA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. BARÃO DE MAUÁ</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>125</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00019</identificadorDaUnidade>
+        <codigoInterno>AGUIA09</codigoInterno>
+        <nome>GUARAPIRANGA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00020</identificadorDaUnidade>
+        <codigoInterno>AGUIA10</codigoInterno>
+        <nome>SÃO MATEUS</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. MATEO BEI</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>3181</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00021</identificadorDaUnidade>
+        <codigoInterno>AGUIA11</codigoInterno>
+        <nome>SÃO JOSÉ DOS CAMPOS</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>RUA SETE DE SETEMBRO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>313</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00022</identificadorDaUnidade>
+        <codigoInterno>AGUIA12</codigoInterno>
+        <nome>FERRAZ DE VASCONCELOS</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. BRASIL</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>1374</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00023</identificadorDaUnidade>
+        <codigoInterno>AGUIA13</codigoInterno>
+        <nome>GUAIANASES</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>RUA HIPOLITO DE CAMARGO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>413</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00024</identificadorDaUnidade>
+        <codigoInterno>AGUIA14</codigoInterno>
+        <nome>LAGEADO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ESTRADA DO LAGEADO VELHO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>735</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10001</identificadorDaMatriz>
+        <identificadorDaUnidade>00025</identificadorDaUnidade>
+        <codigoInterno>AGUIA16</codigoInterno>
+        <nome>SUZANO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>R. GENERAL FRANCISCO GLICERIO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>360/354</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10002</identificadorDaMatriz>
+        <identificadorDaUnidade>00026</identificadorDaUnidade>
+        <codigoInterno>AMOEDO</codigoInterno>
+        <nome> RECREIO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV DAS AMÉRICAS</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>RIO DE JANEIRO</cidade>
+        <estado>RJ</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>21777</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00027</identificadorDaUnidade>
+        <codigoInterno>AGSPAR</codigoInterno>
+        <nome>RUA AUGUSTA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>RUA AUGUSTA</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>2685</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00028</identificadorDaUnidade>
+        <codigoInterno>ANFPAR</codigoInterno>
+        <nome>ANALIA FRANCO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV REJENTE FEIJÓ</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>1739</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00029</identificadorDaUnidade>
+        <codigoInterno>ARMKT</codigoInterno>
+        <nome>MARKETING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00030</identificadorDaUnidade>
+        <codigoInterno>ARNPAR</codigoInterno>
+        <nome>ARICANDUVA </nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. ARICANDUVA</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado> SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>5.555</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00031</identificadorDaUnidade>
+        <codigoInterno>BASPAR</codigoInterno>
+        <nome>BARRA SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. DAS AMÉRICAS</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>RJ </estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>4666</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00032</identificadorDaUnidade>
+        <codigoInterno>BBHPAR</codigoInterno>
+        <nome>BH BOULEVARD</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. DOS ANDRADAS </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>BELO HORIZONTE</cidade>
+        <estado>MG</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>3000</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00033</identificadorDaUnidade>
+        <codigoInterno>BHSPAR</codigoInterno>
+        <nome>BH SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua> ROD. BR 356 </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>BELO HORIZONTE</cidade>
+        <estado>MG</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>3049</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00034</identificadorDaUnidade>
+        <codigoInterno>BNDPAR</codigoInterno>
+        <nome>BANDEIRAS</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV JOHN BOYD DUNLOP</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>3900</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00035</identificadorDaUnidade>
+        <codigoInterno>BRLPAR</codigoInterno>
+        <nome>OUTLET PREMIUM BRASILIA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ROD BR 060 KM 21 LOJA </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>BRASILIA</cidade>
+        <estado>DF</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>1046</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00036</identificadorDaUnidade>
+        <codigoInterno>BRSPAR</codigoInterno>
+        <nome>BRISAMAR SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua> R. FREI GASPAR,</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>365</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00037</identificadorDaUnidade>
+        <codigoInterno>BTTPAR</codigoInterno>
+        <nome>BOULEVARD TATUAPÉ</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>R GONÇALVES CRESPO </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>TAUBATÉ</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>78</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00038</identificadorDaUnidade>
+        <codigoInterno>CGDPAR</codigoInterno>
+        <nome>PARK SHOPPING CAMPO GRANDE - RJ</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ESTRADA DO MONTEIRO,</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>RJ </estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>1200</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00039</identificadorDaUnidade>
+        <codigoInterno>CGRPAR</codigoInterno>
+        <nome>CAMPO GRANDE - MS</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV AFONSO PENA, </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>CAMPO GRANDE</cidade>
+        <estado>MS</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>4909</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00040</identificadorDaUnidade>
+        <codigoInterno>CMNPAR</codigoInterno>
+        <nome>CAMPINAS SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>RUA JACY TEIXEIRA DE CAMARGO, </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>CAMPINAS</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>940</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00041</identificadorDaUnidade>
+        <codigoInterno>CNOPAR</codigoInterno>
+        <nome>CENTER NORTE</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>TRAVESSA CASALBUONO </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>120</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00042</identificadorDaUnidade>
+        <codigoInterno>CNTPAR</codigoInterno>
+        <nome>CONTAGEM - ITAU POWER SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. GENERAL DAVID SARNOFF </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>MG</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>5160</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00043</identificadorDaUnidade>
+        <codigoInterno>DPEPAR</codigoInterno>
+        <nome>D. PEDRO CAMPINAS</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. GUILHERME CAMPOS </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>CAMPINAS</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>500</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00044</identificadorDaUnidade>
+        <codigoInterno>EBHPAR</codigoInterno>
+        <nome>ESTAÇAO BH</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV CRISTIANO MACHADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>BELO HORIZONTE</cidade>
+        <estado>MG</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>11183</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00045</identificadorDaUnidade>
+        <codigoInterno>ECRPAR</codigoInterno>
+        <nome>SHOPPING ESTAÇÃO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV SETE DE SETEMBRO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>CURITIBA</cidade>
+        <estado>PR</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>2775</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00046</identificadorDaUnidade>
+        <codigoInterno>ELDPAR</codigoInterno>
+        <nome>SHOPPING ELDORADO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. REBOUÇAS</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>3970</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00047</identificadorDaUnidade>
+        <codigoInterno>EPLPAR</codigoInterno>
+        <nome>IGUATEMI ESPLANADA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00048</identificadorDaUnidade>
+        <codigoInterno>FLRPAR</codigoInterno>
+        <nome>FLORIPA SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ROD. VIRGÍLIO VÁRZEA </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>FLORIANOPOLIS</cidade>
+        <estado>SC</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>587</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00049</identificadorDaUnidade>
+        <codigoInterno>GLRPAR</codigoInterno>
+        <nome>IGUATEMI GALLERIA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00050</identificadorDaUnidade>
+        <codigoInterno>GPLPAR</codigoInterno>
+        <nome>GRAND PLAZA SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. INDUSTRIAL</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>600</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00051</identificadorDaUnidade>
+        <codigoInterno>GVNPAR</codigoInterno>
+        <nome>SHOPPING GRANJA VIANA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ROD. RAPOSO TAVARES KM 23,5</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>214</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00052</identificadorDaUnidade>
+        <codigoInterno>GVTPAR</codigoInterno>
+        <nome>RUA GAIVOTA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>R GAIVOTA </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>1183</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00053</identificadorDaUnidade>
+        <codigoInterno>IBIPAR</codigoInterno>
+        <nome>SHOPPING IBIRAPUERA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. IBIRAPUERA </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>3103</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00054</identificadorDaUnidade>
+        <codigoInterno>IFRPAR</codigoInterno>
+        <nome>IGUATEMI FLORIANÓPOLIS</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. MADRE BENVENUTA</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>FLORIANOPOLIS</cidade>
+        <estado>SC</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>687</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00055</identificadorDaUnidade>
+        <codigoInterno>JGDPAR</codigoInterno>
+        <nome>JARDIM GUADALUPE</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV BRASIL</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>RJ </estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>22155</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00056</identificadorDaUnidade>
+        <codigoInterno>JKI</codigoInterno>
+        <nome>CASA MOYSÉS JK</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. PRESIDENTE JUCELINO KUBITSCHEK</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>2041</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00057</identificadorDaUnidade>
+        <codigoInterno>JNIPAR</codigoInterno>
+        <nome>JUNDIAI SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV 9 DE JULHO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>JUNDIAI</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>3333</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00058</identificadorDaUnidade>
+        <codigoInterno>JZFPAR</codigoInterno>
+        <nome>JUIZ DE FORA - INDEPENDÊNCIA SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. INDEPENDÊNCIA</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>JUIZ DE FORA</cidade>
+        <estado>MG</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>3600</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00059</identificadorDaUnidade>
+        <codigoInterno>LNDPAR</codigoInterno>
+        <nome>BOULEVARD LONDRINA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. THEODORO VICTORELLI</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>LONDRINA</cidade>
+        <estado>PR</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>150</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00060</identificadorDaUnidade>
+        <codigoInterno>LPLPAR</codigoInterno>
+        <nome>LITORAL PLAZA SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. AYRTON SENNA DA SILVA </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>1511</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00061</identificadorDaUnidade>
+        <codigoInterno>MARPAR</codigoInterno>
+        <nome>CATUAÍ MARINGÁ</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV COLOMBO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>MARINGA</cidade>
+        <estado>PR</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>9161</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00062</identificadorDaUnidade>
+        <codigoInterno>MBRPAR</codigoInterno>
+        <nome>METROPOLITANO BARRA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. DAS AMÉRICAS</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>RJ </estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>4666</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00063</identificadorDaUnidade>
+        <codigoInterno>MDRPAR</codigoInterno>
+        <nome>MADUREIRA SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ESTRADA DA PORTELA </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>RJ </estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>222</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00064</identificadorDaUnidade>
+        <codigoInterno>MIRPAR</codigoInterno>
+        <nome>MIRAMAR SHOPPING</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV MARECHAL FLORIANO PEIXOTO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>44</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00065</identificadorDaUnidade>
+        <codigoInterno>MORPAR</codigoInterno>
+        <nome>MORUMBI</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. ROQUE PETRONI JUNIOR </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>1089</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00066</identificadorDaUnidade>
+        <codigoInterno>NAMPAR</codigoInterno>
+        <nome>NOVA AMERICA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV PASTOR MARTIN LUTHER KING JR</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>RJ </estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>126</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00067</identificadorDaUnidade>
+        <codigoInterno>NLNPAR</codigoInterno>
+        <nome>LONDRINA NORTE SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV SYLVIO BARROS</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>100</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00068</identificadorDaUnidade>
+        <codigoInterno>NSHPAR</codigoInterno>
+        <nome>NORTE SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>R DOM HELDER CÂMARA </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>RJ </estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>5080</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00069</identificadorDaUnidade>
+        <codigoInterno>NTRPAR</codigoInterno>
+        <nome>PLAZA SHOPPING NITEROI</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua> R. QUINZE DE NOVEMBRO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>RJ </estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>8</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00070</identificadorDaUnidade>
+        <codigoInterno>PAEPAR</codigoInterno>
+        <nome>PRAÇA DA ÁRVORE</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>R. PAGEÚ</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>266</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00071</identificadorDaUnidade>
+        <codigoInterno>PARPAR</codigoInterno>
+        <nome>PARK SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>SAI/SO ÁREA 6580</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>DF</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>6580</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00072</identificadorDaUnidade>
+        <codigoInterno>PASPAR</codigoInterno>
+        <nome>SHOPPING PASSEIO DAS ÁGUAS</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00073</identificadorDaUnidade>
+        <codigoInterno>PBLPAR</codigoInterno>
+        <nome>IGUATEMI PRAIA DE BELAS</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00074</identificadorDaUnidade>
+        <codigoInterno>PIEPAR</codigoInterno>
+        <nome>PIER 21</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>SITO NO SCES - TRECHO 02, CONJUNTO 32 LOJA P 03</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>DF</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00075</identificadorDaUnidade>
+        <codigoInterno>PLNPAR</codigoInterno>
+        <nome>OUTLET PLATINUM</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00076</identificadorDaUnidade>
+        <codigoInterno>PMCPAR</codigoInterno>
+        <nome>PRAÇA DA MOÇA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>RUA MANOEL DA NOBREGA</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>712</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00077</identificadorDaUnidade>
+        <codigoInterno>PMRPAR</codigoInterno>
+        <nome>PÁTIO MARABÁ</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00078</identificadorDaUnidade>
+        <codigoInterno>PNHPAR</codigoInterno>
+        <nome>CENTER PENHA</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00079</identificadorDaUnidade>
+        <codigoInterno>PPLPAR</codigoInterno>
+        <nome>PÁTIO PAULISTA</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00080</identificadorDaUnidade>
+        <codigoInterno>PRTPAR</codigoInterno>
+        <nome>SHOPPING PIRITUBA</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00081</identificadorDaUnidade>
+        <codigoInterno>RBPPAR</codigoInterno>
+        <nome>RIBEIRÃO SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. CORONEL FERNANDO FERREIRA LEITE </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>1540</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00082</identificadorDaUnidade>
+        <codigoInterno>RCFPAR</codigoInterno>
+        <nome>RECIFE SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>RUA PADRE CARAPUCEIRO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>RECIFE</cidade>
+        <estado>PE</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>777</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00083</identificadorDaUnidade>
+        <codigoInterno>RMRPAR</codigoInterno>
+        <nome>RIO MAR</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00084</identificadorDaUnidade>
+        <codigoInterno>RPSPAR</codigoInterno>
+        <nome>RAPOSO SHOOPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ROD RAPOSO TAVARES</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>S/N </ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00085</identificadorDaUnidade>
+        <codigoInterno>SBNPAR</codigoInterno>
+        <nome>SÃO BERNARDO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV ROTARY</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SÃO BERNARDO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>624</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00086</identificadorDaUnidade>
+        <codigoInterno>SCTPAR</codigoInterno>
+        <nome>PARK SHOPPING SÃO CAETANO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ALAMEDA TERRACOTA</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SÃO CAETANO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>545</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00087</identificadorDaUnidade>
+        <codigoInterno>SLVPAR</codigoInterno>
+        <nome>SALVADOR OUTLET</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00088</identificadorDaUnidade>
+        <codigoInterno>SMCPAR</codigoInterno>
+        <nome>MOOCA PLAZA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>R CAPITÃO PACHECO CHAVES </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>313</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00089</identificadorDaUnidade>
+        <codigoInterno>SNRPAR</codigoInterno>
+        <nome>SALVADOR NORTE</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>RODOVIA BA-526</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SALVADOR</cidade>
+        <estado>BA</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>526/305 </ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00090</identificadorDaUnidade>
+        <codigoInterno>SPMPAR</codigoInterno>
+        <nome>SP MARKET</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV NAÇÕES UNIDAS</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>22540</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00091</identificadorDaUnidade>
+        <codigoInterno>SPPPAR</codigoInterno>
+        <nome>SP PRIME OUTLET</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00092</identificadorDaUnidade>
+        <codigoInterno>SSOPAR</codigoInterno>
+        <nome>SUPER SHOPPING OSASCO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV DOS AUTONOMISTAS</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>OSASCO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>1828</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00093</identificadorDaUnidade>
+        <codigoInterno>SURPAR</codigoInterno>
+        <nome>SANTA URSULA</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>R SÃO JOSÉ </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>933</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00094</identificadorDaUnidade>
+        <codigoInterno>TBOPAR</codigoInterno>
+        <nome>SHOPPING TABOÃO</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>ROD REGIS BITTENCOURT, KM 271,5 </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>TABOAO DA SERRA</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00095</identificadorDaUnidade>
+        <codigoInterno>TBTPAR</codigoInterno>
+        <nome>TAUBATÉ</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>TAUBATÉ</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00096</identificadorDaUnidade>
+        <codigoInterno>TMBPAR</codigoInterno>
+        <nome>SHOPPING TAMBORÉ</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. PIRACEMA </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>669</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00097</identificadorDaUnidade>
+        <codigoInterno>UBLPAR</codigoInterno>
+        <nome>UBERLANDIA SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV PAULO GRACINDO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>UBERLANDIA</cidade>
+        <estado>MG</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>15</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00098</identificadorDaUnidade>
+        <codigoInterno>VBRPAR</codigoInterno>
+        <nome>VIA BRASIL</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>R ITAPERA</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>RJ </estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>500</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00099</identificadorDaUnidade>
+        <codigoInterno>VILPAR</codigoInterno>
+        <nome>SHOPPING VILA VELHA</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. AYRTON SENNA </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>3000</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00100</identificadorDaUnidade>
+        <codigoInterno>VPRPAR</codigoInterno>
+        <nome>VIA PARQUE SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>VILA VELHA</cidade>
+        <estado>ES</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00101</identificadorDaUnidade>
+        <codigoInterno>VVLPAR</codigoInterno>
+        <nome>VILA VELHA - ES</nome>
+        <situacao>0</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>AV. ANTÁRTICA </rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>SÃO PAULO</cidade>
+        <estado>SP</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>380</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+    <unidade>
+        <identificadorDaMatriz>10003</identificadorDaMatriz>
+        <identificadorDaUnidade>00102</identificadorDaUnidade>
+        <codigoInterno>WPLPAR</codigoInterno>
+        <nome>WEST PLAZA SHOPPING</nome>
+        <situacao>1</situacao>
+        <cep>NÃO INFORMADO</cep>
+        <rua>NÃO INFORMADO</rua>
+        <bairro>NÃO INFORMADO</bairro>
+        <cidade>NÃO INFORMADO</cidade>
+        <estado>NÃO INFORMADO</estado>
+        <regiao>NÃO INFORMADO</regiao>
+        <ruaNumero>NÃO INFORMADO</ruaNumero>
+        <complemento>NÃO INFORMADO</complemento>
+    </unidade>
+</unidades>

@@ -1463,3 +1463,21 @@ CREATE TABLE `intranet`.`acesso_remoto` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
+
+CREATE TABLE `intranet`.`produto_cliente` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `produto` INT NULL,
+  `cliente` INT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_produto_cliente_produto_idx` (`produto` ASC),
+  INDEX `fk_produto_cliente_cliente_idx` (`cliente` ASC),
+  CONSTRAINT `fk_produto_cliente_produto`
+    FOREIGN KEY (`produto`)
+    REFERENCES `intranet`.`produto` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_produto_cliente_cliente`
+    FOREIGN KEY (`cliente`)
+    REFERENCES `intranet`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);

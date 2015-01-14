@@ -16802,3 +16802,26 @@ INSERT INTO endereco VALUES(4209,4209,'s/n','');
 INSERT INTO cliente VALUES(4209,4209,1078,'Yukai',0,0,1,1,'Yukai','Yukai');
 INSERT INTO dados_cliente VALUES(4209,4209,'03.353.890/0001-03','Empreendimento Nutricional Ltda.','Yukai','0',curdate(),curdate() + interval 1 year,1,0,'','','','','','1');
 INSERT INTO contato_cliente VALUES(4966,4209,'Elizabete (Proprietária)',0,'elizabetimonteiro@hotmail.com','','Indefinido');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

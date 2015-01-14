@@ -1,0 +1,589 @@
+<produtos_clientes >
+    <produto_cliente>
+        <identificadorDoProdutoCliente>1</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00001</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>2</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00002</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>3</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00003</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>4</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00004</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>5</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00005</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>6</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00006</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>7</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00007</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>8</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00008</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>9</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00009</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>10</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00010</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>11</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00011</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>12</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00011</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>13</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00012</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>14</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00013</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>15</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00014</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>16</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00015</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>17</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00016</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>18</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00017</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>19</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00018</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>20</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00019</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>21</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00020</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>22</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00021</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>23</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00022</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>24</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00023</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>25</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00024</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>26</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00025</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>27</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00026</identificadorDoCliente>
+        
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>28</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00027</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>29</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00028</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>30</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00029</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>31</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00030</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>32</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00031</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>33</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00032</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>34</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00033</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>35</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00034</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>36</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00035</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>37</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00036</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>38</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00037</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>39</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00038</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>40</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00039</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>41</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00040</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>42</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00041</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>43</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00042</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>44</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00043</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>45</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00044</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>46</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00045</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>47</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00046</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>48</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00047</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>49</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00048</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>50</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00049</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>51</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00050</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>52</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00051</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>53</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00052</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>54</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00053</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>55</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00054</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>56</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00055</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>57</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00056</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>58</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00057</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>59</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00058</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>60</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00059</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>61</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00060</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>62</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00061</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>63</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00062</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>64</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00063</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>65</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00064</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>66</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00065</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>67</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00066</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>68</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00067</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>69</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00068</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>70</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00069</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>71</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00070</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>72</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00071</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>73</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00072</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>74</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00073</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>75</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00074</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>76</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00075</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>77</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00076</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>78</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00077</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>79</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00078</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>80</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00079</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>81</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00080</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>82</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00081</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>83</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00082</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>84</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00083</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>85</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00084</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>86</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00085</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>87</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00086</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>88</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00087</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>89</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00088</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>90</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00089</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>91</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00090</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>92</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00091</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>93</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00092</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>94</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00093</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>95</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00094</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>96</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00095</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>97</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00096</identificadorDoCliente>
+        
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>98</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00097</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>99</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00098</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>100</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00099</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>101</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00100</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>102</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00101</identificadorDoCliente>
+    </produto_cliente>
+    <produto_cliente>
+        <identificadorDoProdutoCliente>103</identificadorDoProdutoCliente>
+        <identificadorDoProduto>1</identificadorDoProduto>
+        <identificadorDoCliente>00102</identificadorDoCliente>
+    </produto_cliente>
+</produtos_clientes>

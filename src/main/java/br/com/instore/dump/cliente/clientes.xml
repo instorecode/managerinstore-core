@@ -511,20 +511,7 @@
         <ruaNumero>3300</ruaNumero>
         <complemento> - SHOPPING FLAMBOYANT</complemento>
     </cliente>
-    <cliente>
-        <identificadorDaMatriz>10036</identificadorDaMatriz>
-        <codigoInterno>LASEMILLA</codigoInterno>
-        <nome>LA SEMILLA</nome>
-        <situacao>1</situacao>
-        <cep>04.535-012</cep>
-        <rua>RUA JOÃO CACHOEIRA</rua>
-        <bairro>ITAIM BIBI</bairro>
-        <cidade>SÃO PAULO</cidade>
-        <estado>SP</estado>
-        <dataInicio>2014-07-01</dataInicio>
-        <dataFim>2035-12-31</dataFim>
-        <ruaNumero>673</ruaNumero>
-    </cliente>
+    
     <cliente>
         <identificadorDaMatriz>10037</identificadorDaMatriz>
         <codigoInterno>LEADER</codigoInterno>
@@ -939,21 +926,7 @@
         <ruaNumero>5570</ruaNumero>
         <complemento>DE 1358 A 2298 - LADO PAR, 1950 E</complemento>
     </cliente>
-    <cliente>
-        <identificadorDaMatriz>10067</identificadorDaMatriz>
-        <codigoInterno>POSTOSANMARINO</codigoInterno>
-        <nome>POSTO SAN MARINO </nome>
-        <situacao>1</situacao>
-        <cep>77.023-056</cep>
-        <rua>AVENIDA 806 SUL </rua>
-        <bairro>PLANO DIRETOR SUL</bairro>
-        <cidade>PALMAS</cidade>
-        <estado>TO</estado>
-        <dataInicio>2011-11-10</dataInicio>
-        <dataFim>2035-12-31</dataFim>
-        <ruaNumero>10</ruaNumero>
-        <complemento> NS 10, 10 - LT PAC 24A</complemento>
-    </cliente>
+    
     <cliente>
         <identificadorDaMatriz>10068</identificadorDaMatriz>
         <codigoInterno>PUSCO</codigoInterno>

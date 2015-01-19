@@ -1481,3 +1481,7 @@ CREATE TABLE `intranet`.`produto_cliente` (
     REFERENCES `intranet`.`cliente` (`idcliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+
+INSERT INTO `intranet`.`funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('410', '/cliente/configuracao/acesso/produto/{cliente}', 'Configurar dados do cliente', 'fa-building', '1', '0');
+INSERT INTO `intranet`.`perfil_funcionalidade` (`idperfil_funcionalidade`, `idfuncionalidade`, `idperfil`) VALUES ('600', '410', '2');
+UPDATE `intranet`.`funcionalidade` SET `icone`='fa-cog' WHERE `idfuncionalidade`='410';

@@ -22,11 +22,11 @@ public class ProdutoClienteBean extends Bean {
     private Integer id;
     
     @ManyToOne
-    @JoinColumn(name = "produto", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "produto", nullable = false)
     private ProdutoBean produto;
     
     @ManyToOne
-    @JoinColumn(name = "cliente", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "cliente", nullable = false)
     private ClienteBean cliente;
 
     public Integer getId() {

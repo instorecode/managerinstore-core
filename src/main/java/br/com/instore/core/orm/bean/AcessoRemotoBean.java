@@ -29,10 +29,10 @@ public class AcessoRemotoBean extends Bean {
     @Column(name = "porta", length = 255)
     private String porta;
     @ManyToOne
-    @JoinColumn(name = "tipo_acesso_remoto", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "tipo_acesso_remoto", nullable = false)
     private TipoAcessoRemotoBean tipoAcessoRemoto;
     @ManyToOne
-    @JoinColumn(name = "cliente", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "cliente", nullable = false)
     private ClienteBean cliente;
 
     public Integer getId() {

@@ -23,7 +23,7 @@ public class RepositoryViewer {
     protected UsuarioBean usuario;
     
     public RepositoryViewer() {
-        
+        verifySession();
     }
 
     public RepositoryViewer(Session session) {

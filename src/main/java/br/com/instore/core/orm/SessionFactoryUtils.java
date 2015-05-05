@@ -84,11 +84,12 @@ public class SessionFactoryUtils {
         properties.put("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
         properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 //        properties.put("hibernate.connection.url", "jdbc:mysql://192.168.1.56:3306/test?autoReconnectForPools=true");
-        properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/intranet?autoReconnectForPools=true");
-        properties.put("hibernate.show_sql", true);
+        properties.put("hibernate.connection.url", "jdbc:mysql://192.168.1.83:3306/teste?autoReconnectForPools=true");
+        properties.put("hibernate.show_sql", false);
+        properties.put("hibernate.connection.zeroDateTimeBehavior", "convertToNull");
         properties.put("javax.persistence.validation.mode", "none"); 
         properties.put("hibernate.connection.username", "root");
-//        properties.put("hibernate.connection.password", "instore@#");
+        properties.put("hibernate.connection.password", "instore@#");
 //        properties.put("hibernate.'.password", "");
 
 //        if (Environment.env() == Environment.Env.DEVELOPMENT) {

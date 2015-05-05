@@ -1485,3 +1485,83 @@ CREATE TABLE `intranet`.`produto_cliente` (
 INSERT INTO `intranet`.`funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('410', '/cliente/configuracao/acesso/produto/{cliente}', 'Configurar dados do cliente', 'fa-building', '1', '0');
 INSERT INTO `intranet`.`perfil_funcionalidade` (`idperfil_funcionalidade`, `idfuncionalidade`, `idperfil`) VALUES ('600', '410', '2');
 UPDATE `intranet`.`funcionalidade` SET `icone`='fa-cog' WHERE `idfuncionalidade`='410';
+
+
+
+
+CREATE TABLE IF NOT EXISTS audiostore_comercial_extra (
+	  id INT NOT NULL AUTO_INCREMENT,
+      audiostore_comercial INT NOT NULL,
+	  quem_solicitou VARCHAR(255) NOT NULL,
+	  quem_solicitou_data DATETIME NOT NULL,
+	  quem_recebeu INT NOT NULL,
+	  quem_recebeu_data DATETIME NOT NULL,
+	  tipo_radio SMALLINT NOT NULL,
+	  locutor INT NOT NULL,
+      prazo_locucao DATETIME NOT NULL,
+      prazo_studio DATETIME NOT NULL,
+      situacao SMALLINT NOT NULL,
+      unidades TEXT NOT NULL,
+	  PRIMARY KEY (id) , 
+      FOREIGN KEY(audiostore_comercial) REFERENCES audiostore_comercial(id) , 
+      FOREIGN KEY(quem_recebeu) REFERENCES usuario(idusuario)  ,
+      FOREIGN KEY(locutor) REFERENCES voz(idvoz)  
+)
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS audiostore_comercial_extra_obs (
+	  id INT NOT NULL AUTO_INCREMENT,
+      audiostore_comercial_extra INT NOT NULL,
+	  tipo SMALLINT NOT NULL,
+      data DATETIME NOT NULL,
+      usuario INT NOT NULL,
+	  PRIMARY KEY (id) , 
+      texto TEXT NOT NULL,
+      FOREIGN KEY(audiostore_comercial_extra) REFERENCES audiostore_comercial_extra(id) , 
+      FOREIGN KEY(usuario) REFERENCES usuario(idusuario) 
+)
+ENGINE = InnoDB;
+
+
+
+
+
+
+
+
+
+
+
+----------------
+-- 05/05/2015 --
+----------------
+CREATE TABLE orden_servico_obs (
+    id int not null auto_increment , 
+    fk int not null , 
+    usuario int not null,
+    data varchar(20) not null,
+    tipo int not null,
+    html longtext not null ,
+    primary key(id)
+);
+
+CREATE TABLE orden_servico_parte1 (
+	id int not null auto_increment , 
+    cliente int not null,
+    usuario int not null,
+    nome varchar(255) not null ,
+    quem_solicitou text not null ,
+    quando_solicitou varchar(10) not null,
+    data_max_distribuicao varchar(10) not null,
+    tipo int not null,
+    primary key(id)
+);
+
+CREATE TABLE orden_servico_parte2 (
+	id int not null auto_increment , 
+    fk int not null,
+    locutor int not null,
+    texto longtext not null,
+    prazo_locucao varchar(10) not null,
+    primary key(id)
+);

@@ -54,14 +54,7 @@ public class UsuarioBean extends Bean {
     @Column(name = "senha", nullable = false, length = 32)
     private String senha;
     
-    
-    @OneToMany
-    @JoinTable(
-                name = "perfil_usuario", 
-                joinColumns = @JoinColumn(name = "idusuario" , insertable = false , updatable = false),
-                inverseJoinColumns = @JoinColumn(name = "idperfil")
-            )
-    private List<PerfilBean> perfilBeanList;
+
 
     public UsuarioBean() {
     }
@@ -125,12 +118,6 @@ public class UsuarioBean extends Bean {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
-    public List<PerfilBean> getPerfilBeanList() {
-        return perfilBeanList;
-    }
-
-    public void setPerfilBeanList(List<PerfilBean> perfilBeanList) {
-        this.perfilBeanList = perfilBeanList;
-    }
 }
+
+

@@ -21,9 +21,8 @@ public class VozBean extends Bean {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idvoz;    
     
-    @ManyToOne()
-    @JoinColumn(name = "idcliente" ,nullable = false)
-    private ClienteBean cliente;
+    @Column(name = "idcliente", nullable = false)
+    private Integer idcliente;
     
     @Column(name = "genero", nullable = false)
     private boolean genero;
@@ -55,12 +54,12 @@ public class VozBean extends Bean {
         this.idvoz = idvoz;
     }
 
-    public ClienteBean getCliente() {
-        return cliente;
+    public Integer getIdcliente() {
+        return idcliente;
     }
 
-    public void setCliente(ClienteBean cliente) {
-        this.cliente = cliente;
+    public void setIdcliente(Integer idcliente) {
+        this.idcliente = idcliente;
     }
 
     public boolean isGenero() {

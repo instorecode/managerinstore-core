@@ -15,6 +15,7 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
+
 public class Query {
 
     private Boolean connectorAndOr = null;

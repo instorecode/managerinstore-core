@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "orden_servico_obs")
-public class OrdenServicoObsBean  extends Bean {
+@Table(name = "ordem_servico_fila")
+public class OrdemServicoFileBean  extends Bean {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
@@ -23,19 +23,19 @@ public class OrdenServicoObsBean  extends Bean {
     @Column(name = "usuario", nullable = false )
     private Integer usuario;
     
-    @Column(name = "data", nullable = false , length = 10)
+    @Column(name = "data", nullable = false , length = 20)
     private String data;
     
-    @Column(name = "tipo", nullable = false )
-    private Integer tipo;
+    @Column(name = "prioridade", nullable = false )
+    private Integer prioridade;
     
-    @Column(name = "html", nullable = false )
-    private String html;
+    @Column(name = "situacao", nullable = false )
+    private Integer situacao;
 
-    public OrdenServicoObsBean() {
+    public OrdemServicoFileBean() {
     }
 
-    public OrdenServicoObsBean(Integer id) {
+    public OrdemServicoFileBean(Integer id) {
         this.id = id;
     }
 
@@ -71,20 +71,20 @@ public class OrdenServicoObsBean  extends Bean {
         this.data = data;
     }
 
-    public Integer getTipo() {
-        return tipo;
+    public Integer getPrioridade() {
+        return prioridade;
     }
 
-    public void setTipo(Integer tipo) {
-        this.tipo = tipo;
+    public void setPrioridade(Integer prioridade) {
+        this.prioridade = prioridade;
     }
 
-    public String getHtml() {
-        return html;
+    public Integer getSituacao() {
+        return situacao;
     }
 
-    public void setHtml(String html) {
-        this.html = html;
+    public void setSituacao(Integer situacao) {
+        this.situacao = situacao;
     }    
 }
 

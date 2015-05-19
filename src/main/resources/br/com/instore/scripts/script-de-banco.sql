@@ -1535,7 +1535,7 @@ ENGINE = InnoDB;
 ----------------
 -- 05/05/2015 --
 ----------------
-CREATE TABLE orden_servico_obs (
+CREATE TABLE ordem_servico_obs (
     id int not null auto_increment , 
     fk int not null , 
     usuario int not null,
@@ -1545,10 +1545,11 @@ CREATE TABLE orden_servico_obs (
     primary key(id)
 );
 
-CREATE TABLE orden_servico_parte1 (
-	id int not null auto_increment , 
+CREATE TABLE ordem_servico_parte1 (
+    id int not null auto_increment , 
     cliente int not null,
     usuario int not null,
+    data varchar(20) not null ,
     nome varchar(255) not null ,
     quem_solicitou text not null ,
     quando_solicitou varchar(10) not null,
@@ -1557,11 +1558,42 @@ CREATE TABLE orden_servico_parte1 (
     primary key(id)
 );
 
-CREATE TABLE orden_servico_parte2 (
+CREATE TABLE ordem_servico_parte2 (
 	id int not null auto_increment , 
     fk int not null,
     locutor int not null,
     texto longtext not null,
     prazo_locucao varchar(10) not null,
+    primary key(id)
+);
+
+CREATE TABLE ordem_servico_parte3 (
+	id int not null auto_increment , 
+    fk int not null,
+    prazo_estudio varchar(10) not null,
+    primary key(id)
+);
+
+CREATE TABLE ordem_servico_parte4 (
+   id int not null auto_increment , 
+    fk int not null,
+    categoria int not null,
+    tipo int not null ,
+    frequencia varchar(255) not null ,
+    dinicial varchar(10) not null ,
+    dfinal varchar(10) not null ,
+    dvencimento varchar(10) not null ,
+    unidades longtext not null ,
+    horarios longtext not null ,
+    primary key(id)
+);
+
+CREATE TABLE ordem_servico_fila (
+    id int not null auto_increment , 
+    usuario int not null,
+    fk int not null,
+    data varchar(20) not null ,
+    prioridade int not null,
+    situacao int not null,
     primary key(id)
 );

@@ -9,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "orden_servico_parte2")
-public class OrdenServicoParte2Bean extends Bean {
+@Table(name = "ordem_servico_parte2")
+public class OrdemServicoParte2Bean extends Bean {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,10 +29,10 @@ public class OrdenServicoParte2Bean extends Bean {
     @Column(name = "prazo_locucao", nullable = false, length = 10)
     private String prazoLocucao;
 
-    public OrdenServicoParte2Bean() {
+    public OrdemServicoParte2Bean() {
     }
 
-    public OrdenServicoParte2Bean(Integer id) {
+    public OrdemServicoParte2Bean(Integer id) {
         this.id = id;
     }
 

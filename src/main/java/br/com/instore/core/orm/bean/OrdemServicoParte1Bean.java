@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "orden_servico_parte1")
-public class OrdenServicoParte1Bean  extends Bean {
+@Table(name = "ordem_servico_parte1")
+public class OrdemServicoParte1Bean  extends Bean {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
@@ -22,6 +22,9 @@ public class OrdenServicoParte1Bean  extends Bean {
     
     @Column(name = "usuario", nullable = false )
     private Integer usuario;
+    
+    @Column(name = "data", nullable = false , length = 20)
+    private String data;
     
     @Column(name = "nome", nullable = false , length = 255)
     private String nome;
@@ -38,14 +41,12 @@ public class OrdenServicoParte1Bean  extends Bean {
     @Column(name = "tipo", nullable = false )
     private Integer tipo;
 
-    public OrdenServicoParte1Bean() {
+    public OrdemServicoParte1Bean() {
     }
 
-    public OrdenServicoParte1Bean(Integer id) {
+    public OrdemServicoParte1Bean(Integer id) {
         this.id = id;
     }
-    
-    
 
     public Integer getId() {
         return id;
@@ -69,6 +70,14 @@ public class OrdenServicoParte1Bean  extends Bean {
 
     public void setUsuario(Integer usuario) {
         this.usuario = usuario;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
     public String getNome() {
@@ -109,7 +118,7 @@ public class OrdenServicoParte1Bean  extends Bean {
 
     public void setTipo(Integer tipo) {
         this.tipo = tipo;
-    }
+    }    
 }
 
 

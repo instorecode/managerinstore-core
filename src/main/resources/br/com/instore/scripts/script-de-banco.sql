@@ -1552,6 +1552,7 @@ CREATE TABLE ordem_servico_parte1 (
     data varchar(20) not null ,
     nome varchar(255) not null ,
     quem_solicitou text not null ,
+    quem_solicitou_email text not null ,
     quando_solicitou varchar(10) not null,
     data_max_distribuicao varchar(10) not null,
     tipo int not null,
@@ -1597,3 +1598,144 @@ CREATE TABLE ordem_servico_fila (
     situacao int not null,
     primary key(id)
 );
+
+
+CREATE TABLE ordem_servico_hash (
+    id int not null auto_increment , 
+    usuario int not null,
+    data varchar(20) not null ,
+    fk int not null,
+    metadata text not null,
+    email varchar(255) not null ,
+    finalizado int not null ,
+    situacao int not null ,
+    obs longtext not null ,
+    hash varchar(255) not null ,
+    primary key(id)
+);
+
+CREATE TABLE ordem_servico_validacao_interna (
+    id int not null auto_increment , 
+    usuario int not null,
+    data varchar(20) not null ,
+    fk int not null,
+    primary key(id)
+);
+
+ALTER TABLE `perfil` 
+ADD COLUMN `icone` VARCHAR(255) NULL AFTER `nome`;
+
+
+INSERT INTO `funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('420', '/ordem-servico/lista', 'Lista de OS', ' ', '0', '1');
+INSERT INTO `funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('421', '/ordem-servico/cadastro', 'Cadastrar OS', ' ', '420', '0');
+INSERT INTO `funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('422', '/ordem-servico/atualizar/{id}', 'Atualizar OS', ' ', '420', '0');
+
+
+
+CREATE TABLE script_usuario (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  id_usuario int(11) DEFAULT NULL,
+  script_sql longtext NOT NULL,
+  script_data datetime DEFAULT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY iduser_script_UNIQUE (id)
+) ENGINE=InnoDB AUTO_INCREMENT=11926 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE excecao (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  mensagem varchar(255) NOT NULL,
+  linha varchar(255) NOT NULL,
+  codigo varchar(255) NOT NULL,
+  excecao_data datetime DEFAULT NULL,
+  excecao_arquivo varchar(255) DEFAULT NULL,
+  id_usuario varchar(255) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE projeto (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  nome varchar(255) NOT NULL,
+  descricao longtext NOT NULL,
+  data_criacao datetime NOT NULL,
+  id_usuario int(11) DEFAULT NULL,
+  link_documentacao varchar(255) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY id_UNIQUE (id)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE versao (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  data_criacao datetime NOT NULL,
+  nome varchar(255) DEFAULT NULL,
+  descricao longtext NOT NULL,
+  id_projeto int(11) NOT NULL,
+  link_svn varchar(255) DEFAULT NULL,
+  download tinyint(4) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY idversion_UNIQUE (id)
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE acontecimento (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  data_inicio date NOT NULL,
+  data_final date NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE bug (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  id_usuario int(11) DEFAULT NULL,
+  data_cadastro datetime NOT NULL,
+  descricao longtext NOT NULL,
+  tipo_sistema_operacional int(11) NOT NULL,
+  services_pack varchar(255) NOT NULL,
+  data_atualizacao_os date NOT NULL,
+  is_servico tinyint(1) NOT NULL,
+  numero_versao_os varchar(255) NOT NULL,
+  arquitetura_processador varchar(3) NOT NULL,
+  usuario_da_maquina varchar(255) NOT NULL,
+  nome_processador varchar(255) NOT NULL,
+  quantidade_memoria_ram int(11) NOT NULL,
+  tamanho_disco int(11) NOT NULL,
+  sistema_operacional varchar(255) NOT NULL,
+  versao_sistema_operacional varchar(255) NOT NULL,
+  PRIMARY KEY (id),
+  KEY fk_bugs_user_idx (id_usuario),
+  CONSTRAINT fk_bugs_user FOREIGN KEY (id_usuario) REFERENCES usuario (idusuario) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+
+CREATE TABLE solucao (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  id_usuario int(11) DEFAULT NULL,
+  data date NOT NULL,
+  descricao longtext NOT NULL,
+  PRIMARY KEY (id),
+  KEY fk_solution_bugs_user1_idx (id_usuario),
+  CONSTRAINT fk_solution_bugs_user1 FOREIGN KEY (id_usuario) REFERENCES usuario (idusuario) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE versao_bug (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  id_bug int(11) DEFAULT NULL,
+  id_versao int(11) DEFAULT NULL,
+  id_acontecimento int(11) DEFAULT NULL,
+  id_solucao int(11) DEFAULT NULL,
+  PRIMARY KEY (id),
+  KEY fk_version_bugs_bugs1_idx (id_bug),
+  KEY fk_version_bugs_version1_idx (id_versao),
+  KEY fk_version_bugs_occurred_bugs1_idx (id_acontecimento),
+  KEY fk_version_bugs_solution_bugs1_idx (id_solucao),
+  CONSTRAINT fk_version_bugs_bugs1 FOREIGN KEY (id_bug) REFERENCES bug (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_version_bugs_occurred_bugs1 FOREIGN KEY (id_acontecimento) REFERENCES acontecimento (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_version_bugs_solution_bugs1 FOREIGN KEY (id_solucao) REFERENCES solucao (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_version_bugs_version1 FOREIGN KEY (id_versao) REFERENCES versao (id) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
+
+
+
+

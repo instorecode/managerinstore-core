@@ -13,6 +13,7 @@ import java.util.zip.GZIPOutputStream;
 public class Main {
 
     public static void main(String[] args) throws UnsupportedEncodingException, DataFormatException, FileNotFoundException, IOException {
+        System.out.println("asaqwqwqw");
 //        compressGzipFile("C:\\Users\\TI-Caio\\Desktop\\VideoOne.l-3", "C:\\Users\\TI-Caio\\Desktop\\zip.l-3");
 //        decompressGzipFile("C:\\Users\\TI-Caio\\Desktop\\zip.l-3", "C:\\Users\\TI-Caio\\Desktop\\unzip.l-3");
     }

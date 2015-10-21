@@ -1,7 +1,6 @@
 package br.com.instore.core.orm;
 
 import br.com.instore.core.orm.bean.AuditoriaBean;
-import br.com.instore.core.orm.bean.UsuarioBean;
 import java.lang.reflect.Field;
 import java.math.BigInteger;
 import java.util.ArrayList;

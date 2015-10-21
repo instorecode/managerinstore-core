@@ -2,7 +2,7 @@ package br.com.instore.core.orm.bean;
 
 import br.com.instore.core.orm.Bean;
 import br.com.instore.core.orm.ViewLabel;
-import br.com.instore.core.orm.bean.annotation.Auditor;
+import br.com.instore.core.orm.Auditor;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;

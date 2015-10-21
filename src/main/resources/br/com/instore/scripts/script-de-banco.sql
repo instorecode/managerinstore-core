@@ -941,6 +941,11 @@ INSERT INTO funcionalidade VALUES (121, '/ocorrencia/cadastrar', 'Formulário de
 INSERT INTO funcionalidade VALUES (122, '/ocorrencia/atualizar/{id}', 'Formulário de atualização da ocorrencia' , 'fa-bug' , 120 , 0 ); 
 INSERT INTO funcionalidade VALUES (123, '/ocorrencia/remover/{id}', 'Formulário de remoção da ocorrencia' , 'fa-bug'   , 120 , 0 ); 
 
+INSERT INTO funcionalidade VALUES (423, '/projetos', 'Projetos' , 'fa-star' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (424, '/projeto/cadastrar', 'Formulário de cadastro do projeto' , 'fa-star'    , 423 , 0 ); 
+INSERT INTO funcionalidade VALUES (425, '/projeto/atualizar/{id}', 'Formulário de atualização do projeto' , 'fa-star' , 423 , 0 ); 
+INSERT INTO funcionalidade VALUES (426, '/projeto/remover/{id}', 'Formulário de remoção de projeto' , 'fa-star'   , 423 , 0 ); 
+
 -- configuraçoes dos arquivos por cliente
 
 alter table dados_cliente add column local_origem_musica  varchar(255) not null default '';

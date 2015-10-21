@@ -1,7 +1,7 @@
 package br.com.instore.core.orm.bean;
 
 import br.com.instore.core.orm.Bean;
-import br.com.instore.core.orm.bean.annotation.Auditor;
+import br.com.instore.core.orm.Auditor;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -27,6 +27,9 @@ public class PerfilBean extends Bean {
     
     @Column(name = "nome", nullable = false)
     private String nome;
+    
+    @Column(name = "icone", nullable = false)
+    private String icone;
     
     @OneToMany()
     @JoinTable(
@@ -65,5 +68,13 @@ public class PerfilBean extends Bean {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getIcone() {
+        return icone;
+    }
+
+    public void setIcone(String icone) {
+        this.icone = icone;
     }
 }

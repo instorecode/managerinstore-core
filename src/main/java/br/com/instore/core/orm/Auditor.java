@@ -1,4 +1,4 @@
-package br.com.instore.core.orm.bean.annotation;
+package br.com.instore.core.orm;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

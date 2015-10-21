@@ -1,7 +1,7 @@
 package br.com.instore.core.orm.bean;
 
 import br.com.instore.core.orm.Bean;
-import br.com.instore.core.orm.bean.annotation.Auditor;
+import br.com.instore.core.orm.Auditor;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
@@ -24,7 +24,7 @@ public class AudiostoreProgramacaoBean extends Bean {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column( name = "id" , nullable = false , length = 30)
-    private Integer id;
+    public Integer id;
     
     @Column( name = "descricao" , nullable = false , length = 30 , unique = true)
     private String descricao;

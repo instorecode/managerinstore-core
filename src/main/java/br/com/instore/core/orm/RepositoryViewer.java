@@ -3,7 +3,6 @@ package br.com.instore.core.orm;
 import br.com.instore.core.orm.bean.AuditoriaBean;
 import br.com.instore.core.orm.bean.AuditoriaDadosBean;
 import br.com.instore.core.orm.bean.UsuarioBean;
-import br.com.instore.core.orm.bean.annotation.Auditor;
 import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,7 +20,8 @@ public class RepositoryViewer {
     protected Session session;
     private Query query;
     protected UsuarioBean usuario;
-    
+    private Object tmp = null;
+
     public RepositoryViewer() {
         verifySession();
     }
@@ -146,11 +146,23 @@ public class RepositoryViewer {
             if (null == f.get(t)) {
                 verifySession();
                 auditar(usuario, t, (short) 1);
+
+                if (null != tmp && tmp.getClass().equals(t.getClass())) {
+                    f.set(tmp, f.get(t));
+                    t = (T) tmp;
+                }
+
                 session.save(t);
             } else {
                 verifySession();
                 auditar(usuario, t, (short) 2);
-                session.update(t);
+
+                if (null != tmp && tmp.getClass().equals(t.getClass())) {
+                    f.set(tmp, f.get(t));
+                    t = (T) tmp;
+                }
+
+                session.update(session.merge(t));
             }
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
@@ -160,6 +172,10 @@ public class RepositoryViewer {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
+        } finally {
+            if (null != tmp && tmp.getClass().equals(t.getClass())) {
+                tmp = null;
+            }
         }
     }
 
@@ -225,16 +241,7 @@ public class RepositoryViewer {
         auditoria.setData(new Date());
 
         save(auditoria);
-
-        // CREATE
-        if (tipo == 1) {
-            diff(object, auditoria);
-        }
-
-        // UPDATE
-        if (tipo == 2) {
-            diff(object, auditoria);
-        }
+        diff(object, auditoria);
     }
 
     private <T extends Bean> void diff(T novoObjeto, AuditoriaBean auditoriaBean) {
@@ -252,10 +259,33 @@ public class RepositoryViewer {
             }
         }
 
+        T objTemp = null;
+
+        try {
+            objTemp = (T) novoObjeto.getClass().newInstance();            
+            for (Field field : clazz.getDeclaredFields()) {
+                field.setAccessible(true);                
+                field.set(objTemp, field.get(novoObjeto));
+            }
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+            return;
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+            return;
+        } catch (SecurityException e) {
+            e.printStackTrace();
+            return;
+        }
+
         if (fieldName != null) {
             try {
                 Field f = clazz.getDeclaredField(fieldName);
                 f.setAccessible(true);
+
+                if (null != f.get(novoObjeto) && Integer.parseInt(f.get(novoObjeto).toString()) > 0 && auditoriaBean.getAcao() == 2) {
+                    session.refresh(novoObjeto);
+                }
 
                 T antigo = null;
 
@@ -263,6 +293,8 @@ public class RepositoryViewer {
                     antigo = find(novoObjeto.getClass(), Integer.parseInt(f.get(novoObjeto).toString()));
                 }
 
+                novoObjeto = objTemp;
+                tmp = novoObjeto;
 
                 if (null != antigo) {
                     for (Field field : clazz.getDeclaredFields()) {

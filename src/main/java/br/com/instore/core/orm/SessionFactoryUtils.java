@@ -47,64 +47,24 @@ public class SessionFactoryUtils {
         return CPScanner.scanClasses(new PackageNameFilter("br.com.instore.core.orm.bean"));
     }
 
-//    private Properties properties() {
-//        FileInputStream fis = null;
-//        Properties properties = new Properties();
-//        try {
-//            String filename = this.getClass().getResource("/br/com/instore/resources").getPath() + "/";
-//            switch (Environment.env()) {
-//                case DEVELOPMENT:
-//                    filename += "DEVELOPMENT.properties";
-//                    break;
-//                case PRODUCTION:
-//                    filename += "PRODUCTION.properties";
-//                    break;
-//            }
-//            fis = new FileInputStream(new File(filename));
-//            
-//            properties.load(fis);
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } finally {
-//            try {
-//                if (null != fis) {
-//                    fis.close();
-//                }
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        return properties;
-//    }
     private Properties properties() {
         Properties properties = new Properties();
         // padrao
         properties.put("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
         properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-//        properties.put("hibernate.connection.url", "jdbc:mysql://192.168.1.56:3306/test?autoReconnectForPools=true");
-        properties.put("hibernate.connection.url", "jdbc:mysql://192.168.1.83:3306/teste?autoReconnectForPools=true");
+//        properties.put("hibernate.connection.url", "jdbc:mysql://192.168.1.56:3306/intranet?autoReconnectForPools=true");
+        properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/intranet?autoReconnectForPools=true");
         properties.put("hibernate.show_sql", false);
         properties.put("hibernate.connection.zeroDateTimeBehavior", "convertToNull");
         properties.put("javax.persistence.validation.mode", "none"); 
-        properties.put("hibernate.connection.username", "root");
-        properties.put("hibernate.connection.password", "instore@#");
-//        properties.put("hibernate.'.password", "");
+        properties.put("hibernate.connection.username", "instorecode");
+        properties.put("hibernate.connection.password", "1nstor3");
 
-//        if (Environment.env() == Environment.Env.DEVELOPMENT) {
-//            properties.put("hibernate.connection.username", "root");
-//            properties.put("hibernate.connection.password", "");
-//        } else {
-//            properties.put("hibernate.connection.username", "root");
-//            properties.put("hibernate.connection.password", "instore@#");
-//        }
 
         // pool
         properties.put("hibernate.connection.provider_class", "org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider");
         properties.put("hibernate.connection.pool_size", 1);
         properties.put("c3p0.min_size", 5);
-//        properties.put("c3p0.max_size", 200);
         properties.put("c3p0.max_statements", 50);
         properties.put("c3p0.idle_test_period", 3000);
         properties.put("c3p0.timeout", ((60 * 60) * 24));

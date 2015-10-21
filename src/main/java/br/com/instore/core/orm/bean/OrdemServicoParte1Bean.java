@@ -32,6 +32,9 @@ public class OrdemServicoParte1Bean  extends Bean {
     @Column(name = "quem_solicitou", nullable = false , length = 60000)
     private String quemSolicitou;
     
+    @Column(name = "quem_solicitou_email", nullable = false , length = 60000)
+    private String quemSolicitouEmail;
+    
     @Column(name = "quando_solicitou", nullable = false , length = 10)
     private String quandoSolicitou;
     
@@ -119,6 +122,14 @@ public class OrdemServicoParte1Bean  extends Bean {
     public void setTipo(Integer tipo) {
         this.tipo = tipo;
     }    
+
+    public String getQuemSolicitouEmail() {
+        return quemSolicitouEmail;
+    }
+
+    public void setQuemSolicitouEmail(String quemSolicitouEmail) {
+        this.quemSolicitouEmail = quemSolicitouEmail;
+    }
 }
 
 

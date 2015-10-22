@@ -57,8 +57,8 @@ public class SessionFactoryUtils {
         properties.put("hibernate.show_sql", false);
         properties.put("hibernate.connection.zeroDateTimeBehavior", "convertToNull");
         properties.put("javax.persistence.validation.mode", "none"); 
-        properties.put("hibernate.connection.username", "instorecode");
-        properties.put("hibernate.connection.password", "1nstor3");
+        properties.put("hibernate.connection.username", "root");
+        properties.put("hibernate.connection.password", "");
 
 
         // pool

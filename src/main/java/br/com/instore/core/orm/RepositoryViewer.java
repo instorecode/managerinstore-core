@@ -7,6 +7,8 @@ import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -172,6 +174,8 @@ public class RepositoryViewer {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
+        }catch (Exception e) {
+            e.printStackTrace();    
         } finally {
             if (null != tmp && tmp.getClass().equals(t.getClass())) {
                 tmp = null;
@@ -215,7 +219,11 @@ public class RepositoryViewer {
     public <T extends Bean> void delete(T t) {
         verifySession();
         session.delete(t);
-        auditar(usuario, t, (short) 3);
+        try {
+            auditar(usuario, t, (short) 3);
+        } catch (Exception e) {
+            e.printStackTrace();  
+        }
     }
 
     public <T extends Bean> T marge(T t) {
@@ -228,7 +236,10 @@ public class RepositoryViewer {
         return (T) session.merge(string, t);
     }
 
-    private <T extends Bean> void auditar(UsuarioBean usuario, T object, short tipo) {
+    private <T extends Bean> void auditar(UsuarioBean usuario, T object, short tipo) throws Exception{
+        if (null == usuario) {
+            throw new Exception("Informe um usuario de auditoria");
+        }
 
         if (!object.getClass().isAnnotationPresent(Auditor.class)) {
             return;
@@ -262,9 +273,9 @@ public class RepositoryViewer {
         T objTemp = null;
 
         try {
-            objTemp = (T) novoObjeto.getClass().newInstance();            
+            objTemp = (T) novoObjeto.getClass().newInstance();
             for (Field field : clazz.getDeclaredFields()) {
-                field.setAccessible(true);                
+                field.setAccessible(true);
                 field.set(objTemp, field.get(novoObjeto));
             }
         } catch (InstantiationException e) {

@@ -54,8 +54,6 @@ public class UsuarioBean extends Bean {
     @Column(name = "senha", nullable = false, length = 32)
     private String senha;
     
-
-
     public UsuarioBean() {
     }
 

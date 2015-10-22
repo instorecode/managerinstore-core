@@ -1527,16 +1527,6 @@ CREATE TABLE IF NOT EXISTS audiostore_comercial_extra_obs (
 )
 ENGINE = InnoDB;
 
-
-
-
-
-
-
-
-
-
-
 ----------------
 -- 05/05/2015 --
 ----------------

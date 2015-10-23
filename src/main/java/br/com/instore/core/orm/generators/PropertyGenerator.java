@@ -1,11 +1,9 @@
 package br.com.instore.core.orm.generators;
 
 import br.com.instore.core.orm.FileExtended;
-import java.io.File;
 import java.lang.reflect.Field;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.persistence.Id;
 import net.sf.corn.cps.CPScanner;
 import net.sf.corn.cps.PackageNameFilter;
 
@@ -40,10 +38,10 @@ public class PropertyGenerator {
                         if(Character.isUpperCase( chr )) {
                             nf = nf.substring(0, nf.length()-1).concat("_").concat(String.valueOf(chr).toUpperCase());
                         }
-                    }
-                    code = code.concat("\n\t").concat("String ").concat(nf.trim()).concat(" = ").concat("\"").concat(n).concat("\"").concat(";");
+                    }                    
+                    code = code.concat("\n\t").concat("String ").concat(nf.trim()).concat(" = ").concat("\"").concat(n).concat(genNameValue(f)).concat("\"").concat(";");
                 }
-                code = code.concat("\n}\n");
+                code = code.concat("\n}\n");               
                 
                 try {
                     FileExtended.write("C:\\Users\\instore\\Desktop\\prop\\", name.concat(".java"), code);
@@ -52,5 +50,18 @@ public class PropertyGenerator {
                 }
             }
         }
+    }
+    
+    public static String genNameValue(Field field) {
+        String ret = "";
+        if (field.getType().getName().contains("br.com.instore.core.orm.bean.")) {
+            for (Field f : field.getType().getDeclaredFields()) {
+                if(f.isAnnotationPresent(Id.class)) {
+                    f.setAccessible(true);
+                    ret = ".".concat(f.getName());
+                }
+            }
+        }
+        return ret;
     }
 }

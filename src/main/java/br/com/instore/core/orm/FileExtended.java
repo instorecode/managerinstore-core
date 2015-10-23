@@ -16,7 +16,6 @@ public class FileExtended {
             }
             
             File file = new File(dirpath.concat(filename));
-            System.out.println(file.getAbsolutePath());
             FileOutputStream fos = new FileOutputStream(file);
             BufferedOutputStream bos = new  BufferedOutputStream(fos);
             bos.write(content.getBytes());

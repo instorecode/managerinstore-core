@@ -29,7 +29,7 @@ public class PropertyGenerator {
                 String code = "";
                 code = code.concat("package br.com.instore.core.orm.bean.property;\n");
                 code = code.concat("public interface ");
-                code = code.concat(name.concat("Property"));
+                code = code.concat(name.concat(""));
                 code = code.concat(" { \n");
                 for(Field f : bean.getDeclaredFields()) {
                     String n = f.getName();

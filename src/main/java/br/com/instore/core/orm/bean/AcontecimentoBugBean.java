@@ -14,11 +14,11 @@ import javax.persistence.TemporalType;
 
 @Auditor
 @Entity
-@Table(name = "acontecimento")
-public class AcontecimentoBean extends Bean{
+@Table(name = "acontecimento_bug")
+public class AcontecimentoBugBean extends Bean{
     
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "idacontecimento_bug", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     
@@ -30,9 +30,9 @@ public class AcontecimentoBean extends Bean{
     @Temporal(TemporalType.DATE)
     private Date dataFinal;
     
-    public AcontecimentoBean (){}
+    public AcontecimentoBugBean (){}
     
-    public AcontecimentoBean (Integer id){
+    public AcontecimentoBugBean (Integer id){
         this.id = id;
     }
 

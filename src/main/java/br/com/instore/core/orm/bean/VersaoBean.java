@@ -19,7 +19,7 @@ import javax.persistence.TemporalType;
 public class VersaoBean extends Bean {
 
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "idversao", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
@@ -33,7 +33,7 @@ public class VersaoBean extends Bean {
     @Column(name = "descricao", nullable = false)
     private String descricao;
 
-    @Column(name = "id_projeto", nullable = false)
+    @Column(name = "idprojeto", nullable = false)
     private Integer idProjeto;
 
     @Column(name = "link_svn", nullable = false)

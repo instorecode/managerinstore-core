@@ -19,7 +19,7 @@ public class ProjetoBean extends Bean {
  
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
+    @Column(name = "idprojeto", nullable = false)
     private Integer id; 
     
     @Column(name = "nome", nullable = false)
@@ -32,7 +32,7 @@ public class ProjetoBean extends Bean {
     @Column(name = "data_criacao", nullable = false)
     private Date dataCriacao;
     
-    @Column(name = "id_usuario", nullable = false)
+    @Column(name = "idusuario", nullable = false)
     private Integer idUsuario;
     
     @Column(name = "link_documentacao", nullable = false)

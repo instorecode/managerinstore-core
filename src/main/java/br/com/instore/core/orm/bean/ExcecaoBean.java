@@ -1,5 +1,6 @@
 package br.com.instore.core.orm.bean;
 
+import br.com.instore.core.orm.Auditor;
 import br.com.instore.core.orm.Bean;
 import java.util.Date;
 import javax.persistence.Column;
@@ -11,12 +12,13 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+@Auditor
 @Entity
 @Table(name = "excecao")
 public class ExcecaoBean extends Bean{
     
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "idexcecao", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     
@@ -36,8 +38,8 @@ public class ExcecaoBean extends Bean{
     @Column(name = "excecao_arquivo", nullable = false)
     private String excecaoArquivo;
     
-    @Column(name = "id_usuario", nullable = false)
-    private String idUsuario;
+    @Column(name = "idusuario", nullable = false)
+    private Integer idUsuario;
 
     public ExcecaoBean(Integer id) {
         this.id = id;
@@ -94,11 +96,11 @@ public class ExcecaoBean extends Bean{
         this.excecaoArquivo = excecaoArquivo;
     }
 
-    public String getIdUsuario() {
+    public Integer getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(String idUsuario) {
+    public void setIdUsuario(Integer idUsuario) {
         this.idUsuario = idUsuario;
     }
     

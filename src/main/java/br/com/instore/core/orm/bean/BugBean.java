@@ -20,12 +20,12 @@ import javax.persistence.TemporalType;
 public class BugBean extends Bean {
 
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "idbug", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "idusuario", nullable = false , insertable = false , updatable = false )
+    @JoinColumn(name = "idusuario")
     private UsuarioBean usuario;
 
     @Column(name = "data_cadastro", nullable = false)
@@ -38,38 +38,38 @@ public class BugBean extends Bean {
     @Column(name = "tipo_sistema_operacional", nullable = false)
     private Integer tipoSistemaOperacional;
 
-    @Column(name = "services_pack", nullable = false)
+    @Column(name = "services_pack", nullable = true)
     private String servicesPack;
 
-    @Column(name = "data_atualizacao_os", nullable = false)
+    @Column(name = "data_atualizacao_os", nullable = true)
     @Temporal(TemporalType.DATE)
     private Date dataAtualizacaoOs;
 
     @Column(name = "is_servico", nullable = false)
     private Boolean isServico;
 
-    @Column(name = "numero_versao_os", nullable = false)
+    @Column(name = "numero_versao_os", nullable = true)
     private String numeroVersaoOs;
 
-    @Column(name = "arquitetura_processador", nullable = false)
+    @Column(name = "arquitetura_processador", nullable = true, length = 3)
     private String arquiteturaProcessador;
 
-    @Column(name = "usuario_da_maquina", nullable = false)
+    @Column(name = "usuario_da_maquina", nullable = true)
     private String usuarioDaMaquina;
 
-    @Column(name = "nome_processador", nullable = false)
+    @Column(name = "nome_processador", nullable = true)
     private String nomeProcessador;
 
-    @Column(name = "quantidade_memoria_ram", nullable = false)
+    @Column(name = "quantidade_memoria_ram", nullable = true)
     private Integer quantidadeMemoriaRam;
 
-    @Column(name = "tamanho_disco", nullable = false)
+    @Column(name = "tamanho_disco", nullable = true)
     private Integer tamanhoDisco;
 
     @Column(name = "sistema_operacional", nullable = false)
     private String sistemaOperacional;
 
-    @Column(name = "versao_sistema_operacional", nullable = false)
+    @Column(name = "versao_sistema_operacional", nullable = true)
     private String versaoSistemaOperacional;
 
     public BugBean() {

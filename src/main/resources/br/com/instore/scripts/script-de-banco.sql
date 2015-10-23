@@ -1625,88 +1625,73 @@ INSERT INTO `funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`,
 INSERT INTO `funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('421', '/ordem-servico/cadastro', 'Cadastrar OS', ' ', '420', '0');
 INSERT INTO `funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('422', '/ordem-servico/atualizar/{id}', 'Atualizar OS', ' ', '420', '0');
 
+CREATE TABLE `excecao` (
+  `idexcecao` int(11) NOT NULL AUTO_INCREMENT,
+  `mensagem` varchar(255) NOT NULL,
+  `linha` varchar(255) NOT NULL,
+  `codigo` varchar(255) NOT NULL,
+  `excecao_data` datetime NOT NULL,
+  `excecao_arquivo` varchar(255) NOT NULL,
+  `idusuario` int(11) NOT NULL,
+  PRIMARY KEY (`idexcecao`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
+CREATE TABLE `projeto` (
+  `idprojeto` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `descricao` longtext NOT NULL,
+  `data_criacao` datetime NOT NULL,
+  `idusuario` int(11) DEFAULT NULL,
+  `link_documentacao` varchar(255) NOT NULL,
+  PRIMARY KEY (`idprojeto`),
+  UNIQUE KEY `id_UNIQUE` (`idprojeto`),
+  UNIQUE KEY `nome_UNIQUE` (`nome`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
-CREATE TABLE script_usuario (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  id_usuario int(11) DEFAULT NULL,
-  script_sql longtext NOT NULL,
-  script_data datetime DEFAULT NULL,
-  PRIMARY KEY (id),
-  UNIQUE KEY iduser_script_UNIQUE (id)
-) ENGINE=InnoDB AUTO_INCREMENT=11926 DEFAULT CHARSET=latin1;
+CREATE TABLE `versao` (
+  `idversao` int(11) NOT NULL AUTO_INCREMENT,
+  `data_criacao` datetime NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `descricao` longtext NOT NULL,
+  `idprojeto` int(11) NOT NULL,
+  `link_svn` varchar(255) NOT NULL,
+  `download` tinyint(1) NOT NULL,
+  PRIMARY KEY (`idversao`),
+  UNIQUE KEY `idversion_UNIQUE` (`idversao`),
+  UNIQUE KEY `nome_UNIQUE` (`nome`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `acontecimento_bug` (
+  `idacontecimento_bug` int(11) NOT NULL AUTO_INCREMENT,
+  `data_inicio` date NOT NULL,
+  `data_final` date NOT NULL,
+  PRIMARY KEY (`idacontecimento_bug`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE excecao (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  mensagem varchar(255) NOT NULL,
-  linha varchar(255) NOT NULL,
-  codigo varchar(255) NOT NULL,
-  excecao_data datetime DEFAULT NULL,
-  excecao_arquivo varchar(255) DEFAULT NULL,
-  id_usuario varchar(255) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
-
-
-CREATE TABLE projeto (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  nome varchar(255) NOT NULL,
-  descricao longtext NOT NULL,
-  data_criacao datetime NOT NULL,
-  id_usuario int(11) DEFAULT NULL,
-  link_documentacao varchar(255) NOT NULL,
-  PRIMARY KEY (id),
-  UNIQUE KEY id_UNIQUE (id)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
-
-
-CREATE TABLE versao (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  data_criacao datetime NOT NULL,
-  nome varchar(255) DEFAULT NULL,
-  descricao longtext NOT NULL,
-  id_projeto int(11) NOT NULL,
-  link_svn varchar(255) DEFAULT NULL,
-  download tinyint(4) NOT NULL,
-  PRIMARY KEY (id),
-  UNIQUE KEY idversion_UNIQUE (id)
-) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=latin1;
-
-
-CREATE TABLE acontecimento (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  data_inicio date NOT NULL,
-  data_final date NOT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
-
-
-CREATE TABLE bug (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  id_usuario int(11) DEFAULT NULL,
-  data_cadastro datetime NOT NULL,
-  descricao longtext NOT NULL,
-  tipo_sistema_operacional int(11) NOT NULL,
-  services_pack varchar(255) NOT NULL,
-  data_atualizacao_os date NOT NULL,
-  is_servico tinyint(1) NOT NULL,
-  numero_versao_os varchar(255) NOT NULL,
-  arquitetura_processador varchar(3) NOT NULL,
-  usuario_da_maquina varchar(255) NOT NULL,
-  nome_processador varchar(255) NOT NULL,
-  quantidade_memoria_ram int(11) NOT NULL,
-  tamanho_disco int(11) NOT NULL,
-  sistema_operacional varchar(255) NOT NULL,
-  versao_sistema_operacional varchar(255) NOT NULL,
-  PRIMARY KEY (id),
-  KEY fk_bugs_user_idx (id_usuario),
-  CONSTRAINT fk_bugs_user FOREIGN KEY (id_usuario) REFERENCES usuario (idusuario) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+CREATE TABLE `bug` (
+  `idbug` int(11) NOT NULL AUTO_INCREMENT,
+  `idusuario` int(11) NOT NULL,
+  `data_cadastro` datetime NOT NULL,
+  `descricao` longtext NOT NULL,
+  `tipo_sistema_operacional` int(11) NOT NULL,
+  `services_pack` varchar(255) DEFAULT NULL,
+  `data_atualizacao_os` date DEFAULT NULL,
+  `is_servico` tinyint(1) NOT NULL,
+  `numero_versao_os` varchar(255) DEFAULT NULL,
+  `arquitetura_processador` varchar(3) DEFAULT NULL,
+  `usuario_da_maquina` varchar(255) DEFAULT NULL,
+  `nome_processador` varchar(255) DEFAULT NULL,
+  `quantidade_memoria_ram` int(11) DEFAULT NULL,
+  `tamanho_disco` int(11) DEFAULT NULL,
+  `sistema_operacional` varchar(255) NOT NULL,
+  `versao_sistema_operacional` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`idbug`),
+  KEY `fk_bugs_user_idx` (`idusuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 CREATE TABLE solucao (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  id_usuario int(11) DEFAULT NULL,
+  idsolucao int(11) NOT NULL AUTO_INCREMENT,
+  idusuario int(11) DEFAULT NULL,
   data date NOT NULL,
   descricao longtext NOT NULL,
   PRIMARY KEY (id),
@@ -1715,11 +1700,11 @@ CREATE TABLE solucao (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE versao_bug (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  id_bug int(11) DEFAULT NULL,
-  id_versao int(11) DEFAULT NULL,
-  id_acontecimento int(11) DEFAULT NULL,
-  id_solucao int(11) DEFAULT NULL,
+  idversao_bug int(11) NOT NULL AUTO_INCREMENT,
+  idbug int(11) DEFAULT NULL,
+  idversao int(11) DEFAULT NULL,
+  idacontecimento int(11) DEFAULT NULL,
+  idsolucao int(11) DEFAULT NULL,
   PRIMARY KEY (id),
   KEY fk_version_bugs_bugs1_idx (id_bug),
   KEY fk_version_bugs_version1_idx (id_versao),

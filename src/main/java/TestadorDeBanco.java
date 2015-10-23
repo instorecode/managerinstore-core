@@ -1,10 +1,5 @@
 
 import br.com.instore.core.orm.Bean;
-import br.com.instore.core.orm.RepositoryViewer;
-import br.com.instore.core.orm.bean.BugBean;
-import br.com.instore.core.orm.bean.SolucaoBean;
-import br.com.instore.core.orm.bean.UsuarioBean;
-import br.com.instore.core.orm.bean.VersaoBugBean;
 import java.util.List;
 import java.lang.reflect.Field;
 import java.util.Arrays;
@@ -15,20 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.Column;
 
 public class TestadorDeBanco {
-
-    public static void main(String[] args) {
-        try {
-            Bean bean = testeDeIsercao(new VersaoBugBean());
-            System.out.println(bean);
-            
-            RepositoryViewer rv = new RepositoryViewer();          
-            rv.setUsuario(new UsuarioBean(22));
-            rv.save(bean);
-            rv.finalize();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
 
     private static Bean testeDeIsercao(Bean bean) throws Exception {
         try {
@@ -74,17 +55,14 @@ public class TestadorDeBanco {
                         field.set(bean, new Date());
                     }
                 } catch (IllegalArgumentException e) {
-                    e.printStackTrace();
-                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, e);
+                    e.printStackTrace();                
                 } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, e);
+                    e.printStackTrace();                
                 } catch (SecurityException e) {
                     e.printStackTrace();
                     return null;
                 } catch (InstantiationException e) {
-                    e.printStackTrace();
-                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, e);
+                    e.printStackTrace();                
                 }
             }
         } catch (Exception e) {

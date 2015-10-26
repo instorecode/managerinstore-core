@@ -25,7 +25,7 @@ public class PropertyGenerator {
             // Parse URL Http
             if(!contains) {
                 String code = "";
-                code = code.concat("package br.com.instore.core.orm.bean.property;\n");
+                code = code.concat("package br.com.instore.core.orm.property;\n");
                 code = code.concat("public interface ");
                 code = code.concat(name.concat(""));
                 code = code.concat(" { \n");

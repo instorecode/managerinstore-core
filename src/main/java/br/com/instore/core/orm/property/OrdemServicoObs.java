@@ -1,4 +1,4 @@
-package br.com.instore.core.orm.bean.property;
+package br.com.instore.core.orm.property;
 public interface OrdemServicoObs { 
 
 	String ID = "id";

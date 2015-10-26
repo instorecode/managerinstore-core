@@ -13,7 +13,7 @@ import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
-
+import org.hibernate.criterion.SimpleExpression;
 
 public class Query {
 
@@ -53,8 +53,7 @@ public class Query {
         if (resultSet.size() > 0) {
             ret = (T) resultSet.get(0);
         }
-        
-        
+
         dao.clearAndClose();
         return ret;
     }
@@ -71,6 +70,7 @@ public class Query {
                 criteria.addOrder(order);
             }
         }
+
         dao.verifySession();
         T ret = (T) criteria.list();
         dao.clearAndClose();
@@ -85,10 +85,10 @@ public class Query {
             }
         }
         Object object = criteria.setProjection(Projections.rowCount()).uniqueResult();
-        if(null != object) {
+        if (null != object) {
             ret = new Long(object.toString());
         }
-        
+
         dao.clearAndClose();
         return ret;
     }
@@ -104,636 +104,133 @@ public class Query {
     }
 
     public <T> Query eq(String column, T t) {
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.eq(column, t)));
-            } else {
-                criterionList.add(Restrictions.eq(column, t));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.eq(column, t))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.eq(column, t)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.eq(column, t))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.eq(column, t)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.eq(column, t));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query between(String column, T t1, T t2) {
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.between(column, t1, t2)));
-            } else {
-                criterionList.add(Restrictions.between(column, t1, t2));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.between(column, t1, t2))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.between(column, t1, t2)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.between(column, t1, t2))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.between(column, t1, t2)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.between(column, t1, t2));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query in(String column, T... t) {
-
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.in(column, Arrays.asList(t))));
-            } else {
-                criterionList.add(Restrictions.in(column, Arrays.asList(t)));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.in(column, Arrays.asList(t)))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.in(column, Arrays.asList(t))));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.in(column, Arrays.asList(t)))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.in(column, Arrays.asList(t))));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.in(column, Arrays.asList(t)));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query more(String column, T t) {
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.gt(column, t)));
-            } else {
-                criterionList.add(Restrictions.gt(column, t));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.gt(column, t))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.gt(column, t)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.gt(column, t))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.gt(column, t)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.gt(column, t));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query moreEqual(String column, T t) {
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.ge(column, t)));
-            } else {
-                criterionList.add(Restrictions.ge(column, t));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.ge(column, t))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.ge(column, t)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.ge(column, t))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.ge(column, t)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.ge(column, t));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query less(String column, T t) {
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.lt(column, t)));
-            } else {
-                criterionList.add(Restrictions.lt(column, t));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.lt(column, t))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.lt(column, t)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.lt(column, t))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.lt(column, t)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.lt(column, t));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query lessEqual(String column, T t) {
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.le(column, t)));
-            } else {
-                criterionList.add(Restrictions.le(column, t));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.le(column, t))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.le(column, t)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.le(column, t))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.le(column, t)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.le(column, t));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query likeStart(String column, String t) {
-
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.like(column, t, MatchMode.START)));
-            } else {
-                criterionList.add(Restrictions.like(column, t, MatchMode.ANYWHERE));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.like(column, t, MatchMode.START))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.like(column, t, MatchMode.START)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.like(column, t, MatchMode.START))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.like(column, t, MatchMode.START)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.like(column, t, MatchMode.START));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query likeEnd(String column, String t) {
-
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.like(column, t, MatchMode.END)));
-            } else {
-                criterionList.add(Restrictions.like(column, t, MatchMode.ANYWHERE));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.like(column, t, MatchMode.END))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.like(column, t, MatchMode.END)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.like(column, t, MatchMode.END))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.like(column, t, MatchMode.END)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.like(column, t, MatchMode.END));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query likeAnyWhere(String column, String t) {
-
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.like(column, t, MatchMode.ANYWHERE)));
-            } else {
-                criterionList.add(Restrictions.like(column, t, MatchMode.ANYWHERE));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.like(column, t, MatchMode.ANYWHERE))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.like(column, t, MatchMode.ANYWHERE)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.like(column, t, MatchMode.ANYWHERE))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.like(column, t, MatchMode.ANYWHERE)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.like(column, t, MatchMode.ANYWHERE));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query ilikeStart(String column, String t) {
-
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.ilike(column, t, MatchMode.START)));
-            } else {
-                criterionList.add(Restrictions.like(column, t, MatchMode.ANYWHERE));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.ilike(column, t, MatchMode.START))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.ilike(column, t, MatchMode.START)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.ilike(column, t, MatchMode.START))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.ilike(column, t, MatchMode.START)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.ilike(column, t, MatchMode.START));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query ilikeEnd(String column, String t) {
-
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.ilike(column, t, MatchMode.END)));
-            } else {
-                criterionList.add(Restrictions.ilike(column, t, MatchMode.ANYWHERE));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.ilike(column, t, MatchMode.END))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.ilike(column, t, MatchMode.END)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.ilike(column, t, MatchMode.END))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.ilike(column, t, MatchMode.END)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.ilike(column, t, MatchMode.END));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query ilikeAnyWhere(String column, String t) {
-
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.ilike(column, t, MatchMode.ANYWHERE)));
-            } else {
-                criterionList.add(Restrictions.ilike(column, t, MatchMode.ANYWHERE));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.ilike(column, t, MatchMode.ANYWHERE))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.ilike(column, t, MatchMode.ANYWHERE)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.ilike(column, t, MatchMode.ANYWHERE))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.ilike(column, t, MatchMode.ANYWHERE)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.ilike(column, t, MatchMode.ANYWHERE));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query isEmpty(String column) {
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.isEmpty(column)));
-            } else {
-                criterionList.add(Restrictions.isEmpty(column));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.isEmpty(column))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.isEmpty(column)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.isEmpty(column))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.isEmpty(column)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.isEmpty(column));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query isNotEmpty(String column) {
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.isNotEmpty(column)));
-            } else {
-                criterionList.add(Restrictions.isNotEmpty(column));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.isNotEmpty(column))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.isNotEmpty(column)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.isNotEmpty(column))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.isNotEmpty(column)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.isNotEmpty(column));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query isNull(String column) {
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.isNull(column)));
-            } else {
-                criterionList.add(Restrictions.isNull(column));
-            }
-
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.isNull(column))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.isNull(column)));
-                    }
-
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.isNull(column))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.isNull(column)));
-                    }
-                }
-            }
-        }
-
+        addCriteria(Restrictions.isNull(column));
         connectorAndOr = null;
         not = false;
         return this;
     }
 
     public <T> Query isNotNull(String column) {
-        if (connectorAndOr == null) {
-            if (not) {
-                criterionList.add(Restrictions.not(Restrictions.isNotNull(column)));
-            } else {
-                criterionList.add(Restrictions.isNotNull(column));
-            }
+        addCriteria(Restrictions.isNotNull(column));
+        connectorAndOr = null;
+        not = false;
+        return this;
+    }
 
-        } else {
-            if (criterionList.size() > 0) {
-                Criterion r = criterionList.get(criterionList.size() - 1);
-                if (connectorAndOr) {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.and(r, Restrictions.isNotNull(column))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.and(r, Restrictions.isNotNull(column)));
-                    }
+    public <T> Query lowEqualsDate(String column, Date date) {
+        addCriteria(Restrictions.le(column, date));
+        connectorAndOr = null;
+        not = false;
+        return this;
+    }
 
-                } else {
-                    if (not) {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.not(Restrictions.or(r, Restrictions.isNotNull(column))));
-                    } else {
-                        criterionList.remove(criterionList.size() - 1);
-                        criterionList.add(Restrictions.or(r, Restrictions.isNotNull(column)));
-                    }
-                }
-            }
-        }
-
+    public <T> Query greatEqualsDate(String column, Date date) {
+        addCriteria(Restrictions.ge(column, date));
         connectorAndOr = null;
         not = false;
         return this;
@@ -886,7 +383,7 @@ public class Query {
         dao.session.createSQLQuery(querySQL).executeUpdate();
         dao.finalize();
     }
-    
+
     public void executeSQLCommand2() throws DataValidatorException {
         dao.session.createSQLQuery(querySQL).executeUpdate();
         dao.finalize();
@@ -937,5 +434,78 @@ public class Query {
         }
 
         return null;
+    }
+
+    public <T> Query addCriteria(SimpleExpression se) {
+        if (connectorAndOr == null) {
+            if (not) {
+                criterionList.add(Restrictions.not(se));
+            } else {
+                criterionList.add(se);
+            }
+        } else {
+            if (criterionList.size() > 0) {
+                Criterion r = criterionList.get(criterionList.size() - 1);
+                if (connectorAndOr) {
+                    if (not) {
+                        criterionList.remove(criterionList.size() - 1);
+                        criterionList.add(Restrictions.not(Restrictions.and(r, se)));
+                    } else {
+                        criterionList.remove(criterionList.size() - 1);
+                        criterionList.add(Restrictions.and(r, se));
+                    }
+
+                } else {
+                    if (not) {
+                        criterionList.remove(criterionList.size() - 1);
+                        criterionList.add(Restrictions.not(Restrictions.or(r, se)));
+                    } else {
+                        criterionList.remove(criterionList.size() - 1);
+                        criterionList.add(Restrictions.or(r, se));
+                    }
+                }
+            }
+        }
+
+        connectorAndOr = null;
+        not = false;
+        return this;
+    }
+
+    // add critir
+    public <T> Query addCriteria(Criterion criterion) {
+        if (connectorAndOr == null) {
+            if (not) {
+                criterionList.add(Restrictions.not(criterion));
+            } else {
+                criterionList.add(criterion);
+            }
+
+        } else {
+            if (criterionList.size() > 0) {
+                Criterion r = criterionList.get(criterionList.size() - 1);
+                if (connectorAndOr) {
+                    if (not) {
+                        criterionList.remove(criterionList.size() - 1);
+                        criterionList.add(Restrictions.not(Restrictions.and(r, criterion)));
+                    } else {
+                        criterionList.remove(criterionList.size() - 1);
+                        criterionList.add(Restrictions.and(r, criterion));
+                    }
+
+                } else {
+                    if (not) {
+                        criterionList.remove(criterionList.size() - 1);
+                        criterionList.add(Restrictions.not(Restrictions.or(r, criterion)));
+                    } else {
+                        criterionList.remove(criterionList.size() - 1);
+                        criterionList.add(Restrictions.or(r, criterion));
+                    }
+                }
+            }
+        }
+        connectorAndOr = null;
+        not = false;
+        return this;
     }
 }

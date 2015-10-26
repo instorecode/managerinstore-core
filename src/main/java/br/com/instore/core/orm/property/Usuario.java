@@ -1,11 +1,11 @@
 package br.com.instore.core.orm.bean.property;
+public interface Usuario { 
 
-
-public interface Usuario {
-    String IDUSUARIO     = "idusuario";
-    String DATA_CADASTRO = "dataCadastro";
-    String NOME          = "nome";
-    String CPF           = "cpf";
-    String EMAIL         = "email";
-    String SENHA         = "senha";
+	String IDUSUARIO = "idusuario";
+	String ENDERECO = "endereco.idendereco";
+	String DATA_CADASTRO = "dataCadastro";
+	String NOME = "nome";
+	String CPF = "cpf";
+	String EMAIL = "email";
+	String SENHA = "senha";
 }

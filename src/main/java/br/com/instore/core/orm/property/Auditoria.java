@@ -1,6 +1,9 @@
 package br.com.instore.core.orm.bean.property;
+public interface Auditoria { 
 
-public interface Auditoria {
-    public String IDAUDITORIA = "idauditoria";
-    public String DATA = "data";
+	String IDAUDITORIA = "idauditoria";
+	String USUARIO = "usuario.idusuario";
+	String ACAO = "acao";
+	String ENTIDADE = "entidade";
+	String DATA = "data";
 }

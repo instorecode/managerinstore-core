@@ -1,6 +1,7 @@
 package br.com.instore.core.orm.bean.property;
+public interface AudiostoreProgramacaoCategoria { 
 
-public interface AudiostoreProgramacaoCategoria {
-    String  ID = "audiostoreProgramacao.id";
-    String  CODIGO = "AudiostoreCategoria.codigo";
+	String IDAUDIOSTORE_PROGRAMACAO_CATEGORIA = "idaudiostoreProgramacaoCategoria";
+	String AUDIOSTORE_CATEGORIA = "audiostoreCategoria.codigo";
+	String AUDIOSTORE_PROGRAMACAO = "audiostoreProgramacao.id";
 }

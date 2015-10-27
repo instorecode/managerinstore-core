@@ -682,161 +682,11 @@ CREATE TABLE IF NOT EXISTS `intranet`.`lancamento_finalizado` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
-
-    SET SESSION wait_timeout = 2;
-    SHOW VARIABLES LIKE 'wait_timeout';
-
-    SET GLOBAL connect_timeout=60;
-    SHOW VARIABLES LIKE 'connect_timeout';
-
-    SHOW GLOBAL STATUS like 'Threads_connected';
-    show processlist;
-
-
-    -- regioes
-    insert into regiao values(1, 'Região Norte');
-    insert into regiao values(2, 'Região Nordeste');
-    insert into regiao values(3, 'Região Centro-Oeste');
-    insert into regiao values(4, 'Região Sudeste');
-    insert into regiao values(5, 'Região Sul');
-
-    -- estado
-    INSERT INTO estado VALUES (null, 1,'Acre', 'AC');
-    INSERT INTO estado VALUES (null, 2,'Alagoas' , 'AL');
-    INSERT INTO estado VALUES (null, 1,'Amapá' , 'AP');
-    INSERT INTO estado VALUES (null, 1,'Amazonas' , 'AM');
-    INSERT INTO estado VALUES (null, 2,'Bahia' , 'BA' );
-    INSERT INTO estado VALUES (null, 2,'Ceará','CE');
-    INSERT INTO estado VALUES (null, 3,'Distrito Federal','DF');
-    INSERT INTO estado VALUES (null, 4,'Espírito Santo','ES');
-    INSERT INTO estado VALUES (null, 3,'Goiás','GO');
-    INSERT INTO estado VALUES (null, 2,'Maranhão','MA');
-    INSERT INTO estado VALUES (null, 3,'Mato Grosso','MT');
-    INSERT INTO estado VALUES (null, 3,'Mato Grosso do Sul','MS');
-    INSERT INTO estado VALUES (null, 4,'Minas Gerais','MG');
-    INSERT INTO estado VALUES (null, 1,'Pará','PA');
-    INSERT INTO estado VALUES (null, 2,'Paraíba','PB');
-    INSERT INTO estado VALUES (null, 5,'Paraná','PR');
-    INSERT INTO estado VALUES (null, 2,'Pernambuco','PE');
-    INSERT INTO estado VALUES (null, 2,'Piauí','PI');
-    INSERT INTO estado VALUES (null, 4,'Rio de Janeiro','RJ');
-    INSERT INTO estado VALUES (null, 2,'Rio Grande do Norte','RN');
-    INSERT INTO estado VALUES (null, 5,'Rio Grande do Sul','RS');
-    INSERT INTO estado VALUES (null, 1,'Rondônia','RO');
-    INSERT INTO estado VALUES (null, 1,'Roraima','RR');
-    INSERT INTO estado VALUES (null, 5,'Santa Catarina','SC');
-    INSERT INTO estado VALUES (null, 4,'São Paulo','SP');
-    INSERT INTO estado VALUES (null, 2,'Sergipe','SE');
-    INSERT INTO estado VALUES (null, 1,'Tocantins','TO'); 
-
-    -- FUNCIONALIDADES
-    delete from perfil_funcionalidade where idperfil > 0;
-    delete from perfil_usuario where idperfil > 0;
-    delete from funcionalidade where idfuncionalidade > 0;
-    delete from perfil where idperfil > 0;
-
-    insert into perfil values(1, 'perfil interno');
-    insert into perfil values(2, 'Administrador');
-
-    INSERT INTO funcionalidade VALUES (1, '/clientes', 'Cliente' , 'fa-building' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (2, '/cliente/cadastrar', 'Formulário de cadastro cliente' , 'fa-building'    , 1 , 1 ); 
-    INSERT INTO funcionalidade VALUES (3, '/cliente/atualizar/{id}', 'Formulário de atualização do cliente' , 'fa-building' , 1 , 0 ); 
-    INSERT INTO funcionalidade VALUES (4, '/cliente/remover/{id}', 'Formulário de remoção do cliente' , 'fa-building'   , 1 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (5, '/contatos/{id}', 'Contato do cliente' , 'fa-users' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (6, '/contato/cadastrar/{id}', 'Formulário de cadastro contato' , 'fa-users'    , 5 , 1 ); 
-    INSERT INTO funcionalidade VALUES (7, '/contato/atualizar/{id}', 'Formulário de atualização do contato' , 'fa-users' , 5 , 0 ); 
-    INSERT INTO funcionalidade VALUES (8, '/contato/remover/{id}', 'Formulário de remoção do contato' , 'fa-users'   , 5 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (9, '/audiostore-categorias', 'Categoria' , 'fa-file-code-o' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (10, '/audiostore-categoria/cadastrar', 'Formulário de cadastro audiostore categoria' , 'fa-file-code-o'    , 9 , 1 ); 
-    INSERT INTO funcionalidade VALUES (11, '/audiostore-categoria/atualizar/{id}', 'Formulário de atualização do audiostore categoria' , 'fa-file-code-o' , 9 , 0 ); 
-    INSERT INTO funcionalidade VALUES (12, '/audiostore-categoria/remover/{id}', 'Formulário de remoção do audiostore categoria' , 'fa-file-code-o'   , 9 , 0 ); 
-    INSERT INTO funcionalidade VALUES (13, '/audiostore-categoria/download-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 9 , 0 ); 
-    INSERT INTO funcionalidade VALUES (14, '/audiostore-categoria/upload-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 9 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (15, '/audiostore-programacao', 'Programação' , 'fa-file-archive-o' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (16, '/audiostore-programacao/cadastrar', 'Formulário de cadastro audiostore programação' , 'fa-file-archive-o'    , 15 , 1 ); 
-    INSERT INTO funcionalidade VALUES (17, '/audiostore-programacao/atualizar/{id}', 'Formulário de atualização do audiostore programação' , 'fa-file-archive-o' , 15 , 0 ); 
-    INSERT INTO funcionalidade VALUES (18, '/audiostore-programacao/remover/{id}', 'Formulário de remoção do audiostore programação' , 'fa-file-archive-o'   , 15 , 0 ); 
-    INSERT INTO funcionalidade VALUES (19, '/audiostore-programacao/download-exp/{id}', 'Download do arquivo exp' , 'fa-file-archive-o'   , 15 , 0 ); 
-    INSERT INTO funcionalidade VALUES (20, '/audiostore-programacao/upload-exp/{id}', 'Download do arquivo exp' , 'fa-file-archive-o'   , 15 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (21, '/voz', 'Voz' , 'fa-bullhorn' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (22, '/voz/cadastrar', 'Formulário de cadastro voz' , 'fa-bullhorn'    , 21 , 1 ); 
-    INSERT INTO funcionalidade VALUES (23, '/voz/atualizar/{id}', 'Formulário de atualização da voz' , 'fa-bullhorn' , 21 , 0 ); 
-    INSERT INTO funcionalidade VALUES (24, '/voz/remover/{id}', 'Formulário de remoção da voz' , 'fa-bullhorn'   , 21 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (25, '/audiostore-gravadora', 'Gravadora' , 'fa-youtube-play' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (26, '/audiostore-gravadora/cadastrar', 'Formulário de cadastro gravadora' , 'fa-youtube-play'    , 25 , 1 ); 
-    INSERT INTO funcionalidade VALUES (27, '/audiostore-gravadora/atualizar/{id}', 'Formulário de atualização da gravadora' , 'fa-youtube-play' , 25 , 0 ); 
-    INSERT INTO funcionalidade VALUES (28, '/audiostore-gravadora/remover/{id}', 'Formulário de remoção da gravadora' , 'fa-youtube-play'   , 25 , 0 ); 
-    INSERT INTO funcionalidade VALUES (29, '/audiostore-gravadora/download-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 25 , 0 ); 
-    INSERT INTO funcionalidade VALUES (30, '/audiostore-gravadora/upload-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 25 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (31, '/audiostore-musica', 'Música' , 'fa-volume-up' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (32, '/audiostore-musica/cadastrar', 'Formulário de cadastro música' , 'fa-volume-up'    , 31 , 1 ); 
-    INSERT INTO funcionalidade VALUES (33, '/audiostore-musica/atualizar/{id}', 'Formulário de atualização da música' , 'fa-volume-up' , 31 , 0 ); 
-    INSERT INTO funcionalidade VALUES (34, '/audiostore-musica/remover/{id}', 'Formulário de remoção da música' , 'fa-volume-up'   , 31 , 0 ); 
-    INSERT INTO funcionalidade VALUES (35, '/audiostore-musica/download-exp/{id}', 'Download do arquivo exp' , 'fa-volume-up'   , 31 , 0 ); 
-    INSERT INTO funcionalidade VALUES (36, '/audiostore-musica/upload-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 31 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (37, '/configuracao-interna', 'Configurações' , 'fa-cog' , 0 , 1 ); 
-
-    INSERT INTO funcionalidade VALUES (38, '/audiostore-comercial', 'Comercial' , 'fa-tag' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (39, '/audiostore-comercial/cadastrar', 'Formulário de cadastro comercial' , 'fa-tag'    , 38 , 1 ); 
-    INSERT INTO funcionalidade VALUES (40, '/audiostore-comercial/atualizar/{id}', 'Formulário de atualização do comercial' , 'fa-tag' , 38 , 0 ); 
-    INSERT INTO funcionalidade VALUES (41, '/audiostore-comercial/remover/{id}', 'Formulário de remoção do comercial' , 'fa-tag'   , 38 , 0 ); 
-    INSERT INTO funcionalidade VALUES (42, '/audiostore-comercial/download-exp/{id}', 'Download do arquivo exp' , 'fa-tag'   , 38 , 0 ); 
-    INSERT INTO funcionalidade VALUES (43, '/audiostore-comercial/upload-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 38 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (44, '/perfil', 'Perfil' , 'fa-sitemap' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (45, '/perfil/cadastrar', 'Formulário de cadastro perfil' , 'fa-sitemap'    , 44 , 1 ); 
-    INSERT INTO funcionalidade VALUES (46, '/perfil/atualizar/{id}', 'Formulário de atualização do perfil' , 'fa-sitemap' , 4 , 0 ); 
-    INSERT INTO funcionalidade VALUES (47, '/perfil/remover/{id}', 'Formulário de remoção do perfil' , 'fa-sitemap'   , 44 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (48, '/usuario', 'Usuário' , 'fa-user' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (49, '/usuario/cadastrar', 'Formulário de cadastro usuario' , 'fa-user'    , 48 , 1 ); 
-    INSERT INTO funcionalidade VALUES (50, '/usuario/atualizar/{id}', 'Formulário de atualização do usuario' , 'fa-user' , 48 , 0 ); 
-    INSERT INTO funcionalidade VALUES (51, '/usuario/remover/{id}', 'Formulário de remoção do usuario' , 'fa-user'   , 48 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (52, '/lancamento-entidade', 'Entidade Financeira' , 'fa-building' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (53, '/lancamento-entidade/cadastrar', 'Formulário de cadastro entidade' , 'fa-building'    , 52 , 1 ); 
-    INSERT INTO funcionalidade VALUES (54, '/lancamento-entidade/atualizar/{id}', 'Formulário de atualização do entidade' , 'fa-building' , 52 , 0 ); 
-    INSERT INTO funcionalidade VALUES (55, '/lancamento-entidade/remover/{id}', 'Formulário de remoção do entidade' , 'fa-building'   , 52 , 0 ); 
-    INSERT INTO funcionalidade VALUES (56, '/lancamento-entidade/relatorio', 'Relatorios de lançamentos' , 'fa-building'   , 52 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (57, '/lancamento', 'Lançamentos' , 'fa-usd' , 0 , 1 ); 
-    INSERT INTO funcionalidade VALUES (58, '/lancamento/cadastrar', 'Formulário de cadastro lançamento' , 'fa-usd'    , 57 , 1 ); 
-    INSERT INTO funcionalidade VALUES (59, '/lancamento/atualizar/{id}', 'Formulário de atualização do lançamento' , 'fa-usd' , 57 , 0 ); 
-    INSERT INTO funcionalidade VALUES (60, '/lancamento/remover/{id}', 'Formulário de remoção do lançamento' , 'fa-usd'   , 57 , 0 ); 
-
-    INSERT INTO funcionalidade VALUES (61, '/filial/{id}', 'Filial' , 'fa-cubes' , 0 , 0 ); 
-    INSERT INTO funcionalidade VALUES (62, '/filial/cadastrar/{id}', 'Formulário de cadastro filial' , 'fa-cubes'    , 61 , 0 ); 
-    INSERT INTO funcionalidade VALUES (63, '/filial/atualizar/{id}', 'Formulário de atualização da filial' , 'fa-cubes' , 61 , 0 ); 
-    INSERT INTO funcionalidade VALUES (64, '/filial/remover/{id}', 'Formulário de remoção da filial' , 'fa-cubes'   , 61 , 0 ); 
-
-    -- DELTETE
-    delete from contato_cliente where contato_cliente.idcontato_cliente > 0;
-    delete from dados_cliente where dados_cliente.iddados_cliente > 0;
-    delete from cliente where cliente.idcliente >  1;
-    delete from endereco where endereco.idendereco > 100;
-    delete from cep where cep.idcep > 100;
-    delete from bairro where bairro.idbairro > 100;
-    delete from cidade where cidade.idcidade > 100;
-
--- adiciona valor do contrato
-alter table dados_cliente add column valor_contrato decimal(10,2) not null default '0.0';
-
--- adiciona tipo de faturamento
-alter table cliente add column faturameno_matriz tinyint(1) not null default '1';
-
 -- helpdesk
+-- -----------------------------------------------------
+-- Table `intranet`.`ocorrencia_prioridade`
+-- -----------------------------------------------------
+
 CREATE TABLE IF NOT EXISTS  ocorrencia_prioridade (
         id integer(11) not null auto_increment,
         descricao varchar(255) not null ,
@@ -844,12 +694,18 @@ CREATE TABLE IF NOT EXISTS  ocorrencia_prioridade (
         primary key(id)
 );
 
+-- -----------------------------------------------------
+-- Table `intranet`.`ocorrencia_origem`
+-- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS  ocorrencia_origem (
         id integer(11) not null auto_increment,
         descricao varchar(255) not null ,
         primary key(id)
 );
 
+-- -----------------------------------------------------
+-- Table `intranet`.`ocorrencia_status`
+-- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS  ocorrencia_status (
         id integer(11) not null auto_increment,
         descricao varchar(255) not null ,
@@ -857,12 +713,18 @@ CREATE TABLE IF NOT EXISTS  ocorrencia_status (
         primary key(id)
 );
 
+-- -----------------------------------------------------
+-- Table `intranet`.`ocorrencia_problema`
+-- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS  ocorrencia_problema (
         id integer(11) not null auto_increment,
         descricao text not null,
         primary key(id)
 );
 
+-- -----------------------------------------------------
+-- Table `intranet`.`ocorrencia_solucao`
+-- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS  ocorrencia_solucao (
         id integer(11) not null auto_increment,
         descricao text not null,
@@ -870,7 +732,9 @@ CREATE TABLE IF NOT EXISTS  ocorrencia_solucao (
         primary key(id)
 );
 
-
+-- -----------------------------------------------------
+-- Table `intranet`.`ocorrencia_problema_solucao`
+-- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS  ocorrencia_problema_solucao (
         id integer(11) not null auto_increment,
         ocorrencia_problema integer(11) not null,
@@ -880,6 +744,9 @@ CREATE TABLE IF NOT EXISTS  ocorrencia_problema_solucao (
         foreign key(ocorrencia_solucao) references ocorrencia_solucao(id)
 );
 
+-- -----------------------------------------------------
+-- Table `intranet`.`ocorrencia`
+-- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS  ocorrencia (
         id integer(11) not null auto_increment,
         descricao text not null,
@@ -898,6 +765,7 @@ CREATE TABLE IF NOT EXISTS  ocorrencia (
         foreign key(cliente) references cliente(idcliente)
 );
 
+
 CREATE TABLE IF NOT EXISTS  ocorrencia_usuario (
         id integer(11) not null auto_increment,
         ocorrencia integer(11),
@@ -909,8 +777,759 @@ CREATE TABLE IF NOT EXISTS  ocorrencia_usuario (
         foreign key(usuario) references usuario(idusuario)
 );
 
+-- -----------------------------------------------------
+-- Table `intranet`.`ocorrencia_usuario_info`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS  ocorrencia_usuario_info (
+	id integer(11) not null auto_increment,
+	ocorrencia_usuario integer(11),
+	comentario text,
+	tempo time,
+	primary key(id),
+	foreign key(ocorrencia_usuario) references ocorrencia_usuario(id)
+);
 
--- permições
+-- -----------------------------------------------------
+-- Table `intranet`.`indice_reajuste`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS indice_reajuste (
+	id integer(11) not null auto_increment,
+	tipo varchar(10) not null,
+	descricao varchar(255) not null,
+	percentual decimal(10,0) not null,
+	primary key(id)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`indice_reajuste_historico`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS indice_reajuste_historico (
+	id integer(11) not null auto_increment,
+	indice_reajuste integer(11) not null,
+	usuario integer(11) not null,
+	texto varchar(255) not null,
+	data datetime not null,
+	primary key(id),
+	foreign key(indice_reajuste) references indice_reajuste(id),
+	foreign key(usuario) references usuario(idusuario)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`cliente_suspenso`
+-- -----------------------------------------------------
+create table if not exists cliente_suspenso (
+	id integer(11) not null auto_increment,
+	cliente integer(11),
+	usuario integer(11),
+	suspenso tinyint(1),
+	motivo text ,
+	data datetime,
+	data_inicio date,
+	data_fim date,
+	primary key(id),
+	foreign key(cliente) references cliente(idcliente),
+	foreign key(usuario) references usuario(idusuario)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`categoria_geral`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS categoria_geral (
+	id integer(11) not null auto_increment,
+	usuario integer(11) not null,
+	nome text not null,
+	primary key(id)
+) ENGINE = MyISAM ;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`musica_geral`
+-- -----------------------------------------------------
+CREATE TABLE musica_geral (
+	id integer(11) NOT NULL AUTO_INCREMENT,
+	categoria_geral integer(11) not null,
+	usuario integer(11) not null,
+	gravadora int(11) NOT NULL,
+	titulo varchar(255) NOT NULL,
+	interprete varchar(255) NOT NULL,
+	tipo_interprete smallint(6) NOT NULL,
+	letra text NOT NULL,
+	bpm smallint(6) NOT NULL,
+	tempo_total varchar(30) NOT NULL,
+	ano_gravacao int(11) NOT NULL,
+	afinidade1 varchar(255) NOT NULL,
+	afinidade2 varchar(255) NOT NULL,
+	afinidade3 varchar(255) NOT NULL,
+	afinidade4 varchar(255) NOT NULL,
+	arquivo varchar(255) NOT NULL,
+	PRIMARY KEY (id)
+) ENGINE=MyISAM;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`categoria_musica_geral`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS categoria_musica_geral (
+	id integer(11) not null auto_increment,
+	categoria integer(11) not null,
+	musica integer(11) not null,
+	primary key(id)
+) ENGINE = MyISAM ;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`audiostore_musica`
+-- -----------------------------------------------------
+drop table audiostore_musica;
+
+CREATE TABLE audiostore_musica (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    musica_geral int(11) NOT NULL,
+    categoria1 smallint(6) NOT NULL,
+    categoria2 smallint(6) DEFAULT NULL,
+    categoria3 smallint(6) DEFAULT NULL,
+    cut tinyint(1) NOT NULL,
+    crossover tinyint(1) NOT NULL,
+    data_vencimento_crossover date NOT NULL,
+    dias_execucao1 int(11) NOT NULL,
+    dias_execucao2 int(11) NOT NULL,
+    data date NOT NULL,
+    ultima_execucao datetime NOT NULL,
+    ultima_execucao_data date NOT NULL,
+    random int(11) NOT NULL,
+    qtde_player int(11) NOT NULL,
+    qtde int(11) NOT NULL,
+    data_vencimento date NOT NULL,
+    frame_inicio int(11) NOT NULL,
+    frame_final int(11) NOT NULL,
+    msg varchar(40) NOT NULL,
+    sem_som tinyint(1) NOT NULL,
+    super_crossover tinyint(1) NOT NULL,
+    cliente int(11) NOT NULL DEFAULT '1',
+    PRIMARY KEY (id),
+    KEY fk_audiostore_musica_audiostore_categoria1_idx (categoria1),
+    KEY fk_audiostore_musica_audiostore_categoria2_idx (categoria2),
+    KEY fk_audiostore_musica_audiostore_categoria3_idx (categoria3),
+    KEY cliente (cliente),
+    CONSTRAINT audiostore_musica_ibfk_1 FOREIGN KEY (cliente) REFERENCES cliente (idcliente),
+    CONSTRAINT fk_audiostore_musica_audiostore_categoria1 FOREIGN KEY (categoria1) REFERENCES audiostore_categoria (codigo) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT fk_audiostore_musica_audiostore_categoria2 FOREIGN KEY (categoria2) REFERENCES audiostore_categoria (codigo) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT fk_audiostore_musica_audiostore_categoria3 FOREIGN KEY (categoria3) REFERENCES audiostore_categoria (codigo) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`ajuda`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS ajuda (
+    id int (11) NOT NULL AUTO_INCREMENT ,
+    titulo varchar (255) NOT NULL,
+    texto text NOT NULL,
+    idfuncionalidade int(11) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (idfuncionalidade) REFERENCES funcionalidade (idfuncionalidade)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`audiostore_programacao_comercial`
+-- -----------------------------------------------------
+CREATE TABLE `intranet`.`audiostore_programacao_comercial` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `programacao` INT NOT NULL,
+  `comercial` INT NOT NULL,
+  `inicial_final` TINYINT(1) NOT NULL,
+  `intervalo` VARCHAR(5) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`tipo_produto`
+-- -----------------------------------------------------
+CREATE TABLE `intranet`.`tipo_produto` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`produto`
+-- -----------------------------------------------------
+CREATE TABLE `intranet`.`produto` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `tipo_produto` INT NULL,
+  `nome` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_produto_tipo_produto_idx` (`tipo_produto` ASC),
+  CONSTRAINT `fk_produto_tipo_produto`
+    FOREIGN KEY (`tipo_produto`)
+    REFERENCES `intranet`.`tipo_produto` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`tipo_acesso_remoto`
+-- -----------------------------------------------------
+CREATE TABLE `intranet`.`tipo_acesso_remoto` (
+  `id` INT NOT NULL,
+  `nome` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`acesso_remoto`
+-- -----------------------------------------------------
+CREATE TABLE `intranet`.`acesso_remoto` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `tipo_acesso_remoto` INT NULL,
+  `cliente` INT NULL,
+  `servidor` VARCHAR(255) NULL,
+  `usuario` VARCHAR(255) NULL,
+  `senha` VARCHAR(255) NULL,
+  `porta` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_tipo_acesso_acesso_remoto_idx` (`tipo_acesso_remoto` ASC),
+  INDEX `fk_cliente_acesso_remoto_idx` (`cliente` ASC),
+  CONSTRAINT `fk_tipo_acesso_acesso_remoto`
+    FOREIGN KEY (`tipo_acesso_remoto`)
+    REFERENCES `intranet`.`tipo_acesso_remoto` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cliente_acesso_remoto`
+    FOREIGN KEY (`cliente`)
+    REFERENCES `intranet`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`produto_cliente`
+-- -----------------------------------------------------
+CREATE TABLE `intranet`.`produto_cliente` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `produto` INT NULL,
+  `cliente` INT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_produto_cliente_produto_idx` (`produto` ASC),
+  INDEX `fk_produto_cliente_cliente_idx` (`cliente` ASC),
+  CONSTRAINT `fk_produto_cliente_produto`
+    FOREIGN KEY (`produto`)
+    REFERENCES `intranet`.`produto` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_produto_cliente_cliente`
+    FOREIGN KEY (`cliente`)
+    REFERENCES `intranet`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`audiostore_comercial_extra`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS audiostore_comercial_extra (
+    id INT NOT NULL AUTO_INCREMENT,
+    audiostore_comercial INT NOT NULL,
+    quem_solicitou VARCHAR(255) NOT NULL,
+    quem_solicitou_data DATETIME NOT NULL,
+    quem_recebeu INT NOT NULL,
+    quem_recebeu_data DATETIME NOT NULL,
+    tipo_radio SMALLINT NOT NULL,
+    locutor INT NOT NULL,
+    prazo_locucao DATETIME NOT NULL,
+    prazo_studio DATETIME NOT NULL,
+    situacao SMALLINT NOT NULL,
+    unidades TEXT NOT NULL,
+    PRIMARY KEY (id) , 
+    FOREIGN KEY(audiostore_comercial) REFERENCES audiostore_comercial(id) , 
+    FOREIGN KEY(quem_recebeu) REFERENCES usuario(idusuario)  ,
+    FOREIGN KEY(locutor) REFERENCES voz(idvoz)  
+)ENGINE = InnoDB;
+-- -----------------------------------------------------
+-- Table `intranet`.`audiostore_comercial_extra_obs`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS audiostore_comercial_extra_obs (
+    id INT NOT NULL AUTO_INCREMENT,
+    audiostore_comercial_extra INT NOT NULL,
+    tipo SMALLINT NOT NULL,
+    data DATETIME NOT NULL,
+    usuario INT NOT NULL,
+    PRIMARY KEY (id) , 
+    texto TEXT NOT NULL,
+    FOREIGN KEY(audiostore_comercial_extra) REFERENCES audiostore_comercial_extra(id) , 
+    FOREIGN KEY(usuario) REFERENCES usuario(idusuario) 
+)ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`ordem_servico_obs`
+-- -----------------------------------------------------
+CREATE TABLE ordem_servico_obs (
+    id int not null auto_increment , 
+    fk int not null , 
+    usuario int not null,
+    data varchar(20) not null,
+    tipo int not null,
+    html longtext not null ,
+    primary key(id)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`ordem_servico_parte1`
+-- -----------------------------------------------------
+CREATE TABLE ordem_servico_parte1 (
+    id int not null auto_increment , 
+    cliente int not null,
+    usuario int not null,
+    data varchar(20) not null ,
+    nome varchar(255) not null ,
+    quem_solicitou text not null ,
+    quem_solicitou_email text not null ,
+    quando_solicitou varchar(10) not null,
+    data_max_distribuicao varchar(10) not null,
+    tipo int not null,
+    primary key(id)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`ordem_servico_parte2`
+-- -----------------------------------------------------
+CREATE TABLE ordem_servico_parte2 (
+    id int not null auto_increment , 
+    fk int not null,
+    locutor int not null,
+    texto longtext not null,
+    prazo_locucao varchar(10) not null,
+    primary key(id)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`ordem_servico_parte3`
+-- -----------------------------------------------------
+CREATE TABLE ordem_servico_parte3 (
+    id int not null auto_increment , 
+    fk int not null,
+    prazo_estudio varchar(10) not null,
+    primary key(id)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`ordem_servico_parte4`
+-- -----------------------------------------------------
+CREATE TABLE ordem_servico_parte4 (
+    id int not null auto_increment , 
+    fk int not null,
+    categoria int not null,
+    tipo int not null ,
+    frequencia varchar(255) not null ,
+    dinicial varchar(10) not null ,
+    dfinal varchar(10) not null ,
+    dvencimento varchar(10) not null ,
+    unidades longtext not null ,
+    horarios longtext not null ,
+    primary key(id)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`ordem_servico_fila`
+-- -----------------------------------------------------
+CREATE TABLE ordem_servico_fila (
+    id int not null auto_increment , 
+    usuario int not null,
+    fk int not null,
+    data varchar(20) not null ,
+    prioridade int not null,
+    situacao int not null,
+    primary key(id)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`ordem_servico_hash`
+-- -----------------------------------------------------
+CREATE TABLE ordem_servico_hash (
+    id int not null auto_increment , 
+    usuario int not null,
+    data varchar(20) not null ,
+    fk int not null,
+    metadata text not null,
+    email varchar(255) not null ,
+    finalizado int not null ,
+    situacao int not null ,
+    obs longtext not null ,
+    hash varchar(255) not null ,
+    primary key(id)
+);
+
+-- -----------------------------------------------------
+-- Table `intranet`.`ordem_servico_validacao_interna`
+-- -----------------------------------------------------
+CREATE TABLE ordem_servico_validacao_interna (
+    id int not null auto_increment , 
+    usuario int not null,
+    data varchar(20) not null ,
+    fk int not null,
+    primary key(id)
+);
+
+ALTER TABLE `perfil` 
+ADD COLUMN `icone` VARCHAR(255) NULL AFTER `nome`;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`excecao`
+-- -----------------------------------------------------
+CREATE TABLE `excecao` (
+  `idexcecao` int(11) NOT NULL AUTO_INCREMENT,
+  `mensagem` varchar(255) NOT NULL,
+  `linha` varchar(255) NOT NULL,
+  `codigo` varchar(255) NOT NULL,
+  `excecao_data` datetime NOT NULL,
+  `excecao_arquivo` varchar(255) NOT NULL,
+  `idusuario` int(11) NOT NULL,
+  PRIMARY KEY (`idexcecao`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`projeto`
+-- -----------------------------------------------------
+CREATE TABLE `projeto` (
+  `idprojeto` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `descricao` longtext NOT NULL,
+  `data_criacao` datetime NOT NULL,
+  `idusuario` int(11) DEFAULT NULL,
+  `link_documentacao` varchar(255) NOT NULL,
+  PRIMARY KEY (`idprojeto`),
+  UNIQUE KEY `id_UNIQUE` (`idprojeto`),
+  UNIQUE KEY `nome_UNIQUE` (`nome`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`versao`
+-- -----------------------------------------------------
+CREATE TABLE `versao` (
+  `idversao` int(11) NOT NULL AUTO_INCREMENT,
+  `data_criacao` datetime NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `descricao` longtext NOT NULL,
+  `idprojeto` int(11) NOT NULL,
+  `link_svn` varchar(255) NOT NULL,
+  `download` tinyint(1) NOT NULL,
+  PRIMARY KEY (`idversao`),
+  UNIQUE KEY `idversion_UNIQUE` (`idversao`),
+  UNIQUE KEY `nome_UNIQUE` (`nome`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`acontecimento_bug`
+-- -----------------------------------------------------
+CREATE TABLE `acontecimento_bug` (
+  `idacontecimento_bug` int(11) NOT NULL AUTO_INCREMENT,
+  `data_inicio` date NOT NULL,
+  `data_final` date NOT NULL,
+  PRIMARY KEY (`idacontecimento_bug`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`bug`
+-- -----------------------------------------------------
+CREATE TABLE `bug` (
+  `idbug` int(11) NOT NULL AUTO_INCREMENT,
+  `idusuario` int(11) NOT NULL,
+  `data_cadastro` datetime NOT NULL,
+  `descricao` longtext NOT NULL,
+  `tipo_sistema_operacional` int(11) NOT NULL,
+  `services_pack` varchar(255) DEFAULT NULL,
+  `data_atualizacao_os` date DEFAULT NULL,
+  `is_servico` tinyint(1) NOT NULL,
+  `numero_versao_os` varchar(255) DEFAULT NULL,
+  `arquitetura_processador` varchar(3) DEFAULT NULL,
+  `usuario_da_maquina` varchar(255) DEFAULT NULL,
+  `nome_processador` varchar(255) DEFAULT NULL,
+  `quantidade_memoria_ram` int(11) DEFAULT NULL,
+  `tamanho_disco` int(11) DEFAULT NULL,
+  `sistema_operacional` varchar(255) NOT NULL,
+  `versao_sistema_operacional` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`idbug`),
+  KEY `fk_bugs_user_idx` (`idusuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`solucao`
+-- -----------------------------------------------------
+CREATE TABLE solucao (
+  idsolucao int(11) NOT NULL AUTO_INCREMENT,
+  idusuario int(11) DEFAULT NULL,
+  data date NOT NULL,
+  descricao longtext NOT NULL,
+  PRIMARY KEY (id),
+  KEY fk_solution_bugs_user1_idx (id_usuario),
+  CONSTRAINT fk_solution_bugs_user1 FOREIGN KEY (id_usuario) REFERENCES usuario (idusuario) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- -----------------------------------------------------
+-- Table `intranet`.`versao_bug`
+-- -----------------------------------------------------
+CREATE TABLE versao_bug (
+  idversao_bug int(11) NOT NULL AUTO_INCREMENT,
+  idbug int(11) DEFAULT NULL,
+  idversao int(11) DEFAULT NULL,
+  idacontecimento int(11) DEFAULT NULL,
+  idsolucao int(11) DEFAULT NULL,
+  PRIMARY KEY (id),
+  KEY fk_version_bugs_bugs1_idx (id_bug),
+  KEY fk_version_bugs_version1_idx (id_versao),
+  KEY fk_version_bugs_occurred_bugs1_idx (id_acontecimento),
+  KEY fk_version_bugs_solution_bugs1_idx (id_solucao),
+  CONSTRAINT fk_version_bugs_bugs1 FOREIGN KEY (id_bug) REFERENCES bug (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_version_bugs_occurred_bugs1 FOREIGN KEY (id_acontecimento) REFERENCES acontecimento (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_version_bugs_solution_bugs1 FOREIGN KEY (id_solucao) REFERENCES solucao (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_version_bugs_version1 FOREIGN KEY (id_versao) REFERENCES versao (id) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
+
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+SET SESSION wait_timeout = 2;
+SHOW VARIABLES LIKE 'wait_timeout';
+
+SET GLOBAL connect_timeout=60;
+SHOW VARIABLES LIKE 'connect_timeout';
+
+SHOW GLOBAL STATUS like 'Threads_connected';
+show processlist;
+
+
+-- ALTER TABLE
+alter table cliente add column faturameno_matriz tinyint(1) not null default '1';
+alter table cliente add column codigo_interno varchar(255) default '';
+alter table cliente add column codigo_externo varchar(255) default '';
+
+alter table dados_cliente add column valor_contrato decimal(10,2) not null default '0.0';
+alter table dados_cliente add column local_origem_musica  varchar(255) not null default '';
+alter table dados_cliente add column local_destino_musica varchar(255) not null default '';
+alter table dados_cliente add column local_origem_spot    varchar(255) not null default '';
+alter table dados_cliente add column local_destino_spot   varchar(255) not null default '';
+alter table dados_cliente add column local_destino_exp    varchar(255) not null default '';
+alter table dados_cliente add column indice_reajuste integer(11);
+alter table dados_cliente add foreign key(indice_reajuste) references indice_reajuste(id);
+
+alter table audiostore_musica add column cliente integer(11) not null default 1;
+alter table audiostore_musica add foreign key (cliente) references cliente(idcliente);
+
+alter table audiostore_comercial add column cliente integer(11) not null default 1;
+alter table audiostore_comercial add foreign key (cliente) references cliente(idcliente);
+
+alter table ocorrencia_usuario drop column prazo_resolucao;
+
+ALTER TABLE auditoria CHANGE COLUMN entidade entidade TEXT NOT NULL ;
+
+alter table bairro add column tipo varchar(255) default '';
+
+alter table indice_reajuste modify column percentual varchar(10) not null;
+
+ALTER TABLE audiostore_comercial add column interromper_musica_tocada tinyint(1) not null default '0';
+alter table audiostore_comercial add column texto longtext not null default '';
+ALTER TABLE audiostore_comercial DROP FOREIGN KEY `fk_audiostore_comercial_audiostore_categoria1`;
+ALTER TABLE audiostore_comercial CHANGE COLUMN categoria categoria SMALLINT(6) NULL ;
+ALTER TABLE `intranet`.`audiostore_comercial` 
+    ADD CONSTRAINT `fk_audiostore_comercial_audiostore_categoria1`
+    FOREIGN KEY (`categoria`)
+    REFERENCES `intranet`.`audiostore_categoria` (`codigo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION;
+
+ALTER TABLE audiostore_comercial_sh add column interromper_musica_tocada tinyint(1) not null default '0';
+
+ALTER TABLE `intranet`.`audiostore_programacao_comercial` CHANGE COLUMN `intervalo` `intervalo` VARCHAR(8) NOT NULL ;
+
+ALTER TABLE `intranet`.`audiostore_musica` ADD COLUMN `ultima_importacao` TINYINT(1) NULL DEFAULT 0 AFTER `cliente`;
+
+ALTER TABLE `intranet`.`musica_geral` ADD COLUMN `ultima_importacao` TINYINT(1) NULL DEFAULT 0 AFTER `arquivo`;
+ALTER TABLE `intranet`.`musica_geral` ADD COLUMN `data_cadastro` DATE NULL AFTER `ultima_importacao`;
+
+----------------------------------------------
+------------ INSERTS AND UPDATES -------------
+----------------------------------------------
+
+insert into perfil_funcionalidade select null , idfuncionalidade ,idperfil  from perfil , funcionalidade where idperfil in(1,2);
+
+insert into perfil values(1, 'perfil interno');
+insert into perfil values(2, 'Administrador');
+INSERT INTO perfil VALUES ('1', 'ADM');
+INSERT INTO perfil VALUES ('2', 'TI');
+INSERT INTO perfil VALUES ('3', 'Video');
+INSERT INTO perfil VALUES ('4', 'Produção');
+INSERT INTO perfil VALUES ('5', 'Comercial');
+INSERT INTO perfil VALUES ('6', 'Suporte');
+INSERT INTO perfil VALUES ('7', 'Studio');
+
+-- USUARIOS -- 
+INSERT INTO usuario VALUES ('1', null, now() , 'Alex Valentim Gonçalves', '08920068461', 'alex.goncalves@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('2', null, now() , 'Andre Batalha', '00000000001', 'andre.batalha@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('3', null, now() , 'Batalha', '00000000002', 'batalha@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('4', null, now() , 'Diamandi Ferreira', '00000000003', 'diamandi.ferreira@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('5', null, now() , 'Diana Queiroz', '00000000004', 'diana.queiroz@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('6', null, now() , 'Eder Barbosa', '00000000005', 'eder.barbosa@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('7', null, now() , 'Eduardo Marins', '00000000006', 'eduardo.marins@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('8', null, now() , 'Gabriel Lima', '00000000007', 'gabriel.lima@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('9', null, now() , 'Gabriel Oliveira', '00000000008', 'gabriel.oliveira@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('10', null, now() , 'Giovanna Alves', '00000000009', 'giovanna.alves@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('11', null, now() , 'Jadmas Santana', '00000000010', 'jadmas.santana@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('12', null, now() , 'Julio Silva', '00000000011', 'julio.silva@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('13', null, now() , 'Laercio Bozzi', '00000000012', 'laercio.bozzi@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('14', null, now() , 'Marcos Aloisi', '00000000013', 'marcos.aloisi@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('15', null, now() , 'Marina Rodrigues', '00000000014', 'marina.rodrigues@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('16', null, now() , 'Mony Spinola', '00000000015', 'mony.spinola@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('17', null, now() , 'Nilson Lopes', '00000000016', 'nilson.lopes@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('18', null, now() , 'Paulo Morales', '00000000017', 'paulo.morales@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('19', null, now() , 'Paulo Torres', '00000000018', 'paulo.torres@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('20', null, now() , 'Thiago Queiroz', '00000000019', 'thiago.queiroz@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('21', null, now() , 'Vinicius Gomes', '00000000020', 'vinicius.gomes@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('22', null, now() , 'Vinicius Silva', '00000000021', 'vinicius.silva@instore.com.br', md5(123));
+INSERT INTO usuario VALUES ('23', null, now() , 'Viviane Moura', '00000000022', 'viviane.moura@instore.com.br', md5(123));
+
+
+-- PERFIL USUARIO --
+INSERT INTO perfil_usuario VALUES ('1', '1', '17');
+INSERT INTO perfil_usuario VALUES ('2', '1', '3');
+INSERT INTO perfil_usuario VALUES ('3', '2', '1');
+INSERT INTO perfil_usuario VALUES ('4', '2', '1');
+INSERT INTO perfil_usuario VALUES ('5', '2', '22');
+INSERT INTO perfil_usuario VALUES ('6', '3', '2');
+INSERT INTO perfil_usuario VALUES ('7', '3', '18');
+INSERT INTO perfil_usuario VALUES ('8', '4', '4');
+INSERT INTO perfil_usuario VALUES ('9', '4', '6');
+INSERT INTO perfil_usuario VALUES ('10', '4', '8');
+INSERT INTO perfil_usuario VALUES ('11', '4', '9');
+INSERT INTO perfil_usuario VALUES ('12', '4', '11');
+INSERT INTO perfil_usuario VALUES ('13', '4', '14');
+INSERT INTO perfil_usuario VALUES ('14', '4', '15');
+INSERT INTO perfil_usuario VALUES ('15', '5', '10');
+INSERT INTO perfil_usuario VALUES ('16', '5', '7');
+INSERT INTO perfil_usuario VALUES ('17', '5', '5');
+INSERT INTO perfil_usuario VALUES ('18', '5', '16');
+INSERT INTO perfil_usuario VALUES ('19', '6', '12');
+INSERT INTO perfil_usuario VALUES ('20', '6', '20');
+INSERT INTO perfil_usuario VALUES ('21', '6', '21');
+INSERT INTO perfil_usuario VALUES ('22', '6', '23');
+INSERT INTO perfil_usuario VALUES ('23', '7', '18');
+INSERT INTO perfil_usuario VALUES ('24', '7', '13');
+
+-- regioes
+insert into regiao values(1, 'Região Norte');
+insert into regiao values(2, 'Região Nordeste');
+insert into regiao values(3, 'Região Centro-Oeste');
+insert into regiao values(4, 'Região Sudeste');
+insert into regiao values(5, 'Região Sul');
+
+-- estado
+INSERT INTO estado VALUES (null, 1,'Acre', 'AC');
+INSERT INTO estado VALUES (null, 2,'Alagoas' , 'AL');
+INSERT INTO estado VALUES (null, 1,'Amapá' , 'AP');
+INSERT INTO estado VALUES (null, 1,'Amazonas' , 'AM');
+INSERT INTO estado VALUES (null, 2,'Bahia' , 'BA' );
+INSERT INTO estado VALUES (null, 2,'Ceará','CE');
+INSERT INTO estado VALUES (null, 3,'Distrito Federal','DF');
+INSERT INTO estado VALUES (null, 4,'Espírito Santo','ES');
+INSERT INTO estado VALUES (null, 3,'Goiás','GO');
+INSERT INTO estado VALUES (null, 2,'Maranhão','MA');
+INSERT INTO estado VALUES (null, 3,'Mato Grosso','MT');
+INSERT INTO estado VALUES (null, 3,'Mato Grosso do Sul','MS');
+INSERT INTO estado VALUES (null, 4,'Minas Gerais','MG');
+INSERT INTO estado VALUES (null, 1,'Pará','PA');
+INSERT INTO estado VALUES (null, 2,'Paraíba','PB');
+INSERT INTO estado VALUES (null, 5,'Paraná','PR');
+INSERT INTO estado VALUES (null, 2,'Pernambuco','PE');
+INSERT INTO estado VALUES (null, 2,'Piauí','PI');
+INSERT INTO estado VALUES (null, 4,'Rio de Janeiro','RJ');
+INSERT INTO estado VALUES (null, 2,'Rio Grande do Norte','RN');
+INSERT INTO estado VALUES (null, 5,'Rio Grande do Sul','RS');
+INSERT INTO estado VALUES (null, 1,'Rondônia','RO');
+INSERT INTO estado VALUES (null, 1,'Roraima','RR');
+INSERT INTO estado VALUES (null, 5,'Santa Catarina','SC');
+INSERT INTO estado VALUES (null, 4,'São Paulo','SP');
+INSERT INTO estado VALUES (null, 2,'Sergipe','SE');
+INSERT INTO estado VALUES (null, 1,'Tocantins','TO'); 
+
+---- permições -----
+-- FUNCIONALIDADE --
+
+INSERT INTO funcionalidade VALUES (1, '/clientes', 'Cliente' , 'fa-building' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (2, '/cliente/cadastrar', 'Formulário de cadastro cliente' , 'fa-building'    , 1 , 1 ); 
+INSERT INTO funcionalidade VALUES (3, '/cliente/atualizar/{id}', 'Formulário de atualização do cliente' , 'fa-building' , 1 , 0 ); 
+INSERT INTO funcionalidade VALUES (4, '/cliente/remover/{id}', 'Formulário de remoção do cliente' , 'fa-building'   , 1 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (5, '/contatos/{id}', 'Contato do cliente' , 'fa-users' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (6, '/contato/cadastrar/{id}', 'Formulário de cadastro contato' , 'fa-users'    , 5 , 1 ); 
+INSERT INTO funcionalidade VALUES (7, '/contato/atualizar/{id}', 'Formulário de atualização do contato' , 'fa-users' , 5 , 0 ); 
+INSERT INTO funcionalidade VALUES (8, '/contato/remover/{id}', 'Formulário de remoção do contato' , 'fa-users'   , 5 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (9, '/audiostore-categorias', 'Categoria' , 'fa-file-code-o' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (10, '/audiostore-categoria/cadastrar', 'Formulário de cadastro audiostore categoria' , 'fa-file-code-o'    , 9 , 1 ); 
+INSERT INTO funcionalidade VALUES (11, '/audiostore-categoria/atualizar/{id}', 'Formulário de atualização do audiostore categoria' , 'fa-file-code-o' , 9 , 0 ); 
+INSERT INTO funcionalidade VALUES (12, '/audiostore-categoria/remover/{id}', 'Formulário de remoção do audiostore categoria' , 'fa-file-code-o'   , 9 , 0 ); 
+INSERT INTO funcionalidade VALUES (13, '/audiostore-categoria/download-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 9 , 0 ); 
+INSERT INTO funcionalidade VALUES (14, '/audiostore-categoria/upload-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 9 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (15, '/audiostore-programacao', 'Programação' , 'fa-file-archive-o' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (16, '/audiostore-programacao/cadastrar', 'Formulário de cadastro audiostore programação' , 'fa-file-archive-o'    , 15 , 1 ); 
+INSERT INTO funcionalidade VALUES (17, '/audiostore-programacao/atualizar/{id}', 'Formulário de atualização do audiostore programação' , 'fa-file-archive-o' , 15 , 0 ); 
+INSERT INTO funcionalidade VALUES (18, '/audiostore-programacao/remover/{id}', 'Formulário de remoção do audiostore programação' , 'fa-file-archive-o'   , 15 , 0 ); 
+INSERT INTO funcionalidade VALUES (19, '/audiostore-programacao/download-exp/{id}', 'Download do arquivo exp' , 'fa-file-archive-o'   , 15 , 0 ); 
+INSERT INTO funcionalidade VALUES (20, '/audiostore-programacao/upload-exp/{id}', 'Download do arquivo exp' , 'fa-file-archive-o'   , 15 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (21, '/voz', 'Voz' , 'fa-bullhorn' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (22, '/voz/cadastrar', 'Formulário de cadastro voz' , 'fa-bullhorn'    , 21 , 1 ); 
+INSERT INTO funcionalidade VALUES (23, '/voz/atualizar/{id}', 'Formulário de atualização da voz' , 'fa-bullhorn' , 21 , 0 ); 
+INSERT INTO funcionalidade VALUES (24, '/voz/remover/{id}', 'Formulário de remoção da voz' , 'fa-bullhorn'   , 21 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (25, '/audiostore-gravadora', 'Gravadora' , 'fa-youtube-play' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (26, '/audiostore-gravadora/cadastrar', 'Formulário de cadastro gravadora' , 'fa-youtube-play'    , 25 , 1 ); 
+INSERT INTO funcionalidade VALUES (27, '/audiostore-gravadora/atualizar/{id}', 'Formulário de atualização da gravadora' , 'fa-youtube-play' , 25 , 0 ); 
+INSERT INTO funcionalidade VALUES (28, '/audiostore-gravadora/remover/{id}', 'Formulário de remoção da gravadora' , 'fa-youtube-play'   , 25 , 0 ); 
+INSERT INTO funcionalidade VALUES (29, '/audiostore-gravadora/download-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 25 , 0 ); 
+INSERT INTO funcionalidade VALUES (30, '/audiostore-gravadora/upload-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 25 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (31, '/audiostore-musica', 'Música' , 'fa-volume-up' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (32, '/audiostore-musica/cadastrar', 'Formulário de cadastro música' , 'fa-volume-up'    , 31 , 1 ); 
+INSERT INTO funcionalidade VALUES (33, '/audiostore-musica/atualizar/{id}', 'Formulário de atualização da música' , 'fa-volume-up' , 31 , 0 ); 
+INSERT INTO funcionalidade VALUES (34, '/audiostore-musica/remover/{id}', 'Formulário de remoção da música' , 'fa-volume-up'   , 31 , 0 ); 
+INSERT INTO funcionalidade VALUES (35, '/audiostore-musica/download-exp/{id}', 'Download do arquivo exp' , 'fa-volume-up'   , 31 , 0 ); 
+INSERT INTO funcionalidade VALUES (36, '/audiostore-musica/upload-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 31 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (37, '/configuracao-interna', 'Configurações' , 'fa-cog' , 0 , 1 ); 
+
+INSERT INTO funcionalidade VALUES (38, '/audiostore-comercial', 'Comercial' , 'fa-tag' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (39, '/audiostore-comercial/cadastrar', 'Formulário de cadastro comercial' , 'fa-tag'    , 38 , 1 ); 
+INSERT INTO funcionalidade VALUES (40, '/audiostore-comercial/atualizar/{id}', 'Formulário de atualização do comercial' , 'fa-tag' , 38 , 0 ); 
+INSERT INTO funcionalidade VALUES (41, '/audiostore-comercial/remover/{id}', 'Formulário de remoção do comercial' , 'fa-tag'   , 38 , 0 ); 
+INSERT INTO funcionalidade VALUES (42, '/audiostore-comercial/download-exp/{id}', 'Download do arquivo exp' , 'fa-tag'   , 38 , 0 ); 
+INSERT INTO funcionalidade VALUES (43, '/audiostore-comercial/upload-exp/{id}', 'Download do arquivo exp' , 'fa-file-code-o'   , 38 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (44, '/perfil', 'Perfil' , 'fa-sitemap' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (45, '/perfil/cadastrar', 'Formulário de cadastro perfil' , 'fa-sitemap'    , 44 , 1 ); 
+INSERT INTO funcionalidade VALUES (46, '/perfil/atualizar/{id}', 'Formulário de atualização do perfil' , 'fa-sitemap' , 4 , 0 ); 
+INSERT INTO funcionalidade VALUES (47, '/perfil/remover/{id}', 'Formulário de remoção do perfil' , 'fa-sitemap'   , 44 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (48, '/usuario', 'Usuário' , 'fa-user' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (49, '/usuario/cadastrar', 'Formulário de cadastro usuario' , 'fa-user'    , 48 , 1 ); 
+INSERT INTO funcionalidade VALUES (50, '/usuario/atualizar/{id}', 'Formulário de atualização do usuario' , 'fa-user' , 48 , 0 ); 
+INSERT INTO funcionalidade VALUES (51, '/usuario/remover/{id}', 'Formulário de remoção do usuario' , 'fa-user'   , 48 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (52, '/lancamento-entidade', 'Entidade Financeira' , 'fa-building' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (53, '/lancamento-entidade/cadastrar', 'Formulário de cadastro entidade' , 'fa-building'    , 52 , 1 ); 
+INSERT INTO funcionalidade VALUES (54, '/lancamento-entidade/atualizar/{id}', 'Formulário de atualização do entidade' , 'fa-building' , 52 , 0 ); 
+INSERT INTO funcionalidade VALUES (55, '/lancamento-entidade/remover/{id}', 'Formulário de remoção do entidade' , 'fa-building'   , 52 , 0 ); 
+INSERT INTO funcionalidade VALUES (56, '/lancamento-entidade/relatorio', 'Relatorios de lançamentos' , 'fa-building'   , 52 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (57, '/lancamento', 'Lançamentos' , 'fa-usd' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (58, '/lancamento/cadastrar', 'Formulário de cadastro lançamento' , 'fa-usd'    , 57 , 1 ); 
+INSERT INTO funcionalidade VALUES (59, '/lancamento/atualizar/{id}', 'Formulário de atualização do lançamento' , 'fa-usd' , 57 , 0 ); 
+INSERT INTO funcionalidade VALUES (60, '/lancamento/remover/{id}', 'Formulário de remoção do lançamento' , 'fa-usd'   , 57 , 0 ); 
+
+INSERT INTO funcionalidade VALUES (61, '/filial/{id}', 'Filial' , 'fa-cubes' , 0 , 0 ); 
+INSERT INTO funcionalidade VALUES (62, '/filial/cadastrar/{id}', 'Formulário de cadastro filial' , 'fa-cubes'    , 61 , 0 ); 
+INSERT INTO funcionalidade VALUES (63, '/filial/atualizar/{id}', 'Formulário de atualização da filial' , 'fa-cubes' , 61 , 0 ); 
+INSERT INTO funcionalidade VALUES (64, '/filial/remover/{id}', 'Formulário de remoção da filial' , 'fa-cubes'   , 61 , 0 ); 
+
 INSERT INTO funcionalidade VALUES (70, '/ocorrencia-origem', 'Origem da ocorrencia' , 'fa-exchange' , 0 , 1 ); 
 INSERT INTO funcionalidade VALUES (71, '/ocorrencia-origem/cadastrar', 'Formulário de cadastro da origem da ocorrencia' , 'fa-exchange'    , 70 , 0 ); 
 INSERT INTO funcionalidade VALUES (72, '/ocorrencia-origem/atualizar/{id}', 'Formulário de atualização da origem da ocorrencia' , 'fa-exchange' , 70 , 0 ); 
@@ -941,289 +1560,69 @@ INSERT INTO funcionalidade VALUES (121, '/ocorrencia/cadastrar', 'Formulário de
 INSERT INTO funcionalidade VALUES (122, '/ocorrencia/atualizar/{id}', 'Formulário de atualização da ocorrencia' , 'fa-bug' , 120 , 0 ); 
 INSERT INTO funcionalidade VALUES (123, '/ocorrencia/remover/{id}', 'Formulário de remoção da ocorrencia' , 'fa-bug'   , 120 , 0 ); 
 
-INSERT INTO funcionalidade VALUES (423, '/projetos', 'Projetos' , 'fa-star' , 0 , 1 ); 
-INSERT INTO funcionalidade VALUES (424, '/projeto/cadastrar', 'Formulário de cadastro do projeto' , 'fa-star'    , 423 , 0 ); 
-INSERT INTO funcionalidade VALUES (425, '/projeto/atualizar/{id}', 'Formulário de atualização do projeto' , 'fa-star' , 423 , 0 ); 
-INSERT INTO funcionalidade VALUES (426, '/projeto/remover/{id}', 'Formulário de remoção de projeto' , 'fa-star'   , 423 , 0 ); 
-
--- configuraçoes dos arquivos por cliente
-
-alter table dados_cliente add column local_origem_musica  varchar(255) not null default '';
-alter table dados_cliente add column local_destino_musica varchar(255) not null default '';
-alter table dados_cliente add column local_origem_spot    varchar(255) not null default '';
-alter table dados_cliente add column local_destino_spot   varchar(255) not null default '';
-alter table dados_cliente add column local_destino_exp    varchar(255) not null default '';
-
 INSERT INTO funcionalidade VALUES (130, '/cliente-configuracao/{id}', 'Configuração do cliente' , 'fa-cog' , 0 , 1 ); 
-
-
--- relaciona musica com o cliente
-alter table audiostore_musica add column cliente integer(11) not null default 1;
-alter table audiostore_musica add foreign key (cliente) references cliente(idcliente);
-
-alter table audiostore_comercial add column cliente integer(11) not null default 1;
-alter table audiostore_comercial add foreign key (cliente) references cliente(idcliente);
-
-alter table ocorrencia_usuario drop column prazo_resolucao;
-CREATE TABLE IF NOT EXISTS  ocorrencia_usuario_info (
-	id integer(11) not null auto_increment,
-	ocorrencia_usuario integer(11),
-	comentario text,
-	tempo time,
-	primary key(id),
-	foreign key(ocorrencia_usuario) references ocorrencia_usuario(id)
-);
-
-ALTER TABLE auditoria CHANGE COLUMN entidade entidade TEXT NOT NULL ;
-
-
-alter table cliente add column codigo_interno varchar(255) default '';
-alter table cliente add column codigo_externo varchar(255) default '';
-alter table bairro add column tipo varchar(255) default '';
-CREATE TABLE IF NOT EXISTS indice_reajuste (
-	id integer(11) not null auto_increment,
-	tipo varchar(10) not null,
-	descricao varchar(255) not null,
-	percentual decimal(10,0) not null,
-	primary key(id)
-);
-
-CREATE TABLE IF NOT EXISTS indice_reajuste_historico (
-	id integer(11) not null auto_increment,
-	indice_reajuste integer(11) not null,
-	usuario integer(11) not null,
-	texto varchar(255) not null,
-	data datetime not null,
-	primary key(id),
-	foreign key(indice_reajuste) references indice_reajuste(id),
-	foreign key(usuario) references usuario(idusuario)
-);
-
-alter table dados_cliente add column indice_reajuste integer(11);
-alter table dados_cliente add foreign key(indice_reajuste) references indice_reajuste(id);
-alter table indice_reajuste modify column percentual varchar(10) not null;
 
 INSERT INTO funcionalidade VALUES (140, '/indice-reajuste', 'Indice de reajuste' , 'fa-sort-numeric-desc ' , 0 , 1 ); 
 INSERT INTO funcionalidade VALUES (141, '/indice-reajuste/cadastrar', 'Formulário de cadastro de indice' , 'fa-sort-numeric-desc '    , 140 , 0 ); 
 INSERT INTO funcionalidade VALUES (142, '/indice-reajuste/atualizar/{id}', 'Formulário de atualização de indice' , 'fa-sort-numeric-desc ' , 140 , 0 ); 
 INSERT INTO funcionalidade VALUES (143, '/indice-reajuste/remover/{id}', 'Formulário de remoção de indice' , 'fa-sort-numeric-desc '   , 140 , 0 ); 
 
-
 INSERT INTO funcionalidade VALUES (145, '/minha-ocorrencia', 'Ocorrencias tratadas por min' , 'fa-bug '   , 0 , 1 ); 
 INSERT INTO funcionalidade VALUES (146, '/minha-ocorrencia/cadastrar', 'Formulário de cadastro da  ocorrencia' , 'fa-bug'    , 145 , 0 ); 
 INSERT INTO funcionalidade VALUES (147, '/minha-ocorrencia/atualizar/{id}', 'Formulário de atualização da ocorrencia' , 'fa-bug' , 145 , 0 ); 
 INSERT INTO funcionalidade VALUES (148, '/minha-ocorrencia/remover/{id}', 'Formulário de remoção da ocorrencia' , 'fa-bug'   , 145 , 0 ); 
 
-
 INSERT INTO funcionalidade VALUES (180, '/gerarexp', 'Gerar Arquivo de Exportação' , 'fa-file-excel-o'   , 0 , 1 ); 
-
-
-create table if not exists cliente_suspenso (
-	id integer(11) not null auto_increment,
-	cliente integer(11),
-	usuario integer(11),
-	suspenso tinyint(1),
-	motivo text ,
-	data datetime,
-	data_inicio date,
-	data_fim date,
-	primary key(id),
-	foreign key(cliente) references cliente(idcliente),
-	foreign key(usuario) references usuario(idusuario)
-);
+INSERT INTO funcionalidade VALUES (390, '/gerarexp', 'Gerar Arquivo de Exportação' , 'fa-file-excel-o'   , 0 , 1 ); 
 
 INSERT INTO funcionalidade VALUES (150, '/cliente-ou-filial/suspender/{id}', 'Suspender cliente/filial' , 'fa-times'   , 1 , 0 ); 
-
-CREATE TABLE IF NOT EXISTS categoria_geral (
-	id integer(11) not null auto_increment,
-	usuario integer(11) not null,
-	nome text not null,
-	primary key(id)
-) ENGINE = MyISAM ;
-
-
-CREATE TABLE musica_geral (
-	id integer(11) NOT NULL AUTO_INCREMENT,
-	categoria_geral integer(11) not null,
-	usuario integer(11) not null,
-	gravadora int(11) NOT NULL,
-	titulo varchar(255) NOT NULL,
-	interprete varchar(255) NOT NULL,
-	tipo_interprete smallint(6) NOT NULL,
-	letra text NOT NULL,
-	bpm smallint(6) NOT NULL,
-	tempo_total varchar(30) NOT NULL,
-	ano_gravacao int(11) NOT NULL,
-	afinidade1 varchar(255) NOT NULL,
-	afinidade2 varchar(255) NOT NULL,
-	afinidade3 varchar(255) NOT NULL,
-	afinidade4 varchar(255) NOT NULL,
-	arquivo varchar(255) NOT NULL,
-	PRIMARY KEY (id)
-) ENGINE=MyISAM;
-
-CREATE TABLE IF NOT EXISTS categoria_musica_geral (
-	id integer(11) not null auto_increment,
-	categoria integer(11) not null,
-	musica integer(11) not null,
-	primary key(id)
-) ENGINE = MyISAM ;
-
 
 INSERT INTO funcionalidade VALUES (152, '/musica', 'Arquivos de Músicas' , 'fa-music'   , 0 , 1 ); 
 INSERT INTO funcionalidade VALUES (153, '/musica/cadastrar', 'Cadastrar Arquivos de Músicas' , 'fa-music'   , 152 , 0 ); 
 INSERT INTO funcionalidade VALUES (154, '/musica/atualizar/{id}', 'Atualizar Arquivos de Músicas' , 'fa-music'   , 152 , 0 ); 
 INSERT INTO funcionalidade VALUES (155, '/musica/remover/{id}', 'Atualizar Arquivos de Músicas' , 'fa-music'   , 152 , 0 ); 
 
-
-drop table audiostore_musica;
-
-CREATE TABLE audiostore_musica (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  musica_geral int(11) NOT NULL,
-  categoria1 smallint(6) NOT NULL,
-  categoria2 smallint(6) DEFAULT NULL,
-  categoria3 smallint(6) DEFAULT NULL,
-  cut tinyint(1) NOT NULL,
-  crossover tinyint(1) NOT NULL,
-  data_vencimento_crossover date NOT NULL,
-  dias_execucao1 int(11) NOT NULL,
-  dias_execucao2 int(11) NOT NULL,
-  data date NOT NULL,
-  ultima_execucao datetime NOT NULL,
-  ultima_execucao_data date NOT NULL,
-  random int(11) NOT NULL,
-  qtde_player int(11) NOT NULL,
-  qtde int(11) NOT NULL,
-  data_vencimento date NOT NULL,
-  frame_inicio int(11) NOT NULL,
-  frame_final int(11) NOT NULL,
-  msg varchar(40) NOT NULL,
-  sem_som tinyint(1) NOT NULL,
-  super_crossover tinyint(1) NOT NULL,
-  cliente int(11) NOT NULL DEFAULT '1',
-  PRIMARY KEY (id),
-  KEY fk_audiostore_musica_audiostore_categoria1_idx (categoria1),
-  KEY fk_audiostore_musica_audiostore_categoria2_idx (categoria2),
-  KEY fk_audiostore_musica_audiostore_categoria3_idx (categoria3),
-  KEY cliente (cliente),
-  CONSTRAINT audiostore_musica_ibfk_1 FOREIGN KEY (cliente) REFERENCES cliente (idcliente),
-  CONSTRAINT fk_audiostore_musica_audiostore_categoria1 FOREIGN KEY (categoria1) REFERENCES audiostore_categoria (codigo) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT fk_audiostore_musica_audiostore_categoria2 FOREIGN KEY (categoria2) REFERENCES audiostore_categoria (codigo) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT fk_audiostore_musica_audiostore_categoria3 FOREIGN KEY (categoria3) REFERENCES audiostore_categoria (codigo) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-delete from perfil_funcionalidade where idfuncionalidade in(31,32,33,34,35,36,160);
-delete from funcionalidade where idfuncionalidade in(31,32,33,34,35,36,160);
-
 INSERT INTO funcionalidade VALUES (160, '/musica/programacao-audiostore/{idmusicaGeral}', 'Programação de Música do AudioServer' , 'fa-music'   , 152 , 0 ); 
 INSERT INTO funcionalidade VALUES (161, '/musica/programacao-audiostore/cadastrar/{idmusicaGeral}', 'Programação de Música do AudioServer' , 'fa-music'   , 152 , 0 ); 
 INSERT INTO funcionalidade VALUES (162, '/musica/programacao-audiostore/atualizar/{idmusicaGeral}/{id}', 'Programação de Música do AudioServer' , 'fa-music'   , 152 , 0 ); 
 INSERT INTO funcionalidade VALUES (163, '/musica/programacao-audiostore/remover/{idmusicaGeral}/{id}', 'Programação de Música do AudioServer' , 'fa-music'   , 152 , 0 ); 
 
-INSERT INTO funcionalidade VALUES (390, '/gerarexp', 'Gerar Arquivo de Exportação' , 'fa-file-excel-o'   , 0 , 1 ); 
+UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='160';
+UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='161';
+UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='162';
+UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='163';
 
-ALTER TABLE audiostore_comercial add column interromper_musica_tocada tinyint(1) not null default '0';
-ALTER TABLE audiostore_comercial_sh add column interromper_musica_tocada tinyint(1) not null default '0';
+UPDATE funcionalidade SET mapping_id='/musica/programacao-audiostore', visivel='1', parente = 0 WHERE idfuncionalidade='160';
+UPDATE funcionalidade SET mapping_id='/musica/programacao-audiostore/atualizar/{id}' WHERE idfuncionalidade='162';
+UPDATE funcionalidade SET mapping_id='/musica/programacao-audiostore/remover/{id}' WHERE idfuncionalidade='163';
+UPDATE funcionalidade SET icone='fa-file-audio-o' WHERE idfuncionalidade >= 160 and idfuncionalidade <= 163;
 
-create table IF NOT EXISTS ajuda (
-id int (11) NOT NULL AUTO_INCREMENT ,
-titulo varchar (255) NOT NULL,
-texto text NOT NULL,
-idfuncionalidade int(11) NOT NULL,
-PRIMARY KEY (id),
-FOREIGN KEY (idfuncionalidade) REFERENCES funcionalidade (idfuncionalidade)
-);
+insert into funcionalidade  values (200, '/ajuda', 'Ajuda Do Sistema' , 'fa fa-life-ring' , 0, 1 );
+insert into funcionalidade values (201, '/ajuda/cadastrar', 'Cadastrar Ajuda' , 'fa fa-life-ring' , 200, 0 );
+insert into funcionalidade values (202, '/ajuda/atualizar/{id}', 'Atualizar Ajuda' , 'fa fa-life-ring' , 200, 0 );
+insert into funcionalidade  values (203, '/ajuda/remover/{id}', 'Remover Ajuda' , 'fa fa-life-ring' , 200, 0 );
 
-insert into funcionalidade  values ( 200, "/ajuda", "Ajuda Do Sistema" , "fa fa-life-ring" , 0, 1 );
-insert into funcionalidade values ( 201, "/ajuda/cadastrar", "Cadastrar Ajuda" , "fa fa-life-ring" , 200, 0 );
-insert into funcionalidade values (202, "/ajuda/atualizar/{id}", "Atualizar Ajuda" , "fa fa-life-ring" , 200, 0 );
-insert into funcionalidade  values (203, "/ajuda/remover/{id}", "Remover Ajuda" , "fa fa-life-ring" , 200, 0 );
+INSERT INTO funcionalidade VALUES (423, '/projetos', 'Projetos' , 'fa-star' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (424, '/projeto/cadastrar', 'Formulário de cadastro do projeto' , 'fa-star'    , 423 , 0 ); 
+INSERT INTO funcionalidade VALUES (425, '/projeto/atualizar/{id}', 'Formulário de atualização do projeto' , 'fa-star' , 423 , 0 ); 
+INSERT INTO funcionalidade VALUES (426, '/projeto/remover/{id}', 'Formulário de remoção de projeto' , 'fa-star'   , 423 , 0 ); 
+
+INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('420', '/ordem-servico/lista', 'Lista de OS', ' ', '0', '1');
+INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('421', '/ordem-servico/cadastro', 'Cadastrar OS', ' ', '420', '0');
+INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('422', '/ordem-servico/atualizar/{id}', 'Atualizar OS', ' ', '420', '0');
+
+INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('410', '/cliente/configuracao/acesso/produto/{cliente}', 'Configurar dados do cliente', 'fa-building', '1', '0');
+INSERT INTO perfil_funcionalidade (`idperfil_funcionalidade`, `idfuncionalidade`, `idperfil`) VALUES ('600', '410', '2');
+UPDATE funcionalidade SET `icone`='fa-cog' WHERE `idfuncionalidade`='410';
+
+
 insert into perfil_funcionalidade values (null, 200,1);
 insert into perfil_funcionalidade values (null, 201,1);
 insert into perfil_funcionalidade values (null, 202,1);
 insert into perfil_funcionalidade values (null, 203,1);
 
-alter table audiostore_comercial add column texto longtext not null default '';
 
-UPDATE funcionalidade SET mapping_id='/musica/programacao-audiostore', visivel='1', parente = 0 WHERE idfuncionalidade='160';
-UPDATE funcionalidade SET mapping_id='/musica/programacao-audiostore/atualizar/{id}' WHERE idfuncionalidade='162';
-UPDATE funcionalidade SET mapping_id='/musica/programacao-audiostore/remover/{id}' WHERE idfuncionalidade='163';
-UPDATE funcionalidade SET parente='0' WHERE idfuncionalidade='160';
-UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='160';
-UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='161';
-UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='162';
-UPDATE funcionalidade SET nome='Música do AudioServer ' WHERE idfuncionalidade='163';
-UPDATE funcionalidade SET icone='fa-file-audio-o' WHERE idfuncionalidade >= 160 and idfuncionalidade <= 163;
-
-
-delete from auditoria_dados where idauditoria_dados  > 0;
-delete from auditoria where idauditoria  > 0;
-delete from historico_usuario where idhistorico_usuario > 0;
-delete from usuario where idusuario > 0;
-delete from perfil_usuario where idperfil_usuario > 0;
-delete from perfil_funcionalidade where idperfil_funcionalidade > 0;
-delete from perfil where idperfil > 0;
-
-INSERT INTO perfil VALUES ('1', 'ADM');
-INSERT INTO perfil VALUES ('2', 'TI');
-INSERT INTO perfil VALUES ('3', 'Video');
-INSERT INTO perfil VALUES ('4', 'Produção');
-INSERT INTO perfil VALUES ('5', 'Comercial');
-INSERT INTO perfil VALUES ('6', 'Suporte');
-INSERT INTO perfil VALUES ('7', 'Studio');
-
-INSERT INTO usuario VALUES ('1', null, now() , 'Alex Valentim Gonçalves', '08920068461', 'alex.goncalves@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('2', null, now() , 'Andre Batalha', '00000000001', 'andre.batalha@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('3', null, now() , 'Batalha', '00000000002', 'batalha@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('4', null, now() , 'Diamandi Ferreira', '00000000003', 'diamandi.ferreira@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('5', null, now() , 'Diana Queiroz', '00000000004', 'diana.queiroz@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('6', null, now() , 'Eder Barbosa', '00000000005', 'eder.barbosa@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('7', null, now() , 'Eduardo Marins', '00000000006', 'eduardo.marins@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('8', null, now() , 'Gabriel Lima', '00000000007', 'gabriel.lima@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('9', null, now() , 'Gabriel Oliveira', '00000000008', 'gabriel.oliveira@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('10', null, now() , 'Giovanna Alves', '00000000009', 'giovanna.alves@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('11', null, now() , 'Jadmas Santana', '00000000010', 'jadmas.santana@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('12', null, now() , 'Julio Silva', '00000000011', 'julio.silva@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('13', null, now() , 'Laercio Bozzi', '00000000012', 'laercio.bozzi@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('14', null, now() , 'Marcos Aloisi', '00000000013', 'marcos.aloisi@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('15', null, now() , 'Marina Rodrigues', '00000000014', 'marina.rodrigues@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('16', null, now() , 'Mony Spinola', '00000000015', 'mony.spinola@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('17', null, now() , 'Nilson Lopes', '00000000016', 'nilson.lopes@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('18', null, now() , 'Paulo Morales', '00000000017', 'paulo.morales@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('19', null, now() , 'Paulo Torres', '00000000018', 'paulo.torres@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('20', null, now() , 'Thiago Queiroz', '00000000019', 'thiago.queiroz@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('21', null, now() , 'Vinicius Gomes', '00000000020', 'vinicius.gomes@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('22', null, now() , 'Vinicius Silva', '00000000021', 'vinicius.silva@instore.com.br', md5(123));
-INSERT INTO usuario VALUES ('23', null, now() , 'Viviane Moura', '00000000022', 'viviane.moura@instore.com.br', md5(123));
-
-INSERT INTO perfil_usuario VALUES ('1', '1', '17');
-INSERT INTO perfil_usuario VALUES ('2', '1', '3');
-INSERT INTO perfil_usuario VALUES ('3', '2', '1');
-INSERT INTO perfil_usuario VALUES ('4', '2', '1');
-INSERT INTO perfil_usuario VALUES ('5', '2', '22');
-INSERT INTO perfil_usuario VALUES ('6', '3', '2');
-INSERT INTO perfil_usuario VALUES ('7', '3', '18');
-INSERT INTO perfil_usuario VALUES ('8', '4', '4');
-INSERT INTO perfil_usuario VALUES ('9', '4', '6');
-INSERT INTO perfil_usuario VALUES ('10', '4', '8');
-INSERT INTO perfil_usuario VALUES ('11', '4', '9');
-INSERT INTO perfil_usuario VALUES ('12', '4', '11');
-INSERT INTO perfil_usuario VALUES ('13', '4', '14');
-INSERT INTO perfil_usuario VALUES ('14', '4', '15');
-INSERT INTO perfil_usuario VALUES ('15', '5', '10');
-INSERT INTO perfil_usuario VALUES ('16', '5', '7');
-INSERT INTO perfil_usuario VALUES ('17', '5', '5');
-INSERT INTO perfil_usuario VALUES ('18', '5', '16');
-INSERT INTO perfil_usuario VALUES ('19', '6', '12');
-INSERT INTO perfil_usuario VALUES ('20', '6', '20');
-INSERT INTO perfil_usuario VALUES ('21', '6', '21');
-INSERT INTO perfil_usuario VALUES ('22', '6', '23');
-INSERT INTO perfil_usuario VALUES ('23', '7', '18');
-INSERT INTO perfil_usuario VALUES ('24', '7', '13');
-
-insert into perfil_funcionalidade select null , idfuncionalidade ,idperfil  from perfil , funcionalidade where idperfil in(1,2);
-
+-- CATEGORIA GERAL -- 
 INSERT INTO categoria_geral VALUES('1',1,'AXE');
 INSERT INTO categoria_geral VALUES('2',1,'PAGO/ SAMBA');
 INSERT INTO categoria_geral VALUES('3',1,'SERT');
@@ -1386,336 +1785,30 @@ INSERT INTO categoria_geral VALUES('996',1,'CARNA AXE');
 INSERT INTO categoria_geral VALUES('997',1,'BOSSA NOVA');
 INSERT INTO categoria_geral VALUES('999',1,'ESPERA TELEFONICA');
 
-ALTER TABLE `intranet`.`audiostore_comercial` 
-DROP FOREIGN KEY `fk_audiostore_comercial_audiostore_categoria1`;
-ALTER TABLE `intranet`.`audiostore_comercial` 
-CHANGE COLUMN `categoria` `categoria` SMALLINT(6) NULL ;
-ALTER TABLE `intranet`.`audiostore_comercial` 
-ADD CONSTRAINT `fk_audiostore_comercial_audiostore_categoria1`
-  FOREIGN KEY (`categoria`)
-  REFERENCES `intranet`.`audiostore_categoria` (`codigo`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION;
+delete from perfil_funcionalidade where idfuncionalidade in(31,32,33,34,35,36);
+delete from funcionalidade where idfuncionalidade in(31,32,33,34,35,36);
+-- DELETE --
 
-CREATE TABLE `intranet`.`audiostore_programacao_comercial` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `programacao` INT NOT NULL,
-  `comercial` INT NOT NULL,
-  `inicial_final` TINYINT(1) NOT NULL,
-  `intervalo` VARCHAR(5) NOT NULL,
-  PRIMARY KEY (`id`));
+delete from perfil_funcionalidade where idperfil > 0;
+delete from perfil_usuario where idperfil > 0;
+delete from funcionalidade where idfuncionalidade > 0;
+delete from perfil where idperfil > 0;
 
-ALTER TABLE `intranet`.`audiostore_programacao_comercial` 
-CHANGE COLUMN `intervalo` `intervalo` VARCHAR(8) NOT NULL ;
+delete from contato_cliente where contato_cliente.idcontato_cliente > 0;
+delete from dados_cliente where dados_cliente.iddados_cliente > 0;
+delete from cliente where cliente.idcliente >  1;
+delete from endereco where endereco.idendereco > 100;
+delete from cep where cep.idcep > 100;
+delete from bairro where bairro.idbairro > 100;
+delete from cidade where cidade.idcidade > 100;
 
-ALTER TABLE `intranet`.`audiostore_musica` 
-ADD COLUMN `ultima_importacao` TINYINT(1) NULL DEFAULT 0 AFTER `cliente`;
-
-ALTER TABLE `intranet`.`musica_geral` 
-ADD COLUMN `ultima_importacao` TINYINT(1) NULL DEFAULT 0 AFTER `arquivo`;
-
-ALTER TABLE `intranet`.`musica_geral` 
-ADD COLUMN `data_cadastro` DATE NULL AFTER `ultima_importacao`;
-
-UPDATE `intranet`.`musica_geral` SET `data_cadastro`=date('05/01/2015') WHERE `id`>=1;
-
-CREATE TABLE `intranet`.`tipo_produto` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(255) NULL,
-  PRIMARY KEY (`id`));
-
-
-
-
-CREATE TABLE `intranet`.`produto` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `tipo_produto` INT NULL,
-  `nome` VARCHAR(255) NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_produto_tipo_produto_idx` (`tipo_produto` ASC),
-  CONSTRAINT `fk_produto_tipo_produto`
-    FOREIGN KEY (`tipo_produto`)
-    REFERENCES `intranet`.`tipo_produto` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
-
-
-CREATE TABLE `intranet`.`tipo_acesso_remoto` (
-  `id` INT NOT NULL,
-  `nome` VARCHAR(255) NULL,
-  PRIMARY KEY (`id`));
-
-
-CREATE TABLE `intranet`.`acesso_remoto` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `tipo_acesso_remoto` INT NULL,
-  `cliente` INT NULL,
-  `servidor` VARCHAR(255) NULL,
-  `usuario` VARCHAR(255) NULL,
-  `senha` VARCHAR(255) NULL,
-  `porta` VARCHAR(255) NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_tipo_acesso_acesso_remoto_idx` (`tipo_acesso_remoto` ASC),
-  INDEX `fk_cliente_acesso_remoto_idx` (`cliente` ASC),
-  CONSTRAINT `fk_tipo_acesso_acesso_remoto`
-    FOREIGN KEY (`tipo_acesso_remoto`)
-    REFERENCES `intranet`.`tipo_acesso_remoto` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_cliente_acesso_remoto`
-    FOREIGN KEY (`cliente`)
-    REFERENCES `intranet`.`cliente` (`idcliente`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
-
-
-CREATE TABLE `intranet`.`produto_cliente` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `produto` INT NULL,
-  `cliente` INT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_produto_cliente_produto_idx` (`produto` ASC),
-  INDEX `fk_produto_cliente_cliente_idx` (`cliente` ASC),
-  CONSTRAINT `fk_produto_cliente_produto`
-    FOREIGN KEY (`produto`)
-    REFERENCES `intranet`.`produto` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_produto_cliente_cliente`
-    FOREIGN KEY (`cliente`)
-    REFERENCES `intranet`.`cliente` (`idcliente`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
-
-INSERT INTO `intranet`.`funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('410', '/cliente/configuracao/acesso/produto/{cliente}', 'Configurar dados do cliente', 'fa-building', '1', '0');
-INSERT INTO `intranet`.`perfil_funcionalidade` (`idperfil_funcionalidade`, `idfuncionalidade`, `idperfil`) VALUES ('600', '410', '2');
-UPDATE `intranet`.`funcionalidade` SET `icone`='fa-cog' WHERE `idfuncionalidade`='410';
-
-
-
-
-CREATE TABLE IF NOT EXISTS audiostore_comercial_extra (
-	  id INT NOT NULL AUTO_INCREMENT,
-      audiostore_comercial INT NOT NULL,
-	  quem_solicitou VARCHAR(255) NOT NULL,
-	  quem_solicitou_data DATETIME NOT NULL,
-	  quem_recebeu INT NOT NULL,
-	  quem_recebeu_data DATETIME NOT NULL,
-	  tipo_radio SMALLINT NOT NULL,
-	  locutor INT NOT NULL,
-      prazo_locucao DATETIME NOT NULL,
-      prazo_studio DATETIME NOT NULL,
-      situacao SMALLINT NOT NULL,
-      unidades TEXT NOT NULL,
-	  PRIMARY KEY (id) , 
-      FOREIGN KEY(audiostore_comercial) REFERENCES audiostore_comercial(id) , 
-      FOREIGN KEY(quem_recebeu) REFERENCES usuario(idusuario)  ,
-      FOREIGN KEY(locutor) REFERENCES voz(idvoz)  
-)
-ENGINE = InnoDB;
-
-CREATE TABLE IF NOT EXISTS audiostore_comercial_extra_obs (
-	  id INT NOT NULL AUTO_INCREMENT,
-      audiostore_comercial_extra INT NOT NULL,
-	  tipo SMALLINT NOT NULL,
-      data DATETIME NOT NULL,
-      usuario INT NOT NULL,
-	  PRIMARY KEY (id) , 
-      texto TEXT NOT NULL,
-      FOREIGN KEY(audiostore_comercial_extra) REFERENCES audiostore_comercial_extra(id) , 
-      FOREIGN KEY(usuario) REFERENCES usuario(idusuario) 
-)
-ENGINE = InnoDB;
-
-----------------
--- 05/05/2015 --
-----------------
-CREATE TABLE ordem_servico_obs (
-    id int not null auto_increment , 
-    fk int not null , 
-    usuario int not null,
-    data varchar(20) not null,
-    tipo int not null,
-    html longtext not null ,
-    primary key(id)
-);
-
-CREATE TABLE ordem_servico_parte1 (
-    id int not null auto_increment , 
-    cliente int not null,
-    usuario int not null,
-    data varchar(20) not null ,
-    nome varchar(255) not null ,
-    quem_solicitou text not null ,
-    quem_solicitou_email text not null ,
-    quando_solicitou varchar(10) not null,
-    data_max_distribuicao varchar(10) not null,
-    tipo int not null,
-    primary key(id)
-);
-
-CREATE TABLE ordem_servico_parte2 (
-	id int not null auto_increment , 
-    fk int not null,
-    locutor int not null,
-    texto longtext not null,
-    prazo_locucao varchar(10) not null,
-    primary key(id)
-);
-
-CREATE TABLE ordem_servico_parte3 (
-	id int not null auto_increment , 
-    fk int not null,
-    prazo_estudio varchar(10) not null,
-    primary key(id)
-);
-
-CREATE TABLE ordem_servico_parte4 (
-   id int not null auto_increment , 
-    fk int not null,
-    categoria int not null,
-    tipo int not null ,
-    frequencia varchar(255) not null ,
-    dinicial varchar(10) not null ,
-    dfinal varchar(10) not null ,
-    dvencimento varchar(10) not null ,
-    unidades longtext not null ,
-    horarios longtext not null ,
-    primary key(id)
-);
-
-CREATE TABLE ordem_servico_fila (
-    id int not null auto_increment , 
-    usuario int not null,
-    fk int not null,
-    data varchar(20) not null ,
-    prioridade int not null,
-    situacao int not null,
-    primary key(id)
-);
-
-
-CREATE TABLE ordem_servico_hash (
-    id int not null auto_increment , 
-    usuario int not null,
-    data varchar(20) not null ,
-    fk int not null,
-    metadata text not null,
-    email varchar(255) not null ,
-    finalizado int not null ,
-    situacao int not null ,
-    obs longtext not null ,
-    hash varchar(255) not null ,
-    primary key(id)
-);
-
-CREATE TABLE ordem_servico_validacao_interna (
-    id int not null auto_increment , 
-    usuario int not null,
-    data varchar(20) not null ,
-    fk int not null,
-    primary key(id)
-);
-
-ALTER TABLE `perfil` 
-ADD COLUMN `icone` VARCHAR(255) NULL AFTER `nome`;
-
-
-INSERT INTO `funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('420', '/ordem-servico/lista', 'Lista de OS', ' ', '0', '1');
-INSERT INTO `funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('421', '/ordem-servico/cadastro', 'Cadastrar OS', ' ', '420', '0');
-INSERT INTO `funcionalidade` (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('422', '/ordem-servico/atualizar/{id}', 'Atualizar OS', ' ', '420', '0');
-
-CREATE TABLE `excecao` (
-  `idexcecao` int(11) NOT NULL AUTO_INCREMENT,
-  `mensagem` varchar(255) NOT NULL,
-  `linha` varchar(255) NOT NULL,
-  `codigo` varchar(255) NOT NULL,
-  `excecao_data` datetime NOT NULL,
-  `excecao_arquivo` varchar(255) NOT NULL,
-  `idusuario` int(11) NOT NULL,
-  PRIMARY KEY (`idexcecao`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
-CREATE TABLE `projeto` (
-  `idprojeto` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(255) NOT NULL,
-  `descricao` longtext NOT NULL,
-  `data_criacao` datetime NOT NULL,
-  `idusuario` int(11) DEFAULT NULL,
-  `link_documentacao` varchar(255) NOT NULL,
-  PRIMARY KEY (`idprojeto`),
-  UNIQUE KEY `id_UNIQUE` (`idprojeto`),
-  UNIQUE KEY `nome_UNIQUE` (`nome`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-
-CREATE TABLE `versao` (
-  `idversao` int(11) NOT NULL AUTO_INCREMENT,
-  `data_criacao` datetime NOT NULL,
-  `nome` varchar(255) NOT NULL,
-  `descricao` longtext NOT NULL,
-  `idprojeto` int(11) NOT NULL,
-  `link_svn` varchar(255) NOT NULL,
-  `download` tinyint(1) NOT NULL,
-  PRIMARY KEY (`idversao`),
-  UNIQUE KEY `idversion_UNIQUE` (`idversao`),
-  UNIQUE KEY `nome_UNIQUE` (`nome`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE `acontecimento_bug` (
-  `idacontecimento_bug` int(11) NOT NULL AUTO_INCREMENT,
-  `data_inicio` date NOT NULL,
-  `data_final` date NOT NULL,
-  PRIMARY KEY (`idacontecimento_bug`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE `bug` (
-  `idbug` int(11) NOT NULL AUTO_INCREMENT,
-  `idusuario` int(11) NOT NULL,
-  `data_cadastro` datetime NOT NULL,
-  `descricao` longtext NOT NULL,
-  `tipo_sistema_operacional` int(11) NOT NULL,
-  `services_pack` varchar(255) DEFAULT NULL,
-  `data_atualizacao_os` date DEFAULT NULL,
-  `is_servico` tinyint(1) NOT NULL,
-  `numero_versao_os` varchar(255) DEFAULT NULL,
-  `arquitetura_processador` varchar(3) DEFAULT NULL,
-  `usuario_da_maquina` varchar(255) DEFAULT NULL,
-  `nome_processador` varchar(255) DEFAULT NULL,
-  `quantidade_memoria_ram` int(11) DEFAULT NULL,
-  `tamanho_disco` int(11) DEFAULT NULL,
-  `sistema_operacional` varchar(255) NOT NULL,
-  `versao_sistema_operacional` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`idbug`),
-  KEY `fk_bugs_user_idx` (`idusuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
-
-CREATE TABLE solucao (
-  idsolucao int(11) NOT NULL AUTO_INCREMENT,
-  idusuario int(11) DEFAULT NULL,
-  data date NOT NULL,
-  descricao longtext NOT NULL,
-  PRIMARY KEY (id),
-  KEY fk_solution_bugs_user1_idx (id_usuario),
-  CONSTRAINT fk_solution_bugs_user1 FOREIGN KEY (id_usuario) REFERENCES usuario (idusuario) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE versao_bug (
-  idversao_bug int(11) NOT NULL AUTO_INCREMENT,
-  idbug int(11) DEFAULT NULL,
-  idversao int(11) DEFAULT NULL,
-  idacontecimento int(11) DEFAULT NULL,
-  idsolucao int(11) DEFAULT NULL,
-  PRIMARY KEY (id),
-  KEY fk_version_bugs_bugs1_idx (id_bug),
-  KEY fk_version_bugs_version1_idx (id_versao),
-  KEY fk_version_bugs_occurred_bugs1_idx (id_acontecimento),
-  KEY fk_version_bugs_solution_bugs1_idx (id_solucao),
-  CONSTRAINT fk_version_bugs_bugs1 FOREIGN KEY (id_bug) REFERENCES bug (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT fk_version_bugs_occurred_bugs1 FOREIGN KEY (id_acontecimento) REFERENCES acontecimento (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT fk_version_bugs_solution_bugs1 FOREIGN KEY (id_solucao) REFERENCES solucao (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT fk_version_bugs_version1 FOREIGN KEY (id_versao) REFERENCES versao (id) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
-
+delete from auditoria_dados where idauditoria_dados  > 0;
+delete from auditoria where idauditoria  > 0;
+delete from historico_usuario where idhistorico_usuario > 0;
+delete from usuario where idusuario > 0;
+delete from perfil_usuario where idperfil_usuario > 0;
+delete from perfil_funcionalidade where idperfil_funcionalidade > 0;
+delete from perfil where idperfil > 0;
 
 
 

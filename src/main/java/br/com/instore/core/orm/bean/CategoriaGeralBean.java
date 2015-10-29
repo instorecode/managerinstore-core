@@ -14,6 +14,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="categoria_geral")
 public class CategoriaGeralBean extends Bean {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column( name = "id" , nullable = false)

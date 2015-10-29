@@ -21,46 +21,67 @@ public class MusicaGeralBean extends Bean {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Integer id;
+
     @Column(name = "comun_jamendo_megatrax", nullable = false)
     private Integer comunJamendoMegatrax;
+
     @Column(name = "codigo_interno", nullable = false)
     private String codigoInterno;
+
     @Column(name = "codigo_externo", nullable = false)
     private String codigoExterno;
+
     @Column(name = "velocidade", nullable = false)
     private Integer velocidade;
+
     @Column(name = "categoria_geral", nullable = false)
     private Integer categoriaGeral;
+
     @Column(name = "usuario", nullable = false)
     private Integer usuario;
+
     @Column(name = "gravadora", nullable = false)
     private Integer gravadora;
+
     @Column(name = "titulo", nullable = false, length = 255)
     private String titulo;
+
     @Column(name = "interprete", nullable = false)
     private String interprete;
+
     @Column(name = "tipo_interprete", nullable = false)
-    private short tipoInterprete;
+    private Short tipoInterprete;
+
     @Column(name = "letra", nullable = false)
     private String letra;
+
     @Column(name = "bpm", nullable = false)
-    private short bpm;
+    private Short bpm;
+
     @Column(name = "tempo_total", nullable = false, length = 30)
     private String tempoTotal;
+
     @Column(name = "ano_gravacao", nullable = false)
     private Integer anoGravacao;
+
     @Column(name = "afinidade1", nullable = false, length = 255)
     private String afinidade1;
+
     @Column(name = "afinidade2", nullable = false, length = 255)
     private String afinidade2;
+
     @Column(name = "afinidade3", nullable = false, length = 255)
     private String afinidade3;
+
     @Column(name = "afinidade4", nullable = false, length = 255)
     private String afinidade4;
+
     @Column(name = "arquivo", nullable = false, length = 255)
     private String arquivo;
+
     @Column(name = "ultima_importacao", nullable = false)
     private Boolean ultimaImportacao;
+
     @Temporal(TemporalType.DATE)
     @Column(name = "data_cadastro", nullable = false)
     private Date dataCadastro;
@@ -78,6 +99,38 @@ public class MusicaGeralBean extends Bean {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getComunJamendoMegatrax() {
+        return comunJamendoMegatrax;
+    }
+
+    public void setComunJamendoMegatrax(Integer comunJamendoMegatrax) {
+        this.comunJamendoMegatrax = comunJamendoMegatrax;
+    }
+
+    public String getCodigoInterno() {
+        return codigoInterno;
+    }
+
+    public void setCodigoInterno(String codigoInterno) {
+        this.codigoInterno = codigoInterno;
+    }
+
+    public String getCodigoExterno() {
+        return codigoExterno;
+    }
+
+    public void setCodigoExterno(String codigoExterno) {
+        this.codigoExterno = codigoExterno;
+    }
+
+    public Integer getVelocidade() {
+        return velocidade;
+    }
+
+    public void setVelocidade(Integer velocidade) {
+        this.velocidade = velocidade;
     }
 
     public Integer getCategoriaGeral() {
@@ -120,11 +173,11 @@ public class MusicaGeralBean extends Bean {
         this.interprete = interprete;
     }
 
-    public short getTipoInterprete() {
+    public Short getTipoInterprete() {
         return tipoInterprete;
     }
 
-    public void setTipoInterprete(short tipoInterprete) {
+    public void setTipoInterprete(Short tipoInterprete) {
         this.tipoInterprete = tipoInterprete;
     }
 
@@ -136,11 +189,11 @@ public class MusicaGeralBean extends Bean {
         this.letra = letra;
     }
 
-    public short getBpm() {
+    public Short getBpm() {
         return bpm;
     }
 
-    public void setBpm(short bpm) {
+    public void setBpm(Short bpm) {
         this.bpm = bpm;
     }
 
@@ -200,38 +253,6 @@ public class MusicaGeralBean extends Bean {
         this.arquivo = arquivo;
     }
 
-    public Integer getComunJamendoMegatrax() {
-        return comunJamendoMegatrax;
-    }
-
-    public void setComunJamendoMegatrax(Integer comunJamendoMegatrax) {
-        this.comunJamendoMegatrax = comunJamendoMegatrax;
-    }
-
-    public String getCodigoInterno() {
-        return codigoInterno;
-    }
-
-    public void setCodigoInterno(String codigoInterno) {
-        this.codigoInterno = codigoInterno;
-    }
-
-    public String getCodigoExterno() {
-        return codigoExterno;
-    }
-
-    public void setCodigoExterno(String codigoExterno) {
-        this.codigoExterno = codigoExterno;
-    }
-
-    public Integer getVelocidade() {
-        return velocidade;
-    }
-
-    public void setVelocidade(Integer velocidade) {
-        this.velocidade = velocidade;
-    }
-
     public Boolean getUltimaImportacao() {
         return ultimaImportacao;
     }
@@ -247,4 +268,5 @@ public class MusicaGeralBean extends Bean {
     public void setDataCadastro(Date dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
+
 }

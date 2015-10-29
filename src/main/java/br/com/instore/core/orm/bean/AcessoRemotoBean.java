@@ -17,20 +17,25 @@ import org.apache.commons.lang.builder.ToStringStyle;
 public class AcessoRemotoBean extends Bean {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)   
     private Integer id;
+    
     @Column(name = "servidor", length = 255)
     private String servidor;
+    
     @Column(name = "usuario", length = 255)
     private String usuario;
+    
     @Column(name = "senha", length = 255)
     private String senha;
+    
     @Column(name = "porta", length = 255)
     private String porta;
+    
     @ManyToOne
     @JoinColumn(name = "tipo_acesso_remoto", nullable = false)
     private TipoAcessoRemotoBean tipoAcessoRemoto;
+    
     @ManyToOne
     @JoinColumn(name = "cliente", nullable = false)
     private ClienteBean cliente;

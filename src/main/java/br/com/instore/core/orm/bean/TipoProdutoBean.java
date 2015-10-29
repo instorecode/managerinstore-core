@@ -18,6 +18,7 @@ public class TipoProdutoBean extends Bean {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Integer id;
+    
     @Column(name = "nome", length = 255)
     private String nome;
 

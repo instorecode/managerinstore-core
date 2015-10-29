@@ -40,7 +40,7 @@ public class AudiostoreCategoriaBean extends Bean {
     
     @Column( name = "tipo" , nullable = false )
     @ViewLabel("Tipo")
-    private short tipo;
+    private Short tipo;
     
     @Column( name = "cod_interno" , nullable = false , length = 3 )
     @ViewLabel("Código")
@@ -98,11 +98,11 @@ public class AudiostoreCategoriaBean extends Bean {
         this.dataFinal = dataFinal;
     }
 
-    public short getTipo() {
+    public Short getTipo() {
         return tipo;
     }
 
-    public void setTipo(short tipo) {
+    public void setTipo(Short tipo) {
         this.tipo = tipo;
     }
 

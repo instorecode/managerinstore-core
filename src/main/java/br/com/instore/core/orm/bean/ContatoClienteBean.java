@@ -31,7 +31,7 @@ public class ContatoClienteBean extends Bean {
     private String nome;
     
     @Column( name = "principal" , nullable = false)
-    private boolean principal;
+    private Boolean principal;
     
     @Column( name = "email" , nullable = false , length = 255)
     private String email;
@@ -73,11 +73,11 @@ public class ContatoClienteBean extends Bean {
         this.nome = nome;
     }
 
-    public boolean isPrincipal() {
+    public Boolean isPrincipal() {
         return principal;
     }
 
-    public void setPrincipal(boolean principal) {
+    public void setPrincipal(Boolean principal) {
         this.principal = principal;
     }
 

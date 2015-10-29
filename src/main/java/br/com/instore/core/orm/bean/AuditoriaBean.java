@@ -27,7 +27,7 @@ public class AuditoriaBean extends Bean {
     private UsuarioBean usuario;
     
     @Column(name = "acao" , nullable = false)
-    private short acao;
+    private Short acao;
     
     @Column(name = "entidade" , nullable = false)
     private String entidade;
@@ -59,11 +59,11 @@ public class AuditoriaBean extends Bean {
         this.usuario = usuario;
     }
 
-    public short getAcao() {
+    public Short getAcao() {
         return acao;
     }
 
-    public void setAcao(short acao) {
+    public void setAcao(Short acao) {
         this.acao = acao;
     }
 

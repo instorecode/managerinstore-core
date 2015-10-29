@@ -1314,6 +1314,8 @@ alter table dados_cliente add foreign key(indice_reajuste) references indice_rea
 alter table audiostore_musica add column cliente integer(11) not null default 1;
 alter table audiostore_musica add foreign key (cliente) references cliente(idcliente);
 
+alter table audiostore_categoria add column cod_interno varchar(255) not null; 
+
 alter table audiostore_comercial add column cliente integer(11) not null default 1;
 alter table audiostore_comercial add foreign key (cliente) references cliente(idcliente);
 
@@ -1338,12 +1340,12 @@ ALTER TABLE `intranet`.`audiostore_comercial`
 
 ALTER TABLE audiostore_comercial_sh add column interromper_musica_tocada tinyint(1) not null default '0';
 
-ALTER TABLE `intranet`.`audiostore_programacao_comercial` CHANGE COLUMN `intervalo` `intervalo` VARCHAR(8) NOT NULL ;
+ALTER TABLE audiostore_programacao_comercial CHANGE COLUMN `intervalo` `intervalo` VARCHAR(8) NOT NULL ;
 
-ALTER TABLE `intranet`.`audiostore_musica` ADD COLUMN `ultima_importacao` TINYINT(1) NULL DEFAULT 0 AFTER `cliente`;
+ALTER TABLE audiostore_musica ADD COLUMN `ultima_importacao` TINYINT(1) NULL DEFAULT 0 AFTER `cliente`;
 
-ALTER TABLE `intranet`.`musica_geral` ADD COLUMN `ultima_importacao` TINYINT(1) NULL DEFAULT 0 AFTER `arquivo`;
-ALTER TABLE `intranet`.`musica_geral` ADD COLUMN `data_cadastro` DATE NULL AFTER `ultima_importacao`;
+ALTER TABLE musica_geral ADD COLUMN `ultima_importacao` TINYINT(1) NULL DEFAULT 0 AFTER `arquivo`;
+ALTER TABLE musica_geral ADD COLUMN `data_cadastro` DATE NULL AFTER `ultima_importacao`;
 
 ----------------------------------------------
 ------------ INSERTS AND UPDATES -------------
@@ -1607,6 +1609,11 @@ INSERT INTO funcionalidade VALUES (424, '/projeto/cadastrar', 'Formulário de ca
 INSERT INTO funcionalidade VALUES (425, '/projeto/atualizar/{id}', 'Formulário de atualização do projeto' , 'fa-star' , 423 , 0 ); 
 INSERT INTO funcionalidade VALUES (426, '/projeto/remover/{id}', 'Formulário de remoção de projeto' , 'fa-star'   , 423 , 0 ); 
 
+INSERT INTO funcionalidade VALUES (427, '/versoes', 'Versões' , 'fa-star' , 0 , 1 ); 
+INSERT INTO funcionalidade VALUES (428, '/versao/cadastrar', 'Formulário de cadastro da versão' , 'fa-star'    , 427 , 0 ); 
+INSERT INTO funcionalidade VALUES (429, '/versao/atualizar/{id}', 'Formulário de atualização de versão' , 'fa-star' , 427 , 0 ); 
+INSERT INTO funcionalidade VALUES (430, '/versao/remover/{id}', 'Formulário de remoção de versão' , 'fa-star'   , 427 , 0 ); 
+
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('420', '/ordem-servico/lista', 'Lista de OS', ' ', '0', '1');
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('421', '/ordem-servico/cadastro', 'Cadastrar OS', ' ', '420', '0');
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('422', '/ordem-servico/atualizar/{id}', 'Atualizar OS', ' ', '420', '0');
@@ -1621,6 +1628,15 @@ insert into perfil_funcionalidade values (null, 201,1);
 insert into perfil_funcionalidade values (null, 202,1);
 insert into perfil_funcionalidade values (null, 203,1);
 
+insert into perfil_funcionalidade values (null, 427, 2);
+insert into perfil_funcionalidade values (null, 428, 2);
+insert into perfil_funcionalidade values (null, 429, 2);
+insert into perfil_funcionalidade values (null, 430, 2);
+
+insert into perfil_funcionalidade values (null, 427, 1);
+insert into perfil_funcionalidade values (null, 428, 1);
+insert into perfil_funcionalidade values (null, 429, 1);
+insert into perfil_funcionalidade values (null, 430, 1);
 
 -- CATEGORIA GERAL -- 
 INSERT INTO categoria_geral VALUES('1',1,'AXE');

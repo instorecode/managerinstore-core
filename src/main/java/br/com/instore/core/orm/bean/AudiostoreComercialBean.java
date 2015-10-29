@@ -18,8 +18,10 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "audiostore_comercial")
 public class AudiostoreComercialBean extends Bean {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", nullable = false)
     private Integer id;
     
     @ManyToOne
@@ -33,7 +35,7 @@ public class AudiostoreComercialBean extends Bean {
     private String titulo;
     
     @Column(name = "tipo_interprete" , nullable = false)
-    private short tipoInterprete;
+    private Short tipoInterprete;
     
     @Temporal(TemporalType.DATE)
     @Column(name = "periodo_inicial" , nullable = false)
@@ -44,10 +46,10 @@ public class AudiostoreComercialBean extends Bean {
     private Date periodoFinal;
     
     @Column(name = "tipo_horario" , nullable = false)
-    private short tipoHorario;
+    private Short tipoHorario;
     
     @Column(name = "dias_semana" , length = 7 , nullable = false)
-    private short diasSemana;
+    private Short diasSemana;
     
     @Column(name = "dias_alternados" , nullable = false)
     private Boolean diasAlternados;
@@ -103,8 +105,7 @@ public class AudiostoreComercialBean extends Bean {
     
     @ManyToOne
     @JoinColumn(name = "cliente" , nullable = false)
-    private ClienteBean cliente;
-    
+    private ClienteBean cliente;    
     
     @Column(name = "texto" , nullable = false)
     private String texto;
@@ -123,7 +124,7 @@ public class AudiostoreComercialBean extends Bean {
     public void setId(Integer id) {
         this.id = id;
     }
-    
+
     public AudiostoreCategoriaBean getAudiostoreCategoria() {
         return audiostoreCategoria;
     }
@@ -148,11 +149,11 @@ public class AudiostoreComercialBean extends Bean {
         this.titulo = titulo;
     }
 
-    public short getTipoInterprete() {
+    public Short getTipoInterprete() {
         return tipoInterprete;
     }
 
-    public void setTipoInterprete(short tipoInterprete) {
+    public void setTipoInterprete(Short tipoInterprete) {
         this.tipoInterprete = tipoInterprete;
     }
 
@@ -172,19 +173,19 @@ public class AudiostoreComercialBean extends Bean {
         this.periodoFinal = periodoFinal;
     }
 
-    public short getTipoHorario() {
+    public Short getTipoHorario() {
         return tipoHorario;
     }
 
-    public void setTipoHorario(short tipoHorario) {
+    public void setTipoHorario(Short tipoHorario) {
         this.tipoHorario = tipoHorario;
     }
 
-    public short getDiasSemana() {
+    public Short getDiasSemana() {
         return diasSemana;
     }
 
-    public void setDiasSemana(short diasSemana) {
+    public void setDiasSemana(Short diasSemana) {
         this.diasSemana = diasSemana;
     }
 
@@ -308,20 +309,20 @@ public class AudiostoreComercialBean extends Bean {
         this.semSom = semSom;
     }
 
-    public ClienteBean getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(ClienteBean cliente) {
-        this.cliente = cliente;
-    }
-
     public Boolean getInterromperMusicaTocada() {
         return interromperMusicaTocada;
     }
 
     public void setInterromperMusicaTocada(Boolean interromperMusicaTocada) {
         this.interromperMusicaTocada = interromperMusicaTocada;
+    }
+
+    public ClienteBean getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ClienteBean cliente) {
+        this.cliente = cliente;
     }
 
     public String getTexto() {
@@ -331,4 +332,6 @@ public class AudiostoreComercialBean extends Bean {
     public void setTexto(String texto) {
         this.texto = texto;
     }
+
+    
 }

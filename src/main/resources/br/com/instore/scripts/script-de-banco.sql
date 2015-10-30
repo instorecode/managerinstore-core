@@ -1256,9 +1256,9 @@ CREATE TABLE solucao (
   idusuario int(11) DEFAULT NULL,
   data date NOT NULL,
   descricao longtext NOT NULL,
-  PRIMARY KEY (id),
-  KEY fk_solution_bugs_user1_idx (id_usuario),
-  CONSTRAINT fk_solution_bugs_user1 FOREIGN KEY (id_usuario) REFERENCES usuario (idusuario) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (idsolucao),
+  KEY fk_solution_bugs_user1_idx (idusuario),
+  CONSTRAINT fk_solution_bugs_user1 FOREIGN KEY (idusuario) REFERENCES usuario (idusuario) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- -----------------------------------------------------
@@ -1270,16 +1270,17 @@ CREATE TABLE versao_bug (
   idversao int(11) DEFAULT NULL,
   idacontecimento int(11) DEFAULT NULL,
   idsolucao int(11) DEFAULT NULL,
-  PRIMARY KEY (id),
-  KEY fk_version_bugs_bugs1_idx (id_bug),
-  KEY fk_version_bugs_version1_idx (id_versao),
-  KEY fk_version_bugs_occurred_bugs1_idx (id_acontecimento),
-  KEY fk_version_bugs_solution_bugs1_idx (id_solucao),
-  CONSTRAINT fk_version_bugs_bugs1 FOREIGN KEY (id_bug) REFERENCES bug (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT fk_version_bugs_occurred_bugs1 FOREIGN KEY (id_acontecimento) REFERENCES acontecimento (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT fk_version_bugs_solution_bugs1 FOREIGN KEY (id_solucao) REFERENCES solucao (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT fk_version_bugs_version1 FOREIGN KEY (id_versao) REFERENCES versao (id) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (idversao_bug),
+  KEY fk_version_bugs_bugs1_idx (idbug),
+  KEY fk_version_bugs_version1_idx (idversao),
+  KEY fk_version_bugs_occurred_bugs1_idx (idacontecimento),
+  KEY fk_version_bugs_solution_bugs1_idx (idsolucao),
+  CONSTRAINT fk_version_bugs_bugs1 FOREIGN KEY (idbug) REFERENCES bug (idbug) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_version_bugs_occurred_bugs1 FOREIGN KEY (idacontecimento) REFERENCES acontecimento (idacontecimento) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_version_bugs_solution_bugs1 FOREIGN KEY (idsolucao) REFERENCES solucao (idsolucao) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_version_bugs_version1 FOREIGN KEY (idversao) REFERENCES versao (idversao) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
+
 
 
 
@@ -1353,15 +1354,13 @@ ALTER TABLE musica_geral ADD COLUMN `data_cadastro` DATE NULL AFTER `ultima_impo
 
 insert into perfil_funcionalidade select null , idfuncionalidade ,idperfil  from perfil , funcionalidade where idperfil in(1,2);
 
-insert into perfil values(1, 'perfil interno');
-insert into perfil values(2, 'Administrador');
-INSERT INTO perfil VALUES ('1', 'ADM');
-INSERT INTO perfil VALUES ('2', 'TI');
-INSERT INTO perfil VALUES ('3', 'Video');
-INSERT INTO perfil VALUES ('4', 'Produção');
-INSERT INTO perfil VALUES ('5', 'Comercial');
-INSERT INTO perfil VALUES ('6', 'Suporte');
-INSERT INTO perfil VALUES ('7', 'Studio');
+INSERT INTO perfil VALUES ('1', 'ADM','');
+INSERT INTO perfil VALUES ('2', 'TI','');
+INSERT INTO perfil VALUES ('3', 'Video','');
+INSERT INTO perfil VALUES ('4', 'Produção','');
+INSERT INTO perfil VALUES ('5', 'Comercial','');
+INSERT INTO perfil VALUES ('6', 'Suporte','');
+INSERT INTO perfil VALUES ('7', 'Studio','');
 
 -- USUARIOS -- 
 INSERT INTO usuario VALUES ('1', null, now() , 'Alex Valentim Gonçalves', '08920068461', 'alex.goncalves@instore.com.br', md5(123));
@@ -1389,31 +1388,7 @@ INSERT INTO usuario VALUES ('22', null, now() , 'Vinicius Silva', '00000000021',
 INSERT INTO usuario VALUES ('23', null, now() , 'Viviane Moura', '00000000022', 'viviane.moura@instore.com.br', md5(123));
 
 
--- PERFIL USUARIO --
-INSERT INTO perfil_usuario VALUES ('1', '1', '17');
-INSERT INTO perfil_usuario VALUES ('2', '1', '3');
-INSERT INTO perfil_usuario VALUES ('3', '2', '1');
-INSERT INTO perfil_usuario VALUES ('4', '2', '1');
-INSERT INTO perfil_usuario VALUES ('5', '2', '22');
-INSERT INTO perfil_usuario VALUES ('6', '3', '2');
-INSERT INTO perfil_usuario VALUES ('7', '3', '18');
-INSERT INTO perfil_usuario VALUES ('8', '4', '4');
-INSERT INTO perfil_usuario VALUES ('9', '4', '6');
-INSERT INTO perfil_usuario VALUES ('10', '4', '8');
-INSERT INTO perfil_usuario VALUES ('11', '4', '9');
-INSERT INTO perfil_usuario VALUES ('12', '4', '11');
-INSERT INTO perfil_usuario VALUES ('13', '4', '14');
-INSERT INTO perfil_usuario VALUES ('14', '4', '15');
-INSERT INTO perfil_usuario VALUES ('15', '5', '10');
-INSERT INTO perfil_usuario VALUES ('16', '5', '7');
-INSERT INTO perfil_usuario VALUES ('17', '5', '5');
-INSERT INTO perfil_usuario VALUES ('18', '5', '16');
-INSERT INTO perfil_usuario VALUES ('19', '6', '12');
-INSERT INTO perfil_usuario VALUES ('20', '6', '20');
-INSERT INTO perfil_usuario VALUES ('21', '6', '21');
-INSERT INTO perfil_usuario VALUES ('22', '6', '23');
-INSERT INTO perfil_usuario VALUES ('23', '7', '18');
-INSERT INTO perfil_usuario VALUES ('24', '7', '13');
+
 
 -- regioes
 insert into regiao values(1, 'Região Norte');
@@ -1619,24 +1594,8 @@ INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('422', '/ordem-servico/atualizar/{id}', 'Atualizar OS', ' ', '420', '0');
 
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('410', '/cliente/configuracao/acesso/produto/{cliente}', 'Configurar dados do cliente', 'fa-building', '1', '0');
-INSERT INTO perfil_funcionalidade (`idperfil_funcionalidade`, `idfuncionalidade`, `idperfil`) VALUES ('600', '410', '2');
+
 UPDATE funcionalidade SET `icone`='fa-cog' WHERE `idfuncionalidade`='410';
-
-
-insert into perfil_funcionalidade values (null, 200,1);
-insert into perfil_funcionalidade values (null, 201,1);
-insert into perfil_funcionalidade values (null, 202,1);
-insert into perfil_funcionalidade values (null, 203,1);
-
-insert into perfil_funcionalidade values (null, 427, 2);
-insert into perfil_funcionalidade values (null, 428, 2);
-insert into perfil_funcionalidade values (null, 429, 2);
-insert into perfil_funcionalidade values (null, 430, 2);
-
-insert into perfil_funcionalidade values (null, 427, 1);
-insert into perfil_funcionalidade values (null, 428, 1);
-insert into perfil_funcionalidade values (null, 429, 1);
-insert into perfil_funcionalidade values (null, 430, 1);
 
 -- CATEGORIA GERAL -- 
 INSERT INTO categoria_geral VALUES('1',1,'AXE');
@@ -1800,6 +1759,169 @@ INSERT INTO categoria_geral VALUES('995',1,'CRIANÇA ESPECIAL');
 INSERT INTO categoria_geral VALUES('996',1,'CARNA AXE');
 INSERT INTO categoria_geral VALUES('997',1,'BOSSA NOVA');
 INSERT INTO categoria_geral VALUES('999',1,'ESPERA TELEFONICA');
+
+-- PERFIL USUARIO --
+INSERT INTO perfil_usuario VALUES ('1', '1', '17');
+INSERT INTO perfil_usuario VALUES ('2', '1', '3');
+INSERT INTO perfil_usuario VALUES ('3', '2', '1');
+INSERT INTO perfil_usuario VALUES ('4', '2', '1');
+INSERT INTO perfil_usuario VALUES ('5', '2', '22');
+INSERT INTO perfil_usuario VALUES ('6', '3', '2');
+INSERT INTO perfil_usuario VALUES ('7', '3', '18');
+INSERT INTO perfil_usuario VALUES ('8', '4', '4');
+INSERT INTO perfil_usuario VALUES ('9', '4', '6');
+INSERT INTO perfil_usuario VALUES ('10', '4', '8');
+INSERT INTO perfil_usuario VALUES ('11', '4', '9');
+INSERT INTO perfil_usuario VALUES ('12', '4', '11');
+INSERT INTO perfil_usuario VALUES ('13', '4', '14');
+INSERT INTO perfil_usuario VALUES ('14', '4', '15');
+INSERT INTO perfil_usuario VALUES ('15', '5', '10');
+INSERT INTO perfil_usuario VALUES ('16', '5', '7');
+INSERT INTO perfil_usuario VALUES ('17', '5', '5');
+INSERT INTO perfil_usuario VALUES ('18', '5', '16');
+INSERT INTO perfil_usuario VALUES ('19', '6', '12');
+INSERT INTO perfil_usuario VALUES ('20', '6', '20');
+INSERT INTO perfil_usuario VALUES ('21', '6', '21');
+INSERT INTO perfil_usuario VALUES ('22', '6', '23');
+INSERT INTO perfil_usuario VALUES ('23', '7', '18');
+INSERT INTO perfil_usuario VALUES ('24', '7', '13');
+
+insert into perfil_funcionalidade select null , idfuncionalidade, 22 from funcionalidade;
+
+INSERT INTO perfil_funcionalidade values ('600', '410', '2');
+insert into perfil_funcionalidade values (null, 200,1);
+insert into perfil_funcionalidade values (null, 201,1);
+insert into perfil_funcionalidade values (null, 202,1);
+insert into perfil_funcionalidade values (null, 203,1);
+
+insert into perfil_funcionalidade values (null, 427, 2);
+insert into perfil_funcionalidade values (null, 428, 2);
+insert into perfil_funcionalidade values (null, 429, 2);
+insert into perfil_funcionalidade values (null, 430, 2);
+insert into perfil_funcionalidade values (null, 1,2);
+insert into perfil_funcionalidade values (null, 2,2);
+insert into perfil_funcionalidade values (null, 3,2);
+insert into perfil_funcionalidade values (null, 4,2);
+insert into perfil_funcionalidade values (null, 5,2);
+insert into perfil_funcionalidade values (null, 6,2);
+insert into perfil_funcionalidade values (null, 7,2);
+insert into perfil_funcionalidade values (null, 8,2);
+insert into perfil_funcionalidade values (null, 9,2);
+insert into perfil_funcionalidade values (null, 10,2);
+insert into perfil_funcionalidade values (null, 11,2);
+insert into perfil_funcionalidade values (null, 12,2);
+insert into perfil_funcionalidade values (null, 13,2);
+insert into perfil_funcionalidade values (null, 14,2);
+insert into perfil_funcionalidade values (null, 15,2);
+insert into perfil_funcionalidade values (null, 16,2);
+insert into perfil_funcionalidade values (null, 17,2);
+insert into perfil_funcionalidade values (null, 18,2);
+insert into perfil_funcionalidade values (null, 19,2);
+insert into perfil_funcionalidade values (null, 20,2);
+insert into perfil_funcionalidade values (null, 21,2);
+insert into perfil_funcionalidade values (null, 22,2);
+insert into perfil_funcionalidade values (null, 23,2);
+insert into perfil_funcionalidade values (null, 24,2);
+insert into perfil_funcionalidade values (null, 25,2);
+insert into perfil_funcionalidade values (null, 26,2);
+insert into perfil_funcionalidade values (null, 27,2);
+insert into perfil_funcionalidade values (null, 28,2);
+insert into perfil_funcionalidade values (null, 29,2);
+insert into perfil_funcionalidade values (null, 30,2);
+insert into perfil_funcionalidade values (null, 37,2);
+insert into perfil_funcionalidade values (null, 38,2);
+insert into perfil_funcionalidade values (null, 39,2);
+insert into perfil_funcionalidade values (null, 40,2);
+insert into perfil_funcionalidade values (null, 41,2);
+insert into perfil_funcionalidade values (null, 42,2);
+insert into perfil_funcionalidade values (null, 43,2);
+insert into perfil_funcionalidade values (null, 44,2);
+insert into perfil_funcionalidade values (null, 45,2);
+insert into perfil_funcionalidade values (null, 46,2);
+insert into perfil_funcionalidade values (null, 47,2);
+insert into perfil_funcionalidade values (null, 48,2);
+insert into perfil_funcionalidade values (null, 49,2);
+insert into perfil_funcionalidade values (null, 50,2);
+insert into perfil_funcionalidade values (null, 51,2);
+insert into perfil_funcionalidade values (null, 52,2);
+insert into perfil_funcionalidade values (null, 53,2);
+insert into perfil_funcionalidade values (null, 54,2);
+insert into perfil_funcionalidade values (null, 55,2);
+insert into perfil_funcionalidade values (null, 56,2);
+insert into perfil_funcionalidade values (null, 57,2);
+insert into perfil_funcionalidade values (null, 58,2);
+insert into perfil_funcionalidade values (null, 59,2);
+insert into perfil_funcionalidade values (null, 60,2);
+insert into perfil_funcionalidade values (null, 61,2);
+insert into perfil_funcionalidade values (null, 62,2);
+insert into perfil_funcionalidade values (null, 63,2);
+insert into perfil_funcionalidade values (null, 64,2);
+insert into perfil_funcionalidade values (null, 70,2);
+insert into perfil_funcionalidade values (null, 71,2);
+insert into perfil_funcionalidade values (null, 72,2);
+insert into perfil_funcionalidade values (null, 73,2);
+insert into perfil_funcionalidade values (null, 80,2);
+insert into perfil_funcionalidade values (null, 81,2);
+insert into perfil_funcionalidade values (null, 82,2);
+insert into perfil_funcionalidade values (null, 83,2);
+insert into perfil_funcionalidade values (null, 90,2);
+insert into perfil_funcionalidade values (null, 91,2);
+insert into perfil_funcionalidade values (null, 92,2);
+insert into perfil_funcionalidade values (null, 93,2);
+insert into perfil_funcionalidade values (null, 100,2);
+insert into perfil_funcionalidade values (null, 101,2);
+insert into perfil_funcionalidade values (null, 102,2);
+insert into perfil_funcionalidade values (null, 103,2);
+insert into perfil_funcionalidade values (null, 110,2);
+insert into perfil_funcionalidade values (null, 111,2);
+insert into perfil_funcionalidade values (null, 112,2);
+insert into perfil_funcionalidade values (null, 113,2);
+insert into perfil_funcionalidade values (null, 120,2);
+insert into perfil_funcionalidade values (null, 121,2);
+insert into perfil_funcionalidade values (null, 122,2);
+insert into perfil_funcionalidade values (null, 123,2);
+insert into perfil_funcionalidade values (null, 130,2);
+insert into perfil_funcionalidade values (null, 140,2);
+insert into perfil_funcionalidade values (null, 141,2);
+insert into perfil_funcionalidade values (null, 142,2);
+insert into perfil_funcionalidade values (null, 143,2);
+insert into perfil_funcionalidade values (null, 145,2);
+insert into perfil_funcionalidade values (null, 146,2);
+insert into perfil_funcionalidade values (null, 147,2);
+insert into perfil_funcionalidade values (null, 148,2);
+insert into perfil_funcionalidade values (null, 150,2);
+insert into perfil_funcionalidade values (null, 152,2);
+insert into perfil_funcionalidade values (null, 153,2);
+insert into perfil_funcionalidade values (null, 154,2);
+insert into perfil_funcionalidade values (null, 155,2);
+insert into perfil_funcionalidade values (null, 160,2);
+insert into perfil_funcionalidade values (null, 161,2);
+insert into perfil_funcionalidade values (null, 162,2);
+insert into perfil_funcionalidade values (null, 163,2);
+insert into perfil_funcionalidade values (null, 180,2);
+insert into perfil_funcionalidade values (null, 200,2);
+insert into perfil_funcionalidade values (null, 201,2);
+insert into perfil_funcionalidade values (null, 202,2);
+insert into perfil_funcionalidade values (null, 203,2);
+insert into perfil_funcionalidade values (null, 390,2);
+insert into perfil_funcionalidade values (null, 410,2);
+insert into perfil_funcionalidade values (null, 420,2);
+insert into perfil_funcionalidade values (null, 421,2);
+insert into perfil_funcionalidade values (null, 422,2);
+insert into perfil_funcionalidade values (null, 423,2);
+insert into perfil_funcionalidade values (null, 424,2);
+insert into perfil_funcionalidade values (null, 425,2);
+insert into perfil_funcionalidade values (null, 426,2);
+insert into perfil_funcionalidade values (null, 427,2);
+insert into perfil_funcionalidade values (null, 428,2);
+insert into perfil_funcionalidade values (null, 429,2);
+insert into perfil_funcionalidade values (null, 430,2);
+
+
+insert into perfil_funcionalidade values (null, 427, 1);
+insert into perfil_funcionalidade values (null, 428, 1);
+insert into perfil_funcionalidade values (null, 429, 1);
+insert into perfil_funcionalidade values (null, 430, 1);
 
 delete from perfil_funcionalidade where idfuncionalidade in(31,32,33,34,35,36);
 delete from funcionalidade where idfuncionalidade in(31,32,33,34,35,36);

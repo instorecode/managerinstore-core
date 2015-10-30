@@ -1593,7 +1593,7 @@ INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('421', '/ordem-servico/cadastro', 'Cadastrar OS', ' ', '420', '0');
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('422', '/ordem-servico/atualizar/{id}', 'Atualizar OS', ' ', '420', '0');
 
-INSERT INTO funcionalidade VALUES (431, '/dump-paradox', 'Realizar dump do paradox' , 'fa-star'   , 431 , 0 ); 
+INSERT INTO funcionalidade VALUES (431, '/dump-paradox', 'Realizar dump do paradox' , 'fa-star'   , 431 , 1); 
 
 
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('410', '/cliente/configuracao/acesso/produto/{cliente}', 'Configurar dados do cliente', 'fa-building', '1', '0');
@@ -1954,4 +1954,23 @@ delete from perfil_funcionalidade where idperfil_funcionalidade > 0;
 delete from perfil where idperfil > 0;
 
 
+
+---------------------------
+-------- SELECTS-----------
+---------------------------
+
+SELECT 
+    usuario.idusuario as id_usuario,
+    usuario.nome,
+    p.idperfil as id_perfil,
+    p.nome,
+    f.idfuncionalidade as id_funcionalidade,
+    f.mapping_id,
+    f.nome    
+FROM intranet.usuario AS usuario
+inner join perfil_usuario AS pu ON pu.idusuario = usuario.idusuario
+inner join perfil AS p ON p.idperfil = pu.idperfil
+inner join perfil_funcionalidade AS pf ON pf.idperfil = p.idperfil
+inner join funcionalidade AS f ON f.idfuncionalidade = pf.idfuncionalidade
+where usuario.idusuario = <ID DO USUARIO>;
 

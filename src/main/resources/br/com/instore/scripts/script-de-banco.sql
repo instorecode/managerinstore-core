@@ -1593,6 +1593,9 @@ INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('421', '/ordem-servico/cadastro', 'Cadastrar OS', ' ', '420', '0');
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('422', '/ordem-servico/atualizar/{id}', 'Atualizar OS', ' ', '420', '0');
 
+INSERT INTO funcionalidade VALUES (431, '/dump-paradox', 'Realizar dump do paradox' , 'fa-star'   , 431 , 0 ); 
+
+
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('410', '/cliente/configuracao/acesso/produto/{cliente}', 'Configurar dados do cliente', 'fa-building', '1', '0');
 
 UPDATE funcionalidade SET `icone`='fa-cog' WHERE `idfuncionalidade`='410';
@@ -1916,12 +1919,14 @@ insert into perfil_funcionalidade values (null, 427,2);
 insert into perfil_funcionalidade values (null, 428,2);
 insert into perfil_funcionalidade values (null, 429,2);
 insert into perfil_funcionalidade values (null, 430,2);
-
+INSERT INTO perfil_funcionalidade value (null, 431,2);
 
 insert into perfil_funcionalidade values (null, 427, 1);
 insert into perfil_funcionalidade values (null, 428, 1);
 insert into perfil_funcionalidade values (null, 429, 1);
 insert into perfil_funcionalidade values (null, 430, 1);
+
+
 
 delete from perfil_funcionalidade where idfuncionalidade in(31,32,33,34,35,36);
 delete from funcionalidade where idfuncionalidade in(31,32,33,34,35,36);

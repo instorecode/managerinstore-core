@@ -471,8 +471,7 @@ public class Query {
         not = false;
         return this;
     }
-
-    // add critir
+ 
     public <T> Query addCriteria(Criterion criterion) {
         if (connectorAndOr == null) {
             if (not) {

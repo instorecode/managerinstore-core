@@ -2,7 +2,9 @@ package br.com.instore.core.orm;
 
 import br.com.instore.core.orm.bean.AuditoriaBean;
 import br.com.instore.core.orm.bean.AuditoriaDadosBean;
+import br.com.instore.core.orm.bean.CategoriaGeralBean;
 import br.com.instore.core.orm.bean.UsuarioBean;
+import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -130,7 +132,8 @@ public class RepositoryViewer {
         return query;
     }
 
-    public <T extends Bean> void save(T t) {
+    public <T extends Bean> Integer save(T t) {
+        Integer ret = 0;
         try {
             Class<?> clazz = t.getClass();
 
@@ -154,7 +157,10 @@ public class RepositoryViewer {
                     t = (T) tmp;
                 }
 
-                session.save(t);
+                Serializable ser = session.save(t);
+                if (null != ser) {
+                    ret = (Integer)ser;
+                }
             } else {
                 verifySession();
                 auditar(usuario, t, (short) 2);
@@ -174,46 +180,14 @@ public class RepositoryViewer {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
-        }catch (Exception e) {
-            e.printStackTrace();    
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
             if (null != tmp && tmp.getClass().equals(t.getClass())) {
                 tmp = null;
             }
         }
-    }
-
-    public <T extends Bean> void save2(T t) {
-        try {
-            Class<?> clazz = t.getClass();
-
-            String fieldName = null;
-            for (Field field : clazz.getDeclaredFields()) {
-                if (field.isAnnotationPresent(Id.class)) {
-                    fieldName = field.getName();
-                    break;
-                }
-            }
-
-            Field f = clazz.getDeclaredField(fieldName);
-            f.setAccessible(true);
-
-            if (null == f.get(t)) {
-                verifySession();
-                session.save(t);
-            } else {
-                verifySession();
-                session.update(t);
-            }
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
+        return ret;
     }
 
     public <T extends Bean> void delete(T t) {
@@ -222,7 +196,7 @@ public class RepositoryViewer {
         try {
             auditar(usuario, t, (short) 3);
         } catch (Exception e) {
-            e.printStackTrace();  
+            e.printStackTrace();
         }
     }
 
@@ -236,7 +210,7 @@ public class RepositoryViewer {
         return (T) session.merge(string, t);
     }
 
-    private <T extends Bean> void auditar(UsuarioBean usuario, T object, short tipo) throws Exception{
+    private <T extends Bean> void auditar(UsuarioBean usuario, T object, short tipo) throws Exception {
         if (null == usuario) {
             throw new Exception("Informe um usuario de auditoria");
         }
@@ -393,19 +367,6 @@ public class RepositoryViewer {
 
     public void setUsuario(UsuarioBean usuario) {
         this.usuario = usuario;
-    }
-
-    public static void main(String[] args) {
-        RepositoryViewer rv = new RepositoryViewer();
-        String q = "";
-        q = "select \n"
-                + "    count(*) as size\n"
-                + "from\n"
-                + "    perfil_funcionalidade\n"
-                + "left join perfil_usuario using(idperfil)\n"
-                + "inner join funcionalidade using(idfuncionalidade)\n"
-                + "where mapping_id = '/usuario' and idusuario = " + 1 + " \n group by idfuncionalidade";
-        System.out.println(rv.query(q).executeSQLCount());;
     }
 
     public void clearAndClose() {

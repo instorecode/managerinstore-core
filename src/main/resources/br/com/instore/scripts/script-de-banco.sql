@@ -1597,7 +1597,7 @@ INSERT INTO funcionalidade VALUES (431, '/dump-paradox', 'Realizar dump do parad
 
 
 INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('410', '/cliente/configuracao/acesso/produto/{cliente}', 'Configurar dados do cliente', 'fa-building', '1', '0');
-
+INSERT INTO funcionalidade (`idfuncionalidade`, `mapping_id`, `nome`, `icone`, `parente`, `visivel`) VALUES ('432', '/audiostore-programacao/cadastrar/pagina-unica', 'Cadatrar programação pagina unica', ' ', '15', '1');
 UPDATE funcionalidade SET `icone`='fa-cog' WHERE `idfuncionalidade`='410';
 
 -- CATEGORIA GERAL -- 
@@ -1973,4 +1973,5 @@ inner join perfil AS p ON p.idperfil = pu.idperfil
 inner join perfil_funcionalidade AS pf ON pf.idperfil = p.idperfil
 inner join funcionalidade AS f ON f.idfuncionalidade = pf.idfuncionalidade
 where usuario.idusuario = <ID DO USUARIO>;
+
 

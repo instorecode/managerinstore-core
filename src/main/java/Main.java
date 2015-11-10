@@ -10,15 +10,8 @@ public class Main {
 
     public static void main(String[] args) {
         RepositoryViewer rv = new RepositoryViewer();
-        rv.setUsuario(new UsuarioBean(22));
-        ProjetoBean p = new ProjetoBean();
-        p.setDataCriacao(new Date());
-        p.setDescricao("aaa");
-        p.setIdUsuario(Integer.MIN_VALUE);    
-        p.setLinkDocumentacao("aaaa");
-        p.setNome("aaaaatyuytusssdsdss");
-        System.out.println(rv.save(p));
-        rv.finalize();
+        UsuarioBean user =  rv.query(UsuarioBean.class).eq("idusuario", 22).findOne();
+        System.out.println(user);
         
     }
 
